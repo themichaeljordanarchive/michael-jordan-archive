@@ -940,4 +940,32 @@ body:not(.season-page) .research-grid{
     text-align: right;
     white-space: nowrap;
   }
+}.summary-footnote{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.summary-footnote p{
+  margin-bottom: 12px;
+  max-width: 78ch;
+}.summary-footnote{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.summary-footnote p{
+  margin-bottom: 12px;
+  max-width: 78ch;
+}
+.archive-link {
+  text-decoration: underline;
+}
+
+.archive-link:hover {
+  text-decoration: none;
+}
+.season-policy {
+  margin-top: 36px;
 }
