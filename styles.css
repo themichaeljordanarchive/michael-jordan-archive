@@ -1,0 +1,943 @@
+/* =========================================================
+   Michael Jordan Archive — CLEAN STYLESHEET (WHITE CATALOG)
+   Single-source-of-truth. Template-ready.
+   ========================================================= */
+
+/* ---------- Base Reset ---------- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
+
+/* ---------- Theme Tokens ---------- */
+:root{
+  --bg: #f7f7f5;
+  --paper: #ffffff;
+  --ink: #141414;
+  --ink-2: #2b2b2b;
+  --muted: #6b6b6b;
+  --rule: rgba(0,0,0,0.10);
+  --rule-2: rgba(0,0,0,0.14);
+
+  --sans: ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
+  --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+
+  /* Wider layout */
+  --reading: 1280px;
+  --radius: 14px;
+
+  /* Accent */
+  --accent-red: #b10d0d;
+}
+
+/* ---------- Page Base ---------- */
+body{
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--serif);
+  line-height: 1.7;
+  overflow-x: hidden;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+/* ---------- Links ---------- */
+a{ color: inherit; text-decoration: none; }
+a:hover{ text-decoration: none; }
+
+/* ---------- Layout ---------- */
+main{
+  display: block;
+  width: 100%;
+  max-width: var(--reading);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 44px 24px 92px;
+}
+
+/* Copy blocks read “wide”, but keep line length premium */
+p{
+  margin: 0 0 18px 0;
+  color: var(--ink-2);
+  max-width: 78ch; /* was 72ch */
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+ul{
+  margin: 10px 0 18px 18px;
+  color: var(--ink-2);
+}
+li{ margin: 6px 0; }
+
+.muted{
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(20,20,20,0.55);
+}
+
+/* ---------- Typography ---------- */
+h1{
+  margin: 0 0 14px 0;
+  font-size: 42px;
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+  font-weight: 520;
+  color: var(--ink);
+  max-width: 28ch;
+}
+
+h2, h3{
+  margin: 44px 0 12px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 650;
+  color: var(--ink);
+}
+
+/* =========================================================
+   HEADER + NAV (DESKTOP)
+   ========================================================= */
+
+.site-header{
+  background: rgba(247,247,245,0.92);
+  border-bottom: 1px solid var(--rule);
+  padding: 18px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.brand{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin: 0;
+}
+
+.brand img{ width: 56px; height: auto; }
+
+.brand-name{
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #111111;
+}
+
+/* Nav (Desktop) */
+.site-nav{
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.site-nav a,
+.site-nav a:link,
+.site-nav a:visited{
+  font-family: var(--sans);
+  font-size: 10.75px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 450;
+  color: rgba(20,20,20,0.55);
+  padding: 6px 0 2px;
+}
+.site-nav a:hover{ color: rgba(20,20,20,0.90); }
+
+/* Hamburger (hidden on desktop) */
+.nav-toggle{
+  display: none;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+.nav-toggle span{
+  display: block;
+  width: 26px;
+  height: 2px;
+  background: #7a7a7a;
+  margin: 6px auto;
+  border-radius: 2px;
+}
+
+/* =========================================================
+   HERO (if used)
+   ========================================================= */
+
+.hero{
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background: #e9e9e7;
+  margin-top: 0;
+}
+.hero img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+.hero-bleed{
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  overflow: hidden;
+  background: #e9e9e7;
+  margin-top: 0;
+}
+.hero-bleed img{
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+  object-position: center 70%;
+}
+
+.hero-carousel{
+  width: 100vw;
+  height: 640px;
+  overflow: hidden;
+  position: relative;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: transparent;
+  margin-top: 0;
+}
+.hero-track{
+  display: flex;
+  height: 100%;
+  width: 400vw;
+  animation: hero-slide 24s ease-in-out infinite;
+  will-change: transform;
+}
+.hero-track img{
+  width: 100vw;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+  flex-shrink: 0;
+}
+@keyframes hero-slide{
+  0%   { transform: translateX(0); }
+  18%  { transform: translateX(0); }
+  20%  { transform: translateX(-100vw); }
+  38%  { transform: translateX(-100vw); }
+  40%  { transform: translateX(-200vw); }
+  58%  { transform: translateX(-200vw); }
+  60%  { transform: translateX(-300vw); }
+  78%  { transform: translateX(-300vw); }
+  100% { transform: translateX(0); }
+}
+
+/* =========================================================
+   CONTENT BLOCKS
+   ========================================================= */
+
+.research-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.research-item{
+  background: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.09);
+  border-radius: var(--radius);
+  padding: 18px;
+}
+
+/* =========================================================
+   SEASON INDEX (GRID)
+   ========================================================= */
+
+.season-index{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  align-items: stretch;
+  margin-top: 12px;
+}
+
+.season-card{
+  display: block;
+  background-color: rgba(255,255,255,0.92);
+  border: 1px solid rgba(0,0,0,0.09);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  min-height: 110px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.season-card:hover{
+  border-color: rgba(0,0,0,0.14);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(0,0,0,0.06);
+}
+
+.season-year{
+  font-family: var(--sans);
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 6px;
+}
+
+.season-status{
+  margin-top: 10px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #8a8a8a;
+}
+
+.season-card.in-progress .season-status{ color: #9a9a9a; }
+.season-card:not(.in-progress) .season-status{
+  color: #141414;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+}
+
+.season-metrics{
+  margin-top: 10px;
+  display: grid;
+  gap: 6px;
+}
+
+.metric{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-family: var(--sans);
+}
+.metric .label{
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.metric .value{
+  font-family: var(--serif);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.season-index a.season-card:link,
+.season-index a.season-card:visited{ color: inherit; }
+
+/* ---------- Special season cards (8687 + 8485) ---------- */
+.season-card-8687{ --season-card-bg: url("assets/1986-87-bg.jpg"); --season-card-detail: url("assets/1986-87-detail.jpg"); }
+.season-card-8485{ --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
+
+.season-card-8687,
+.season-card-8485{
+  background-image:
+    linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
+    var(--season-card-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image 0.25s ease, transform 0.2s ease;
+}
+
+.season-card-8687:hover,
+.season-card-8485:hover{
+  background-image:
+    linear-gradient(rgba(255,255,255,0.68), rgba(255,255,255,0.68)),
+    var(--season-card-bg);
+}
+
+.season-card-8687::before,
+.season-card-8485::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--season-card-detail);
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.season-card-8687:hover::before,
+.season-card-8485:hover::before{ opacity: 0.08; }
+
+/* Mobile/touch: no hover, so bake in the vibe */
+@media (hover: none) and (pointer: coarse){
+  .season-card-8687,
+  .season-card-8485{
+    background-image:
+      linear-gradient(rgba(255,255,255,0.90), rgba(255,255,255,0.90)),
+      var(--season-card-bg);
+  }
+  .season-card-8687::before,
+  .season-card-8485::before{ opacity: 0.06; }
+}
+
+/* =========================================================
+   CONTACT FORM (if used)
+   ========================================================= */
+
+.contact-form{ max-width: 560px; margin-top: 26px; }
+
+.contact-form label{
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #5a5a5a;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width: 100%;
+  padding: 12px 12px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  font-size: 14px;
+  color: var(--ink);
+  outline: none;
+}
+.contact-form textarea{ min-height: 130px; resize: vertical; }
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{ border-color: rgba(0,0,0,0.22); }
+
+.btn, button.btn{
+  display: inline-block;
+  margin-top: 14px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.18);
+  background: #111;
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn:hover{ background: #000; }
+
+/* Footer */
+.site-footer{
+  padding: 22px 24px 34px;
+  border-top: 1px solid var(--rule);
+  background: transparent;
+  color: rgba(0,0,0,0.55);
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+
+/* =========================================================
+   SEASON DETAIL TEMPLATE (ALL SEASONS)
+   ========================================================= */
+
+/* Back link */
+.back-link{
+  margin: 0 0 18px 0;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.55);
+}
+.back-link a:hover{ color: rgba(20,20,20,0.90); }
+
+/* ----- WOW HEADER CARD (universal) ----- */
+.season-header{ margin-bottom: 60px; }
+
+.season-card--detail{
+  border: 1px solid rgba(0,0,0,0.10);
+  background:
+    radial-gradient(circle at top right, rgba(0,0,0,0.03), transparent 60%),
+    linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,248,248,0.96));
+  border-radius: 18px;
+  padding: 46px;
+  box-shadow: 0 18px 44px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+/* Thin accent line inside the WOW header card */
+.season-card--detail::before{
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: rgba(177,13,13,0.55);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.season-header-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+/* Header enhancement */
+.season-card--detail h1{
+  font-size: 46px;
+  line-height: 1.03;
+  letter-spacing: -0.01em;
+  margin-bottom: 18px;
+}
+
+.population-total{
+  margin-top: 14px;
+  font-size: 20px;
+  line-height: 1.5;
+}
+.population-total strong{
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.breakdown{
+  display: inline-flex;
+  gap: 10px;
+  align-items: baseline;
+  margin-top: 8px;
+  color: rgba(20,20,20,0.62);
+  font-size: 14px;
+}
+.breakdown strong{ color: rgba(20,20,20,0.92); font-weight: 700; }
+.breakdown .sep{ opacity: 0.45; padding: 0 2px; }
+
+.audit-badge{
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  padding: 10px 14px;
+  border: 1px solid rgba(47,111,79,0.55);
+  color: rgba(47,111,79,0.95);
+  background: rgba(47,111,79,0.08);
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-radius: 999px;
+  font-family: var(--sans);
+  font-weight: 800;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+  transform: translateY(4px);
+}
+
+.season-summary{
+  margin-top: 18px;
+  max-width: 74ch;
+  line-height: 1.65;
+}
+
+/* ----- Red underline under season title (works on mobile) ----- */
+.season-header h1{
+  position: relative;
+  padding-bottom: 18px;
+}
+.season-header h1::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 64px;
+  height: 3px;
+  background: var(--accent-red);
+  border-radius: 2px;
+}
+
+/* ----- Population (inner card) ----- */
+.population-card{
+  margin-top: 34px;
+  padding: 30px;
+  background: rgba(255,255,255,0.94);
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 16px;
+  position: relative;
+}
+
+/* Population card red accent line (fixed + complete) */
+.population-card::before{
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 18px;
+  bottom: 18px;
+  width: 2px;
+  background: rgba(177,13,13,0.45);
+  border-radius: 2px;
+  pointer-events: none;
+}
+
+.population-card h3{
+  font-size: 12px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+  color: rgba(20,20,20,0.55);
+  font-family: var(--sans);
+  font-weight: 750;
+}
+
+.population-card table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.population-card th{
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: rgba(20,20,20,0.50);
+  padding: 12px 0 10px;
+  font-family: var(--sans);
+}
+
+/* Header alignment */
+.population-card th:nth-child(1){ text-align: left; }
+.population-card th:nth-child(2),
+.population-card th:nth-child(3){ text-align: center; }
+.population-card th:nth-child(4){ text-align: left; } /* Audit label left */
+
+.population-card td{
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-size: 15px;
+  color: rgba(20,20,20,0.88);
+}
+.population-card tr:last-child td{ border-bottom: none; }
+
+/* Vertical dividers */
+.population-card th:nth-child(2),
+.population-card td:nth-child(2),
+.population-card th:nth-child(3),
+.population-card td:nth-child(3),
+.population-card th:nth-child(4),
+.population-card td:nth-child(4){
+  border-left: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Padding per column (keeps Audit from drifting) */
+.population-card th:nth-child(2),
+.population-card td:nth-child(2),
+.population-card th:nth-child(3),
+.population-card td:nth-child(3){
+  padding-left: 18px;
+}
+
+.population-card th:nth-child(4){ padding-left: 12px; }
+.population-card td:nth-child(4){ padding-left: 0; padding-right: 6px; }
+
+/* Column alignment */
+.population-card td:nth-child(1){ text-align: left; }
+
+.population-card td:nth-child(2),
+.population-card td:nth-child(3){
+  text-align: center;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.population-card td:nth-child(4){
+  text-align: right;
+  white-space: nowrap;
+}
+
+.pop-footnote{
+  margin-top: 14px;
+  max-width: 80ch;
+}
+
+/* Row hover polish */
+.season-header .population-card tbody tr{ transition: background 0.2s ease; }
+.season-header .population-card tbody tr:hover{ background: rgba(0,0,0,0.02); }
+.season-header .population-card td:first-child{ font-weight: 600; }
+
+/* Refined link styling inside Public Sale Details */
+.evidence-content ul li a{
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.evidence-content ul li a:hover{
+  border-bottom-color: var(--accent-red);
+  color: rgba(177,13,13,0.85);
+}
+
+/* ----- Evidence blocks (Home/Away) ----- */
+.evidence-block{ margin-top: 34px; }
+
+/* Red accent bar beside Home / Away headers */
+.evidence-block h2{
+  position: relative;
+  padding-left: 14px;
+}
+.evidence-block h2::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  background: var(--accent-red);
+  border-radius: 2px;
+}
+
+.evidence-grid{
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 44px;
+  align-items: start;
+  margin-top: 18px;
+}
+
+.evidence-image img{
+  width: 100%;
+  border-radius: var(--radius);
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+}
+
+.evidence-caption{ margin-top: 10px; }
+
+.evidence-content{
+  background: rgba(255,255,255,0.96);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+
+.evidence-meta{
+  display: grid;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.evidence-meta > div{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.meta-label{
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.50);
+}
+.meta-value{
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(20,20,20,0.92);
+}
+
+.evidence-callout{
+  margin: 16px 0;
+  background: rgba(0,0,0,0.03);
+  border-left: 3px solid rgba(0,0,0,0.22);
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  color: rgba(20,20,20,0.82);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px){
+  .season-index{ grid-template-columns: repeat(2, 1fr); }
+  .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
+}
+
+@media (max-width: 700px){
+  main{ padding: 28px 18px 70px; }
+  h1{ font-size: 32px; line-height: 1.08; }
+
+  .site-header{
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 72px;
+  }
+
+  .nav-toggle{
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 16px;
+  }
+
+  .site-nav{
+    display: none;
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    margin-top: 14px;
+    padding: 14px 0 6px;
+    border-top: 1px solid var(--rule);
+    align-items: flex-start;
+  }
+
+  body.nav-open .site-nav{ display: flex; }
+
+  .season-index{ grid-template-columns: 1fr; }
+
+  .season-card--detail{ padding: 28px; }
+  .season-header-top{ flex-direction: column; gap: 16px; }
+  .audit-badge{ align-self: flex-start; }
+
+  /* Population table: mobile tuning (single source of truth) */
+  .population-card{ padding: 20px; }
+  .population-card::before{
+    left: 14px;
+    top: 14px;
+    bottom: 14px;
+  }
+
+  .population-card th{
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    padding-bottom: 14px;
+  }
+
+  /* tighter padding for col 2 + 3 only */
+  .population-card th:nth-child(2),
+  .population-card td:nth-child(2),
+  .population-card th:nth-child(3),
+  .population-card td:nth-child(3){
+    padding-left: 10px;
+  }
+
+  /* Audit column: label left, value right (no left padding push) */
+  .population-card th:nth-child(4){ padding-left: 8px; text-align: left; }
+  .population-card td:nth-child(4){
+    padding-left: 0;
+    padding-right: 6px;
+    text-align: right;
+  }
+
+  /* slightly lighter dividers on mobile */
+  .population-card th:nth-child(2),
+  .population-card td:nth-child(2),
+  .population-card th:nth-child(3),
+  .population-card td:nth-child(3),
+  .population-card th:nth-child(4),
+  .population-card td:nth-child(4){
+    border-left-color: rgba(0,0,0,0.04);
+  }
+
+  .hero{ height: 320px; }
+  .hero img{ object-position: center 65%; }
+  .hero-bleed img{ height: 320px; object-position: center 65%; }
+  .hero-carousel{ height: 320px; }
+  .hero-track img{ object-position: center 65%; }
+}
+/* ===== Subtle framing polish ===== */
+
+.season-card--detail{
+  border-color: rgba(0,0,0,0.14);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.08);
+}
+
+.season-header{
+  background: rgba(255,255,255,0.60);
+  border-radius: 22px;
+  padding: 18px;
+}
+/* =========================================================
+   FOUNDATION OVERRIDES (single source of truth)
+   - Standard pages: wider
+   - Season detail pages: tighter
+   - Mobile: safe population table fix
+   ========================================================= */
+
+:root{
+  --reading-standard: 1180px;
+  --reading-season: 980px;
+}
+
+/* 1) Main container widths */
+body:not(.season-page) main{
+  width: 100%;
+  max-width: var(--reading-standard);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+body.season-page main{
+  width: 100%;
+  max-width: var(--reading-season);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* 2) Don’t let inner sections drift left */
+body:not(.season-page) .home-intro,
+body:not(.season-page) .contact-form,
+body:not(.season-page) .research-grid{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 3) Mobile: prevent Population header overlap (season pages only) */
+@media (max-width: 700px){
+  body.season-page .population-card table{
+    table-layout: auto;
+    width: 100%;
+  }
+
+  body.season-page .population-card th,
+  body.season-page .population-card td{
+    white-space: normal;
+    word-break: break-word;
+  }
+
+  body.season-page .population-card th{
+    font-size: 9px;
+    letter-spacing: 0.12em;
+  }
+
+  body.season-page .population-card td:nth-child(4){
+    text-align: right;
+    white-space: nowrap;
+  }
+}
