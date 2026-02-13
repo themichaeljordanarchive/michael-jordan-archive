@@ -828,10 +828,14 @@ body.season-page .population-card table{
   width: 100%;
 }
 
-body.season-page .population-card th,
+body.season-page .population-card th{
+    white-space: nowrap;
+    word-break: normal;
+}
+
 body.season-page .population-card td{
-  white-space: nowrap;
-  word-break: normal;
+    white-space: normal;
+    word-break: normal;
 }
 
 body.season-page .population-card th{
