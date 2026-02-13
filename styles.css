@@ -27,6 +27,10 @@ img { max-width: 100%; height: auto; display: block; }
 
   /* Accent */
   --accent-red: #b10d0d;
+
+  /* Page widths */
+  --reading-standard: 1180px;
+  --reading-season: 980px;
 }
 
 /* ---------- Page Base ---------- */
@@ -56,11 +60,30 @@ main{
   padding: 44px 24px 92px;
 }
 
+/* Standard pages vs season pages */
+body:not(.season-page) main{
+  width: 100%;
+  max-width: var(--reading-standard);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+body.season-page main{
+  width: 100%;
+  max-width: var(--reading-season);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 /* Copy blocks read “wide”, but keep line length premium */
 p{
   margin: 0 0 18px 0;
   color: var(--ink-2);
-  max-width: 78ch; /* was 72ch */
+  max-width: 78ch;
   font-size: 16px;
   line-height: 1.75;
 }
@@ -261,6 +284,14 @@ h2, h3{
   padding: 18px;
 }
 
+/* Prevent inner sections drifting left (standard pages) */
+body:not(.season-page) .home-intro,
+body:not(.season-page) .contact-form,
+body:not(.season-page) .research-grid{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* =========================================================
    SEASON INDEX (GRID)
    ========================================================= */
@@ -344,7 +375,7 @@ h2, h3{
 .season-index a.season-card:link,
 .season-index a.season-card:visited{ color: inherit; }
 
-/* ---------- Special season cards (8687 + 8485) ---------- */
+/* Special season cards via CSS variables */
 .season-card-8687{ --season-card-bg: url("assets/1986-87-bg.jpg"); --season-card-detail: url("assets/1986-87-detail.jpg"); }
 .season-card-8485{ --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
 
@@ -378,6 +409,7 @@ h2, h3{
   transition: opacity 0.25s ease;
   pointer-events: none;
 }
+
 .season-card-8687:hover::before,
 .season-card-8485:hover::before{ opacity: 0.08; }
 
@@ -455,7 +487,6 @@ h2, h3{
   font-size: 12px;
   letter-spacing: 0.06em;
 }
-
 /* =========================================================
    SEASON DETAIL TEMPLATE (ALL SEASONS)
    ========================================================= */
@@ -474,28 +505,24 @@ h2, h3{
 /* ----- WOW HEADER CARD (universal) ----- */
 .season-header{ margin-bottom: 60px; }
 
-.season-card--detail{
-  border: 1px solid rgba(0,0,0,0.10);
-  background:
-    radial-gradient(circle at top right, rgba(0,0,0,0.03), transparent 60%),
-    linear-gradient(180deg, rgba(255,255,255,0.98), rgba(248,248,248,0.96));
-  border-radius: 18px;
-  padding: 46px;
-  box-shadow: 0 18px 44px rgba(0,0,0,0.06);
-  position: relative;
+/* background framing around the WOW header card */
+.season-header{
+  background: rgba(255,255,255,0.60);
+  border-radius: 22px;
+  padding: 18px;
 }
 
-/* Thin accent line inside the WOW header card */
-.season-card--detail::before{
-  content: "";
-  position: absolute;
-  left: 18px;
-  top: 18px;
-  bottom: 18px;
-  width: 2px;
-  background: rgba(177,13,13,0.55);
-  border-radius: 2px;
-  pointer-events: none;
+.season-card--detail{
+  position: relative;
+  border-radius: 22px;
+  padding: 64px;
+  background: rgba(255,255,255,0.96);
+
+  /* Thin red frame */
+  border: 1.5px solid rgba(157,15,15,0.55);
+
+  box-shadow:
+    0 18px 44px rgba(0,0,0,0.08);
 }
 
 .season-header-top{
@@ -505,64 +532,12 @@ h2, h3{
   gap: 30px;
 }
 
-/* Header enhancement */
-.season-card--detail h1{
-  font-size: 46px;
-  line-height: 1.03;
-  letter-spacing: -0.01em;
-  margin-bottom: 18px;
-}
-
-.population-total{
-  margin-top: 14px;
-  font-size: 20px;
-  line-height: 1.5;
-}
-.population-total strong{
-  font-size: 34px;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-.breakdown{
-  display: inline-flex;
-  gap: 10px;
-  align-items: baseline;
-  margin-top: 8px;
-  color: rgba(20,20,20,0.62);
-  font-size: 14px;
-}
-.breakdown strong{ color: rgba(20,20,20,0.92); font-weight: 700; }
-.breakdown .sep{ opacity: 0.45; padding: 0 2px; }
-
-.audit-badge{
-  font-size: 11px;
-  letter-spacing: 0.22em;
-  padding: 10px 14px;
-  border: 1px solid rgba(47,111,79,0.55);
-  color: rgba(47,111,79,0.95);
-  background: rgba(47,111,79,0.08);
-  text-transform: uppercase;
-  white-space: nowrap;
-  border-radius: 999px;
-  font-family: var(--sans);
-  font-weight: 800;
-  box-shadow: 0 10px 22px rgba(0,0,0,0.06);
-  transform: translateY(4px);
-}
-
-.season-summary{
-  margin-top: 18px;
-  max-width: 74ch;
-  line-height: 1.65;
-}
-
-/* ----- Red underline under season title (works on mobile) ----- */
+/* Title underline */
 .season-header h1{
   position: relative;
   padding-bottom: 18px;
 }
-.season-header h1::after{
+.season-header h1:not(.season-year-hero){
   content: "";
   position: absolute;
   left: 0;
@@ -572,28 +547,97 @@ h2, h3{
   background: var(--accent-red);
   border-radius: 2px;
 }
+.season-year-hero{
+  font-family: var(--serif);
+  font-size: 72px;
+  line-height: 0.92;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  margin-bottom: 18px;
+color: #000;
+}
+
+.season-year-hero{
+  position: relative;
+  display: inline-block;
+  padding-bottom: 14px;
+}
+
+.season-year-hero::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: calc(100% + 16px);
+  height: 3px;
+  background: var(--accent-red);
+}
+
+/* Typography tuning (approved) */
+.season-header h1{
+  font-size: 38px;
+  line-height: 1.08;
+  letter-spacing: 0.005em;
+  font-weight: 520;
+  margin-bottom: 10px;
+}
+
+/* Population total line */
+.population-total{
+  margin-top: 4px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.population-total{
+    color: rgba(0,0,0,0.75);
+}
+
+.population-total strong{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: -0.03em;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Breakdown line */
+.breakdown{
+  font-size: 14px;
+  color: rgba(20,20,20,0.65);
+}
+.breakdown strong{ color: rgba(20,20,20,0.92); font-weight: 700; }
+.breakdown .sep{ opacity: 0.45; padding: 0 2px; }
+
+/* Audit badge (neutral) */
+.audit-badge{
+    font-family: var(--sans);
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    padding: 8px 18px;
+
+    background: rgba(29, 95, 60, 0.08);
+    color: #1d5f3c;
+    border: 1.5px solid rgba(29, 95, 60, 0.55);
+
+    border-radius: 999px;
+}
+
+/* Summary */
+.season-summary{
+  margin-top: 18px;
+  max-width: 74ch;
+  line-height: 1.65;
+}
 
 /* ----- Population (inner card) ----- */
 .population-card{
-  margin-top: 34px;
-  padding: 30px;
-  background: rgba(255,255,255,0.94);
-  border: 1px solid rgba(0,0,0,0.10);
-  border-radius: 16px;
-  position: relative;
-}
-
-/* Population card red accent line (fixed + complete) */
-.population-card::before{
-  content: "";
-  position: absolute;
-  left: 18px;
-  top: 18px;
-  bottom: 18px;
-  width: 2px;
-  background: rgba(177,13,13,0.45);
-  border-radius: 2px;
-  pointer-events: none;
+    background: #f9f9f7;              /* slightly warmer than header */
+    border: 1px solid rgba(0,0,0,0.12);
+    border-radius: 16px;
+    padding: 32px;
 }
 
 .population-card h3{
@@ -613,91 +657,60 @@ h2, h3{
 }
 
 .population-card th{
-  font-size: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.22em;
-  color: rgba(20,20,20,0.50);
-  padding: 12px 0 10px;
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
   font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.55);
 }
-
-/* Header alignment */
-.population-card th:nth-child(1){ text-align: left; }
-.population-card th:nth-child(2),
-.population-card th:nth-child(3){ text-align: center; }
-.population-card th:nth-child(4){ text-align: left; } /* Audit label left */
 
 .population-card td{
-  padding: 16px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  font-size: 15px;
-  color: rgba(20,20,20,0.88);
+  padding: 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-family: var(--serif);
+  font-size: 16px;
+  color: rgba(20,20,20,0.92);
 }
-.population-card tr:last-child td{ border-bottom: none; }
 
-/* Vertical dividers */
-.population-card th:nth-child(2),
+.population-card td:first-child{ font-weight: 500; }
+
 .population-card td:nth-child(2),
-.population-card th:nth-child(3),
 .population-card td:nth-child(3),
-.population-card th:nth-child(4),
 .population-card td:nth-child(4){
-  border-left: 1px solid rgba(0,0,0,0.06);
-}
-
-/* Padding per column (keeps Audit from drifting) */
-.population-card th:nth-child(2),
-.population-card td:nth-child(2),
-.population-card th:nth-child(3),
-.population-card td:nth-child(3){
-  padding-left: 18px;
-}
-
-.population-card th:nth-child(4){ padding-left: 12px; }
-.population-card td:nth-child(4){ padding-left: 0; padding-right: 6px; }
-
-/* Column alignment */
-.population-card td:nth-child(1){ text-align: left; }
-
-.population-card td:nth-child(2),
-.population-card td:nth-child(3){
   text-align: center;
   font-weight: 600;
-  font-size: 17px;
 }
 
-.population-card td:nth-child(4){
-  text-align: right;
-  white-space: nowrap;
-}
-
-.pop-footnote{
-  margin-top: 14px;
-  max-width: 80ch;
-}
-
-/* Row hover polish */
 .season-header .population-card tbody tr{ transition: background 0.2s ease; }
 .season-header .population-card tbody tr:hover{ background: rgba(0,0,0,0.02); }
-.season-header .population-card td:first-child{ font-weight: 600; }
 
-/* Refined link styling inside Public Sale Details */
-.evidence-content ul li a{
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.25);
-  padding-bottom: 1px;
-  transition: border-color 0.2s ease, color 0.2s ease;
+/* Footnote inside population card */
+.summary-footnote{
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.06);
 }
-.evidence-content ul li a:hover{
-  border-bottom-color: var(--accent-red);
-  color: rgba(177,13,13,0.85);
+
+.summary-footnote p{
+  margin-bottom: 12px;
+  max-width: 78ch;
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(20,20,20,0.70);
 }
+.summary-footnote p.muted{
+  color: rgba(20,20,20,0.55);
+}
+
+/* Link styling */
+.archive-link { text-decoration: underline; }
+.archive-link:hover { text-decoration: none; }
 
 /* ----- Evidence blocks (Home/Away) ----- */
 .evidence-block{ margin-top: 34px; }
 
-/* Red accent bar beside Home / Away headers */
 .evidence-block h2{
   position: relative;
   padding-left: 14px;
@@ -776,6 +789,22 @@ h2, h3{
   color: rgba(20,20,20,0.82);
 }
 
+/* Refined link styling inside Public Sale Details */
+.evidence-content ul li a{
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  padding-bottom: 1px;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.evidence-content ul li a:hover{
+  border-bottom-color: var(--accent-red);
+  color: rgba(177,13,13,0.85);
+}
+
+/* Methodology section spacing */
+.season-policy { margin-top: 36px; }
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
@@ -821,105 +850,10 @@ h2, h3{
   .season-header-top{ flex-direction: column; gap: 16px; }
   .audit-badge{ align-self: flex-start; }
 
-  /* Population table: mobile tuning (single source of truth) */
-  .population-card{ padding: 20px; }
-  .population-card::before{
-    left: 14px;
-    top: 14px;
-    bottom: 14px;
-  }
+  /* Population table: mobile tuning (season pages only) */
+  body.season-page .population-card{ padding: 20px; }
+ 
 
-  .population-card th{
-    font-size: 9px;
-    letter-spacing: 0.18em;
-    padding-bottom: 14px;
-  }
-
-  /* tighter padding for col 2 + 3 only */
-  .population-card th:nth-child(2),
-  .population-card td:nth-child(2),
-  .population-card th:nth-child(3),
-  .population-card td:nth-child(3){
-    padding-left: 10px;
-  }
-
-  /* Audit column: label left, value right (no left padding push) */
-  .population-card th:nth-child(4){ padding-left: 8px; text-align: left; }
-  .population-card td:nth-child(4){
-    padding-left: 0;
-    padding-right: 6px;
-    text-align: right;
-  }
-
-  /* slightly lighter dividers on mobile */
-  .population-card th:nth-child(2),
-  .population-card td:nth-child(2),
-  .population-card th:nth-child(3),
-  .population-card td:nth-child(3),
-  .population-card th:nth-child(4),
-  .population-card td:nth-child(4){
-    border-left-color: rgba(0,0,0,0.04);
-  }
-
-  .hero{ height: 320px; }
-  .hero img{ object-position: center 65%; }
-  .hero-bleed img{ height: 320px; object-position: center 65%; }
-  .hero-carousel{ height: 320px; }
-  .hero-track img{ object-position: center 65%; }
-}
-/* ===== Subtle framing polish ===== */
-
-.season-card--detail{
-  border-color: rgba(0,0,0,0.14);
-  box-shadow: 0 18px 44px rgba(0,0,0,0.08);
-}
-
-.season-header{
-  background: rgba(255,255,255,0.60);
-  border-radius: 22px;
-  padding: 18px;
-}
-/* =========================================================
-   FOUNDATION OVERRIDES (single source of truth)
-   - Standard pages: wider
-   - Season detail pages: tighter
-   - Mobile: safe population table fix
-   ========================================================= */
-
-:root{
-  --reading-standard: 1180px;
-  --reading-season: 980px;
-}
-
-/* 1) Main container widths */
-body:not(.season-page) main{
-  width: 100%;
-  max-width: var(--reading-standard);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-body.season-page main{
-  width: 100%;
-  max-width: var(--reading-season);
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
-}
-
-/* 2) Don’t let inner sections drift left */
-body:not(.season-page) .home-intro,
-body:not(.season-page) .contact-form,
-body:not(.season-page) .research-grid{
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* 3) Mobile: prevent Population header overlap (season pages only) */
-@media (max-width: 700px){
   body.season-page .population-card table{
     table-layout: auto;
     width: 100%;
@@ -936,36 +870,25 @@ body:not(.season-page) .research-grid{
     letter-spacing: 0.12em;
   }
 
+  /* Keep audit column readable */
   body.season-page .population-card td:nth-child(4){
-    text-align: right;
     white-space: nowrap;
   }
-}.summary-footnote{
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(0,0,0,0.06);
+
+  /* Hero mobile heights */
+  .hero{ height: 320px; }
+  .hero img{ object-position: center 65%; }
+  .hero-bleed img{ height: 320px; object-position: center 65%; }
+  .hero-carousel{ height: 320px; }
+  .hero-track img{ object-position: center 65%; }
+}
+.provenance-list{
+  margin: 8px 0 0 18px;
+  padding: 0;
+  list-style: disc;
 }
 
-.summary-footnote p{
-  margin-bottom: 12px;
-  max-width: 78ch;
-}.summary-footnote{
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(0,0,0,0.06);
-}
-
-.summary-footnote p{
-  margin-bottom: 12px;
-  max-width: 78ch;
-}
-.archive-link {
-  text-decoration: underline;
-}
-
-.archive-link:hover {
-  text-decoration: none;
-}
-.season-policy {
-  margin-top: 36px;
+.provenance-list li{
+  margin-bottom: 6px;
+  line-height: 1.6;
 }
