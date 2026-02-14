@@ -896,6 +896,13 @@ color: #000;
   .hero-track img{ object-position: center 65%; }
 
 }
+
+.audit-ok{
+  color: #2f7a4f;
+  font-weight: 600;
+  font-size: 18px;
+
+}
 /* FORCE population table to never overflow */
 body.season-page .population-card {
   overflow-x: hidden;
