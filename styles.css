@@ -822,7 +822,7 @@ color: #000;
 
 /* =========================================================
    RESPONSIVE
-   ========================================================== */
+   ========================================================= */
 
 @media (max-width: 900px){
   .season-index{ grid-template-columns: repeat(2, 1fr); }
@@ -858,9 +858,7 @@ color: #000;
     align-items: flex-start;
   }
 
-  body.nav-open .site-nav{
-    display: flex;
-  }
+  body.nav-open .site-nav{ display: flex; }
 
   .season-index{ grid-template-columns: 1fr; }
 
@@ -868,8 +866,7 @@ color: #000;
   .season-header-top{ flex-direction: column; gap: 16px; }
   .audit-badge{ align-self: flex-start; }
 
-  /* ===== Mobile fix: Population table ===== */
-
+  /* Population table mobile behavior */
   body.season-page .population-card{
     padding: 18px;
     overflow-x: auto;
@@ -893,7 +890,6 @@ color: #000;
   }
 
   /* Hero mobile heights */
-
   .hero{ height: 320px; }
   .hero img{ object-position: center 65%; }
   .hero-bleed img{ height: 320px; object-position: center 65%; }
