@@ -829,7 +829,7 @@ body.season-page .population-card table{
 }
 
 body.season-page .population-card th{
-    white-space: nowrap;
+    white-space: normal;
     word-break: normal;
 }
 
