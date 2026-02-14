@@ -614,6 +614,10 @@ color: #000;
 .population-number strong{
   color: var(--accent-red);
 }
+/* Keep Home/Away numbers black */
+.population-breakdown strong{
+  color: var(--ink) !important;
+}
 
 .population-breakdown{
   display: grid;
