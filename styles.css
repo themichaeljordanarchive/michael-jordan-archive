@@ -508,10 +508,16 @@ body:not(.season-page) .research-grid{
 .season-header{ margin-bottom: 60px; }
 
 /* background framing around the WOW header card */
-.season-header{
-  background: rgba(255,255,255,0.60);
-  border-radius: 22px;
-  padding: 18px;
+
+/* Touchup 1 + 2: tighter header rhythm + stronger population line */
+.season-header h1{
+  margin-bottom: 6px;
+}
+
+.population-total{
+  margin-top: 4px;
+  color: var(--ink);
+  font-weight: 500;
 }
 
 .season-card--detail{
