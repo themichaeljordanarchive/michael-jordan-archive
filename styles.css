@@ -896,3 +896,19 @@ color: #000;
   .hero-track img{ object-position: center 65%; }
 
 }
+/* FORCE population table to never overflow */
+body.season-page .population-card {
+  overflow-x: hidden;
+}
+
+body.season-page .population-card table {
+  width: 100% !important;
+  min-width: 0 !important;
+  table-layout: fixed;
+}
+
+body.season-page .population-card th,
+body.season-page .population-card td {
+  white-space: normal !important;
+  word-break: break-word;
+}
