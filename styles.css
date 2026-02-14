@@ -874,9 +874,8 @@ color: #000;
   }
 
   body.season-page .population-card table{
-    min-width: 520px;
     width: 100%;
-    table-layout: auto;
+    table-layout: fixed;
   }
 
   body.season-page .population-card th{
