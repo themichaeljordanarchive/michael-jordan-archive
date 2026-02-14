@@ -878,27 +878,15 @@ color: #000;
 
   body.season-page .population-card table{
     width: 100%;
-    table-layout: fixed;
+    table-layout: auto;
   }
 
-  /* Column widths so headers don't split */
-  body.season-page .population-card th:nth-child(1),
-  body.season-page .population-card td:nth-child(1){ width: 46%; }
-
-  body.season-page .population-card th:nth-child(2),
-  body.season-page .population-card td:nth-child(2){ width: 18%; }
-
-  body.season-page .population-card th:nth-child(3),
-  body.season-page .population-card td:nth-child(3){ width: 18%; }
-
-  body.season-page .population-card th:nth-child(4),
-  body.season-page .population-card td:nth-child(4){ width: 18%; }
 
   /* Headers: stay on one line */
   body.season-page .population-card th{
-  white-space: normal;   /* allow wrapping */
-  font-size: 10px;       /* slightly larger */
-  letter-spacing: 0.05em;
+  white-space: nowrap;   /* allow wrapping */
+  font-size: 9px;       /* slightly larger */
+  letter-spacing: 0.06em;
   text-align: left;
 }
 
