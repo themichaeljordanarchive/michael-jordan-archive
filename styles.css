@@ -609,6 +609,9 @@ color: #000;
   letter-spacing: -0.03em;
   display: inline-block;
   margin-left: 10px;
+}
+
+.population-number strong{
   color: var(--accent-red);
 }
 
