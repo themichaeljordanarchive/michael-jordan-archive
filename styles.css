@@ -921,3 +921,8 @@ color: #000;
   font-weight: 600;
   font-size: 18px;
 }
+.audit-progress {
+  color: #b08a2e;   /* warm gold */
+  font-weight: 600;
+  font-size: 18px;
+}
