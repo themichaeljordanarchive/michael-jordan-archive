@@ -667,7 +667,7 @@ color: #000;
 .population-card table{
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 .population-card th{
