@@ -611,12 +611,14 @@ color: #000;
   margin-left: 10px;
 }
 
+/* Only make the main total number red */
 .population-number strong{
   color: var(--accent-red);
 }
-/* Keep Home/Away numbers black */
+
+/* Force breakdown numbers to stay normal */
 .population-breakdown strong{
-  color: var(--ink) !important;
+  color: var(--ink);
 }
 
 .population-breakdown{
