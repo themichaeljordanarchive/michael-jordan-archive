@@ -820,49 +820,24 @@ color: #000;
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
 
-/* ===== Mobile fix: Population table ===== */
-body.season-page .population-card{
-  padding: 18px;
-}
-
-body.season-page .population-card table{
-  table-layout: auto;
-  width: 100%;
-}
-
-body.season-page .population-card th{
-    white-space: normal;
-    word-break: normal;
-}
-
-body.season-page .population-card td{
-    white-space: normal;
-    word-break: normal;
-}
-
-body.season-page .population-card th{
-  font-size: 10px;
-  letter-spacing: 0.10em;
-}
-
-body.season-page .population-card td:first-child{
-  white-space: normal;
-}
-  }
-
-
+  /* Header becomes row + dropdown */
   .site-header{
     align-items: center;
     flex-wrap: wrap;
     padding-right: 72px;
+    position: relative;
+  }
 
+  /* show hamburger */
   .nav-toggle{
     display: block;
     position: absolute;
     right: 18px;
     top: 16px;
+    z-index: 9999;
   }
 
+  /* dropdown nav */
   .site-nav{
     display: none;
     flex-direction: column;
@@ -882,26 +857,43 @@ body.season-page .population-card td:first-child{
   .season-header-top{ flex-direction: column; gap: 16px; }
   .audit-badge{ align-self: flex-start; }
 
-  /* Population table: mobile tuning (season pages only) */
-  body.season-page .population-card{ padding: 20px; }
- 
-
-  body.season-page .population-card table{
-    table-layout: auto;
-    width: 100%;
+  /* =====================================
+     Mobile: Population table (bulletproof)
+     - prevents vertical header stacking
+     - prevents overflow past card
+     - allows horizontal scroll inside card
+     ===================================== */
+  body.season-page .population-card{
+    padding: 18px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
-  body.season-page .population-card th,
-  body.season-page .population-card td{
-    white-space: normal;
+  body.season-page .population-card table{
+    width: 100%;
+    min-width: 520px;   /* key: stops Safari from crushing headers */
+    table-layout: fixed;
   }
 
   body.season-page .population-card th{
+    white-space: nowrap;
+    word-break: normal;
+    hyphens: none;
     font-size: 9px;
     letter-spacing: 0.12em;
   }
 
-  /* Keep audit column readable */
+  body.season-page .population-card td{
+    white-space: nowrap;
+    word-break: normal;
+  }
+
+  /* allow Style column to wrap if needed */
+  body.season-page .population-card td:first-child{
+    white-space: normal;
+  }
+
+  /* keep Audit readable */
   body.season-page .population-card td:nth-child(4){
     white-space: nowrap;
   }
@@ -913,6 +905,8 @@ body.season-page .population-card td:first-child{
   .hero-carousel{ height: 320px; }
   .hero-track img{ object-position: center 65%; }
 }
+
+/* Provenance list (not part of responsive block) */
 .provenance-list{
   margin: 8px 0 0 18px;
   padding: 0;
