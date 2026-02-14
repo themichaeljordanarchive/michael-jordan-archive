@@ -659,6 +659,13 @@ color: #000;
   max-width: 74ch;
   line-height: 1.65;
 }
+.last-updated{
+  display: block;
+  margin-top: 4px;
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
 
 /* ----- Population (inner card) ----- */
 .population-card{
