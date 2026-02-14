@@ -880,13 +880,16 @@ color: #000;
 
   body.season-page .population-card th{
     white-space: nowrap;
-    font-size: 10px;
-    letter-spacing: 0.10em;
+    font-size: 9px;
+    letter-spacing: 0.08em;
   }
 
   body.season-page .population-card td{
     white-space: normal;
   }
+body.season-page .population-card td:first-child{
+  white-space: nowrap;
+}
 
   /* Hero mobile heights */
   .hero{ height: 320px; }
