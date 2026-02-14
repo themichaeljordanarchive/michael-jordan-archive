@@ -383,6 +383,7 @@ body:not(.season-page) .research-grid{
 .season-card-8485{ --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
 
 .season-card-8687,
+.season-card-8586,
 .season-card-8485{
   background-image:
     linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
