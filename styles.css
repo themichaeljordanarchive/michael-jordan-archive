@@ -896,14 +896,11 @@ color: #000;
 
   /* Headers: stay on one line */
   body.season-page .population-card th{
-    white-space: nowrap;
-    word-break: normal;
-    overflow-wrap: normal;
-    hyphens: none;
-    font-size: 9px;
-    letter-spacing: 0.06em;
-    text-align: left;
-  }
+  white-space: normal;   /* allow wrapping */
+  font-size: 10px;       /* slightly larger */
+  letter-spacing: 0.05em;
+  text-align: left;
+}
 
   /* Cells */
   body.season-page .population-card td{
