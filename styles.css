@@ -378,11 +378,22 @@ body:not(.season-page) .research-grid{
 .season-index a.season-card:visited{ color: inherit; }
 
 /* Special season cards via CSS variables */
-.season-card-8889{ --season-card-bg: url("assets/1988-89-bg.jpg"); --season-card-detail: url("assets/1988-89-detail.jpg"); }
-.season-card-8687{ --season-card-bg: url("assets/1986-87-bg.jpg"); --season-card-detail: url("assets/1986-87-detail.jpg"); }
-.season-card-8586{ --season-card-bg: url("assets/1985-86-bg.jpg"); --season-card-detail: url("assets/1985-86-detail.jpg"); }
-.season-card-8485{ --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
-
+.season-card-8889{
+  --season-card-bg: url("assets/1988-89-bg.jpg");
+  --season-card-detail: url("assets/1988-89-bg.jpg"); /* use bg for now */
+}
+.season-card-8687{
+  --season-card-bg: url("assets/1986-87-bg.jpg");
+  --season-card-detail: url("assets/1986-87-detail.jpg");
+}
+.season-card-8586{
+  --season-card-bg: url("assets/1985-86-bg.jpg");
+  --season-card-detail: url("assets/1985-86-detail.jpg");
+}
+.season-card-8485{
+  --season-card-bg: url("assets/1984-85-bg.jpg");
+  --season-card-detail: url("assets/1984-85-detail.jpg");
+}
 .season-card-8889,
 .season-card-8687,
 .season-card-8586,
