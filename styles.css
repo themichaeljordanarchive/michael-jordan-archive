@@ -570,7 +570,7 @@ color: #000;
 .season-year-hero{
   position: relative;
   display: inline-block;
-  padding-bottom: 14px;
+  padding-bottom: 8px;
 }
 
 .season-year-hero::after{
