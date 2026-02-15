@@ -938,6 +938,9 @@ color: #000;
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
 
+.season-card{
+  border: 1.5px solid rgba(0,0,0,0.18);
+}
   .site-header{
     position: relative;
     align-items: center;
