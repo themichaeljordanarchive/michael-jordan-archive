@@ -920,6 +920,30 @@ color: #000;
   color: rgba(177,13,13,0.85);
 }
 
+/* =========================
+   Jersey Entries (multi)
+   ========================= */
+
+.jersey-entry{
+  margin-top: 18px;
+}
+
+.jersey-entry-title{
+  margin: 0 0 12px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 750;
+  color: rgba(20,20,20,0.70);
+}
+
+.entry-divider{
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  margin: 26px 0;
+}
+
 /* Methodology section spacing */
 .season-policy { margin-top: 36px; }
 
