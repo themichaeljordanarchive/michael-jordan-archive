@@ -334,19 +334,26 @@ body:not(.season-page) .research-grid{
 }
 
 .season-status{
-  margin-top: 10px;
-  font-family: var(--sans);
-  font-size: 11px;
+  position: relative;
   letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: #8a8a8a;
 }
 
-.season-card.in-progress .season-status{ color: #9a9a9a; }
-.season-card:not(.in-progress) .season-status{
-  color: #141414;
+.season-status::before,
+.season-status::after{
+  content: "•";
+  margin: 0 8px;
+  font-size: 10px;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+.season-status.complete{
+  color: #111;
   font-weight: 600;
-  letter-spacing: 0.24em;
+}
+
+.season-status.in-progress{
+  color: rgba(0,0,0,0.55);
 }
 
 .season-metrics{
