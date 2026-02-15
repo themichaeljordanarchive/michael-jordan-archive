@@ -353,6 +353,11 @@ body:not(.season-page) .research-grid{
   color: #111;
   font-weight: 600;
 }
+.season-status{
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 12px; 
+}
 
 .season-status.complete::before,
 .season-status.complete::after{
