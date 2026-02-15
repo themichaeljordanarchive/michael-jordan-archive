@@ -931,12 +931,18 @@ color: #000;
 @media (max-width: 900px){
   .season-index{ grid-template-columns: repeat(2, 1fr); }
   .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
+.season-card{
+  border: 1.5px solid rgba(157,15,15,0.55) !important;
 }
+
 
 @media (max-width: 700px){
 
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
+.season-card{
+  border: 1.5px solid rgba(157,15,15,0.55) !important;
+}
 
 .season-card{
   border: 1.5px solid rgba(0,0,0,0.18);
