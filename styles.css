@@ -920,6 +920,11 @@ color: #000;
     z-index: 9999;
   }
 
+.season-status{
+  font-size: 10px;
+  letter-spacing: 0.14em;
+}
+
   .site-nav{
     display: none;
     flex-direction: column;
