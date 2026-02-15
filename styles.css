@@ -398,7 +398,7 @@ body:not(.season-page) .research-grid{
 .season-index a.season-card:visited{ color: inherit; }
 
 /* Special season cards via CSS variables */
-.season-card-8889{
+.season-card-9293{
   --season-card-bg: url("assets/1992-93-bg.jpg");
   --season-card-detail: url("assets/1992-93-bg.jpg"); /* use bg for now */
 }
