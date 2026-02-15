@@ -931,22 +931,23 @@ color: #000;
 @media (max-width: 900px){
   .season-index{ grid-template-columns: repeat(2, 1fr); }
   .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
-.season-card{
-  border: 1.5px solid rgba(157,15,15,0.55) !important;
-}
 
+  /* Mobile/tablet: visible red outline around index cards */
+  .season-index a.season-card{
+    border: 1.5px solid rgba(157,15,15,0.55);
+  }
+}
 
 @media (max-width: 700px){
 
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
-.season-card{
-  border: 1.5px solid rgba(157,15,15,0.55) !important;
-}
 
-.season-card{
-  border: 1.5px solid rgba(0,0,0,0.18);
-}
+  /* Stronger outline on small phones */
+  .season-index a.season-card{
+    border: 1.5px solid rgba(157,15,15,0.55);
+  }
+
   .site-header{
     position: relative;
     align-items: center;
@@ -962,10 +963,10 @@ color: #000;
     z-index: 9999;
   }
 
-.season-status{
-  font-size: 10px;
-  letter-spacing: 0.14em;
-}
+  .season-status{
+    font-size: 10px;
+    letter-spacing: 0.14em;
+  }
 
   .site-nav{
     display: none;
@@ -991,7 +992,7 @@ color: #000;
      ========================================================= */
   body.season-page .population-card{
     padding: 18px;
-    overflow-x: hidden; /* prevents sideways page drift */
+    overflow-x: hidden;
   }
 
   body.season-page .population-card table{
@@ -999,26 +1000,21 @@ color: #000;
     table-layout: auto;
   }
 
-
-  /* Headers: stay on one line */
   body.season-page .population-card th{
-  white-space: nowrap;   /* allow wrapping */
-  font-size: 9px;       /* slightly larger */
-  letter-spacing: 0.06em;
-  text-align: left;
-}
-
-  /* Cells */
-  body.season-page .population-card td{
-    white-space: nowrap; /* keeps numbers + checkmarks tidy */
+    white-space: nowrap;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    text-align: left;
   }
 
-  /* Style column should never split Home into Hom/e */
+  body.season-page .population-card td{
+    white-space: nowrap;
+  }
+
   body.season-page .population-card td:first-child{
     white-space: nowrap;
   }
 
-  /* Center the numeric columns + audit */
   body.season-page .population-card td:nth-child(2),
   body.season-page .population-card td:nth-child(3),
   body.season-page .population-card td:nth-child(4){
@@ -1033,24 +1029,28 @@ color: #000;
   .hero-track img{ object-position: center 65%; }
 }
 
+/* =========================================================
+   Global helpers (not responsive)
+   ========================================================= */
+
 /* Audit symbols */
 .audit-ok{
   color: #2f7a4f;
   font-weight: 600;
   font-size: 18px;
 }
-.audit-progress {
-  color: #b08a2e;   /* warm gold */
+.audit-progress{
+  color: #b08a2e;
   font-weight: 600;
   font-size: 18px;
 }
+
 /* Season meta: slightly smaller + softer (override muted) */
 .season-summary.muted{
   font-size: 14px;
   line-height: 1.5;
   color: rgba(0,0,0,0.65);
 }
-
 .season-summary.muted .last-updated{
   display: block;
   margin-top: 4px;
