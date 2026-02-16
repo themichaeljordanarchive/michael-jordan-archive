@@ -1199,10 +1199,10 @@ body.season-page .population-card tbody td:first-child{
 
   .metric-row{
     display: grid;
-    grid-template-columns: 1fr 60px;
-    column-gap: 16px;
-    Align-items: baseline;
-    padding: 4px 0;
+    grid-template-columns: auto auto;
+    column-gap: 12px;
+    Align-items: start;
+    padding: 2px 0;
   }
 
   .metric-label{
