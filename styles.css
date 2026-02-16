@@ -1066,6 +1066,21 @@ body.season-page .population-card th{
 body.season-page .population-card td{
   font-size: 15px;
 }
+/* Population Summary alignment */
+
+body.season-page .population-card th:first-child,
+body.season-page .population-card td:first-child{
+  text-align: left;
+}
+
+body.season-page .population-card th:nth-child(2),
+body.season-page .population-card th:nth-child(3),
+body.season-page .population-card th:nth-child(4),
+body.season-page .population-card td:nth-child(2),
+body.season-page .population-card td:nth-child(3),
+body.season-page .population-card td:nth-child(4){
+  text-align: center;
+}
 
 /* =========================================================
    RESPONSIVE
