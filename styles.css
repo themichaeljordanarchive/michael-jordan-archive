@@ -1100,7 +1100,7 @@ body.season-page .population-card tbody td:first-child{
   grid-template-columns: 100px 1fr;
   gap: 16px;
   align-items: center;
-  border: 1px solid var(--rule);
+  border: 1px solid rgba(0,0,0,0.08);
   border-radius: 12px;
   padding: 14px 16px;
   margin: 14px 0 24px;
@@ -1112,7 +1112,7 @@ body.season-page .population-card tbody td:first-child{
   height: 60px;
   overflow: hidden;
   border-radius: 6px;
-  background: #f5f5f5;
+  background: #fafafa;
 }
 
 .style-summary-thumb img{
