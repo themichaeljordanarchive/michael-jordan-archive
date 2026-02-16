@@ -1042,6 +1042,47 @@ color: #000;
     border: 1.5px solid rgba(157,15,15,0.55);
   }
 
+/* ==============================
+   MOBILE TYPOGRAPHY SCALING
+   ============================== */
+
+/* Main season year */
+.season-year-hero{
+  font-size: 48px;
+  line-height: 0.95;
+}
+
+/* Left column metric labels */
+.metric-label{
+  font-size: 12px;
+  line-height: 1.25;
+}
+
+/* Metric values (2, 4 etc) */
+.metric-value{
+  font-size: 16px;
+}
+
+/* Main total (red 4) */
+.metric-value.main-total{
+  font-size: 22px;
+}
+
+/* Games reviewed block */
+.season-summary{
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Population summary table */
+.population-card th{
+  font-size: 9px;
+}
+
+.population-card td{
+  font-size: 14px;
+}
+
 /* --- Mobile: keep season year on one line --- */
 .season-year-hero{
   white-space: nowrap;
