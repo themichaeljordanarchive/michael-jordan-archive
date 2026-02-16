@@ -378,9 +378,9 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 
 .metric-row{
   display: grid;
-  grid-template-columns: 1fr 80px;
+  grid-template-columns: auto minmax(40px,auto);
   align-items: baseline;
-  column-gap: 20px;
+  column-gap: 16px;
 }
 
 .metric-label{
