@@ -674,6 +674,16 @@ color: #000;
   font-size: 18px;
 }
 
+/* Keep breakdown line left-aligned (not centered) */
+.population-breakdown{
+  grid-column: 1 / -1;         /* span full width of the grid */
+  justify-self: start;          /* align the whole line to the left */
+  display: flex;
+  justify-content: flex-start;  /* items start on the left */
+  gap: 28px;
+  margin-top: 6px;
+}
+
 .population-total strong{
   font-size: 34px;
   font-weight: 600;
