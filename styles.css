@@ -1027,8 +1027,12 @@ color: #000;
 
   /* season header: stack right column under left */
   .season-header-top{
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 24px;
+  }
+
+  .season-status-stack{
+    width: 100%;
   }
 }
 
@@ -1037,84 +1041,12 @@ color: #000;
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
 
-  /* Stronger outline on small phones */
+  /* keep index card outline visible */
   .season-index a.season-card{
     border: 1.5px solid rgba(157,15,15,0.55);
   }
 
-.season-header-top{
-  flex-direction: column;
-  gap: 20px;
-}
-
-.season-status-stack{
-  width: 100%;
-}
-
-.season-summary{
-  margin-top: 6px;
-}
-
-/* ==============================
-   MOBILE TYPOGRAPHY SCALING
-   ============================== */
-
-/* Main season year */
-.season-year-hero{
-  font-size: 48px;
-  line-height: 0.95;
-}
-
-/* Left column metric labels */
-.metric-label{
-  font-size: 12px;
-  line-height: 1.25;
-}
-
-/* Metric values (2, 4 etc) */
-.metric-value{
-  font-size: 16px;
-}
-
-/* Main total (red 4) */
-.metric-value.main-total{
-  font-size: 22px;
-}
-
-/* Games reviewed block */
-.season-summary{
-  font-size: 13px;
-  line-height: 1.4;
-}
-
-/* Population summary table */
-.population-card th{
-  font-size: 9px;
-}
-
-.population-card td{
-  font-size: 14px;
-}
-
-/* --- Mobile: keep season year on one line --- */
-.season-year-hero{
-  white-space: nowrap;
-  font-size: 56px;
-  line-height: 0.95;
-}
-
-/* --- Mobile: tighten the left metrics so labels don't explode into 3 lines --- */
-.metric-row{
-  grid-template-columns: 1fr auto; /* label uses space, number stays tight */
-  column-gap: 12px;
-}
-
-.metric-label{
-  font-size: 12px;
-  line-height: 1.25;
-}
-
-  /* Mobile header/nav */
+  /* header/nav */
   .site-header{
     align-items: center;
     flex-wrap: wrap;
@@ -1140,26 +1072,65 @@ color: #000;
     border-top: 1px solid var(--rule);
     align-items: flex-start;
   }
-
   body.nav-open .site-nav{ display: flex; }
 
+  /* season index grid */
   .season-index{ grid-template-columns: 1fr; }
 
+  /* WOW card spacing */
   .season-card--detail{ padding: 24px 20px; }
 
-  /* year scale on mobile */
-  .season-year-hero{
-    font-size: 48px;
-    line-height: 0.95;
+  .season-header-top{
+    flex-direction: column;
+    gap: 18px;
   }
 
-  /* =========================================================
-     Mobile: Population table (no scroll, no broken words)
-     ========================================================= */
-  body.season-page .population-card{
-    padding: 22px;
-    overflow-x: hidden;
+  .season-status-stack{
+    width: 100%;
   }
+
+  /* ==============================
+     MOBILE TYPOGRAPHY (single source)
+     ============================== */
+
+  .season-year-hero{
+    white-space: nowrap;
+    font-size: 56px;
+    line-height: 0.95;
+    margin-bottom: 12px;
+  }
+
+  .season-metrics{ gap: 12px; }
+
+  .metric-row{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    column-gap: 12px;
+    row-gap: 2px;
+  }
+
+  .metric-label{
+    font-size: 12px;
+    line-height: 1.25;
+  }
+
+  .metric-value{
+    font-size: 16px;
+    text-align: right;
+  }
+
+  .metric-value.main-total{
+    font-size: 22px;
+  }
+
+  .season-summary{
+    margin-top: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+  }
+
+  /* Population summary table */
+  body.season-page .population-card{ padding: 22px; overflow-x: hidden; }
 
   body.season-page .population-card table{
     width: 100%;
@@ -1175,6 +1146,7 @@ color: #000;
 
   body.season-page .population-card td{
     white-space: nowrap;
+    font-size: 14px;
   }
 
   body.season-page .population-card td:nth-child(2),
@@ -1183,7 +1155,7 @@ color: #000;
     text-align: center;
   }
 
-  /* Hero mobile heights */
+  /* Hero */
   .hero{ height: 320px; }
   .hero img{ object-position: center 65%; }
   .hero-bleed img{ height: 320px; object-position: center 65%; }
@@ -1195,13 +1167,11 @@ color: #000;
    Global helpers (not responsive)
    ========================================================= */
 
-/* Audit symbols */
 .audit-ok{
   color: #2f7a4f;
   font-weight: 600;
   font-size: 18px;
 }
-
 .audit-progress{
   color: #b08a2e;
   font-weight: 600;
