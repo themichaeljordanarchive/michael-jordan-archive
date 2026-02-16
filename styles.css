@@ -1091,41 +1091,30 @@ body.season-page .population-card tbody td:first-child{
 
 }
 
-/* =========================================
-   Style Summary Card (with small thumbnail)
-   ========================================= */
-
+/* Style Summary (compact meta strip) */
 .style-summary-card{
-  display: grid;
-  grid-template-columns: 100px 1fr;
-  gap: 16px;
-  align-items: center;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 12px;
-  padding: 14px 16px;
+  border-bottom: 1px solid var(--rule); /* keep subtle bottom line only */
+  padding: 14px 0;
   margin: 14px 0 24px;
-  background: #fff;
+  background: transparent;
 }
 
-.style-summary-thumb{
-  width: 90px;
-  height: 60px;
-  overflow: hidden;
-  border-radius: 6px;
-  background: #fafafa;
+.style-summary-content{
+  padding: 0;
 }
 
-.style-summary-thumb img{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* auto-crops */
-  object-position: center 35%; /* tweak if needed */
-}
-
+/* make note tighter */
 .style-summary-note{
-  margin-top: 8px;
+  margin: 10px 0 0;
   font-size: 13px;
+  line-height: 1.4;
 }
+
+/* optional: reduce density of evidence-meta inside summary */
+.style-summary-card .evidence-meta{
+  gap: 10px;
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
