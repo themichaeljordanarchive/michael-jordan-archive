@@ -1,38 +1,37 @@
-/* LIVE-CSS-FINGERPRINT: 8888 */
+/* LIVE-CSS-FINGERPRINT: 8889 */
 
 /* =========================================================
-   Michael Jordan Archive — CLEAN STYLESHEET (WHITE CATALOG)
-   Single-source-of-truth. Template-ready.
+   The Michael Jordan Archive — WHITE CATALOG SYSTEM
+   Single source of truth. Clean hierarchy. No duplicates.
    ========================================================= */
 
 /* ---------- Base Reset ---------- */
-* { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; }
-img { max-width: 100%; height: auto; display: block; }
+*{ box-sizing: border-box; }
+html, body{ margin: 0; padding: 0; }
+img{ max-width: 100%; height: auto; display: block; }
 
-/* ---------- Theme Tokens ---------- */
+/* ---------- Tokens ---------- */
 :root{
   --bg: #f7f7f5;
   --paper: #ffffff;
+
   --ink: #141414;
   --ink-2: #2b2b2b;
-  --muted: #6b6b6b;
+  --muted: rgba(20,20,20,0.55);
+
   --rule: rgba(0,0,0,0.10);
-  --rule-2: rgba(0,0,0,0.14);
+  --rule-soft: rgba(0,0,0,0.06);
+
+  --accent-red: #b10d0d;
 
   --sans: ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
   --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
 
-  /* Wider layout */
   --reading: 1280px;
-  --radius: 14px;
-
-  /* Accent */
-  --accent-red: #b10d0d;
-
-  /* Page widths */
   --reading-standard: 1180px;
   --reading-season: 980px;
+
+  --radius: 14px;
 }
 
 /* ---------- Page Base ---------- */
@@ -54,34 +53,25 @@ a:hover{ text-decoration: none; }
 
 /* ---------- Layout ---------- */
 main{
-  display: block;
   width: 100%;
   max-width: var(--reading);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding: 44px 24px 92px;
 }
 
-/* Standard pages vs season pages */
 body:not(.season-page) main{
-  width: 100%;
   max-width: var(--reading-standard);
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
 }
 
 body.season-page main{
-  width: 100%;
   max-width: var(--reading-season);
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
 }
 
-/* Copy blocks read “wide”, but keep line length premium */
+/* ---------- Copy ---------- */
 p{
   margin: 0 0 18px 0;
   color: var(--ink-2);
@@ -99,7 +89,7 @@ li{ margin: 6px 0; }
 .muted{
   font-size: 13px;
   line-height: 1.6;
-  color: rgba(20,20,20,0.55);
+  color: var(--muted);
 }
 
 /* ---------- Typography ---------- */
@@ -113,6 +103,7 @@ h1{
   max-width: 28ch;
 }
 
+/* Global section labels (catalog style) */
 h2, h3{
   margin: 44px 0 12px;
   font-family: var(--sans);
@@ -124,7 +115,7 @@ h2, h3{
 }
 
 /* =========================================================
-   HEADER + NAV (DESKTOP)
+   HEADER + NAV (ONE SYSTEM)
    ========================================================= */
 
 .site-header{
@@ -136,6 +127,7 @@ h2, h3{
   align-items: center;
   justify-content: space-between;
   position: relative;
+  z-index: 2000; /* keeps mobile dropdown above page content */
 }
 
 .brand{
@@ -144,7 +136,6 @@ h2, h3{
   gap: 18px;
   margin: 0;
 }
-
 .brand img{ width: 56px; height: auto; }
 
 .brand-name{
@@ -153,10 +144,10 @@ h2, h3{
   letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 700;
-  color: #111111;
+  color: #111;
 }
 
-/* Nav (Desktop) */
+/* Desktop nav base */
 .site-nav{
   display: flex;
   gap: 22px;
@@ -180,7 +171,7 @@ h2, h3{
 }
 .site-nav a:hover{ color: rgba(20,20,20,0.90); }
 
-/* Hamburger (hidden on desktop) */
+/* Hamburger button (only visible in mobile override) */
 .nav-toggle{
   display: none;
   width: 44px;
@@ -286,7 +277,6 @@ h2, h3{
   padding: 18px;
 }
 
-/* Prevent inner sections drifting left (standard pages) */
 body:not(.season-page) .home-intro,
 body:not(.season-page) .contact-form,
 body:not(.season-page) .research-grid{
@@ -295,7 +285,7 @@ body:not(.season-page) .research-grid{
 }
 
 /* =========================================================
-   SEASON INDEX (GRID)
+   SEASON INDEX (GRID) — LOCKED
    ========================================================= */
 
 .season-index{
@@ -316,7 +306,7 @@ body:not(.season-page) .research-grid{
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
-box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 }
 
 .season-card:hover{
@@ -331,53 +321,30 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--ink);
-  margin-bottom: 6px;
+  margin-bottom: 8px;
 }
 
+/* Status: NO pseudo bullets globally. Clean text only. */
 .season-status{
-  position: relative;
-  letter-spacing: 0.22em;
-}
-
-.season-status::before,
-.season-status::after{
-  content: "•";
-  margin: 0 6px;
-  font-size: 8px;
-  vertical-align: middle;
-  position: relative;
-  top: -1px;
-  opacity: 0.6;
-}
-
-.season-status.complete{
-  color: #111;
-  font-weight: 600;
-}
-.season-status{
+  font-family: var(--sans);
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  font-size: 12px; 
-}
-
-.season-status.complete::before,
-.season-status.complete::after{
-  color: var(--accent-red);
-  opacity: 0.8;
-}
-
-.season-status.in-progress{
+  font-size: 12px;
   color: rgba(0,0,0,0.55);
 }
-/* Metrics block — tightened + strengthened */
 
-.season-metrics{
-  margin-top: 0px;
+/* Optional emphasis states */
+.season-status.complete{ color: #111; font-weight: 650; }
+.season-status.in-progress{ color: rgba(0,0,0,0.55); }
+
+/* Index-card metrics — stable even if HTML is simple */
+.season-card .season-metrics{
+  margin-top: 10px;
   display: grid;
   gap: 8px;
 }
 
-.metric-row{
+.season-card .metric-row{
   display: grid;
   grid-template-columns: auto min-content;
   column-gap: 14px;
@@ -385,7 +352,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   padding: 4px 0;
 }
 
-.metric-label{
+.season-card .metric-label{
   font-family: var(--sans);
   font-size: 15px;
   font-weight: 650;
@@ -393,7 +360,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   color: var(--ink-2);
 }
 
-.metric-value{
+.season-card .metric-value{
   text-align: right;
   font-family: var(--serif);
   font-size: 22px;
@@ -402,11 +369,12 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   font-variant-numeric: tabular-nums;
 }
 
-.metric-value.main-total{
+.season-card .metric-value.main-total{
   color: var(--accent-red);
   font-size: 28px;
   font-weight: 850;
 }
+
 .season-index a.season-card:link,
 .season-index a.season-card:visited{ color: inherit; }
 
@@ -414,65 +382,34 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
    Special season cards via CSS variables
    ========================================================= */
 
-/* --- Image variables per season --- */
-
-.season-card-9697 {
-  --season-card-bg: url("assets/1996-97-bg.jpg");
-  --season-card-detail: url("assets/1996-97-bg.jpg");
-}
-
-.season-card-9293 {
-  --season-card-bg: url("assets/1992-93-bg.jpg");
-  --season-card-detail: url("assets/1992-93-bg.jpg");
-}
-
-.season-card-8889 {
-  --season-card-bg: url("assets/1988-89-bg.jpg");
-  --season-card-detail: url("assets/1988-89-bg.jpg");
-}
-
-.season-card-8687 {
-  --season-card-bg: url("assets/1986-87-bg.jpg");
-  --season-card-detail: url("assets/1986-87-detail.jpg");
-}
-
-.season-card-8586 {
-  --season-card-bg: url("assets/1985-86-bg.jpg");
-  --season-card-detail: url("assets/1985-86-detail.jpg");
-}
-
-.season-card-8485 {
-  --season-card-bg: url("assets/1984-85-bg.jpg");
-  --season-card-detail: url("assets/1984-85-detail.jpg");
-}
-
-/* --- Shared card styling --- */
+.season-card-9697 { --season-card-bg: url("assets/1996-97-bg.jpg"); --season-card-detail: url("assets/1996-97-bg.jpg"); }
+.season-card-9293 { --season-card-bg: url("assets/1992-93-bg.jpg"); --season-card-detail: url("assets/1992-93-bg.jpg"); }
+.season-card-8889 { --season-card-bg: url("assets/1988-89-bg.jpg"); --season-card-detail: url("assets/1988-89-bg.jpg"); }
+.season-card-8687 { --season-card-bg: url("assets/1986-87-bg.jpg"); --season-card-detail: url("assets/1986-87-detail.jpg"); }
+.season-card-8586 { --season-card-bg: url("assets/1985-86-bg.jpg"); --season-card-detail: url("assets/1985-86-detail.jpg"); }
+.season-card-8485 { --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
 
 .season-card-9697,
 .season-card-9293,
 .season-card-8889,
 .season-card-8687,
 .season-card-8586,
-.season-card-8485 {
+.season-card-8485{
   background-image:
     linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
     var(--season-card-bg);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   transition: background-image 0.25s ease, transform 0.2s ease;
 }
 
-
-/* --- Hover state --- */
-
 .season-card-9697:hover,
 .season-card-9293:hover,
 .season-card-8889:hover,
 .season-card-8687:hover,
 .season-card-8586:hover,
-.season-card-8485:hover {
+.season-card-8485:hover{
   background-image:
     linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
     var(--season-card-bg);
@@ -498,7 +435,6 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 .season-card-8687:hover::before,
 .season-card-8485:hover::before{ opacity: 0.08; }
 
-/* Mobile/touch: no hover, so bake in the vibe */
 @media (hover: none) and (pointer: coarse){
   .season-card-8687,
   .season-card-8485{
@@ -562,7 +498,6 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 }
 .btn:hover{ background: #000; }
 
-/* Footer */
 .site-footer{
   padding: 22px 24px 34px;
   border-top: 1px solid var(--rule);
@@ -571,448 +506,4 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   font-family: var(--sans);
   font-size: 12px;
   letter-spacing: 0.06em;
-}
-/* =========================================================
-   SEASON DETAIL TEMPLATE (ALL SEASONS) — CLEAN + LOCKED
-   ========================================================= */
-
-/* Back link */
-.back-link{
-  margin: 0 0 18px 0;
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(20,20,20,0.55);
-}
-.back-link a:hover{ color: rgba(20,20,20,0.90); }
-
-/* ----- WOW HEADER CARD (universal) ----- */
-.season-header{ margin-bottom: 60px; }
-
-/* tighter header rhythm */
-.season-header h1{ margin-bottom: 6px; }
-
-/* WOW card container */
-.season-card--detail{
-  position: relative;
-  border-radius: 22px;
-  padding: 64px;
-  background: rgba(255,255,255,0.96);
-  border: 1.5px solid rgba(157,15,15,0.55);
-  box-shadow: 0 18px 44px rgba(0,0,0,0.08);
-}
-
-/* Header columns */
-.season-header-top{
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: start;
-  gap: 48px;
-}
-
-/* Season year hero (handles underline itself) */
-.season-year-hero{
-  font-family: var(--serif);
-  font-size: 72px;
-  line-height: 0.92;
-  letter-spacing: -0.03em;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #000;
-  position: relative;
-  display: inline-block;
-  padding-bottom: 8px;
-}
-.season-year-hero::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 3px;
-  background: var(--accent-red);
-  border-radius: 2px;
-}
-
-/* Population total block (single definition) */
-.population-total{
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 16px;
-  row-gap: 6px;
-  margin-top: 8px;
-  align-items: baseline;
-  font-size: 18px;
-  color: var(--ink);
-  font-weight: 500;
-}
-
-/* main number */
-.population-total strong{
-  font-size: 34px;
-  font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.03em;
-  display: inline-block;
-  margin-left: 10px;
-}
-
-/* Only make the main total number red */
-.population-number strong{ color: var(--accent-red); }
-
-/* Breakdown */
-.population-breakdown{
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  column-gap: 18px;
-  row-gap: 6px;
-  margin-top: 8px;
-  font-size: 16px;
-  justify-content: start;
-}
-.population-breakdown strong{
-  color: var(--ink);
-  font-size: 24px;
-  font-weight: 700;
-}
-
-/* Audit badge */
-.audit-badge{
-  font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.28em;
-  text-transform: uppercase;
-  padding: 8px 18px;
-  background: rgba(29, 95, 60, 0.08);
-  color: #1d5f3c;
-  border: 1.5px solid rgba(29, 95, 60, 0.55);
-  border-radius: 999px;
-}
-
-/* Right column summary */
-.season-status-stack{
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-.season-status-stack .audit-badge{ align-self: flex-start; }
-
-.season-summary{
-  font-size: 15px;
-  line-height: 1.55;
-  color: #333;
-  margin-bottom: 24px;
-}
-.season-summary:first-line{ font-weight: 800; }
-.season-summary strong{ font-weight: 800; }
-
-.last-updated{
-  display: block;
-  margin-top: 6px;
-  font-size: 12px;
-  color: rgba(0,0,0,0.55);
-}
-/* Keep "Last Updated: <date>" on one line */
-.last-updated{
-  white-space: nowrap;
-}
-
-/* ----- Population (inner card) ----- */
-.population-card{
-  background: #f9f9f7;
-  border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 16px;
-  padding: 32px;
-}
-
-.population-card h3{
-  font-size: 12px;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  margin: 0 0 18px;
-  color: rgba(20,20,20,0.55);
-  font-family: var(--sans);
-  font-weight: 750;
-}
-
-.population-card table{
-  width: 100%;
-  border-collapse: collapse;
-  table-layout: auto;
-}
-
-.population-card th{
-  padding: 12px 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-  font-family: var(--sans);
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(20,20,20,0.55);
-  text-align: left;
-  white-space: nowrap;
-}
-
-.population-card td{
-  padding: 16px;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  font-family: var(--serif);
-  font-size: 16px;
-  color: rgba(20,20,20,0.92);
-}
-.population-card td:first-child{ font-weight: 500; }
-
-.population-card td:nth-child(2),
-.population-card td:nth-child(3),
-.population-card td:nth-child(4){
-  text-align: center;
-  font-weight: 600;
-}
-
-/* Prevent “double line” at bottom */
-body.season-page .population-card tbody tr:last-child td{
-  border-bottom: none;
-}
-
-/* Footnote inside population card (ONE line only) */
-.summary-footnote{
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(0,0,0,0.06);
-}
-.summary-footnote p{
-  margin-bottom: 12px;
-  max-width: 78ch;
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(20,20,20,0.70);
-}
-.summary-footnote p.muted{ color: rgba(20,20,20,0.55); }
-
-/* Link styling */
-.archive-link { text-decoration: underline; }
-.archive-link:hover { text-decoration: none; }
-
-/* =========================================================
-   SECTION DIVIDER (centered between major blocks)
-   ========================================================= */
-.section-divider{
-  width: 100%;
-  height: 1px;
-  background: rgba(0,0,0,0.10);
-  margin: 48px auto;
-}
-
-/* =========================================================
-   HOME / AWAY BLOCKS (garment records)
-   ========================================================= */
-
-/* Section headings: centered, no pseudo-elements */
-.season-block > h2{
-  text-align: center;
-  margin: 32px 0 20px;
-}
-
-/* Style Summary (minimal strip) */
-.style-summary-card{
-  padding: 10px 0 18px;
-  margin: 0 0 20px;
-  background: transparent;
-  border: none;
-}
-.style-summary-content{ padding: 0; }
-.style-summary-card .evidence-meta{ gap: 10px; }
-
-/* Evidence blocks */
-.evidence-block{ margin-top: 34px; }
-
-.evidence-grid{
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 44px;
-  align-items: start;
-  margin-top: 18px;
-}
-
-.evidence-image img{
-  width: 100%;
-  border-radius: var(--radius);
-  border: 1px solid rgba(0,0,0,0.08);
-  background: #fff;
-}
-.evidence-caption{ margin-top: 10px; }
-
-.evidence-content{
-  background: rgba(255,255,255,0.96);
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  padding: 22px;
-}
-
-.evidence-meta{
-  display: grid;
-  gap: 10px;
-  margin-bottom: 14px;
-}
-.evidence-meta > div{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 12px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid rgba(0,0,0,0.06);
-}
-
-.meta-label{
-  font-family: var(--sans);
-  font-size: 10px;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(0,0,0,0.50);
-}
-.meta-value{
-  font-family: var(--serif);
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(20,20,20,0.92);
-}
-
-.evidence-callout{
-  margin: 16px 0;
-  background: rgba(0,0,0,0.03);
-  border-left: 3px solid rgba(0,0,0,0.22);
-  padding: 12px 14px;
-  border-radius: 10px;
-  font-size: 14px;
-  color: rgba(20,20,20,0.82);
-}
-
-/* Garment titles (H3 inside evidence-subblock) */
-.evidence-subblock > h3{
-  margin: 22px 0 12px;
-  font-size: 16px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  font-weight: 750;
-  font-family: var(--sans);
-}
-
-/* Refined link styling inside Public Sale Details */
-.evidence-content ul li a{
-  color: var(--ink);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.25);
-  padding-bottom: 1px;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-.evidence-content ul li a:hover{
-  border-bottom-color: var(--accent-red);
-  color: rgba(177,13,13,0.85);
-}
-
-/* =========================================================
-   RESPONSIVE
-   One coherent set of breakpoints.
-   ========================================================= */
-
-/* Tablet + down */
-@media (max-width: 900px){
-  .season-index{ grid-template-columns: repeat(2, 1fr); }
-  .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
-  .season-index a.season-card{ border: 1.5px solid rgba(157,15,15,0.55); }
-  .season-header-top{ gap: 32px; }
-}
-
-/* Phone */
-@media (max-width: 700px){
-  main{ padding: 28px 18px 70px; }
-  h1{ font-size: 32px; line-height: 1.08; }
-
-  /* WOW card */
-  .season-card--detail{
-    padding: 22px 18px;
-    border-width: 1px;
-    border-color: rgba(157, 15, 15, 0.15);
-  }
-
-  /* ---------- MOBILE NAV (single override) ---------- */
-  .nav-toggle{
-    display: block;
-    position: absolute;
-    right: 18px;
-    top: 16px;
-    z-index: 9999;
-  }
-
-  .site-nav{
-    display: none;
-
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-
-    background: var(--bg);
-    padding: 20px 24px;
-    border-top: 1px solid var(--rule);
-
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-
-    z-index: 999;
-  }
-
-  body.nav-open .site-nav{
-    display: flex;
-  }
-
-  /* Keep LEFT/RIGHT on mobile */
-  .season-header-top{
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: 18px;
-    align-items: start;
-  }
-
-  .season-year-hero{
-    font-size: 56px;
-    line-height: 0.95;
-    margin-bottom: 10px;
-  }
-
-  /* Metrics spacing */
-  .season-metrics{ gap: 8px; }
-  .metric-row{
-    grid-template-columns: 1fr auto;
-    column-gap: 14px;
-    align-items: center;
-    padding: 2px 0;
-  }
-
-  /* Population card density */
-  body.season-page .population-card{ padding: 16px; }
-  body.season-page .population-card th,
-  body.season-page .population-card td{ padding: 8px 10px; }
-  body.season-page .population-card td{ font-size: 13px; white-space: normal; }
-}
-
-/* Tiny phones: stack header if needed */
-@media (max-width: 380px){
-  .season-header-top{ grid-template-columns: 1fr; gap: 14px; }
-}
-
-/* =========================================================
-   Global helpers
-   ========================================================= */
-.audit-ok{
-  color: #2f7a4f;
-  font-weight: 600;
-  font-size: 18px;
-}
-.audit-progress{
-  color: #b08a2e;
-  font-weight: 600;
-  font-size: 18px;
 }
