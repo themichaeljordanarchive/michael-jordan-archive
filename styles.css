@@ -1042,6 +1042,19 @@ color: #000;
     border: 1.5px solid rgba(157,15,15,0.55);
   }
 
+.season-header-top{
+  flex-direction: column;
+  gap: 20px;
+}
+
+.season-status-stack{
+  width: 100%;
+}
+
+.season-summary{
+  margin-top: 6px;
+}
+
 /* ==============================
    MOBILE TYPOGRAPHY SCALING
    ============================== */
@@ -1132,7 +1145,7 @@ color: #000;
 
   .season-index{ grid-template-columns: 1fr; }
 
-  .season-card--detail{ padding: 28px; }
+  .season-card--detail{ padding: 24px 20px; }
 
   /* year scale on mobile */
   .season-year-hero{
