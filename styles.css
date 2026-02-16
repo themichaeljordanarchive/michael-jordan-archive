@@ -947,6 +947,31 @@ color: #000;
 /* Methodology section spacing */
 .season-policy { margin-top: 36px; }
 
+/* ===============================
+   HOME / AWAY SECTION HEADERS
+   =============================== */
+
+.season-block h2{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 20px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+
+  margin: 48px 0 20px;
+}
+
+/* Red accent bar */
+.season-block h2::before{
+  content: "";
+  width: 4px;
+  height: 18px;
+  background: var(--accent-red);
+  display: inline-block;
+}
 
 /* =========================================================
    RESPONSIVE
