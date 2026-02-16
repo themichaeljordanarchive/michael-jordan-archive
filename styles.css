@@ -1081,6 +1081,14 @@ body.season-page .population-card td:nth-child(3),
 body.season-page .population-card td:nth-child(4){
   text-align: center;
 }
+/* tighten first column header alignment */
+body.season-page .population-card thead th:first-child{
+  padding-left: 0;
+}
+
+body.season-page .population-card tbody td:first-child{
+  padding-left: 0;
+}
 
 /* =========================================================
    RESPONSIVE
