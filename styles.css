@@ -1093,10 +1093,10 @@ body.season-page .population-card tbody td:first-child{
 
 /* Style Summary (compact meta strip) */
 .style-summary-card{
-  border-bottom: 1px solid var(--rule); /* keep subtle bottom line only */
   padding: 14px 0;
   margin: 14px 0 24px;
   background: transparent;
+  Border: none;
 }
 
 .style-summary-content{
@@ -1129,21 +1129,7 @@ body.season-page .population-card tbody tr:last-child td{
 }
 .season-block > h2{
   text-align: center;
-}/* Centered section headings */
-.season-block > h2{
-  text-align: center;
-  position: relative;
-  padding-bottom: 8px;
-}
-
-/* Default accent (neutral) */
-.season-block > h2::after{
-  content: "";
-  display: block;
-  width: 40px;
-  height: 2px;
-  margin: 8px auto 0;
-  background: rgba(0,0,0,0.25);
+  margin: 32px 0 20px;
 }
 
 /* =========================================================
