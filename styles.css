@@ -1028,6 +1028,14 @@ body.season-page .population-card tbody tr:last-child td{
     touch-action: manipulation;
   }
 
+ .site-nav{
+    display: none;
+  }
+
+  body.nav-open .site-nav{
+    display: flex;
+    flex-direction: column;
+  }
   /* Make sure the button receives the tap, not its child spans */
   .nav-toggle span{
     pointer-events: none;
