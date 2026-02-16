@@ -1169,7 +1169,6 @@ body.season-page .population-card tbody td:first-child{
   }
 
   .season-status-stack{
-    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
