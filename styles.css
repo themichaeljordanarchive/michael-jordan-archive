@@ -660,7 +660,7 @@ color: #000;
   position: absolute;
   left: 0;
   bottom: 0;
-  width: calc(100% + 16px);
+  width: 100%;   /* match text exactly */
   height: 3px;
   background: var(--accent-red);
 }
@@ -1030,6 +1030,11 @@ color: #000;
   font-size: 15px;
   line-height: 1.55;
   color: #333;
+  margin-bottom: 24px;
+}
+
+.season-summary:first-line{
+  font-weight: 800;
 }
 
 .season-summary strong{ font-weight: 800; }
