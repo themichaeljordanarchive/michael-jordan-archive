@@ -714,6 +714,10 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   font-size: 12px;
   color: rgba(0,0,0,0.55);
 }
+/* Keep "Last Updated: <date>" on one line */
+.last-updated{
+  white-space: nowrap;
+}
 
 /* ----- Population (inner card) ----- */
 .population-card{
