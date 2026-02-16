@@ -369,39 +369,43 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 .season-status.in-progress{
   color: rgba(0,0,0,0.55);
 }
+/* Metrics block — tightened + strengthened */
 
 .season-metrics{
-  margin-top: 14px;
+  margin-top: 12px;
   display: grid;
-  gap: 14px;
+  gap: 8px;
 }
 
 .metric-row{
   display: grid;
-  grid-template-columns: auto minmax(40px,auto);
-  align-items: baseline;
+  grid-template-columns: 1fr auto;
   column-gap: 16px;
+  align-items: baseline;
+  padding: 4px 0;
 }
 
 .metric-label{
   font-family: var(--sans);
-  font-size: 14px;
-  letter-spacing: 0.04em;
+  font-size: 15px;
+  font-weight: 650;
+  letter-spacing: 0.01em;
   color: var(--ink-2);
 }
 
 .metric-value{
   text-align: right;
   font-family: var(--serif);
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 22px;
+  font-weight: 750;
   color: var(--ink);
+  font-variant-numeric: tabular-nums;
 }
 
 .metric-value.main-total{
   color: var(--accent-red);
-  font-size: 26px;
-  font-weight: 700;
+  font-size: 28px;
+  font-weight: 850;
 }
 .season-index a.season-card:link,
 .season-index a.season-card:visited{ color: inherit; }
@@ -1010,6 +1014,52 @@ color: #000;
   height: 18px;
   background: var(--accent-red);
   display: inline-block;
+}
+/* Audit / status column hierarchy (BASE) */
+.season-status-stack{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.season-status-stack .audit-badge{
+  align-self: flex-start;
+}
+
+.season-summary{
+  font-size: 15px;
+  line-height: 1.55;
+  color: #333;
+}
+
+.season-summary strong{ font-weight: 800; }
+
+.season-summary small{
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: #777;
+}
+/* Population Summary – tighter desktop density */
+
+body.season-page .population-card{
+  padding: 20px; /* slightly reduced */
+}
+
+body.season-page .population-card th,
+body.season-page .population-card td{
+  padding: 10px 14px;  /* thinner rows */
+  vertical-align: middle;
+}
+
+body.season-page .population-card th{
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+body.season-page .population-card td{
+  font-size: 15px;
 }
 
 /* =========================================================
