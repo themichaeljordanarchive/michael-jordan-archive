@@ -1197,7 +1197,7 @@ body.season-page .population-card tbody td:first-child{
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 14px;
-    align-items: start;
+    align-items: center;
     padding: 2px 0;
   }
 
