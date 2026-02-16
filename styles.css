@@ -1010,3 +1010,31 @@ body.season-page .population-card tbody tr:last-child td{
   }
 
 }
+/* =========================================================
+   FIX: iOS hamburger not clickable (tap capture / z-index)
+   ========================================================= */
+
+@media (max-width: 700px){
+  .site-header{
+    position: relative;
+    z-index: 9999;
+  }
+
+  .nav-toggle{
+    position: relative;
+    z-index: 10000;
+    pointer-events: auto;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+
+  /* Make sure the button receives the tap, not its child spans */
+  .nav-toggle span{
+    pointer-events: none;
+  }
+
+  /* If any nav/menu overlay is floating, keep it below the button */
+  .site-nav{
+    z-index: 9998;
+  }
+}
