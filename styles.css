@@ -635,14 +635,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   border-radius: 2px;
 }
 
-/* Population total block */
-.population-total{
-  margin-top: 6px;
-  color: var(--ink);
-  font-weight: 500;
-}
-
-/* population-total layout */
+/* Population total block (single definition) */
 .population-total{
   display: grid;
   grid-template-columns: 1fr auto;
@@ -651,6 +644,8 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   margin-top: 8px;
   align-items: baseline;
   font-size: 18px;
+  color: var(--ink);
+  font-weight: 500;
 }
 
 /* main number */
@@ -666,7 +661,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 /* Only make the main total number red */
 .population-number strong{ color: var(--accent-red); }
 
-/* Breakdown (single definition: grid) */
+/* Breakdown */
 .population-breakdown{
   grid-column: 1 / -1;
   display: grid;
@@ -696,7 +691,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   border-radius: 999px;
 }
 
-/* Right column summary (single source) */
+/* Right column summary */
 .season-status-stack{
   display: flex;
   flex-direction: column;
@@ -810,13 +805,13 @@ body.season-page .population-card tbody tr:last-child td{
    HOME / AWAY BLOCKS (garment records)
    ========================================================= */
 
-/* Section headings: centered, no pseudo-elements, no random dashes */
+/* Section headings: centered, no pseudo-elements */
 .season-block > h2{
   text-align: center;
   margin: 32px 0 20px;
 }
 
-/* Style Summary (minimal strip — no borders, no “Style Summary” label needed) */
+/* Style Summary (minimal strip) */
 .style-summary-card{
   padding: 10px 0 18px;
   margin: 0 0 20px;
@@ -915,6 +910,7 @@ body.season-page .population-card tbody tr:last-child td{
 
 /* =========================================================
    RESPONSIVE
+   One coherent set of breakpoints.
    ========================================================= */
 
 /* Tablet + down */
@@ -937,42 +933,40 @@ body.season-page .population-card tbody tr:last-child td{
     border-color: rgba(157, 15, 15, 0.15);
   }
 
-/* ---------- MOBILE NAV ---------- */
+  /* ---------- MOBILE NAV (single override) ---------- */
+  .nav-toggle{
+    display: block;
+    position: absolute;
+    right: 18px;
+    top: 16px;
+    z-index: 9999;
+  }
 
-.nav-toggle{
-  display: block;
-  position: absolute;
-  right: 18px;
-  top: 16px;
-  z-index: 9999;
-}
+  .site-nav{
+    display: none;
 
-site-nav{
-  display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
 
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
+    background: var(--bg);
+    padding: 20px 24px;
+    border-top: 1px solid var(--rule);
 
-  background: var(--bg);
-  padding: 20px 24px;
-  border-top: 1px solid var(--rule);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
 
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
+    z-index: 999;
+  }
 
-  z-index: 999;
-}
-
-body.nav-open .site-nav{
-  display: flex;
-}
+  body.nav-open .site-nav{
+    display: flex;
+  }
 
   /* Keep LEFT/RIGHT on mobile */
   .season-header-top{
-    display: grid;
     grid-template-columns: 1.3fr 0.7fr;
     gap: 18px;
     align-items: start;
@@ -987,7 +981,6 @@ body.nav-open .site-nav{
   /* Metrics spacing */
   .season-metrics{ gap: 8px; }
   .metric-row{
-    display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 14px;
     align-items: center;
