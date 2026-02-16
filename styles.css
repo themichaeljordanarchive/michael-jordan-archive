@@ -1025,7 +1025,7 @@ color: #000;
     border: 1.5px solid rgba(157,15,15,0.55);
   }
 
-  /* season header: stack right column under left */
+  /* season header: STACK on tablet + mobile */
   .season-header-top{
     flex-direction: column;
     gap: 24px;
@@ -1033,11 +1033,21 @@ color: #000;
 
   .season-status-stack{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .season-status-stack .audit-badge{
+    align-self: flex-start;
+  }
+
+  .season-summary{
+    margin-top: 0;
   }
 }
 
 @media (max-width: 700px){
-
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
 
@@ -1045,19 +1055,7 @@ color: #000;
   .season-index a.season-card{
     border: 1.5px solid rgba(157,15,15,0.55);
   }
-.season-status-stack{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
 
-.season-status-stack .audit-badge{
-  align-self: flex-start;
-}
-
-.season-summary{
-  margin-top: 0;
-}
   /* header/nav */
   .site-header{
     align-items: center;
@@ -1092,6 +1090,7 @@ color: #000;
   /* WOW card spacing */
   .season-card--detail{ padding: 24px 20px; }
 
+  /* stack header sections on phone */
   .season-header-top{
     flex-direction: column;
     gap: 18px;
@@ -1099,6 +1098,13 @@ color: #000;
 
   .season-status-stack{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .season-status-stack .audit-badge{
+    align-self: flex-start;
   }
 
   /* ==============================
@@ -1136,13 +1142,16 @@ color: #000;
   }
 
   .season-summary{
-    margin-top: 6px;
+    margin-top: 0;
     font-size: 13px;
     line-height: 1.4;
   }
 
   /* Population summary table */
-  body.season-page .population-card{ padding: 22px; overflow-x: hidden; }
+  body.season-page .population-card{
+    padding: 22px;
+    overflow-x: hidden;
+  }
 
   body.season-page .population-card table{
     width: 100%;
