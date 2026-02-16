@@ -1115,6 +1115,15 @@ body.season-page .population-card tbody td:first-child{
   gap: 10px;
 }
 
+/* Garment titles inside Home/Away sections */
+.evidence-subblock > h3{
+  margin: 22px 0 12px;
+  font-size: 16px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 750;
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
