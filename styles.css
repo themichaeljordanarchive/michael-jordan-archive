@@ -969,11 +969,17 @@ body.season-page .population-card tbody tr:last-child td{
   body.season-page .population-card td{ font-size: 13px; white-space: normal; }
 }
 
-/* Tiny phones: stack header if needed */
+/* Tiny phones: still keep LEFT/RIGHT (do not stack) */
 @media (max-width: 380px){
-  .season-header-top{ grid-template-columns: 1fr; gap: 14px; }
+  .season-header-top{
+    grid-template-columns: 2fr 1fr;
+    gap: 14px;
+  }
+  .season-year-hero{
+    white-space: nowrap;
+    font-size: 54px;
+  }
 }
-
 /* =========================================================
    Global helpers
    ========================================================= */
