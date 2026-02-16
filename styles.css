@@ -394,6 +394,11 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   font-weight: 500;
   color: var(--ink);
 }
+/* Make Season Total number red */
+.metric-value.main-total{
+  color: var(--accent-red);
+  font-weight: 700;
+}
 
 .season-index a.season-card:link,
 .season-index a.season-card:visited{ color: inherit; }
