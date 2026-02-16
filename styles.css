@@ -1157,7 +1157,7 @@ color: #000;
      Mobile: Population table (no scroll, no broken words)
      ========================================================= */
   body.season-page .population-card{
-    padding: 18px;
+    padding: 22px;
     overflow-x: hidden;
   }
 
