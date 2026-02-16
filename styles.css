@@ -1045,7 +1045,19 @@ color: #000;
   .season-index a.season-card{
     border: 1.5px solid rgba(157,15,15,0.55);
   }
+.season-status-stack{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 
+.season-status-stack .audit-badge{
+  align-self: flex-start;
+}
+
+.season-summary{
+  margin-top: 0;
+}
   /* header/nav */
   .site-header{
     align-items: center;
