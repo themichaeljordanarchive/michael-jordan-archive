@@ -1199,11 +1199,14 @@ body.season-page .population-card tbody td:first-child{
 
   .metric-row{
     display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 12px;
+    grid-template-columns: 1fr auto;
+    column-gap: 14px;
     Align-items: start;
     padding: 2px 0;
   }
+.season-card--detail .season-metrics{
+  max-width: 360px;   /* adjust between 340–380 */
+}
 
   .metric-label{
     font-size: 13px;     /* was 12 */
