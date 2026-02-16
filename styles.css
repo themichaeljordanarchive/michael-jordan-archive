@@ -618,10 +618,10 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 }
 
 .season-header-top{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
+  display: grid;
+  Grid-template-columns: 1.25fr 0.75fr;
+  align-items: start;
+  gap: 48px;
 }
 
 /* Title underline */
@@ -1176,10 +1176,10 @@ body.season-page .population-card td{
 
   .metric-row{
     display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 12px;
-    row-gap: 2px;
-    padding: 2px 0;
+    grid-template-columns: 1fr 60px;
+    column-gap: 16px;
+    Align-items: baseline;
+    padding: 4px 0;
   }
 
   .metric-label{
