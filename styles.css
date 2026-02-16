@@ -1016,7 +1016,9 @@ color: #000;
    RESPONSIVE
    ========================================================= */
 
+/* Tablet + down */
 @media (max-width: 900px){
+
   .season-index{ grid-template-columns: repeat(2, 1fr); }
   .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
 
@@ -1028,18 +1030,18 @@ color: #000;
   /* season header: STACK on tablet + mobile */
   .season-header-top{
     flex-direction: column;
-    gap: 24px;
+    gap: 20px; /* slightly tighter than 24 */
   }
 
   .season-status-stack{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px; /* more breathing room than 10 */
   }
 
   .season-status-stack .audit-badge{
-    align-self: flex-start;
+    align-self: flex-start; /* prevents badge stretching */
   }
 
   .season-summary{
@@ -1047,14 +1049,12 @@ color: #000;
   }
 }
 
+
+/* Phone */
 @media (max-width: 700px){
+
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
-
-  /* keep index card outline visible */
-  .season-index a.season-card{
-    border: 1.5px solid rgba(157,15,15,0.55);
-  }
 
   /* header/nav */
   .site-header{
@@ -1088,92 +1088,108 @@ color: #000;
   .season-index{ grid-template-columns: 1fr; }
 
   /* WOW card spacing */
-  .season-card--detail{ padding: 24px 20px; }
+  .season-card--detail{ padding: 22px 18px; }
 
-  /* stack header sections on phone */
-  .season-header-top{
-    flex-direction: column;
-    gap: 18px;
-  }
+  /* header stack spacing refinement */
+  .season-header-top{ gap: 18px; }
 
   .season-status-stack{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 14px; /* helps “cramped” feeling */
   }
 
   .season-status-stack .audit-badge{
     align-self: flex-start;
+    margin-bottom: 2px;
   }
 
   /* ==============================
-     MOBILE TYPOGRAPHY (single source)
+     MOBILE TYPOGRAPHY + METRICS
      ============================== */
 
   .season-year-hero{
     white-space: nowrap;
     font-size: 56px;
     line-height: 0.95;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
 
-  .season-metrics{ gap: 12px; }
+  /* tighter + more powerful metrics */
+  .season-metrics{ gap: 8px; } /* was 12 */
 
   .metric-row{
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 12px;
     row-gap: 2px;
+    padding: 2px 0;
   }
 
   .metric-label{
-    font-size: 12px;
-    line-height: 1.25;
+    font-size: 13px;     /* was 12 */
+    line-height: 1.2;
+    font-weight: 650;    /* stronger */
+    color: #2f2f2f;
   }
 
   .metric-value{
-    font-size: 16px;
+    font-size: 18px;     /* was 16 */
+    font-weight: 750;    /* stronger */
     text-align: right;
+    font-variant-numeric: tabular-nums;
   }
 
   .metric-value.main-total{
-    font-size: 22px;
+    font-size: 24px;     /* was 22 */
+    font-weight: 850;
   }
 
+  /* season summary text (slightly more breathable) */
   .season-summary{
-    margin-top: 0;
+    margin-top: 4px;
     font-size: 13px;
-    line-height: 1.4;
+    line-height: 1.45;
   }
 
-  /* Population summary table */
+  /* ==============================
+     POPULATION SUMMARY TABLE (MOBILE)
+     NO SCROLL — KEEP ALL COLUMNS VISIBLE
+     Matches your “yesterday” behavior.
+     ============================== */
+
   body.season-page .population-card{
-    padding: 22px;
-    overflow-x: hidden;
+    padding: 16px; /* reduces overall height */
+    /* IMPORTANT: do NOT hide overflow and do NOT force scroll */
   }
 
-  body.season-page .population-card table{
-    width: 100%;
-    table-layout: auto;
+  /* Thin the rows without changing layout behavior */
+  body.season-page .population-card th,
+  body.season-page .population-card td{
+    padding: 8px 10px;
+    vertical-align: middle;
   }
 
+  /* Keep headers legible but compact */
   body.season-page .population-card th{
-    white-space: nowrap;
-    font-size: 9px;
+    font-size: 10px;         /* was 9 */
+    font-weight: 700;
     letter-spacing: 0.06em;
     text-align: left;
+    white-space: nowrap;     /* header can stay nowrap safely */
   }
 
+  /* Allow Style column to wrap so table fits (THIS is the key) */
   body.season-page .population-card td{
-    white-space: nowrap;
-    font-size: 14px;
+    font-size: 13px;         /* slightly smaller than 14 */
+    white-space: normal;     /* IMPORTANT: do NOT force nowrap */
   }
 
+  /* Center numeric / audit columns */
   body.season-page .population-card td:nth-child(2),
   body.season-page .population-card td:nth-child(3),
   body.season-page .population-card td:nth-child(4){
     text-align: center;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
   }
 
   /* Hero */
@@ -1183,6 +1199,7 @@ color: #000;
   .hero-carousel{ height: 320px; }
   .hero-track img{ object-position: center 65%; }
 }
+
 
 /* =========================================================
    Global helpers (not responsive)
