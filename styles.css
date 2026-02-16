@@ -1042,6 +1042,24 @@ color: #000;
     border: 1.5px solid rgba(157,15,15,0.55);
   }
 
+/* --- Mobile: keep season year on one line --- */
+.season-year-hero{
+  white-space: nowrap;
+  font-size: 56px;
+  line-height: 0.95;
+}
+
+/* --- Mobile: tighten the left metrics so labels don't explode into 3 lines --- */
+.metric-row{
+  grid-template-columns: 1fr auto; /* label uses space, number stays tight */
+  column-gap: 12px;
+}
+
+.metric-label{
+  font-size: 12px;
+  line-height: 1.25;
+}
+
   /* Mobile header/nav */
   .site-header{
     align-items: center;
