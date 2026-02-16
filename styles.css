@@ -1157,7 +1157,7 @@ body.season-page .population-card tbody td:first-child{
   .season-card--detail{
     padding: 22px 18px;
     border-width: 1px;
-    border-color: rgba(157, 15, 15, 0.35);
+    border-color: rgba(157, 15, 15, 0.15);
   }
 
   /* Keep LEFT/RIGHT layout on mobile, just tighten */
