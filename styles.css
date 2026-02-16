@@ -1137,9 +1137,12 @@ body.season-page .population-card td{
   /* season index grid */
   .season-index{ grid-template-columns: 1fr; }
 
-  /* WOW card spacing */
-  .season-card--detail{ padding: 22px 18px; }
-
+  /* WOW card spacing + softer border on mobile */
+.season-card--detail{
+  padding: 22px 18px;
+  border-width: 1px;
+  border-color: rgba(157, 15, 15, 0.35);
+}
   /* header stack spacing refinement */
   .season-header-top{ gap: 18px; }
 
