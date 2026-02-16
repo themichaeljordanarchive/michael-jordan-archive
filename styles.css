@@ -1124,6 +1124,10 @@ body.season-page .population-card tbody td:first-child{
   font-weight: 750;
 }
 
+body.season-page .population-card tbody tr:last-child td{
+  border-bottom: none;
+}
+
 /* =========================================================
    RESPONSIVE
    ========================================================= */
