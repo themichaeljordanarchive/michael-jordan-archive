@@ -1105,25 +1105,13 @@ body.season-page .population-card tbody td:first-child{
     border: 1.5px solid rgba(157,15,15,0.55);
   }
 
-  /* season header: STACK on tablet + mobile */
+  /* IMPORTANT:
+     Do NOT force the season header to stack here.
+     You said you want left/right consistency, so we leave the header layout alone
+     and only tighten spacing as needed. */
+
   .season-header-top{
-    flex-direction: column;
-    gap: 20px; /* slightly tighter than 24 */
-  }
-
-  .season-status-stack{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 12px; /* more breathing room than 10 */
-  }
-
-  .season-status-stack .audit-badge{
-    align-self: flex-start; /* prevents badge stretching */
-  }
-
-  .season-summary{
-    margin-top: 0;
+    gap: 32px; /* slightly tighter than desktop, still roomy */
   }
 }
 
@@ -1166,21 +1154,30 @@ body.season-page .population-card tbody td:first-child{
   .season-index{ grid-template-columns: 1fr; }
 
   /* WOW card spacing + softer border on mobile */
-.season-card--detail{
-  padding: 22px 18px;
-  border-width: 1px;
-  border-color: rgba(157, 15, 15, 0.35);
-}
-  /* header stack spacing refinement */
-  .season-header-top{ gap: 18px; }
+  .season-card--detail{
+    padding: 22px 18px;
+    border-width: 1px;
+    border-color: rgba(157, 15, 15, 0.35);
+  }
+
+  /* Keep LEFT/RIGHT layout on mobile, just tighten */
+  .season-header-top{
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr; /* consistent with desktop, compact */
+    gap: 18px;
+    align-items: start;
+  }
 
   .season-status-stack{
-    gap: 14px; /* helps “cramped” feeling */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start; /* keeps badge from drifting */
   }
 
   .season-status-stack .audit-badge{
     align-self: flex-start;
-    margin-bottom: 2px;
   }
 
   /* ==============================
@@ -1194,80 +1191,81 @@ body.season-page .population-card tbody td:first-child{
     margin-bottom: 10px;
   }
 
-  /* tighter + more powerful metrics */
-  .season-metrics{ gap: 8px; } /* was 12 */
+  /* tighter metrics spacing */
+  .season-metrics{ gap: 8px; }
 
   .metric-row{
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 14px;
-    Align-items: start;
+    align-items: start;
     padding: 2px 0;
   }
-.season-card--detail .season-metrics{
-  max-width: 360px;   /* adjust between 340–380 */
-}
+
+  /* Pull numbers slightly LEFT by narrowing the metrics block (keeps right-justified) */
+  .season-card--detail .season-metrics{
+    max-width: 340px;       /* tweak range: 320–360 */
+    justify-self: start;
+  }
 
   .metric-label{
-    font-size: 13px;     /* was 12 */
+    font-size: 13px;
     line-height: 1.2;
-    font-weight: 650;    /* stronger */
+    font-weight: 650;
     color: #2f2f2f;
   }
 
   .metric-value{
-    font-size: 18px;     /* was 16 */
-    font-weight: 750;    /* stronger */
+    font-size: 18px;
+    font-weight: 750;
     text-align: right;
     font-variant-numeric: tabular-nums;
   }
 
   .metric-value.main-total{
-    font-size: 24px;     /* was 22 */
+    font-size: 24px;
     font-weight: 850;
   }
 
-  /* season summary text (slightly more breathable) */
+  /* Make the right column feel like metadata (smaller, tighter) */
   .season-summary{
-    margin-top: 4px;
+    margin-top: 2px;
     font-size: 13px;
-    line-height: 1.45;
+    line-height: 1.4;
+  }
+
+  .season-summary small{
+    font-size: 12px;
   }
 
   /* ==============================
      POPULATION SUMMARY TABLE (MOBILE)
      NO SCROLL — KEEP ALL COLUMNS VISIBLE
-     Matches your “yesterday” behavior.
      ============================== */
 
   body.season-page .population-card{
-    padding: 16px; /* reduces overall height */
-    /* IMPORTANT: do NOT hide overflow and do NOT force scroll */
+    padding: 16px;
   }
 
-  /* Thin the rows without changing layout behavior */
   body.season-page .population-card th,
   body.season-page .population-card td{
     padding: 8px 10px;
     vertical-align: middle;
   }
 
-  /* Keep headers legible but compact */
   body.season-page .population-card th{
-    font-size: 10px;         /* was 9 */
+    font-size: 10px;
     font-weight: 700;
     letter-spacing: 0.06em;
     text-align: left;
-    white-space: nowrap;     /* header can stay nowrap safely */
+    white-space: nowrap;
   }
 
-  /* Allow Style column to wrap so table fits (THIS is the key) */
   body.season-page .population-card td{
-    font-size: 13px;         /* slightly smaller than 14 */
-    white-space: normal;     /* IMPORTANT: do NOT force nowrap */
+    font-size: 13px;
+    white-space: normal;
   }
 
-  /* Center numeric / audit columns */
   body.season-page .population-card td:nth-child(2),
   body.season-page .population-card td:nth-child(3),
   body.season-page .population-card td:nth-child(4){
@@ -1282,6 +1280,19 @@ body.season-page .population-card tbody td:first-child{
   .hero-bleed img{ height: 320px; object-position: center 65%; }
   .hero-carousel{ height: 320px; }
   .hero-track img{ object-position: center 65%; }
+}
+
+
+/* OPTIONAL safety: ultra-small phones stack to prevent collisions */
+@media (max-width: 380px){
+  .season-header-top{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .season-card--detail .season-metrics{
+    max-width: 100%;
+  }
 }
 
 
