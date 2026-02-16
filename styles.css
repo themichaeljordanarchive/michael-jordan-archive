@@ -753,6 +753,27 @@ color: #000;
   color: rgba(0,0,0,0.65); /* softer than body text */
 }
 
+.season-summary{
+  margin-top: 14px;
+}
+
+.games-label{
+  display: block;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.games-data{
+  display: block;
+}
+
+.last-updated{
+  display: block;
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.55);
+}
+
 .last-updated{
   display: block;
   margin-top: 4px;
