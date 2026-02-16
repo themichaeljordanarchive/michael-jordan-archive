@@ -1038,3 +1038,9 @@ body.season-page .population-card tbody tr:last-child td{
     z-index: 9998;
   }
 }
+/* Mobile nav: open state */
+@media (max-width: 700px){
+  body.nav-open .site-nav{
+    display: flex !important;
+  }
+}
