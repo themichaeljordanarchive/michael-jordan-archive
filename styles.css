@@ -619,7 +619,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 
 .season-header-top{
   display: grid;
-  Grid-template-columns: 1.25fr 0.75fr;
+  Grid-template-columns: 1.1fr 0.9fr;
   align-items: start;
   gap: 48px;
 }
