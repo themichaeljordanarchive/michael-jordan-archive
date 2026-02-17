@@ -928,10 +928,12 @@ body.season-page .population-card tbody tr:last-child td{
   margin: 0;
 }
 
+.section-strip{
+  overflow: hidden;
+}
 .section-strip img{
   width: 100%;
-  height: 120px;   /* your strip height */
-  object-fit: cover;
+  height: auto;   /* your strip height */
   display: block;
 }
 
