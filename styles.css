@@ -922,7 +922,24 @@ body.season-page .population-card tbody tr:last-child td{
   border-bottom-color: var(--accent-red);
   color: rgba(177,13,13,0.85);
 }
+/* Section strip (desktop + mobile base) */
+.section-strip{
+  width: 100%;
+  margin: 0;
+}
 
+.section-strip img{
+  width: 100%;
+  height: 120px;   /* your strip height */
+  object-fit: cover;
+  display: block;
+}
+
+/* Section title below strip */
+.section-title{
+  text-align: center;
+  margin: 18px 0 28px;   /* tighten this */
+}
 /* =========================================================
    RESPONSIVE — LOCKED (single source)
    ========================================================= */
