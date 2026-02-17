@@ -735,6 +735,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 16px;
   padding: 32px;
+  Margin-bottom: 24px;
 }
 
 .population-card h3{
