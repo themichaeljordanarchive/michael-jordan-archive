@@ -122,6 +122,15 @@ h2, h3{
   font-weight: 650;
   color: var(--ink);
 }
+.pop-label{
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.42);
+  margin-top: 4px;
+  text-align: center;   /* since mobile is primary */
+}
 
 /* =========================================================
    HEADER + NAV (DESKTOP)
@@ -939,6 +948,10 @@ body.season-page .population-card tbody tr:last-child td{
     border-width: 1px;
     border-color: rgba(157, 15, 15, 0.15);
   }
+
+.evidence-subblock > h3{
+  text-align: center;
+}
 
   /* Keep LEFT/RIGHT on mobile (give left side real space) */
   .season-header-top{
