@@ -956,6 +956,18 @@ body.season-page .population-card tbody tr:last-child td{
     margin-bottom: 10px;
   }
 
+/* Slightly reduce right column summary text on mobile */
+  .season-summary{
+    font-size: 14px;
+    line-height: 1.5;
+  }
+.season-summary > div:first-child {
+  margin-bottom: 4px;
+}
+  .last-updated{
+    font-size: 11px;
+  }
+
   /* Metrics spacing */
   .season-metrics{ gap: 8px; }
   .metric-row{
