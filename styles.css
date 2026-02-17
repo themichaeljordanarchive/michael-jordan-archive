@@ -822,7 +822,8 @@ body.season-page .population-card tbody tr:last-child td{
 /* Section headings: centered, no pseudo-elements, no random dashes */
 .season-block > h2{
   text-align: center;
-  margin: 32px 0 20px;
+  margin: 20px 0 18px;
+  Padding-top: 8px;
 }
 
 /* Style Summary (minimal strip — no borders, no “Style Summary” label needed) */
@@ -907,6 +908,9 @@ body.season-page .population-card tbody tr:last-child td{
   text-transform: uppercase;
   font-weight: 750;
   font-family: var(--sans);
+}
+.evidence-subblock{
+  max-width: 50%;
 }
 
 /* Refined link styling inside Public Sale Details */
