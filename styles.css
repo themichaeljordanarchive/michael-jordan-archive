@@ -929,7 +929,15 @@ body.season-page .population-card tbody tr:last-child td{
 }
 
 .section-strip{
+  position: relative;
   overflow: hidden;
+}
+.section-strip::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.08); /* 8% white overlay */
+  pointer-events: none;
 }
 .section-strip img{
   width: 100%;
