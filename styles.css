@@ -1192,3 +1192,16 @@ body.season-page .population-card tbody tr:last-child td{
   }
 
 }
+/* Desktop season header balance */
+
+.season-header-top{
+    align-items: center;  /* was start */
+}
+
+.season-status-stack{
+    padding-top: 6px;
+}
+
+.season-status-stack .audit-badge{
+    margin-bottom: 18px;  /* give it breathing room */
+}
