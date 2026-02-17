@@ -960,6 +960,7 @@ body.season-page .population-card tbody tr:last-child td{
   .season-summary{
     font-size: 13px;
     line-height: 1.45;
+    color: rgba(20,20,20,0.72);
   }
 .season-summary > div:first-child {
   margin-bottom: 6px;
