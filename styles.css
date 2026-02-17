@@ -974,6 +974,27 @@ body.season-page .population-card tbody tr:last-child td{
     align-items: center;
     padding: 2px 0;
   }
+/* Tighten artifact rhythm on mobile */
+
+.evidence-caption{
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+
+.evidence-content{
+  padding: 16px;
+}
+
+.evidence-meta{
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+/* Tighten the “confirmed” meta stack rows on mobile */
+.evidence-meta > div{
+  padding-bottom: 6px;
+  margin-bottom: 0;
+}
 
   /* Population card density */
   body.season-page .population-card{ padding: 16px; }
