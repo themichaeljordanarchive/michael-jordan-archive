@@ -1095,3 +1095,30 @@ body.season-page .population-card tbody tr:last-child td{
   font-weight: 600;
   font-size: 18px;
 }
+/* =========================================================
+   DESKTOP RHYTHM — tighten + normalize
+   ========================================================= */
+@media (min-width: 901px){
+
+  /* 1) Bring the garment title closer to the record */
+  .evidence-subblock > h3{
+    margin: 12px 0 10px; /* was looser */
+  }
+
+  /* 2) Bring the image/details grid closer to the title */
+  .evidence-grid{
+    margin-top: 12px;    /* was 18px */
+    gap: 36px;           /* was 44px (less “air” between image & card) */
+    align-items: start;
+  }
+
+  /* 3) Normalize spacing between artifact entries */
+  .evidence-block{
+    margin-top: 40px;    /* makes record-to-record spacing consistent */
+  }
+
+  /* 4) But reduce the “first record after section header” floating gap */
+  .season-block .evidence-block:first-of-type{
+    margin-top: 24px;
+  }
+}
