@@ -996,6 +996,29 @@ body.season-page .population-card tbody tr:last-child td{
   margin-bottom: 0;
 }
 
+/* Mobile unified artifact wrapper */
+@media (max-width: 700px){
+
+  .evidence-grid{
+    border: 1px solid rgba(0,0,0,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    gap: 0;
+    background: transparent;
+  }
+
+  .evidence-image,
+  .evidence-content{
+    padding: 14px;
+  }
+
+  .evidence-content{
+    background: transparent;
+    border: none;
+    border-top: 1px solid rgba(0,0,0,0.05);
+  }
+
+}
   /* Population card density */
   body.season-page .population-card{ padding: 16px; }
   body.season-page .population-card th,
