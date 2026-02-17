@@ -123,13 +123,13 @@ h2, h3{
   color: var(--ink);
 }
 .pop-label{
+  display: block;
   font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.18em;
+  font-size: 10px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: rgba(20,20,20,0.42);
-  margin-top: 4px;
-  text-align: center;   /* since mobile is primary */
+  margin-top: 2px;
 }
 
 /* =========================================================
