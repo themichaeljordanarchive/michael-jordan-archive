@@ -8,7 +8,11 @@
 /* ---------- Base Reset ---------- */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
+html{
+ -webkit-text-size-adjust: 100%;
+}
 img { max-width: 100%; height: auto; display: block; }
+
 
 /* ---------- Theme Tokens ---------- */
 :root{
@@ -960,6 +964,24 @@ body.season-page .population-card tbody tr:last-child td{
   .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
   .season-index a.season-card{ border: 1.5px solid rgba(157,15,15,0.55); }
   .season-header-top{ gap: 32px; }
+}
+/* Mid-size phones (iPhone 15/16 Pro) */
+@media (max-width: 430px) {
+
+  .season-year-hero {
+    font-size: 52px;
+    line-height: 0.95;
+  }
+
+  .season-summary {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .population-card td {
+    font-size: 13px;
+  }
+
 }
 
 /* Phone */
