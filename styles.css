@@ -822,8 +822,7 @@ body.season-page .population-card tbody tr:last-child td{
 /* Section headings: centered, no pseudo-elements, no random dashes */
 .season-block > h2{
   text-align: center;
-  margin: 20px 0 18px;
-  Padding-top: 8px;
+  margin: 12px 0 18px;
 }
 
 /* Style Summary (minimal strip — no borders, no “Style Summary” label needed) */
