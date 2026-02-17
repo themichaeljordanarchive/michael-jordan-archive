@@ -1197,11 +1197,11 @@ body.season-page .population-card tbody tr:last-child td{
 .season-header-top{
     align-items: center;  /* was start */
 }
+/* Desktop: keep text position, nudge badge only */
+.season-header-top{ align-items: start; }
 
-.season-status-stack{
-    padding-top: 6px;
-}
-
+.season-status-stack{ gap: 14px; }           /* optional: slightly tighter */
 .season-status-stack .audit-badge{
-    margin-bottom: 18px;  /* give it breathing room */
+  margin-top: 10px;                          /* moves only badge */
+  margin-bottom: 12px;                       /* keeps text close */
 }
