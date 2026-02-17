@@ -1051,28 +1051,3 @@ body.season-page .population-card tbody tr:last-child td{
   font-weight: 600;
   font-size: 18px;
 }
-
-/* ===== MOBILE RECORD TEST ===== */
-@media (max-width: 700px){
-
-  .evidence-grid{
-    border: 1px solid rgba(0,0,0,0.10);
-    border-radius: 18px;
-    overflow: hidden;
-    gap: 0;
-    background: transparent;
-  }
-
-  .evidence-image,
-  .evidence-content{
-    padding: 14px;
-  }
-
-  .evidence-content{
-    background: transparent;
-    border: none;
-    border-radius: 0;
-    border-top: 1px solid rgba(0,0,0,0.06);
-  }
-
-}
