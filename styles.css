@@ -16,7 +16,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 /* ---------- Theme Tokens ---------- */
 :root{
-  --bg: #f7f7f5;
+  --bg: #ffffff;
   --paper: #ffffff;
   --ink: #141414;
   --ink-2: #2b2b2b;
@@ -127,6 +127,17 @@ li{ margin: 6px 0; }
 .table-scroll th{
   white-space: normal;
   line-height: 1.25;
+}
+.population-card table {
+  background: #f7f7f5;
+  border-radius: 12px;
+}
+.population-card {
+  background: #ffffff;
+}
+.notes-col{
+  min-width: 240px;
+  white-space: normal;
 }
 
 /* ---------- Typography ---------- */
