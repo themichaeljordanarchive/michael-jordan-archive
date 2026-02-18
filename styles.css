@@ -1133,6 +1133,10 @@ body.season-page .population-card tbody tr:last-child td{
     margin-bottom: 8px;
   }
 
+/* Force artifact layout to stack on all phones */
+.evidence-grid{
+  grid-template-columns: 1fr !important;
+}
   .evidence-content{
     padding: 16px;
   }
