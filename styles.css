@@ -122,7 +122,7 @@ li{ margin: 6px 0; }
 }
 
 .table-scroll table {
-  min-width: 640px; /* forces scroll instead of squish */
+  min-width: 720px; /* forces scroll instead of squish */
 }
 
 /* ---------- Typography ---------- */
