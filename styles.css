@@ -101,9 +101,58 @@ a:hover{ text-decoration: none; }
   position: absolute;
   left: 0;
   bottom: 0;
+
   width: 100%;
   height: 2px;
   background: var(--accent-red);
+}
+
+/* ---------------------------------------
+   PRESEASON TABLE SCROLL CUE (Mobile Only)
+---------------------------------------- */
+
+.preseason-page .table-scroll {
+  position: relative;
+}
+
+/* Subtle right-edge fade to indicate scroll */
+.preseason-page .table-scroll::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(
+    to left,
+    var(--card-bg, #f8f6f2),
+    rgba(248, 246, 242, 0)
+  );
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* Small swipe hint */
+.preseason-page .table-hint {
+  display: none;
+}
+
+/* Activate on mobile */
+@media (max-width: 700px) {
+  .preseason-page .table-scroll::after {
+    opacity: 1;
+  }
+
+  .preseason-page .table-hint {
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    margin: 6px 4px 10px;
+  }
 }
 
 @media (hover: hover){
