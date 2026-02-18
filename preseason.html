@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Preseason Uniform Transition Index — Michael Jordan Archive</title>
+  <meta name="description" content="Preseason construction observations and uniform transition tracking across seasons within the Michael Jordan Archive." />
+  <link rel="stylesheet" href="styles.css?v=27">
+</head>
+
+<body class="season-page">
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Michael Jordan Archive logo">
+      </a>
+      <div class="brand-text">
+        <div class="brand-name">Michael Jordan Archive</div>
+      </div>
+    </div>
+
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="jerseys.html">← Back to Jersey Archive</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Preseason Uniform Transition Index</h1>
+
+    <p class="muted">
+      Documented preseason construction observations across seasons. 
+      Supporting imagery and full sourcing maintained within the archive.
+    </p>
+
+    <!-- =====================================================
+         1984-85
+    ====================================================== -->
+
+    <div class="population-card" id="s-8485" style="margin-top:18px;">
+      <h3>1984-85</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Garment</th>
+            <th>Style</th>
+            <th>Preseason Use</th>
+            <th>Regular Season Use</th>
+            <th>Public</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Home Jersey</td>
+            <td>White</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Single garment documented for preseason and regular season continuity.</td>
+          </tr>
+
+          <tr>
+            <td>Away Jersey</td>
+            <td>Red</td>
+            <td>Yes</td>
+            <td>Not documented</td>
+            <td>Yes (Sotheby’s)</td>
+            <td>Publicly sold example. Refer to 1984-85 season page for full documentation.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- =====================================================
+         1985-86
+    ====================================================== -->
+
+    <div class="population-card" id="s-8586" style="margin-top:28px;">
+      <h3>1985-86</h3>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Preseason Games Reviewed</th>
+            <th>Construction Observed</th>
+            <th>Regular Season Construction</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>1984-85 Construction</td>
+            <td>1985-86 Construction</td>
+            <td><span class="audit-progress">⏳</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="muted">
+        Preliminary observation based on October 9, 1985 preseason vs. Houston.
+      </p>
+    </div>
+
+  </main>
+
+  <script>
+    const btn = document.querySelector('.nav-toggle');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        document.body.classList.toggle('nav-open');
+        btn.setAttribute('aria-expanded', document.body.classList.contains('nav-open'));
+      });
+    }
+  </script>
+
+</body>
+</html>
