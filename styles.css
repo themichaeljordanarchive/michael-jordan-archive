@@ -990,8 +990,13 @@ body.season-page .population-card tbody tr:last-child td{
 .brand-text{
   display: none;
 }
-  main{ padding: 28px 18px 70px; }
-  h1{ font-size: 32px; line-height: 1.08; }
+ main{ 
+   padding: 28px 18px 70px; 
+}
+ h1{ 
+  font-size: 32px; 
+  line-height: 1.08; 
+}
 
   /* Season Index: single column (no square tiles) */
   .season-index{ grid-template-columns: 1fr; }
@@ -1012,10 +1017,9 @@ body.season-page .population-card tbody tr:last-child td{
 
   /* Keep LEFT/RIGHT on mobile (give left side real space) */
   .season-header-top{
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 18px;
-    align-items: start;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
   }
 
   /* Year: never split */
