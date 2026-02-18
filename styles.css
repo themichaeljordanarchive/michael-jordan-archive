@@ -1002,7 +1002,7 @@ body.season-page .population-card tbody tr:last-child td{
 .evidence-subblock > h3{
   text-align: center;
   White-space: nowrap;
-  Font-size: clamp(14px, 3.6vw, 16px);
+  Font-size: clamp(13px, 3.2vw, 16px);
   Letter-spacing: 0.05em;
 }
 
