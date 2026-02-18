@@ -1040,7 +1040,7 @@ body.season-page .population-card tbody tr:last-child td{
   margin-bottom: 6px;
 }
   /* Metrics spacing */
-  .season-metrics{ gap: 8px; }
+  .season-metrics{ gap: 12px; }
   .metric-row{
     display: grid;
     grid-template-columns: 1fr auto;
@@ -1091,8 +1091,26 @@ body.season-page .population-card tbody tr:last-child td{
     border: none;
     border-top: 1px solid rgba(0,0,0,0.05);
   }
+/* Tighter WOW vertical rhythm */
+.season-header-top{
+  gap: 16px;
+}
+
+.season-status-stack{
+  margin-top: 4px;
+  gap: 10px;
+}
+
+.audit-badge{
+  margin-bottom: 6px;
+}
+
+.population-card{
+  margin-top: 18px;
+}
 
 }
+
   /* Population card density */
   body.season-page .population-card{ padding: 16px; }
   body.season-page .population-card th,
