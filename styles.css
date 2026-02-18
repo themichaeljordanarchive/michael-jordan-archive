@@ -986,6 +986,10 @@ body.season-page .population-card tbody tr:last-child td{
 
 /* Phone */
 @media (max-width: 700px){
+
+.brand-text{
+  display: none;
+}
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
 
