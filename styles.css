@@ -124,6 +124,10 @@ li{ margin: 6px 0; }
 .table-scroll table {
   min-width: 720px; /* forces scroll instead of squish */
 }
+.table-scroll th{
+  white-space: normal;
+  line-height: 1.25;
+}
 
 /* ---------- Typography ---------- */
 h1{
