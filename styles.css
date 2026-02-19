@@ -1178,8 +1178,8 @@ body.season-page .population-card tbody tr:last-child td{
 
   /* Artifact rhythm tightening on mobile */
   .evidence-caption{
-    margin-top: 4px;
-    margin-bottom: 8px;
+    margin-top: 0px;
+    margin-bottom: 12px;
   }
 
 /* Force artifact layout to stack on all phones */
