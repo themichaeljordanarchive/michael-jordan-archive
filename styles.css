@@ -830,6 +830,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 
 /* Audit badge */
 .audit-badge{
+  margin-top: 18px;
   font-family: var(--sans);
   font-size: 11px;
   letter-spacing: 0.28em;
@@ -845,7 +846,7 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 .season-status-stack{
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 22px;
 }
 .season-status-stack .audit-badge{ align-self: flex-start; }
 
@@ -854,6 +855,9 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
   line-height: 1.55;
   color: #333;
   margin-bottom: 24px;
+}
+.season-summary > div{
+  margin: 6px 0;
 }
 .season-summary strong{ font-weight: 800; }
 
