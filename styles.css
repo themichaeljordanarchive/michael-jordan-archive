@@ -139,7 +139,7 @@ a:hover{ text-decoration: none; }
 }
 
 /* Activate on mobile */
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .preseason-page .table-scroll::after {
     opacity: 1;
   }
