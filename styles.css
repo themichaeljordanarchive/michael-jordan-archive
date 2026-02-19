@@ -514,9 +514,11 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 /* Metrics block — tightened + strengthened */
 
 .season-metrics{
-  margin-top: 0px;
+  margin-top: 10px;
   display: grid;
   gap: 8px;
+  margin-left: -8px;
+  margin-right: -8px;
 }
 
 .metric-row{
