@@ -1275,6 +1275,10 @@ body.season-page .population-card tbody tr:last-child td{
 
   body.nav-open .site-nav{
     display: flex;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    right: 0;
   }
 }
 
