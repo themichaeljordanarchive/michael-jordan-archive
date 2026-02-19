@@ -846,9 +846,9 @@ box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 .season-status-stack{
   display: flex;
   flex-direction: column;
-  gap: 22px;
+  gap: 24px;
+  align-items: flex-start;
 }
-.season-status-stack .audit-badge{ align-self: flex-start; }
 
 .season-summary{
   font-size: 15px;
