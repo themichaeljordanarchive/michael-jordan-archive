@@ -1083,7 +1083,8 @@ body.season-page .population-card tbody tr:last-child td{
   text-align: center;
   margin: 18px 0 28px;   /* tighten this */
 }
-* =========================================================
+
+/* =========================================================
    RESPONSIVE — LOCKED (single source)
    ========================================================= */
 
@@ -1093,6 +1094,11 @@ body.season-page .population-card tbody tr:last-child td{
   .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
   .season-index a.season-card{ border: 1.5px solid rgba(157,15,15,0.55); }
   .season-header-top{ gap: 32px; }
+
+  /* NOTE:
+     Do NOT define hamburger behavior here if your hamburger only exists at 700px.
+     (700px block is the single source of truth for nav open/close.)
+  */
 }
 
 /* Phone */
@@ -1182,10 +1188,11 @@ body.season-page .population-card tbody tr:last-child td{
     margin-bottom: 12px;
   }
 
-/* Force artifact layout to stack on all phones */
-.evidence-grid{
-  grid-template-columns: 1fr !important;
-}
+  /* Force artifact layout to stack on all phones */
+  .evidence-grid{
+    grid-template-columns: 1fr !important;
+  }
+
   .evidence-content{
     padding: 16px;
   }
@@ -1229,10 +1236,11 @@ body.season-page .population-card tbody tr:last-child td{
     white-space: normal;
   }
 
-  /* Mobile nav — single definition */
+  /* Mobile nav — single definition (LOCKED) */
   .site-header{
     position: relative;
     z-index: 9998;
+    overflow: visible; /* critical: prevents dropdown clipping/weird scroll behavior */
   }
 
   .nav-toggle{
