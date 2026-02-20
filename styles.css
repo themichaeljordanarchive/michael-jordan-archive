@@ -387,8 +387,8 @@ h2, h3{
 .hero-track{
   display: flex;
   height: 100%;
-  width: 400vw;
-  animation: hero-slide 24s ease-in-out infinite;
+  width: 500vw;
+  animation: hero-slide 30s ease-in-out infinite;
   will-change: transform;
 }
 .hero-track img{
@@ -400,13 +400,20 @@ h2, h3{
 }
 @keyframes hero-slide{
   0%   { transform: translateX(0); }
-  18%  { transform: translateX(0); }
+  16%  { transform: translateX(0); }
+
   20%  { transform: translateX(-100vw); }
-  38%  { transform: translateX(-100vw); }
+  36%  { transform: translateX(-100vw); }
+
   40%  { transform: translateX(-200vw); }
-  58%  { transform: translateX(-200vw); }
+  56%  { transform: translateX(-200vw); }
+
   60%  { transform: translateX(-300vw); }
-  78%  { transform: translateX(-300vw); }
+  76%  { transform: translateX(-300vw); }
+
+  80%  { transform: translateX(-400vw); }
+  96%  { transform: translateX(-400vw); }
+
   100% { transform: translateX(0); }
 }
 
@@ -1089,6 +1096,67 @@ body.season-page .population-card tbody tr:last-child td{
   text-align: center;
   margin: 18px 0 28px;   /* tighten this */
 }
+
+.home-intro{
+  padding: 48px 0 60px;
+}
+
+.home-intro-inner{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.home-intro .lead{
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.section-title{
+  margin-top: 36px;
+}
+
+.home-grid{
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.home-tile{
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  background: rgba(255,255,255,0.6);
+  transition: border-color 0.2s ease;
+}
+
+.home-tile:hover{
+  border-color: rgba(157,15,15,0.35);
+}
+
+.tile-title{
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.home-list{
+  margin-top: 14px;
+  padding-left: 20px;
+}
+
+@media (max-width: 700px){
+  .home-grid{
+    grid-template-columns: 1fr;
+  }
+  .home-intro{
+    padding: 32px 0 50px;
+  }
+}
+
 
 /* =========================================================
    RESPONSIVE — LOCKED (single source)
