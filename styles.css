@@ -412,18 +412,18 @@ h2, h3{
 
 .hero-caption{
   position: absolute;
-  left: 18px;
-  bottom: 16px;
-  z-index: 6;
-  padding: 10px 14px;
+  bottom: 40px;
+
+  
+  left: 40px;
+
+  max-width: 520px;
+
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 16px 20px;
   border-radius: 10px;
-  background: rgba(0,0,0,0.35);
-  border: 1px solid rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.95);
   backdrop-filter: blur(4px);
-  max-width: 70%;
-  pointer-events: none;
-  min-width: 260px;
 }
 
 .hero-caption-title{
@@ -439,6 +439,15 @@ h2, h3{
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.4;
+}
+
+@media (max-width: 900px){
+  .hero-caption{
+    left: 18px;
+    right: 18px;
+    max-width: none;
+    bottom: 18px;
+  }
 }
 
 @media (max-width: 700px){
