@@ -189,21 +189,23 @@
   }
 
   // initial load
-  updateSlide();
+updateSlide();
 
-  // auto rotate every 8 seconds
-  et heroTimer = setInterval(nextSlide, 8000);
+// auto rotate every 8 seconds
+let heroTimer = setInterval(nextSlide, 8000);
 
+// pause on hover (safe)
 const heroCarousel = document.querySelector('.hero-carousel');
+if (heroCarousel) {
+  heroCarousel.addEventListener('mouseenter', () => {
+    clearInterval(heroTimer);
+  });
 
-heroCarousel.addEventListener('mouseenter', () => {
-  clearInterval(heroTimer);
-});
-
-heroCarousel.addEventListener('mouseleave', () => {
-  heroTimer = setInterval(nextSlide, 8000);
-});
-
+  heroCarousel.addEventListener('mouseleave', () => {
+    clearInterval(heroTimer);
+    heroTimer = setInterval(nextSlide, 8000);
+  });
+}
 </script>
 </body>
 </html>
