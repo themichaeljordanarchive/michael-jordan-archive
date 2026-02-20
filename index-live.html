@@ -179,8 +179,13 @@
     track.style.transform = `translateX(-${index * 100}%)`;
 
     const current = slides[index];
-    captionTitle.textContent = current.dataset.title || '';
-    captionSub.textContent = current.dataset.sub || '';
+    if (current.dataset.title) {
+  captionTitle.textContent = current.dataset.title;
+}
+
+if (current.dataset.sub) {
+  captionSub.textContent = current.dataset.sub;
+}
   }
 
   function nextSlide(){
