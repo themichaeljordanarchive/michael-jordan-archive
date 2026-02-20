@@ -161,8 +161,22 @@
 </footer>
 
 <script>
-document.querySelector('.nav-toggle')
-  .addEventListener('click',()=>document.body.classList.toggle('nav-open'));
+  // NAV toggle
+  document.querySelector('.nav-toggle')
+    .addEventListener('click',()=>document.body.classList.toggle('nav-open'));
+
+  // HERO CAPTION — show first slide text
+  const track = document.getElementById('heroTrack');
+  const captionTitle = document.querySelector('.hero-caption-title');
+  const captionSub = document.querySelector('.hero-caption-sub');
+
+  if(track && captionTitle && captionSub){
+    const slides = track.querySelectorAll('img');
+    const first = slides[0];
+
+    captionTitle.textContent = first.dataset.title || '';
+    captionSub.textContent = first.dataset.sub || '';
+  }
 </script>
 
 </body>
