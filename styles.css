@@ -415,6 +415,51 @@ h2, h3{
   96%  { transform: translateX(-400vw); }
 
   100% { transform: translateX(0); }
+
+}
+
+/* HERO CAPTION OVERLAY */
+.hero-carousel{
+  position: relative; /* required for absolute caption positioning */
+}
+
+.hero-caption{
+  position: absolute;
+  right: 18px;
+  bottom: 16px;
+  z-index: 6;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: rgba(255,255,255,0.95);
+  backdrop-filter: blur(4px);
+  max-width: 70%;
+  pointer-events: none;
+}
+
+.hero-caption-title{
+  font-size: 14px;
+  font-weight: 600;         /* slightly heavier than sentence */
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.hero-caption-sub{
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px){
+  .hero-caption{
+    right: 12px;
+    left: 12px;            /* wider on mobile */
+    max-width: none;
+    bottom: 12px;
+  }
 }
 
 /* =========================================================
