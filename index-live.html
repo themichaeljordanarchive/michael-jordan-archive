@@ -176,7 +176,7 @@
   const total = slides.length;
 
   function updateSlide(){
-    track.style.transform = `translateX(-${index * 100}vw)`;
+    track.style.transform = `translateX(-${index * 100}%)`;
 
     const current = slides[index];
     captionTitle.textContent = current.dataset.title || '';
