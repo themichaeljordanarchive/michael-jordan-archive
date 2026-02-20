@@ -387,35 +387,17 @@ h2, h3{
 .hero-track{
   display: flex;
   height: 100%;
-  width: 500vw;
+  width: 100%;
   will-change: transform;
   transition: transform 700ms ease;
 }
 .hero-track img{
-  width: 100vw;
+  width: 100%;
+  flex: 0 0 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 70%;
   flex-shrink: 0;
-}
-@keyframes hero-slide{
-  0%   { transform: translateX(0); }
-  16%  { transform: translateX(0); }
-
-  20%  { transform: translateX(-100vw); }
-  36%  { transform: translateX(-100vw); }
-
-  40%  { transform: translateX(-200vw); }
-  56%  { transform: translateX(-200vw); }
-
-  60%  { transform: translateX(-300vw); }
-  76%  { transform: translateX(-300vw); }
-
-  80%  { transform: translateX(-400vw); }
-  96%  { transform: translateX(-400vw); }
-
-  100% { transform: translateX(0); }
-
 }
 
 /* HERO CAPTION OVERLAY */
