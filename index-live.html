@@ -156,6 +156,7 @@
 
 </main>
 
+
 <footer class="site-footer">
   © Michael Jordan Archive
 </footer>
@@ -165,19 +166,33 @@
   document.querySelector('.nav-toggle')
     .addEventListener('click',()=>document.body.classList.toggle('nav-open'));
 
-  // HERO CAPTION — show first slide text
+  // HERO CAROUSEL (basic JS version)
   const track = document.getElementById('heroTrack');
+  const slides = track.querySelectorAll('img');
   const captionTitle = document.querySelector('.hero-caption-title');
   const captionSub = document.querySelector('.hero-caption-sub');
 
-  if(track && captionTitle && captionSub){
-    const slides = track.querySelectorAll('img');
-    const first = slides[0];
+  let index = 0;
+  const total = slides.length;
 
-    captionTitle.textContent = first.dataset.title || '';
-    captionSub.textContent = first.dataset.sub || '';
+  function updateSlide(){
+    track.style.transform = `translateX(-${index * 100}vw)`;
+
+    const current = slides[index];
+    captionTitle.textContent = current.dataset.title || '';
+    captionSub.textContent = current.dataset.sub || '';
   }
-</script>
 
+  function nextSlide(){
+    index = (index + 1) % total;
+    updateSlide();
+  }
+
+  // initial load
+  updateSlide();
+
+  // auto rotate every 8 seconds
+  setInterval(nextSlide, 8000);
+</script>
 </body>
 </html>
