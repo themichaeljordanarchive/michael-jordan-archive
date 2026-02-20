@@ -192,7 +192,18 @@
   updateSlide();
 
   // auto rotate every 8 seconds
-  setInterval(nextSlide, 8000);
+  et heroTimer = setInterval(nextSlide, 8000);
+
+const heroCarousel = document.querySelector('.hero-carousel');
+
+heroCarousel.addEventListener('mouseenter', () => {
+  clearInterval(heroTimer);
+});
+
+heroCarousel.addEventListener('mouseleave', () => {
+  heroTimer = setInterval(nextSlide, 8000);
+});
+
 </script>
 </body>
 </html>
