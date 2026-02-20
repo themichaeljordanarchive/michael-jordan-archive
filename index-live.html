@@ -164,7 +164,7 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* NAV toggle */
+  /* ---------------- NAV TOGGLE ---------------- */
   const navBtn = document.querySelector('.nav-toggle');
   if (navBtn) {
     navBtn.addEventListener('click', () => {
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* HERO carousel */
+  /* ---------------- HERO CAROUSEL ---------------- */
   const heroCarousel = document.querySelector('.hero-carousel');
   const track = document.getElementById('heroTrack');
   const captionTitle = document.querySelector('.hero-caption-title');
@@ -192,14 +192,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const current = slides[i];
     if (!current) return;
 
-    // Use getAttribute (more reliable at first paint than dataset on some browsers)
     const t = current.getAttribute('data-title') || current.alt || '';
     const s = current.getAttribute('data-sub') || '';
 
     captionTitle.textContent = t;
     captionSub.textContent = s;
-
-    // Hide sub line if empty (optional)
     captionSub.style.display = s.trim() ? 'block' : 'none';
   }
 
@@ -224,21 +221,18 @@ document.addEventListener('DOMContentLoaded', () => {
     heroTimer = null;
   }
 
-  // Pause on hover
+  /* Pause on hover */
   heroCarousel.addEventListener('mouseenter', stopAuto);
   heroCarousel.addEventListener('mouseleave', () => {
     stopAuto();
     startAuto();
   });
 
-  // Initial draw + autoplay
+  /* Initialize */
+  heroCarousel.style.visibility = 'hidden';   // prevent first-paint flicker
   updateSlide();
   startAuto();
-
-  // Critical: redraw once images/fonts/layout are fully loaded (fixes slide 1 caption glitch)
-  window.addEventListener('load', () => {
-    updateSlide();
-  });
+  heroCarousel.style.visibility = 'visible';
 
 });
 </script>
