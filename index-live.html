@@ -191,6 +191,10 @@
   // initial load
 updateSlide();
 
+// Safari-first-paint fix: redraw caption on next frame(s)
+requestAnimationFrame(() => updateSlide());
+setTimeout(() => updateSlide(), 50);
+
 // auto rotate every 8 seconds
 let heroTimer = setInterval(nextSlide, 8000);
 
