@@ -388,7 +388,7 @@ h2, h3{
   display: flex;
   height: 100%;
   width: 500vw;
-  animation: hero-slide 30s ease-in-out infinite;
+  animation: hero-slide 40s ease-in-out infinite;
   will-change: transform;
 }
 .hero-track img{
