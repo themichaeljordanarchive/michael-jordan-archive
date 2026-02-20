@@ -162,59 +162,86 @@
 </footer>
 
 <script>
-  // NAV toggle
-  document.querySelector('.nav-toggle')
-    .addEventListener('click',()=>document.body.classList.toggle('nav-open'));
+document.addEventListener('DOMContentLoaded', () => {
 
-  // HERO CAROUSEL (basic JS version)
+  /* NAV toggle */
+  const navBtn = document.querySelector('.nav-toggle');
+  if (navBtn) {
+    navBtn.addEventListener('click', () => {
+      document.body.classList.toggle('nav-open');
+    });
+  }
+
+  /* HERO carousel */
+  const heroCarousel = document.querySelector('.hero-carousel');
   const track = document.getElementById('heroTrack');
-  const slides = track.querySelectorAll('img');
   const captionTitle = document.querySelector('.hero-caption-title');
   const captionSub = document.querySelector('.hero-caption-sub');
 
-  let index = 0;
+  if (!heroCarousel || !track || !captionTitle || !captionSub) return;
+
+  const slides = track.querySelectorAll('img');
   const total = slides.length;
+  if (total === 0) return;
 
-  function updateSlide(){
-    track.style.transform = `translateX(-${index * 100}%)`;
+  let index = 0;
+  let heroTimer = null;
+  const INTERVAL = 8000;
 
-    const current = slides[index];
-    if (current.dataset.title) {
-  captionTitle.textContent = current.dataset.title;
-}
+  function applyCaption(i) {
+    const current = slides[i];
+    if (!current) return;
 
-if (current.dataset.sub) {
-  captionSub.textContent = current.dataset.sub;
-}
+    // Use getAttribute (more reliable at first paint than dataset on some browsers)
+    const t = current.getAttribute('data-title') || current.alt || '';
+    const s = current.getAttribute('data-sub') || '';
+
+    captionTitle.textContent = t;
+    captionSub.textContent = s;
+
+    // Hide sub line if empty (optional)
+    captionSub.style.display = s.trim() ? 'block' : 'none';
   }
 
-  function nextSlide(){
+  function updateSlide() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+    applyCaption(index);
+  }
+
+  function nextSlide() {
     index = (index + 1) % total;
     updateSlide();
   }
 
-  // initial load
-updateSlide();
+  function startAuto() {
+    if (heroTimer) return;
+    heroTimer = setInterval(nextSlide, INTERVAL);
+  }
 
-// Safari-first-paint fix: redraw caption on next frame(s)
-requestAnimationFrame(() => updateSlide());
-setTimeout(() => updateSlide(), 50);
-
-// auto rotate every 8 seconds
-let heroTimer = setInterval(nextSlide, 8000);
-
-// pause on hover (safe)
-const heroCarousel = document.querySelector('.hero-carousel');
-if (heroCarousel) {
-  heroCarousel.addEventListener('mouseenter', () => {
+  function stopAuto() {
+    if (!heroTimer) return;
     clearInterval(heroTimer);
-  });
+    heroTimer = null;
+  }
 
+  // Pause on hover
+  heroCarousel.addEventListener('mouseenter', stopAuto);
   heroCarousel.addEventListener('mouseleave', () => {
-    clearInterval(heroTimer);
-    heroTimer = setInterval(nextSlide, 8000);
+    stopAuto();
+    startAuto();
   });
-}
+
+  // Initial draw + autoplay
+  updateSlide();
+  startAuto();
+
+  // Critical: redraw once images/fonts/layout are fully loaded (fixes slide 1 caption glitch)
+  window.addEventListener('load', () => {
+    updateSlide();
+  });
+
+});
 </script>
+
 </body>
 </html>
