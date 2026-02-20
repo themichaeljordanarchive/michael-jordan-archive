@@ -412,7 +412,7 @@ h2, h3{
 
 .hero-caption{
   position: absolute;
-  right: 18px;
+  left: 18px;
   bottom: 16px;
   z-index: 6;
   padding: 10px 14px;
