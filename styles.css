@@ -1247,7 +1247,24 @@ body.season-page .population-card tbody tr:last-child td{
     font-size: 13px;
     line-height: 1.45;
   }
+.hero-caption{
+  padding: 10px 14px;
+  bottom: 8px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.40);
 }
+
+.hero-caption-title{
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  margin-bottom: 3px;
+}
+
+.hero-caption-sub{
+  font-size: 11px;
+  line-height: 1.3;
+}
+
 
   /* Season Index: single column */
   .season-index{ grid-template-columns: 1fr; }
