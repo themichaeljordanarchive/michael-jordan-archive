@@ -409,7 +409,38 @@ h2, h3{
   font-weight: 400;
   letter-spacing: 0.02em;
   line-height: 1.4;
+
 }
+/* HERO ARROWS */
+.hero-arrow{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.28);
+  background: rgba(0,0,0,0.22);
+  color: rgba(255,255,255,0.92);
+  font-size: 28px;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 8;
+  opacity: 0.6;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero-prev{ left: 14px; }
+.hero-next{ right: 14px; }
+
+@media (hover:hover){
+  .hero-arrow:hover{ opacity: 0.95; background: rgba(0,0,0,0.32); }
+}
+
+/* optional: keep them subtle */
+.hero-carousel:hover .hero-arrow{ opacity: 0.85; }
 
 @media (max-width: 900px){
   .hero-caption{

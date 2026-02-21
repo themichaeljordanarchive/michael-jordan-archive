@@ -76,6 +76,9 @@
     <div class="hero-caption-title"></div>
     <div class="hero-caption-sub"></div>
   </div>
+ 
+ <button class="hero-arrow hero-prev" type="button" aria-label="Previous slide">‹</button>
+ <button class="hero-arrow hero-next" type="button" aria-label="Next slide">›</button>
 
 </div>
 
@@ -164,7 +167,6 @@
 </footer>
 
 
-
 <script>
 window.addEventListener('load', function() {
 
@@ -182,6 +184,9 @@ window.addEventListener('load', function() {
   const captionTitle = document.querySelector('.hero-caption-title');
   const captionSub = document.querySelector('.hero-caption-sub');
 
+  const prevBtn = document.querySelector('.hero-prev');
+  const nextBtn = document.querySelector('.hero-next');
+
   if (!heroCarousel || !track || !captionTitle || !captionSub) return;
 
   const slides = track.querySelectorAll('img');
@@ -192,9 +197,7 @@ window.addEventListener('load', function() {
 
   function updateSlide() {
     track.style.transform = 'translateX(-' + (index * 100) + '%)';
-
     const current = slides[index];
-
     captionTitle.textContent = current.getAttribute('data-title') || '';
     captionSub.textContent = current.getAttribute('data-sub') || '';
   }
@@ -204,24 +207,50 @@ window.addEventListener('load', function() {
     updateSlide();
   }
 
-  // FORCE caption immediately after full page load
-  updateSlide();
+  function prevSlide() {
+    index = (index - 1 + total) % total;
+    updateSlide();
+  }
 
-  // autoplay
-  heroTimer = setInterval(nextSlide, 8000);
-
-  // pause on hover
-  heroCarousel.addEventListener('mouseenter', function() {
-    clearInterval(heroTimer);
-  });
-
-  heroCarousel.addEventListener('mouseleave', function() {
+  function startAuto(){
     heroTimer = setInterval(nextSlide, 8000);
+  }
+
+  function stopAuto(){
+    clearInterval(heroTimer);
+  }
+
+  // Initial draw
+  updateSlide();
+  startAuto();
+
+  // Pause on hover
+  heroCarousel.addEventListener('mouseenter', stopAuto);
+  heroCarousel.addEventListener('mouseleave', function(){
+    stopAuto();
+    startAuto();
   });
+
+  // Arrow clicks
+  if (nextBtn){
+    nextBtn.addEventListener('click', function(){
+      stopAuto();
+      nextSlide();
+      startAuto();
+    });
+  }
+
+  if (prevBtn){
+    prevBtn.addEventListener('click', function(){
+      stopAuto();
+      prevSlide();
+      startAuto();
+    });
+  }
 
 });
 </script>
 
 
 </body>
-</html>
+</html
