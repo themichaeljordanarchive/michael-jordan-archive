@@ -1264,7 +1264,7 @@ body.season-page .population-card tbody tr:last-child td{
   font-size: 11px;
   line-height: 1.3;
 }
-
+}
 
   /* Season Index: single column */
   .season-index{ grid-template-columns: 1fr; }
