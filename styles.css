@@ -1276,8 +1276,8 @@ body.season-page .population-card tbody tr:last-child td{
 
   .home-tile{
     padding: 16px 16px 14px;
-    border-color: rgba(0,0,0,0.12);
-    background: rgba(255,255,255,0.85);
+    border-color: 1px sild rgba(0,0,0,0.28);
+    background: e6e3dd;
   }
 
   .tile-title{
