@@ -1267,6 +1267,10 @@ body.season-page .population-card tbody tr:last-child td{
   font-size: 10px;
   line-height: 1.2;
 }
+/* Hero 1 mobile adjustment */
+.hero-track img.hero-collage{
+  object-position: center 60%;
+}
 }
 
   /* Season Index: single column */
