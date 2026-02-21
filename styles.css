@@ -253,13 +253,13 @@ h1{
 }
 
 h2, h3{
-  margin: 44px 0 12px;
+  margin: 36px 0 14px;
   font-family: var(--sans);
-  font-size: 11px;
-  letter-spacing: 0.24em;
+  font-size: 12px;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
-  font-weight: 650;
-  color: var(--ink);
+  font-weight: 500;
+  color: var(--muted);
 }
 .pop-label{
   display: block;
