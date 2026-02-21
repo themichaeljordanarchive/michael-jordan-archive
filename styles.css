@@ -379,6 +379,7 @@ h2, h3{
   aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
+  max-height: calc(100vh - 120px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   background: transparent;
