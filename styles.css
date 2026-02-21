@@ -1284,6 +1284,9 @@ body.season-page .population-card tbody tr:last-child td{
   .hero-caption{
   padding: 12px 16px;
   bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
   border-radius: 8px;
   background: rgba(0,0,0,0.38);
   max-width: 92%;
