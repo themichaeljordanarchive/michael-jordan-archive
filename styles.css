@@ -1319,6 +1319,9 @@ body.season-page .population-card tbody tr:last-child td{
 .hero-track img.hero-collage{
   object-position: center 60%;
 }
+ .hero-carousel{
+   aspect-ratio: auto;
+   height: 55vh;
 }
 
   /* Season Index: single column */
