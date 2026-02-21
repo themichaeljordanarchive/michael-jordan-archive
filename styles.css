@@ -1276,24 +1276,24 @@ body.season-page .population-card tbody tr:last-child td{
 
   /* Hero caption (your dialed-in mobile label) */
   .hero-caption{
-    padding: 6px 10px;
-    bottom: 4px;
-    border-radius: 6px;
-    background: rgba(0,0,0,0.30);
-    max-width: 92%;
-  }
+  padding: 12px 16px;
+  bottom: 8px;
+  border-radius: 8px;
+  background: rgba(0,0,0,0.38);
+  max-width: 92%;
+}
 
-  .hero-caption-title{
-    font-size: 11px;
-    letter-spacing: 0.04em;
-    margin-bottom: 1px;
-    line-height: 1.1;
-  }
+.hero-caption-title{
+  font-size: 16px;
+  letter-spacing: 0.05em;
+  margin-bottom: 4px;
+  line-height: 1.15;
+}
 
-  .hero-caption-sub{
-    font-size: 10px;
-    line-height: 1.2;
-  }
+.hero-caption-sub{
+  font-size: 14px;
+  line-height: 1.4;
+}
 
   /* Hide hero arrows on mobile */
   .hero-arrow{ display: none; }
