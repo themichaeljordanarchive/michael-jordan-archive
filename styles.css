@@ -1169,15 +1169,16 @@ body.season-page .population-card tbody tr:last-child td{
 .home-tile{
   display: block;
   text-decoration: none;
-
   border: 1px solid rgba(0,0,0,0.28);
   border-radius: 18px;
-
   padding: 22px 22px 20px;
-
   background: #f1f0ec;
-
   transition: border-color 0.2s ease, transform 0.15s ease;
+}
+
+.home-tile:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 
 .home-tile:hover{
