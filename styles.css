@@ -375,18 +375,14 @@ h2, h3{
 }
 
 .hero-carousel{
-  width: 100vw;
-  height: 640px;
+  width: 100%;
+  aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   background: transparent;
   margin-top: 0;
-}
-
-.hero-carousel {
-  visibilty: hidden;
 }
 
 .hero-track{
@@ -403,11 +399,6 @@ h2, h3{
   object-fit: cover;
   object-position: center 70%;
   flex-shrink: 0;
-}
-
-/* HERO CAPTION OVERLAY */
-.hero-carousel{
-  position: relative; /* required for absolute caption positioning */
 }
 
 .hero-caption{
