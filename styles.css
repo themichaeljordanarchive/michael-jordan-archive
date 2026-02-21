@@ -1149,12 +1149,36 @@ body.season-page .population-card tbody tr:last-child td{
   border-color: rgba(157,15,15,0.35);
 }
 
+@media (hover: hover){
+  .home-tile:hover{
+    border-color: rgba(157,15,15,0.45);
+  }
+
+  .home-tile:hover::before{
+    background: rgba(157,15,15,0.85);
+  }
+}
+
 .tile-title{
   font-weight: 650;
   letter-spacing: 0.02em;
   margin-bottom: 6px;
 }
+.home-tile{
+  position: relative;
+  padding-left: 22px; /* room for accent */
+}
 
+.home-tile::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:18px;
+  bottom:18px;
+  width:3px;
+  border-radius:999px;
+  background: rgba(157,15,15,0.55);
+}
 .home-list{
   margin-top: 14px;
   padding-left: 20px;
