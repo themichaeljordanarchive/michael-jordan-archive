@@ -1169,15 +1169,15 @@ body.season-page .population-card tbody tr:last-child td{
 .home-tile{
   display: block;
   text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.08);
+  border: 1px solid rgba(0,0,0,0.16);
   border-radius: 18px;
-  padding: 18px 18px 16px;
-  background: rgba(255,255,255,0.6);
+  padding: 20px 120px 18px;
+  background: rgba(255,255,255,0.96);
   transition: border-color 0.2s ease;
 }
 
 .home-tile:hover{
-  border-color: rgba(157,15,15,0.35);
+  border-color: rgba(157,15,15,0.55);
 }
 
 @media (hover: hover){
@@ -1191,7 +1191,7 @@ body.season-page .population-card tbody tr:last-child td{
 }
 
 .tile-title{
-  font-weight: 650;
+  font-weight: 7000;
   letter-spacing: 0.02em;
   margin-bottom: 6px;
 }
