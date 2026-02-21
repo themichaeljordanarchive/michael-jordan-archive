@@ -342,125 +342,87 @@ h2, h3{
 }
 
 /* =========================================================
-   HERO (if used)
+   HERO (DESKTOP)
    ========================================================= */
-
-.hero-bleed{
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  overflow: hidden;
-  background: #e9e9e7;
-  margin-top: 0;
-}
 
 .hero-carousel{
   width: 100%;
   aspect-ratio: 16/9;
   overflow: hidden;
   position: relative;
-  touch-action: pan-y;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   background: transparent;
-  margin-top: 0;
-  max-height: calc(100vh - 110px);
+}
+
+.hero-viewport,
+.hero-track{
+  height: 100%;
 }
 
 .hero-track{
   display: flex;
-  height: 100%;
   width: 100%;
   will-change: transform;
   transition: transform 700ms ease;
 }
+
 .hero-track img{
   width: 100%;
   flex: 0 0 100%;
   height: 100%;
   object-fit: cover;
   object-position: center 70%;
-  flex-shrink: 0;
 }
 
+/* Caption */
 .hero-caption{
   position: absolute;
-  bottom: 12px;  
+  bottom: 12px;
   left: 20px;
-
   max-width: 520px;
-
   background: rgba(0,0,0,0.55);
   color: #fff;
-  padding: 16px 20px;
-  border-radius: 10px;
+  padding: 14px 18px;
+  border-radius: 8px;
   backdrop-filter: blur(4px);
 }
 
 .hero-caption-title{
   font-size: 14px;
-  font-weight: 600;         /* slightly heavier than sentence */
-  letter-spacing: 0.08em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
   margin-bottom: 4px;
 }
 
 .hero-caption-sub{
   font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
   line-height: 1.4;
-
 }
-/* HERO ARROWS */
+
+/* Arrows */
 .hero-arrow{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 52px;
-  height: 52px;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.28);
-  background: rgba(0,0,0,0.22);
-  color: rgba(255,255,255,0.92);
-  font-size: 30px;
-  line-height: 1;
-  display: grid;
-  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: white;
+  font-size: 20px;
   cursor: pointer;
-  z-index: 8;
-  opacity: 0.6;
-  -webkit-tap-highlight-color: transparent;
+  z-index: 5;
 }
 
-.hero-prev{ left: 14px; }
-.hero-next{ right: 14px; }
+.hero-prev{ left: 18px; }
+.hero-next{ right: 18px; }
 
-@media (hover:hover){
-  .hero-arrow:hover{ opacity: 0.95; background: rgba(0,0,0,0.32); }
+.hero-arrow:hover{
+  background: rgba(0,0,0,0.65);
 }
-
-/* optional: keep them subtle */
-.hero-carousel:hover .hero-arrow{ opacity: 0.85; }
-
-@media (max-width: 900px){
-  .hero-caption{
-    left: 18px;
-    right: 18px;
-    max-width: none;
-    bottom: 18px;
-  }
-}
-
-@media (max-width: 700px){
-  .hero-caption{
-    right: 12px;
-    left: 12px;            /* wider on mobile */
-    max-width: none;
-    bottom: 12px;
-  }
-}
-
 /* =========================================================
    CONTENT BLOCKS
    ========================================================= */
@@ -1239,6 +1201,7 @@ body.season-page .population-card tbody tr:last-child td{
 
 /* =========================================================
    RESPONSIVE — LOCKED (single source)
+   Breakpoints: 900 → 700 → 430 → 380
    ========================================================= */
 
 /* Tablet + down */
@@ -1268,7 +1231,9 @@ body.season-page .population-card tbody tr:last-child td{
     line-height: 1.08;
   }
 
-@media (max-width: 700px){
+  /* =========================
+     HOME GRID (mobile)
+     ========================= */
   .home-grid{
     grid-template-columns: 1fr;
     gap: 12px;
@@ -1277,8 +1242,8 @@ body.season-page .population-card tbody tr:last-child td{
 
   .home-tile{
     padding: 16px 16px 14px;
-    border-color: 1px sild rgba(0,0,0,0.28);
-    background: e6e3dd;
+    border: 1px solid rgba(0,0,0,0.28);
+    background: #e6e3dd;
   }
 
   .tile-title{
@@ -1291,38 +1256,56 @@ body.season-page .population-card tbody tr:last-child td{
     line-height: 1.45;
   }
 
-.hero-caption{
-  padding: 6px 10px;
-  bottom: 4px;
-  border-radius: 6px;
-  background: rgba(0,0,0,0.30);
-  max-width: 92%;
-}
+  /* =========================
+     HERO (mobile only)
+     (desktop remains aspect-ratio: 16/9)
+     ========================= */
+  .hero-carousel{
+    aspect-ratio: auto;
+    height: 58vh; /* adjust 50–60vh as desired */
+  }
 
-.hero-caption-title{
-  font-size: 11px;
-  letter-spacing: 0.04em;
-  margin-bottom: 1px;
-  line-height: 1.1;
-}
+  .hero-viewport,
+  .hero-track{
+    height: 100%;
+  }
 
-.hero-caption-sub{
-  font-size: 10px;
-  line-height: 1.2;
-}
+  .hero-track img{
+    height: 100%;
+  }
 
-.hero-arrow{
- display: none;
-}
+  /* Hero caption (your dialed-in mobile label) */
+  .hero-caption{
+    padding: 6px 10px;
+    bottom: 4px;
+    border-radius: 6px;
+    background: rgba(0,0,0,0.30);
+    max-width: 92%;
+  }
 
-/* Hero 1 mobile adjustment */
-.hero-track img.hero-collage{
-  object-position: center 60%;
-}
- .hero-carousel{
-   aspect-ratio: auto;
-   height: 55vh;
-}
+  .hero-caption-title{
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    margin-bottom: 1px;
+    line-height: 1.1;
+  }
+
+  .hero-caption-sub{
+    font-size: 10px;
+    line-height: 1.2;
+  }
+
+  /* Hide hero arrows on mobile */
+  .hero-arrow{ display: none; }
+
+  /* Hero 1 mobile adjustment */
+  .hero-track img.hero-collage{
+    object-position: center 60%;
+  }
+
+  /* =========================
+     SEASON / EVIDENCE mobile
+     ========================= */
 
   /* Season Index: single column */
   .season-index{ grid-template-columns: 1fr; }
@@ -1449,7 +1432,7 @@ body.season-page .population-card tbody tr:last-child td{
   .site-header{
     position: relative;
     z-index: 9998;
-    overflow: visible; /* critical: prevents dropdown clipping/weird scroll behavior */
+    overflow: visible; /* prevents dropdown clipping */
   }
 
   .nav-toggle{
