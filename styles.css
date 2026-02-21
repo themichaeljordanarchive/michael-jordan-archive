@@ -1169,7 +1169,7 @@ body.season-page .population-card tbody tr:last-child td{
 .home-tile{
   display: block;
   text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.16);
+  border: 1px solid rgba(0,0,0,0.22);
   border-radius: 18px;
   padding: 20px 120px 18px;
   background: f3f2ef;
