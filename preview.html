@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Michael Jordan Archive — Research &amp; Authentication</title>
   <meta name="description" content="Independent research specializing in photo matching and documentation of Michael Jordan game-used memorabilia." />
-  <link rel="stylesheet" href="styles.css?v=1" />
+  <link rel="stylesheet" href="styles.css?v=2" />
 </head>
 
 <body>
@@ -197,6 +197,7 @@ window.addEventListener('load', function() {
 
   function updateSlide() {
     track.style.transform = 'translateX(-' + (index * 100) + '%)';
+
     const current = slides[index];
     captionTitle.textContent = current.getAttribute('data-title') || '';
     captionSub.textContent = current.getAttribute('data-sub') || '';
@@ -244,38 +245,9 @@ window.addEventListener('load', function() {
     prevBtn.addEventListener('click', function(){
       stopAuto();
       prevSlide();
-      startAuto(
-);
+      startAuto();
     });
-
-// SWIPE SUPPORT (mobile)
-let startX = 0;
-let endX = 0;
-
-heroCarousel.addEventListener('touchstart', function(e) {
-  startX = e.touches[0].clientX;
-}, { passive: true });
-
-heroCarousel.addEventListener('touchend', function(e) {
-  endX = e.changedTouches[0].clientX;
-  handleSwipe();
-}, { passive: true });
-
-function handleSwipe() {
-  const threshold = 50;
-
-  if (startX - endX > threshold) {
-    stopAuto();
-    nextSlide();
-    startAuto();
   }
-
-  if (endX - startX > threshold) {
-    stopAuto();
-    prevSlide();
-    startAuto();
-  }
-}
 
 });
 </script>
