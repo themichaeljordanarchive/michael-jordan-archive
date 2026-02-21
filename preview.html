@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Michael Jordan Archive — Research &amp; Authentication</title>
+  <meta name="description" content="Independent research specializing in photo matching and documentation of Michael Jordan game-used memorabilia." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <div class="brand">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Michael Jordan Archive logo">
+    </a>
+
+    <div class="brand-text">
+      <div class="brand-name">Michael Jordan Archive</div>
+    </div>
+  </div>
+
+ <button class="nav-toggle" aria-label="Menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<nav class="site-nav">
+  <a href="index.html">Home</a>
+  <a href="jerseys.html">Jersey Archive</a>
+  <a href="research.html">Documented Work</a>
+  <a href="methodology.html">Methodology</a>
+  <a href="contact.html">Contact</a>
+</nav>
+
+</header>
+
+<div class="hero-carousel" aria-label="Featured imagery">
+
+  <div class="hero-viewport">
+    <div class="hero-track" id="heroTrack">
+
+      <img src="assets/hero-1.jpg"
+           alt="Selected Game-Worn Artifacts"
+           data-title="Selected Game-Worn Artifacts"
+           data-sub="Documented representative examples for multiple seasons.">
+
+      <img src="assets/hero-2.jpg"
+           alt="1992–93 Away Jersey"
+           data-title="1992–93 Away Jersey"
+           data-sub="Documented multi-game example for the 1992–93 season.">
+
+      <img src="assets/hero-3.jpg"
+           alt="1986–87 Home Uniform"
+           data-title="1986–87 Home Uniform"
+           data-sub="Documented singular home uniform for the 1986–87 season.">
+
+      <img src="assets/hero-4.jpg"
+           alt="1997–98 Air Jordan (ECF Game 7)"
+           data-title="1997–98 Air Jordan (ECF Game 7)"
+           data-sub="Documented Game 7 example for the 1997–98 season.">
+
+      <img src="assets/hero-5.jpg"
+           alt="1989–90 Away Jersey"
+           data-title="1989–90 Away Jersey"
+           data-sub="Documented away uniform for the 1989–90 season.">
+    </div>
+  </div>
+
+  <!-- Caption overlay (JS will populate this) -->
+  <div class="hero-caption">
+    <div class="hero-caption-title"></div>
+    <div class="hero-caption-sub"></div>
+  </div>
+
+</div>
+
+
+<main>
+
+  <section class="home-intro">
+    <div class="home-intro-inner">
+
+      <h1>The Michael Jordan Archive</h1>
+
+      <p class="lead">
+        The Michael Jordan Archive is an independent research and documentation platform dedicated exclusively to the game-worn career of Michael Jordan.
+      </p>
+
+      <p>
+        The archive specializes in photo-matching, game attribution, and historical verification of Michael Jordan jerseys, sneakers, and related equipment. Research is grounded in primary photographic and video sources, supported by detailed comparative analysis of construction, tagging, wear patterns, and documented game context.
+      </p>
+
+      <p class="muted">
+        The archive is supported by a privately maintained collection of original photographic negatives acquired season-by-season, including imagery not publicly accessible through commercial databases or digital archives. In certain cases, these materials represent the only known visual documentation of specific game-worn garments.
+      </p>
+
+
+
+      <div class="home-grid">
+
+  <a class="home-tile" href="jerseys.html">
+    <div class="tile-title">Jersey Archive</div>
+    <div class="tile-sub muted">
+      Season-by-season documentation of confirmed game-worn garments.
+    </div>
+  </a>
+
+  <a class="home-tile" href="research.html">
+    <div class="tile-title">Documented Work</div>
+    <div class="tile-sub muted">
+      Published findings and verified case analysis.
+    </div>
+  </a>
+
+  <a class="home-tile" href="methodology.html">
+    <div class="tile-title">Methodology</div>
+    <div class="tile-sub muted">
+      Research standards, source protocols, and audit structure.
+    </div>
+  </a>
+
+  <a class="home-tile" href="contact.html">
+    <div class="tile-title">Contact</div>
+    <div class="tile-sub muted">
+      Research inquiries and documentation requests.
+    </div>
+  </a>
+
+</div>
+
+
+      <h2 class="section-title">Archive &amp; Population Research</h2>
+
+      <p>
+        A core objective of The Michael Jordan Archive is the development of an evolving population record for Michael Jordan game-worn jerseys. This initiative seeks to bring structure and evidence-based documentation to a category historically lacking centralized archival research.
+      </p>
+
+      <ul class="home-list">
+        <li>Identification and documentation of confirmed game-worn examples</li>
+        <li>Game-dating and season attribution by photographic record</li>
+        <li>Tracking confirmed and attributed garments across styles and years</li>
+        <li>Population analysis contextualizing scarcity and circulation</li>
+      </ul>
+
+      <p class="purpose">
+        Research conducted through The Michael Jordan Archive supports collectors, auction houses, and institutions seeking rigorous, evidence-driven analysis. All findings are presented independently, with transparency regarding methodology and source limitations.
+      </p>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer class="site-footer">
+  © Michael Jordan Archive
+</footer>
+
+
+
+<script>
+window.addEventListener('load', function() {
+
+  // NAV
+  const navBtn = document.querySelector('.nav-toggle');
+  if (navBtn) {
+    navBtn.addEventListener('click', function() {
+      document.body.classList.toggle('nav-open');
+    });
+  }
+
+  // HERO
+  const heroCarousel = document.querySelector('.hero-carousel');
+  const track = document.getElementById('heroTrack');
+  const captionTitle = document.querySelector('.hero-caption-title');
+  const captionSub = document.querySelector('.hero-caption-sub');
+
+  if (!heroCarousel || !track || !captionTitle || !captionSub) return;
+
+  const slides = track.querySelectorAll('img');
+  const total = slides.length;
+
+  let index = 0;
+  let heroTimer;
+
+  function updateSlide() {
+    track.style.transform = 'translateX(-' + (index * 100) + '%)';
+
+    const current = slides[index];
+
+    captionTitle.textContent = current.getAttribute('data-title') || '';
+    captionSub.textContent = current.getAttribute('data-sub') || '';
+  }
+
+  function nextSlide() {
+    index = (index + 1) % total;
+    updateSlide();
+  }
+
+  // FORCE caption immediately after full page load
+  updateSlide();
+
+  // autoplay
+  heroTimer = setInterval(nextSlide, 8000);
+
+  // pause on hover
+  heroCarousel.addEventListener('mouseenter', function() {
+    clearInterval(heroTimer);
+  });
+
+  heroCarousel.addEventListener('mouseleave', function() {
+    heroTimer = setInterval(nextSlide, 8000);
+  });
+
+});
+</script>
+
+
+</body>
+</html>
