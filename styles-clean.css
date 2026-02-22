@@ -8,11 +8,8 @@
 /* ---------- Base Reset ---------- */
 * { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-html{
- -webkit-text-size-adjust: 100%;
-}
+html { -webkit-text-size-adjust: 100%; }
 img { max-width: 100%; height: auto; display: block; }
-
 
 /* ---------- Theme Tokens ---------- */
 :root{
@@ -27,16 +24,16 @@ img { max-width: 100%; height: auto; display: block; }
   --sans: ui-sans-serif, system-ui, -apple-system, Arial, sans-serif;
   --serif: ui-serif, Georgia, "Times New Roman", Times, serif;
 
-  /* Wider layout */
+  /* Layout widths */
   --reading: 1280px;
+  --reading-standard: 1180px;
+  --reading-season: 980px;
+
+  /* Global radius */
   --radius: 14px;
 
   /* Accent */
   --accent-red: #b10d0d;
-
-  /* Page widths */
-  --reading-standard: 1180px;
-  --reading-season: 980px;
 }
 
 /* ---------- Page Base ---------- */
@@ -51,121 +48,16 @@ body{
   -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
 }
-p, li, .muted, .purpose {
+
+p, li, .muted, .purpose{
   font-family: var(--sans);
   font-weight: 400;
   line-height: 1.75;
   color: var(--ink-2);
 }
 
-/* ---------- Links ---------- */
 a{ color: inherit; text-decoration: none; }
 a:hover{ text-decoration: none; }
-
-.preseason-link{
-  border-bottom: 1px dotted rgba(0,0,0,0.35);
-  text-decoration: none;
-  transition: border-color 0.2s ease;
-}
-
-.preseason-link:hover{
-  border-bottom-color: var(--accent-red);
-}
-.preseason-link{
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.18);
-  padding-bottom: 2px;
-  transition: all 0.2s ease;
-}
-
-.preseason-link:hover{
-  color: var(--accent-red);
-  border-bottom-color: var(--accent-red);
-}
-.preseason-link{
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0.18);
-  padding-bottom: 2px;
-  transition: all 0.2s ease;
-}
-
-.preseason-link .arrow{
-  color: var(--accent-red);
-  font-weight: 700;
-  margin-left: 4px;
-}
-.preseason-page .population-card h3{
-  position: relative;
-  display: inline-block;
-  padding-bottom: 6px;
-}
-
-.preseason-page .population-card h3::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-
-  width: 100%;
-  height: 2px;
-  background: var(--accent-red);
-}
-
-/* ---------------------------------------
-   PRESEASON TABLE SCROLL CUE (Mobile Only)
----------------------------------------- */
-
-.preseason-page .table-scroll {
-  position: relative;
-}
-
-/* Subtle right-edge fade to indicate scroll */
-.preseason-page .table-scroll::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 48px;
-  height: 100%;
-  pointer-events: none;
-  background: linear-gradient(
-    to left,
-    var(--card-bg, #f8f6f2),
-    rgba(248, 246, 242, 0)
-  );
-  opacity: 0;
-  transition: opacity 0.2s ease;
-}
-
-/* Small swipe hint */
-.preseason-page .table-hint {
-  display: none;
-}
-
-/* Activate on mobile */
-@media (max-width: 900px) {
-  .preseason-page .table-scroll::after {
-    opacity: 1;
-  }
-
-  .preseason-page .table-hint {
-    display: block;
-    text-align: right;
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, 0.55);
-    margin: 6px 4px 10px;
-  }
-}
-
-@media (hover: hover){
-  .preseason-link:hover{
-    border-bottom-color: var(--accent-red);
-  }
-}
 
 /* ---------- Layout ---------- */
 main{
@@ -179,24 +71,18 @@ main{
 
 /* Standard pages vs season pages */
 body:not(.season-page) main{
-  width: 100%;
   max-width: var(--reading-standard);
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
 }
 
 body.season-page main{
-  width: 100%;
   max-width: var(--reading-season);
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
 }
 
-/* Copy blocks read “wide”, but keep line length premium */
+/* Copy blocks */
 p{
   margin: 0 0 18px 0;
   color: var(--ink-2);
@@ -204,11 +90,7 @@ p{
   font-size: 16px;
   line-height: 1.75;
 }
-
-ul{
-  margin: 10px 0 18px 18px;
-  color: var(--ink-2);
-}
+ul{ margin: 10px 0 18px 18px; color: var(--ink-2); }
 li{ margin: 6px 0; }
 
 .muted{
@@ -217,25 +99,14 @@ li{ margin: 6px 0; }
   color: rgba(20,20,20,0.55);
 }
 
-.table-scroll {
+/* ---------- Tables ---------- */
+.table-scroll{
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
+.table-scroll table{ min-width: 720px; }
+.table-scroll th{ white-space: normal; line-height: 1.25; }
 
-.table-scroll table {
-  min-width: 720px; /* forces scroll instead of squish */
-}
-.table-scroll th{
-  white-space: normal;
-  line-height: 1.25;
-}
-.population-card table {
-  background: #f7f7f5;
-  border-radius: 12px;
-}
-.population-card {
-  background: #ffffff;
-}
 .notes-col{
   min-width: 240px;
   white-space: normal;
@@ -261,6 +132,7 @@ h2, h3{
   font-weight: 500;
   color: var(--muted);
 }
+
 .pop-label{
   display: block;
   font-family: var(--sans);
@@ -292,7 +164,6 @@ h2, h3{
   gap: 18px;
   margin: 0;
 }
-
 .brand img{ width: 56px; height: auto; }
 
 .brand-name{
@@ -370,10 +241,9 @@ h2, h3{
   display: flex;
   width: 100%;
   will-change: transform;
-  transition: transform 650ms ease;
+  transition: transform 650ms cubic-bezier(.16,1,.3,1);
 }
 
-/* NEW: each slide is the 100% unit */
 .hero-slide{
   flex: 0 0 100%;
   width: 100%;
@@ -381,7 +251,6 @@ h2, h3{
   position: relative;
 }
 
-/* Image fills the slide */
 .hero-slide img{
   width: 100%;
   height: 100%;
@@ -390,20 +259,13 @@ h2, h3{
   object-position: center 70%;
 }
 
-/* Caption is inside slide */
+/* Caption lives inside slide */
 .hero-slide .hero-caption{
   position: absolute;
   bottom: 20px;
   left: 24px;
   max-width: 520px;
-}
 
-/* Caption */
-.hero-caption{
-  position: absolute;
-  bottom: 12px;
-  left: 20px;
-  max-width: 520px;
   background: rgba(255,255,255,0.72);
   color: #111;
   border: 1px solid rgba(0,0,0,0.06);
@@ -441,17 +303,68 @@ h2, h3{
   cursor: pointer;
   z-index: 5;
 }
-
 .hero-prev{ left: 18px; }
 .hero-next{ right: 18px; }
-
-.hero-arrow:hover{
-  background: rgba(0,0,0,0.65);
-}
+.hero-arrow:hover{ background: rgba(0,0,0,0.65); }
 
 /* =========================================================
-   CONTENT BLOCKS
+   LINKS (preseason + archive inline)
    ========================================================= */
+
+.preseason-link{
+  font-weight: 600;
+  border-bottom: 1px solid rgba(0,0,0,0.18);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.preseason-link:hover{
+  color: var(--accent-red);
+  border-bottom-color: var(--accent-red);
+}
+.preseason-link .arrow{
+  color: var(--accent-red);
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+.archive-link{ text-decoration: underline; }
+.archive-link:hover{ text-decoration: none; }
+
+/* =========================================================
+   HOME / CONTENT BLOCKS
+   ========================================================= */
+
+.section-title{
+  text-align: center;
+  margin: 36px 0 28px;
+}
+
+.section-strip{
+  width: 100%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+.section-strip::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.08);
+  pointer-events: none;
+}
+.section-strip img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.home-intro{ padding: 48px 0 60px; }
+.home-intro-inner{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.home-intro .lead{ font-size: 17px; line-height: 1.75; }
 
 .research-grid{
   display: grid;
@@ -459,7 +372,6 @@ h2, h3{
   gap: 18px;
   margin-top: 18px;
 }
-
 .research-item{
   background: rgba(255,255,255,0.92);
   border: 1px solid rgba(0,0,0,0.09);
@@ -467,18 +379,69 @@ h2, h3{
   padding: 18px;
 }
 
-/* Prevent inner sections drifting left (standard pages) */
-body:not(.season-page) .home-intro,
-body:not(.season-page) .contact-form,
-body:not(.season-page) .research-grid{
-  margin-left: auto;
-  margin-right: auto;
+.home-grid{
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
 }
-/* Jersey Archive – Methodology Link */
 
-.season-index-feature-link{
-  margin-bottom: 14px;
+.home-tile{
+  display: block;
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.28);
+  border-radius: 18px;
+  padding: 22px 22px 20px;
+  background: #f1f0ec;
+  position: relative;
+  transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
 }
+
+.home-tile::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:18px;
+  bottom:18px;
+  width:3px;
+  border-radius:999px;
+  background: rgba(157,15,15,0.55);
+}
+
+.home-tile:hover{
+  border-color: rgba(157,15,15,0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.home-tile:active{
+  background: #ffffff;
+  border-color: rgba(157,15,15,0.55);
+}
+
+.tile-title{
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.home-list{
+  margin-top: 14px;
+  padding-left: 20px;
+}
+
+/* Divider */
+.section-divider{
+  width: 100%;
+  height: 1px;
+  background: rgba(0,0,0,0.15);
+  margin: 32px auto 12px;
+}
+/* =========================================================
+   JERSEY ARCHIVE — FEATURE LINK
+   ========================================================= */
+
+.season-index-feature-link{ margin-bottom: 14px; }
 
 .season-index-feature-link a{
   font-family: var(--sans);
@@ -487,14 +450,11 @@ body:not(.season-page) .research-grid{
   text-transform: uppercase;
   color: var(--ink-2);
   opacity: 0.75;
-  text-decoration: none;
   border-bottom: 1px solid rgba(0,0,0,0.15);
   padding-bottom: 3px;
   transition: opacity 0.2s ease, border-color 0.2s ease;
   position: relative;
 }
-
-/* Subtle arrow */
 .season-index-feature-link a::after{
   content: " →";
   font-size: 12px;
@@ -502,19 +462,17 @@ body:not(.season-page) .research-grid{
   opacity: 0.7;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
-
 .season-index-feature-link a:hover{
   opacity: 1;
   border-color: var(--accent-red);
 }
-
 .season-index-feature-link a:hover::after{
   transform: translateX(3px);
   opacity: 1;
 }
 
 /* =========================================================
-   SEASON INDEX (GRID) — CLEANED & COHESIVE
+   SEASON INDEX (GRID)
    ========================================================= */
 
 .season-index{
@@ -531,7 +489,7 @@ body:not(.season-page) .research-grid{
 .season-card{
   display: block;
   background-color: rgba(255,255,255,0.92);
-  border: 1.5px solid rgba(157,15,15,0.35); /* slightly softer */
+  border: 1.5px solid rgba(157,15,15,0.35);
   border-radius: var(--radius);
   padding: 20px 22px;
   min-height: 110px;
@@ -549,7 +507,6 @@ body:not(.season-page) .research-grid{
   box-shadow: 0 12px 28px rgba(0,0,0,0.06);
 }
 
-/* Year = primary */
 .season-year{
   font-family: var(--sans);
   font-size: 16px;
@@ -559,7 +516,6 @@ body:not(.season-page) .research-grid{
   margin-bottom: 6px;
 }
 
-/* Status = quiet metadata (directly under year) */
 .season-status{
   font-size: 11px;
   font-weight: 500;
@@ -571,23 +527,10 @@ body:not(.season-page) .research-grid{
   white-space: nowrap;
 }
 
-/* Optional: subtle distinction */
-.season-card.complete .season-status{
-  opacity: 0.40;
-  color: rgba(0,0,0,0.55);
-}
-.season-card.in-progress .season-status{
-  opacity: 0.55;
-  color: rgba(157,15,15,0.75);
-}
-
-/* Metrics block — tightened + strengthened */
 .season-metrics{
-  margin-top: 0;              /* status already creates spacing */
+  margin-top: 0;
   display: grid;
   gap: 4px;
-  margin-left: -8px;
-  margin-right: -8px;
 }
 
 .metric-row{
@@ -602,7 +545,7 @@ body:not(.season-page) .research-grid{
   font-family: var(--sans);
   font-size: 13px;
   font-weight: 500;
-  opacity: 0.45;              /* FIXED typo */
+  opacity: 0.45;
   letter-spacing: 0.02em;
   color: var(--ink-2);
 }
@@ -616,77 +559,38 @@ body:not(.season-page) .research-grid{
   font-variant-numeric: tabular-nums;
 }
 
-/* Leave this as-is if used elsewhere */
-.metric-value.main-total{
-  color: var(--accent-red);
-  font-size: 28px;
-  font-weight: 850;
-}
-
 /* =========================================================
-   Special season cards via CSS variables
+   Special season cards (watermark / background variables)
    ========================================================= */
 
-/* --- Image variables per season --- */
-
-.season-card-9697 {
-  --season-card-bg: url("assets/1996-97-bg.jpg");
-  --season-card-detail: url("assets/1996-97-bg.jpg");
-}
-
-.season-card-9293 {
-  --season-card-bg: url("assets/1992-93-bg.jpg");
-  --season-card-detail: url("assets/1992-93-bg.jpg");
-}
-
-.season-card-8889 {
-  --season-card-bg: url("assets/1988-89-bg.jpg");
-  --season-card-detail: url("assets/1988-89-bg.jpg");
-}
-
-.season-card-8687 {
-  --season-card-bg: url("assets/1986-87-bg.jpg");
-  --season-card-detail: url("assets/1986-87-detail.jpg");
-}
-
-.season-card-8586 {
-  --season-card-bg: url("assets/1985-86-bg.jpg");
-  --season-card-detail: url("assets/1985-86-detail.jpg");
-}
-
-.season-card-8485 {
-  --season-card-bg: url("assets/1984-85-bg.jpg");
-  --season-card-detail: url("assets/1984-85-detail.jpg");
-}
-
-
-/* --- Shared card styling --- */
+.season-card-9697 { --season-card-bg: url("assets/1996-97-bg.jpg"); --season-card-detail: url("assets/1996-97-bg.jpg"); }
+.season-card-9293 { --season-card-bg: url("assets/1992-93-bg.jpg"); --season-card-detail: url("assets/1992-93-bg.jpg"); }
+.season-card-8889 { --season-card-bg: url("assets/1988-89-bg.jpg"); --season-card-detail: url("assets/1988-89-bg.jpg"); }
+.season-card-8687 { --season-card-bg: url("assets/1986-87-bg.jpg"); --season-card-detail: url("assets/1986-87-detail.jpg"); }
+.season-card-8586 { --season-card-bg: url("assets/1985-86-bg.jpg"); --season-card-detail: url("assets/1985-86-detail.jpg"); }
+.season-card-8485 { --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
 
 .season-card-9697,
 .season-card-9293,
 .season-card-8889,
 .season-card-8687,
 .season-card-8586,
-.season-card-8485 {
+.season-card-8485{
   background-image:
     linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.95)),
     var(--season-card-bg);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
- transition: background-image 0.25s ease, transform 0.2s ease;
+  transition: background-image 0.25s ease, transform 0.2s ease;
 }
-
-
-/* --- Hover state --- */
 
 .season-card-9697:hover,
 .season-card-9293:hover,
 .season-card-8889:hover,
 .season-card-8687:hover,
 .season-card-8586:hover,
-.season-card-8485:hover {
+.season-card-8485:hover{
   background-image:
     linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
     var(--season-card-bg);
@@ -709,10 +613,10 @@ body:not(.season-page) .research-grid{
   pointer-events: none;
 }
 
+/* Detail overlay intensity (only for the seasons you wanted) */
 .season-card-8687:hover::before,
 .season-card-8485:hover::before{ opacity: 0.08; }
 
-/* Mobile/touch: no hover, so bake in the vibe */
 @media (hover: none) and (pointer: coarse){
   .season-card-8687,
   .season-card-8485{
@@ -725,7 +629,7 @@ body:not(.season-page) .research-grid{
 }
 
 /* =========================================================
-   CONTACT FORM (if used)
+   CONTACT FORM
    ========================================================= */
 
 .contact-form{ max-width: 560px; margin-top: 26px; }
@@ -787,10 +691,9 @@ body:not(.season-page) .research-grid{
   letter-spacing: 0.06em;
 }
 /* =========================================================
-   SEASON DETAIL TEMPLATE (ALL SEASONS) — CLEAN + LOCKED
+   SEASON DETAIL TEMPLATE (ALL SEASONS)
    ========================================================= */
 
-/* Back link */
 .back-link{
   margin: 0 0 18px 0;
   font-family: var(--sans);
@@ -801,13 +704,9 @@ body:not(.season-page) .research-grid{
 }
 .back-link a:hover{ color: rgba(20,20,20,0.90); }
 
-/* ----- WOW HEADER CARD (universal) ----- */
 .season-header{ margin-bottom: 60px; }
-
-/* tighter header rhythm */
 .season-header h1{ margin-bottom: 6px; }
 
-/* WOW card container */
 .season-card--detail{
   position: relative;
   border-radius: 22px;
@@ -817,7 +716,6 @@ body:not(.season-page) .research-grid{
   box-shadow: 0 18px 44px rgba(0,0,0,0.08);
 }
 
-/* Header columns */
 .season-header-top{
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
@@ -825,7 +723,6 @@ body:not(.season-page) .research-grid{
   gap: 48px;
 }
 
-/* Season year hero (handles underline itself) */
 .season-year-hero{
   font-family: var(--serif);
   font-size: 72px;
@@ -849,55 +746,6 @@ body:not(.season-page) .research-grid{
   border-radius: 2px;
 }
 
-/* Population total block */
-.population-total{
-  margin-top: 6px;
-  color: var(--ink);
-  font-weight: 500;
-}
-
-/* population-total layout */
-.population-total{
-  display: grid;
-  grid-template-columns: 1fr auto;
-  column-gap: 16px;
-  row-gap: 6px;
-  margin-top: 8px;
-  align-items: baseline;
-  font-size: 18px;
-}
-
-/* main number */
-.population-total strong{
-  font-size: 34px;
-  font-weight: 600;
-  line-height: 0.9;
-  letter-spacing: -0.03em;
-  display: inline-block;
-  margin-left: 10px;
-}
-
-/* Only make the main total number red */
-.population-number strong{ color: var(--accent-red); }
-
-/* Breakdown (single definition: grid) */
-.population-breakdown{
-  grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: auto auto auto auto;
-  column-gap: 18px;
-  row-gap: 6px;
-  margin-top: 8px;
-  font-size: 16px;
-  justify-content: start;
-}
-.population-breakdown strong{
-  color: var(--ink);
-  font-size: 24px;
-  font-weight: 700;
-}
-
-/* Audit badge */
 .audit-badge{
   margin-top: 18px;
   font-family: var(--sans);
@@ -911,7 +759,6 @@ body:not(.season-page) .research-grid{
   border-radius: 999px;
 }
 
-/* Right column summary (single source) */
 .season-status-stack{
   display: flex;
   flex-direction: column;
@@ -925,9 +772,7 @@ body:not(.season-page) .research-grid{
   color: #333;
   margin-bottom: 24px;
 }
-.season-summary > div{
-  margin: 6px 0;
-}
+.season-summary > div{ margin: 6px 0; }
 .season-summary strong{ font-weight: 800; }
 
 .last-updated{
@@ -937,23 +782,13 @@ body:not(.season-page) .research-grid{
   color: rgba(0,0,0,0.55);
 }
 
-/* ----- Population (inner card) ----- */
+/* Population inner card */
 .population-card{
   background: #f9f9f7;
   border: 1px solid rgba(0,0,0,0.12);
   border-radius: 16px;
   padding: 32px;
-  Margin-bottom: 24px;
-}
-
-.population-card h3{
-  font-size: 12px;
-  letter-spacing: 0.26em;
-  text-transform: uppercase;
-  margin: 0 0 18px;
-  color: rgba(20,20,20,0.55);
-  font-family: var(--sans);
-  font-weight: 750;
+  margin-bottom: 24px;
 }
 
 .population-card table{
@@ -983,68 +818,10 @@ body:not(.season-page) .research-grid{
 }
 .population-card td:first-child{ font-weight: 500; }
 
-.population-card td:nth-child(2),
-.population-card td:nth-child(3),
-.population-card td:nth-child(4){
-  text-align: center;
-  font-weight: 600;
-}
-
-/* Prevent “double line” at bottom */
-body.season-page .population-card tbody tr:last-child td{
-  border-bottom: none;
-}
-
-/* Footnote inside population card (ONE line only) */
-.summary-footnote{
-  margin-top: 18px;
-  padding-top: 16px;
-  border-top: 1px solid rgba(0,0,0,0.06);
-}
-.summary-footnote p{
-  margin-bottom: 12px;
-  max-width: 78ch;
-  font-size: 14px;
-  line-height: 1.65;
-  color: rgba(20,20,20,0.70);
-}
-.summary-footnote p.muted{ color: rgba(20,20,20,0.55); }
-
-/* Link styling */
-.archive-link { text-decoration: underline; }
-.archive-link:hover { text-decoration: none; }
-
 /* =========================================================
-   SECTION DIVIDER (centered between major blocks)
-   ========================================================= */
-.section-divider{
-  width: 100%;
-  height: 1px;
-  background: rgba(0,0,0,0.15);
-  margin: 32px auto 12px;
-}
-
-/* =========================================================
-   HOME / AWAY BLOCKS (garment records)
+   EVIDENCE / GARMENT RECORDS
    ========================================================= */
 
-/* Section headings: centered, no pseudo-elements, no random dashes */
-.season-block > h2{
-  text-align: center;
-  margin: 12px 0 18px;
-}
-
-/* Style Summary (minimal strip — no borders, no “Style Summary” label needed) */
-.style-summary-card{
-  padding: 10px 0 18px;
-  margin: 0 0 20px;
-  background: transparent;
-  border: none;
-}
-.style-summary-content{ padding: 0; }
-.style-summary-card .evidence-meta{ gap: 10px; }
-
-/* Evidence blocks */
 .evidence-block{ margin-top: 34px; }
 
 .evidence-grid{
@@ -1108,7 +885,6 @@ body.season-page .population-card tbody tr:last-child td{
   color: rgba(20,20,20,0.82);
 }
 
-/* Garment titles (H3 inside evidence-subblock) */
 .evidence-subblock > h3{
   margin: 22px 0 12px;
   font-size: 16px;
@@ -1118,10 +894,8 @@ body.season-page .population-card tbody tr:last-child td{
   font-family: var(--sans);
 }
 
-/* Refined link styling inside Public Sale Details */
 .evidence-content ul li a{
   color: var(--ink);
-  text-decoration: none;
   border-bottom: 1px solid rgba(0,0,0,0.25);
   padding-bottom: 1px;
   transition: border-color 0.2s ease, color 0.2s ease;
@@ -1130,378 +904,84 @@ body.season-page .population-card tbody tr:last-child td{
   border-bottom-color: var(--accent-red);
   color: rgba(177,13,13,0.85);
 }
-/* Section strip (desktop + mobile base) */
-.section-strip{
-  width: 100%;
-  margin: 0;
-}
-
-.section-strip{
-  position: relative;
-  overflow: hidden;
-}
-.section-strip::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.08); /* 8% white overlay */
-  pointer-events: none;
-}
-.section-strip img{
-  width: 100%;
-  height: auto;   /* your strip height */
-  display: block;
-}
-
-/* Section title below strip */
-.section-title{
-  text-align: center;
-  margin: 18px 0 28px;   /* tighten this */
-}
-
-.home-intro{
-  padding: 48px 0 60px;
-}
-
-.home-intro-inner{
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.home-intro .lead{
-  font-size: 17px;
-  line-height: 1.75;
-}
-
-.section-title{
-  margin-top: 36px;
-}
-
-.home-grid{
-  margin-top: 28px;
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
-}
-
-.home-tile{
-  display: block;
-  text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.28);
-  border-radius: 18px;
-  padding: 22px 22px 20px;
-  background: #f1f0ec;
-  transition: border-color 0.2s ease, transform 0.15s ease;
-}
-
-.home-tile:active{
-  background: #ffffff;
-  border-color: rgba(157,15,15,0.55);
-}
-
-.home-tile:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-}
-
-.home-tile:hover{
-  border-color: rgba(157,15,15,0.45);
-  transform: translateY(-2px);
-}
-
-@media (hover: hover){
-  .home-tile:hover{
-    border-color: rgba(157,15,15,0.45);
-  }
-
-  .home-tile:hover::before{
-    background: rgba(157,15,15,0.85);
-  }
-}
-
-.tile-title{
-  font-weight: 7000;
-  letter-spacing: 0.02em;
-  margin-bottom: 6px;
-}
-.home-tile{
-  position: relative;
-  padding-left: 22px; /* room for accent */
-}
-
-.home-tile::before{
-  content:"";
-  position:absolute;
-  left:0;
-  top:18px;
-  bottom:18px;
-  width:3px;
-  border-radius:999px;
-  background: rgba(157,15,15,0.55);
-}
-.home-list{
-  margin-top: 14px;
-  padding-left: 20px;
-}
-
-@media (max-width: 700px){
-  .home-grid{
-    grid-template-columns: 1fr;
-  }
-  .home-intro{
-    padding: 32px 0 50px;
-  }
-}
-
 
 /* =========================================================
-   RESPONSIVE — LOCKED (single source)
-   Breakpoints: 900 → 700 → 430 → 380
+   RESPONSIVE — LOCKED
    ========================================================= */
 
-/* Tablet + down */
 @media (max-width: 900px){
   .season-index{ grid-template-columns: repeat(2, 1fr); }
   .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
-  .season-index a.season-card{ border: 1.5px solid rgba(157,15,15,0.55); }
   .season-header-top{ gap: 32px; }
-
-  /* NOTE:
-     Do NOT define hamburger behavior here if your hamburger only exists at 700px.
-     (700px block is the single source of truth for nav open/close.)
-  */
 }
 
-/* Phone */
 @media (max-width: 700px){
 
-  .brand-text{ display: none; }
+  main{ padding: 28px 18px 70px; }
+  h1{ font-size: 32px; line-height: 1.08; }
 
-  main{
-    padding: 28px 18px 70px;
-  }
+  .home-grid{ grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
+  .home-intro{ padding: 32px 0 50px; }
 
-  h1{
-    font-size: 32px;
-    line-height: 1.08;
-  }
-
-  /* =========================
-     HOME GRID (mobile)
-     ========================= */
-  .home-grid{
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin-top: 16px;
-  }
-
-  .home-tile{
-    padding: 16px 16px 14px;
-    border: 1px solid rgba(0,0,0,0.28);
-    background: #e6e3dd;
-  }
-
-  .tile-title{
-    font-size: 16px;
-    letter-spacing: 0.02em;
-  }
-
-  .tile-sub{
-    font-size: 13px;
-    line-height: 1.45;
-  }
-
-  /* =========================
-     HERO (mobile only)
-     (desktop remains aspect-ratio: 16/9)
-     ========================= */
   .hero-carousel{
     aspect-ratio: auto;
-    height: 58vh; /* adjust 50–60vh as desired */
+    height: 58vh;
   }
+  .hero-viewport, .hero-track{ height: 100%; }
 
-  .hero-viewport,
-  .hero-track{
-    height: 100%;
-  }
-
-  .hero-track img{
-    height: 100%;
-  }
-
-  /* Mobile hero caption refinement */
-.hero-slide .hero-caption{
-    position: absolute;
-    bottom: 4vh;              /* responsive anchoring */
+  /* Mobile caption centered */
+  .hero-slide .hero-caption{
+    bottom: 4vh;
     left: 50%;
     transform: translateX(-50%);
-
-    max-width: 82%;           /* slightly narrower than before */
+    max-width: 82%;
     text-align: center;
 
-    padding: 10px 14px;       /* reduced padding */
+    padding: 10px 14px;
     border-radius: 0;
 
     background: rgba(255,255,255,0.72);
     border: 1px solid rgba(0,0,0,0.04);
     box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-}
+  }
 
-.hero-caption-title{
+  .hero-caption-title{
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.03em;
-    line-height: 1.1;         /* tighter */
+    line-height: 1.1;
     margin-bottom: 3px;
-}
-
-.hero-caption-sub{
+  }
+  .hero-caption-sub{
     font-size: 13px;
-    line-height: 1.25;        /* tighter */
+    line-height: 1.25;
     opacity: 0.85;
-    max-width: 24ch;          /* controls line wrapping */
+    max-width: 24ch;
     margin: 0 auto;
-}
-
-  /* Hide hero arrows on mobile */
-  .hero-arrow{ display: none; }
-
-  /* Hero 1 mobile adjustment */
-  .hero-track img.hero-collage{
-    object-position: center 60%;
   }
 
-  /* =========================
-     SEASON / EVIDENCE mobile
-     ========================= */
+  .hero-arrow{ display: none; }
+  .hero-slide img.hero-collage{ object-position: center 60%; }
 
-  /* Season Index: single column */
   .season-index{ grid-template-columns: 1fr; }
 
-  /* WOW card */
   .season-card--detail{
     padding: 22px 18px;
     border-width: 1px;
     border-color: rgba(157, 15, 15, 0.15);
   }
 
-  /* Keep artifact titles centered on mobile */
-  .evidence-subblock > h3{
-    text-align: center;
-    white-space: nowrap;
-    font-size: clamp(13px, 3.2vw, 16px);
-    letter-spacing: 0.05em;
-  }
-
-  /* Mobile season header: STACKED (locked) */
   .season-header-top{
     display: flex;
     flex-direction: column;
-    gap: 16px; /* tightened */
+    gap: 16px;
   }
 
-  .season-status-stack{
-    margin-top: 4px;
-    gap: 8px;
-  }
-
-  .audit-badge{
-    margin-bottom: 6px;
-  }
-
-  /* Year sizing */
-  .season-year-hero{
-    white-space: nowrap;
-    font-size: 56px;
-    line-height: 0.95;
-    margin-bottom: 6px;
-  }
-
-  /* Games reviewed block */
-  .season-summary{
-    font-size: 13px;
-    line-height: 1.45;
-    color: rgba(20,20,20,0.72);
-    margin-bottom: 0;
-  }
-
-  .season-summary > div{
-    margin-bottom: 8px;
-  }
-  .season-summary > div:last-child{
-    margin-bottom: 0;
-  }
-
-  /* Metrics spacing */
-  .season-metrics{ gap: 12px; }
-  .metric-row{
-    display: grid;
-    grid-template-columns: 1fr auto;
-    column-gap: 14px;
-    align-items: center;
-    padding: 2px 0;
-  }
-
-  /* Artifact rhythm tightening on mobile */
-  .evidence-caption{
-    margin-top: 0px;
-    margin-bottom: 12px;
-  }
-
-  /* Force artifact layout to stack on all phones */
-  .evidence-grid{
-    grid-template-columns: 1fr !important;
-  }
-
-  .evidence-content{
-    padding: 16px;
-  }
-
-  .evidence-meta{
-    gap: 6px;
-    margin-bottom: 10px;
-  }
-
-  .evidence-meta > div{
-    padding-bottom: 6px;
-    margin-bottom: 0;
-  }
-
-  /* Mobile unified artifact wrapper (image + details as one record) */
-  .evidence-grid{
-    border: 1px solid rgba(0,0,0,0.06);
-    border-radius: 16px;
-    overflow: hidden;
-    gap: 0;
-    background: transparent;
-  }
-
-  .evidence-image,
-  .evidence-content{
-    padding: 14px;
-  }
-
-  .evidence-content{
-    background: transparent;
-    border: none;
-    border-top: 1px solid rgba(0,0,0,0.05);
-  }
-
-  /* Population card density */
-  body.season-page .population-card{ padding: 16px; }
-  body.season-page .population-card th,
-  body.season-page .population-card td{ padding: 8px 10px; }
-  body.season-page .population-card td{
-    font-size: 13px;
-    white-space: normal;
-  }
-
-  /* Mobile nav — single definition (LOCKED) */
+  /* Mobile nav */
   .site-header{
     position: relative;
     z-index: 9998;
-    overflow: visible; /* prevents dropdown clipping */
+    overflow: visible;
   }
 
   .nav-toggle{
@@ -1543,84 +1023,10 @@ body.season-page .population-card tbody tr:last-child td{
   }
 }
 
-/* Mid-size phones (iPhone 15/16 Pro widths) — place AFTER 700 so it wins */
 @media (max-width: 430px){
-  .season-year-hero{
-    font-size: 52px;
-    line-height: 0.95;
-  }
-
-  .season-summary{
-    font-size: 13px;
-    line-height: 1.55;
-  }
-
-  body.season-page .population-card td{
-    font-size: 13px;
-  }
+  .season-year-hero{ font-size: 52px; line-height: 0.95; }
 }
 
-/* Tiny phones */
 @media (max-width: 380px){
-  .season-year-hero{
-    font-size: 54px;
-  }
-}
-
-/* =========================================================
-   Global helpers
-   ========================================================= */
-.audit-ok{
-  color: #2f7a4f;
-  font-weight: 600;
-  font-size: 18px;
-}
-.audit-progress{
-  color: #b08a2e;
-  font-weight: 600;
-  font-size: 18px;
-}
-
-/* =========================================================
-   DESKTOP RHYTHM — tighten + normalize
-   ========================================================= */
-@media (min-width: 901px){
-
-  .evidence-subblock > h3{
-    margin: 12px 0 10px;
-  }
-
-  .evidence-grid{
-    margin-top: 12px;
-    gap: 36px;
-    align-items: start;
-  }
-
-  .evidence-block{
-    margin-top: 40px;
-  }
-  /* =========================================
-   JERSEY ARCHIVE — COHESION + IMAGE RESTORE
-   ========================================= */
-
-.season-index{
-  gap: 28px;
-}
-
-.season-index a.season-card{
-  border: 1px solid rgba(157, 15, 15, 0.22);
-  border-radius: 4px;
-
-  /* IMPORTANT: do NOT use background shorthand */
-  background-color: rgba(255,255,255,0.96);
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.04);
-  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
-
-  /* Preserve your subtle background image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
+  .season-year-hero{ font-size: 54px; }
 }
