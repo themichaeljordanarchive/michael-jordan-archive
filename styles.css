@@ -1303,7 +1303,7 @@ body.season-page .population-card tbody tr:last-child td{
   /* Mobile hero caption (centered placard) */
 .hero-slide .hero-caption{
     position: absolute;
-    bottom: 12px;
+    bottom: 4vh;
     left: 50%;
     transform: translateX(-50%);
 
