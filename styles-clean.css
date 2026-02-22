@@ -558,6 +558,12 @@ h2, h3{
   color: var(--ink);
   font-variant-numeric: tabular-nums;
 }
+/* First two metric rows = primary */
+.season-header-top .season-metrics .metric-row:nth-child(-n+2) .metric-label{
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 0.01em;;
+}
 
 /* =========================================================
    Special season cards (watermark / background variables)
@@ -871,6 +877,92 @@ body.preseason-page .table-hint{
   height: 3px;
   background: var(--accent-red);
   border-radius: 2px;
+}
+/* Population card (season pages) */
+.population-card{
+  background: #f9f9f7;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 16px;
+  padding: 32px;
+  margin-top: 18px;
+}
+
+.population-card h3{
+  margin: 0 0 18px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.55);
+  font-weight: 750;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.population-card h3::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-red);
+}
+
+.population-card table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  background: #f7f7f5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.population-card th{
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.55);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.population-card td{
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-family: var(--serif);
+  font-size: 15px;
+  color: rgba(20,20,20,0.92);
+}
+
+.population-card td:nth-child(2),
+.population-card td:nth-child(3),
+.population-card td:nth-child(4){
+  text-align: center;
+  font-weight: 600;
+}
+
+.population-card tbody tr:last-child td{
+  border-bottom: none;
+}
+
+/* Footnote under the population table (season pages) */
+.summary-footnote{
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.summary-footnote p{
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: rgba(20,20,20,0.55);
+  max-width: 62ch;
 }
 /* =========================================
    SEASON HEADER METRICS — RESTORE HIERARCHY
