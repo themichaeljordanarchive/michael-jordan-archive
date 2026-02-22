@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Michael Jordan Archive — Research &amp; Authentication</title>
   <meta name="description" content="Independent research specializing in photo matching and documentation of Michael Jordan game-used memorabilia." />
-  <link rel="stylesheet" href="styles.css?v=24" />
+  <link rel="stylesheet" href="styles.css?v=25" />
 </head>
 
 <body>
@@ -218,12 +218,20 @@ window.addEventListener('load', function() {
     return i - 1;                               // shift down by 1
   }
 
-  function updateCaption() {
-    const r = realIndexFromWorkingIndex(index);
-    const current = realSlides[r];
-    captionTitle.textContent = current.getAttribute('data-title') || '';
-    captionSub.textContent = current.getAttribute('data-sub') || '';
-  }
+ function updateCaption() {
+  const r = realIndexFromWorkingIndex(index);
+  const current = realSlides[r];
+
+  const captionBox = document.querySelector('.hero-caption');
+
+  // Restart animation cleanly
+  captionBox.classList.remove('is-raising');
+  void captionBox.offsetWidth; // forces reflow
+  captionBox.classList.add('is-raising');
+
+  captionTitle.textContent = current.getAttribute('data-title') || '';
+  captionSub.textContent = current.getAttribute('data-sub') || '';
+}
 
   function goTo(i, animate = true) {
     index = i;
