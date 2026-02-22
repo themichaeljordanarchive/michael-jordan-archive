@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Michael Jordan Archive — Research &amp; Authentication</title>
   <meta name="description" content="Independent research specializing in photo matching and documentation of Michael Jordan game-used memorabilia." />
-  <link rel="stylesheet" href="styles.css?v=31" />
+  <link rel="stylesheet" href="styles.css?v=32" />
 </head>
 
 <body>
@@ -43,39 +43,47 @@
   <div class="hero-viewport">
     <div class="hero-track" id="heroTrack">
 
-      <img src="assets/hero-1.jpg"
-        class="hero-collage"
-        data-title="Selected Game-Worn Artifacts"
-        data-sub="Documented and verified game-worn examples."
-        alt="">
+      <div class="hero-slide">
+  <img src="assets/hero-1.jpg" class="hero-collage" alt="">
+  <div class="hero-caption">
+    <div class="hero-caption-title">Selected Game-Worn Artifacts</div>
+    <div class="hero-caption-sub">Documented and verified game-worn examples.</div>
+  </div>
+</div>
 
-      <img src="assets/hero-2.jpg"
-        alt="1992–93 Away Jersey"
-        data-title="1992–93 Away Jersey"
-        data-sub="Documented multi-game example worn in 1992-93.">
+<div class="hero-slide">
+  <img src="assets/hero-2.jpg" alt="1992–93 Away Jersey">
+  <div class="hero-caption">
+    <div class="hero-caption-title">1992–93 Away Jersey</div>
+    <div class="hero-caption-sub">Documented multi-game example worn in 1992–93.</div>
+  </div>
+</div>
 
-      <img src="assets/hero-3.jpg"
-        alt="1986–87 Home Uniform"
-        data-title="1986–87 Home Uniform"
-        data-sub="Documented singular home uniform for 1986–87.">
+<div class="hero-slide">
+  <img src="assets/hero-3.jpg" alt="1986–87 Home Uniform">
+  <div class="hero-caption">
+    <div class="hero-caption-title">1986–87 Home Uniform</div>
+    <div class="hero-caption-sub">Documented singular home uniform for 1986–87.</div>
+  </div>
+</div>
 
-      <img src="assets/hero-4.jpg"
-        alt="1997–98 Air Jordan (ECF Game 7)"
-        data-title="1997–98 Air Jordan (ECF Game 7)"
-        data-sub="Documented Game 7 example for the 1997–98 season.">
+<div class="hero-slide">
+  <img src="assets/hero-4.jpg" alt="1997–98 Air Jordan (ECF Game 7)">
+  <div class="hero-caption">
+    <div class="hero-caption-title">1997–98 Air Jordan (ECF Game 7)</div>
+    <div class="hero-caption-sub">Documented Game 7 example for the 1997–98 season.</div>
+  </div>
+</div>
 
-      <img src="assets/hero-5.jpg"
-        alt="1989–90 Away Jersey"
-        data-title="1989–90 Away Jersey"
-        data-sub="Documented away jeresey worn during 1989–90.">
+<div class="hero-slide">
+  <img src="assets/hero-5.jpg" alt="1989–90 Away Jersey">
+  <div class="hero-caption">
+    <div class="hero-caption-title">1989–90 Away Jersey</div>
+    <div class="hero-caption-sub">Documented away jersey worn during 1989–90.</div>
+  </div>
+</div>
 
     </div>
-  </div>
-
-  <!-- Caption overlay (JS will populate this) -->
-  <div class="hero-caption">
-    <div class="hero-caption-title"></div>
-    <div class="hero-caption-sub"></div>
   </div>
 
   <button class="hero-arrow hero-prev" type="button" aria-label="Previous slide">‹</button>
@@ -170,103 +178,54 @@ window.addEventListener('load', function() {
   // HERO
   const heroCarousel = document.querySelector('.hero-carousel');
   const track = document.getElementById('heroTrack');
-  const captionTitle = document.querySelector('.hero-caption-title');
-  const captionSub = document.querySelector('.hero-caption-sub');
-
   const prevBtn = document.querySelector('.hero-prev');
   const nextBtn = document.querySelector('.hero-next');
 
-  if (!heroCarousel || !track || !captionTitle || !captionSub) return;
+  if (!heroCarousel || !track) return;
 
-  // Grab real slides first
-  const realSlides = Array.from(track.querySelectorAll('img'));
+  // Grab REAL slides (now .hero-slide)
+  const realSlides = Array.from(track.querySelectorAll('.hero-slide'));
   const totalReal = realSlides.length;
   if (totalReal <= 1) return;
 
-  // --- Build clones for seamless looping ---
+  // Build clones for seamless infinite loop
   const firstClone = realSlides[0].cloneNode(true);
   const lastClone  = realSlides[totalReal - 1].cloneNode(true);
-
-  firstClone.setAttribute('data-clone', 'first');
-  lastClone.setAttribute('data-clone', 'last');
 
   track.insertBefore(lastClone, realSlides[0]);
   track.appendChild(firstClone);
 
-  // Now our working slide list includes clones
-  const slides = Array.from(track.querySelectorAll('img'));
-
-  // Start on the first REAL slide (index 1 because index 0 is lastClone)
   let index = 1;
   let heroTimer;
 
-  // Preserve whatever CSS transition you already set on .hero-track
   const computedTransition = window.getComputedStyle(track).transition;
   const TRANSITION_ON = (computedTransition && computedTransition !== 'all 0s ease 0s')
     ? computedTransition
-    : 'transform 450ms ease';
+    : 'transform 500ms ease';
 
   function setTransform(i, animate) {
     track.style.transition = animate ? TRANSITION_ON : 'none';
     track.style.transform = 'translateX(-' + (i * 100) + '%)';
   }
 
-  function realIndexFromWorkingIndex(i) {
-    // working indices: 0 = lastClone, 1..totalReal = real slides, totalReal+1 = firstClone
-    if (i === 0) return totalReal - 1;          // show last real
-    if (i === totalReal + 1) return 0;          // show first real
-    return i - 1;                               // shift down by 1
-  }
-
- function updateCaption() {
-  const r = realIndexFromWorkingIndex(index);
-  const current = realSlides[r];
-
-  const captionBox = document.querySelector('.hero-caption');
-
-  // Restart animation cleanly
-  captionBox.classList.remove('is-raising');
-  void captionBox.offsetWidth; // forces reflow
-  captionBox.classList.add('is-raising');
-
-  captionTitle.textContent = current.getAttribute('data-title') || '';
-  captionSub.textContent = current.getAttribute('data-sub') || '';
-}
-
   function goTo(i, animate = true) {
     index = i;
     setTransform(index, animate);
-    updateCaption();
   }
 
-  function nextSlide() {
-    goTo(index + 1, true);
-  }
+  function nextSlide() { goTo(index + 1, true); }
+  function prevSlide() { goTo(index - 1, true); }
 
-  function prevSlide() {
-    goTo(index - 1, true);
-  }
+  function startAuto() { heroTimer = setInterval(nextSlide, 6000); }
+  function stopAuto()  { clearInterval(heroTimer); }
 
-  function startAuto() {
-    heroTimer = setInterval(nextSlide, 6000);
-  }
-
-  function stopAuto() {
-    clearInterval(heroTimer);
-  }
-
-  // Seamless wrap: when we land on a clone, jump (without animation) to the matching real slide
+  // Seamless wrap
   track.addEventListener('transitionend', function() {
-    if (index === totalReal + 1) {
-      // We moved onto firstClone (after the last real) -> jump to first real
-      goTo(1, false);
-    } else if (index === 0) {
-      // We moved onto lastClone (before the first real) -> jump to last real
-      goTo(totalReal, false);
-    }
+    if (index === totalReal + 1) goTo(1, false);
+    if (index === 0)            goTo(totalReal, false);
   });
 
-  // Initial draw
+  // Initial position
   goTo(1, false);
   startAuto();
 
@@ -277,17 +236,17 @@ window.addEventListener('load', function() {
     startAuto();
   });
 
-  // Arrow clicks
-  if (nextBtn) {
-    nextBtn.addEventListener('click', function() {
+  // Arrow controls
+  if (nextBtn){
+    nextBtn.addEventListener('click', function(){
       stopAuto();
       nextSlide();
       startAuto();
     });
   }
 
-  if (prevBtn) {
-    prevBtn.addEventListener('click', function() {
+  if (prevBtn){
+    prevBtn.addEventListener('click', function(){
       stopAuto();
       prevSlide();
       startAuto();
