@@ -447,7 +447,7 @@ h2, h3{
 
 @keyframes placardRaise{
   from { transform: translateY(12px); opacity: 0;}
-  to   { transform: translateY(0); opacity: 1; }
+  to   { transform: translateY(0px); opacity: 1; }
 }
 /* =========================================================
    CONTENT BLOCKS
