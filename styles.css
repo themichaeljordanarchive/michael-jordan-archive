@@ -447,8 +447,7 @@ h2, h3{
 
 @keyframes placardLift{
   0%   { transform: translateY(0); }
-  30%  { transform: translateY(-10px); }
-  60%  { transform: translateY(-6px); }
+  40%  { transform: translateY(-8px); }
   100% { transform: translateY(0); }
 }
 /* =========================================================
