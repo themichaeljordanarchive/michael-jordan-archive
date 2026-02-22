@@ -1609,7 +1609,7 @@ body.season-page .population-card tbody tr:last-child td{
 
 .season-index a.season-card{
   border: 1px solid rgba(157, 15, 15, 0.22);
-  border-radius: 6px;
+  border-radius: 4px;
 
   /* IMPORTANT: do NOT use background shorthand */
   background-color: rgba(255,255,255,0.96);
