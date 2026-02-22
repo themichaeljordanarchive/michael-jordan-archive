@@ -1300,21 +1300,21 @@ body.season-page .population-card tbody tr:last-child td{
     height: 100%;
   }
 
-  /* Hero caption (your dialed-in mobile label) */
-  .hero-caption{
-  bottom: 12px;
+  /* Mobile hero caption (new slide-based layout) */
+.hero-slide .hero-caption{
+    position: absolute;
+    bottom: 20px;
+    left: 24px;
 
-  left: 50%;
-  transform: translateX(-50%);
-  text-align: center;
+    width: auto;
+    max-width: 85%;
 
-  width: 96%;
-  max-width: 96%;
+    transform: none;
+    text-align: left;
 
-  padding: 14px 20px;   /* reduced vertical padding */
-
-  border-radius: 10px;
-  background: rgba(0,0,0,0.38);
+    padding: 12px 16px;
+    border-radius: 0;
+    background: rgba(255,255,255,0.72);
 }
 
 .hero-caption-title{
