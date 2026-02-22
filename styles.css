@@ -442,12 +442,12 @@ h2, h3{
 }
 
 .hero-caption.is-raising{
-  animation: placardLift 380ms ease-out forwards;
+  animation: placardRaise 320ms ease-out;
 }
 
-@keyframes placardLift{
-  { transform: translateY(0); }
-  { transform: translateY(-6px); }
+@keyframes placardRaise{
+  from { transform: translateY(12); opacity: 0;}
+  to   { transform: translateY(0); opacity: 1; }
 }
 /* =========================================================
    CONTENT BLOCKS
