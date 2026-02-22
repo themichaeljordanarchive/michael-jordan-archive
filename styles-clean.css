@@ -872,6 +872,44 @@ body.preseason-page .table-hint{
   background: var(--accent-red);
   border-radius: 2px;
 }
+/* =========================================
+   SEASON HEADER METRICS — RESTORE HIERARCHY
+   ========================================= */
+.season-header-top .season-metrics{
+  margin-top: 14px;
+  display: grid;
+  gap: 10px;
+}
+
+.season-header-top .season-metrics .metric-row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 18px;
+  align-items: baseline;
+}
+
+.season-header-top .season-metrics .metric-label{
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.55);
+}
+
+.season-header-top .season-metrics .metric-value{
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+
+.season-header-top .season-metrics .metric-value.main-total{
+  font-size: 36px;
+  font-weight: 750;
+  color: var(--accent-red);
+}
 
 .audit-badge{
   margin-top: 18px;
