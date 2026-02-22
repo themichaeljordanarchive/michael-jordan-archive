@@ -629,6 +629,133 @@ h2, h3{
 }
 
 /* =========================================================
+   PRESEASON PAGE (RESTORED MODULE STYLES)
+   ========================================================= */
+
+/* Optional: make preseason pages read like season pages (nicer line length) */
+body.preseason-page main{
+  max-width: var(--reading-season);
+}
+
+/* Page title block spacing (keeps it from feeling like plain text) */
+body.preseason-page h1{
+  margin-top: 10px;
+}
+
+/* Population card look (table container) */
+body.preseason-page .population-card{
+  background: #ffffff;
+  border: 1px solid rgba(0,0,0,0.10);
+  border-radius: 16px;
+  padding: 28px;
+  margin-top: 18px;
+}
+
+/* Population card heading */
+body.preseason-page .population-card h3{
+  margin: 0 0 18px;
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.55);
+  font-weight: 750;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+/* Red underline accent */
+body.preseason-page .population-card h3::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--accent-red);
+}
+
+/* Table styling */
+body.preseason-page .population-card table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: auto;
+  background: #f7f7f5;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+body.preseason-page .population-card th{
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  font-family: var(--sans);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.55);
+  text-align: left;
+  white-space: nowrap;
+}
+
+body.preseason-page .population-card td{
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  font-family: var(--serif);
+  font-size: 15px;
+  color: rgba(20,20,20,0.92);
+}
+
+body.preseason-page .population-card td:nth-child(2),
+body.preseason-page .population-card td:nth-child(3),
+body.preseason-page .population-card td:nth-child(4){
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Prevent “double line” at bottom */
+body.preseason-page .population-card tbody tr:last-child td{
+  border-bottom: none;
+}
+
+/* Scroll cue for tables on mobile */
+body.preseason-page .table-scroll{
+  position: relative;
+}
+
+body.preseason-page .table-scroll::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 48px;
+  height: 100%;
+  pointer-events: none;
+  background: linear-gradient(to left, #f7f7f5, rgba(247, 247, 245, 0));
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+body.preseason-page .table-hint{
+  display: none;
+}
+
+@media (max-width: 900px){
+  body.preseason-page .table-scroll::after{ opacity: 1; }
+
+  body.preseason-page .table-hint{
+    display: block;
+    text-align: right;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.55);
+    margin: 6px 4px 10px;
+    font-family: var(--sans);
+  }
+}
+
+/* =========================================================
    CONTACT FORM
    ========================================================= */
 
