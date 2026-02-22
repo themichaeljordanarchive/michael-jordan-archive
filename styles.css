@@ -474,6 +474,44 @@ body:not(.season-page) .research-grid{
   margin-left: auto;
   margin-right: auto;
 }
+/* Jersey Archive – Methodology Link */
+
+.season-index-feature-link{
+  margin-bottom: 14px;
+}
+
+.season-index-feature-link a{
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  opacity: 0.75;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0,0,0,0.15);
+  padding-bottom: 3px;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+  position: relative;
+}
+
+/* Subtle arrow */
+.season-index-feature-link a::after{
+  content: " →";
+  font-size: 12px;
+  letter-spacing: 0;
+  opacity: 0.7;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.season-index-feature-link a:hover{
+  opacity: 1;
+  border-color: var(--accent-red);
+}
+
+.season-index-feature-link a:hover::after{
+  transform: translateX(3px);
+  opacity: 1;
+}
 
 /* =========================================================
    SEASON INDEX (GRID) — CLEANED & COHESIVE
