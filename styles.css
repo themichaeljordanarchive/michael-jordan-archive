@@ -441,13 +441,14 @@ h2, h3{
   transform: translateY(0);
 }
 
-.hero-caption.is-raising{
+..hero-caption.is-raising{
   animation: placardRaise 700ms cubic-bezier(.16,1,.3,1);
 }
 
 @keyframes placardRaise{
-  from { transform: translateY(14px); opacity: 0;}
-  to   { transform: translateY(0px); opacity: 1; }
+  0%   { transform: translateY(0); }
+  60%  { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
 }
 /* =========================================================
    CONTENT BLOCKS
