@@ -1294,30 +1294,40 @@ body.season-page .population-card td{
   font-size: 13px;
   padding: 8px 6px;
 }
-/* =========================================
-   Population Summary — Mobile Header Fix
-   ========================================= */
 
-@media (max-width: 700px){
+/* Population card density — season pages (match old behavior, no scroll) */
+body.season-page .population-card{
+  padding: 16px;
+}
 
-  .population-card table{
-    width: 100%;
-    table-layout: fixed;
-  }
+body.season-page .population-card table{
+  width: 100%;
+  table-layout: auto; /* important: do NOT force fixed columns */
+}
 
-  .population-card th{
-    font-size: 6px;
-    letter-spacing: 0.05em;
-  }
+body.season-page .population-card th,
+body.season-page .population-card td{
+  padding: 8px 10px;
+}
 
-  .population-card td{
-    font-size: 10px;
-    padding: 10px 6px;
-  }
+body.season-page .population-card th{
+  font-size: 9px;
+  letter-spacing: 0.10em;  /* slightly tighter than desktop */
+  white-space: nowrap;      /* keep headers on one line */
+}
+
+body.season-page .population-card td{
+  font-size: 13px;
+  white-space: normal;
+}
+
+/* let the STYLE column wrap if needed */
+body.season-page .population-card td:first-child{
+  white-space: normal;
+}
 
 }
-/* existing closing brace */
-}
+
 
 
 @media (max-width: 430px){
