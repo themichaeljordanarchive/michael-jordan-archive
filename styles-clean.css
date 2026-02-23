@@ -1313,7 +1313,9 @@ body.season-page .population-card td{
 body.season-page .population-card th{
   font-size: 9px;
   letter-spacing: 0.10em;  /* slightly tighter than desktop */
-  white-space: nowrap;      /* keep headers on one line */
+  white-space: normal;
+  line-height: 1.2;
+ 
 }
 
 body.season-page .population-card td{
@@ -1327,8 +1329,6 @@ body.season-page .population-card td:first-child{
 }
 
 }
-
-
 
 @media (max-width: 430px){
   .season-year-hero{ font-size: 52px; line-height: 0.95; }
