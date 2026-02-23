@@ -1307,9 +1307,7 @@ body.season-page .population-card td{
 
   .population-card th{
     font-size: 9px;
-    letter-spacing: 0.14em;
-    padding: 6px 6px;
-    white-space: nowrap;
+    letter-spacing: 0.12em;
   }
 
   .population-card td{
