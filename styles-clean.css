@@ -1197,6 +1197,10 @@ body.preseason-page .table-hint{
   }
   .site-header img{
      height: 34px;
+     width: auto;
+     max-width: none;
+     display: block;
+     object-fit: contain;
   }
    .brand-text{
     display: none !important;
