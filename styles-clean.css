@@ -831,25 +831,17 @@ body.preseason-page .table-hint{
    OUTER CARD FRAME
 ------------------------------------------ */
 
-.season-card--detail { ... }
-
 /* -----------------------------------------
    TOP GRID LAYOUT
 ------------------------------------------ */
-
-.season-header-top { ... }
 
 /* -----------------------------------------
    LEFT METRICS STACK
 ------------------------------------------ */
 
-.metric-stack { ... }
-
 /* -----------------------------------------
    RIGHT POPULATION SUMMARY
 ------------------------------------------ */
-
-.population-summary { ... }
 
 .back-link{
   margin: 0 0 18px 0;
@@ -1200,6 +1192,9 @@ body.preseason-page .table-hint{
 }
 
 @media (max-width: 700px){
+  .site-header{
+    padding: 12px 18px;
+  }
    .brand-text{
     display: none !important;
   }
@@ -1275,7 +1270,7 @@ body.preseason-page .table-hint{
     display: block;
     position: absolute;
     right: 18px;
-    top: 16px;
+    top: 12px;
     z-index: 10000;
     pointer-events: auto;
     -webkit-tap-highlight-color: transparent;
