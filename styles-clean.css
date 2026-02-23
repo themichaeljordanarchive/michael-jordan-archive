@@ -1173,7 +1173,9 @@ body.preseason-page .table-hint{
 }
 
 @media (max-width: 700px){
-
+   .brand-text{
+    display: none !important;
+  }
   main{ padding: 28px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
 
@@ -1308,6 +1310,7 @@ body.season-page .population-card table{
 body.season-page .population-card th,
 body.season-page .population-card td{
   padding: 8px 10px;
+
 }
 
 body.season-page .population-card th{
