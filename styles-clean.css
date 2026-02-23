@@ -1294,7 +1294,30 @@ body.season-page .population-card td{
   font-size: 13px;
   padding: 8px 6px;
 }
+/* =========================================
+   Population Summary — Mobile Header Fix
+   ========================================= */
 
+@media (max-width: 700px){
+
+  .population-card table{
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .population-card th{
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    padding: 6px 6px;
+    white-space: nowrap;
+  }
+
+  .population-card td{
+    font-size: 13px;
+    padding: 10px 6px;
+  }
+
+}
 /* existing closing brace */
 }
 
