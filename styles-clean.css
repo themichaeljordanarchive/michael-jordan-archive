@@ -1183,6 +1183,7 @@ body.preseason-page .table-hint{
   .hero-carousel{
     aspect-ratio: auto;
     height: 58vh;
+
   }
   .hero-viewport, .hero-track{ height: 100%; }
 
@@ -1278,7 +1279,25 @@ body.preseason-page .table-hint{
     left: 0;
     right: 0;
   }
+/* Your mobile population fix */
+body.season-page .population-card{
+  padding: 14px;
 }
+
+body.season-page .population-card table{
+  width: 100%;
+  table-layout: fixed;
+}
+
+body.season-page .population-card th,
+body.season-page .population-card td{
+  font-size: 13px;
+  padding: 8px 6px;
+}
+
+/* existing closing brace */
+}
+
 
 @media (max-width: 430px){
   .season-year-hero{ font-size: 52px; line-height: 0.95; }
