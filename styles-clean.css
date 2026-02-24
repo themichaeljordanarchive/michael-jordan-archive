@@ -27,7 +27,7 @@ img { max-width: 100%; height: auto; display: block; }
   /* Layout widths */
   --reading: 1280px;
   --reading-standard: 1180px;
-  --reading-season: 980px;
+  --reading-season: clamp(980px, 78vw, 1120px);
 
   /* Global radius */
   --radius: 14px;
