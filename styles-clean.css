@@ -471,6 +471,9 @@ h2, h3{
   transform: translateX(3px);
   opacity: 1;
 }
+.seaon-index-feature{
+  margin-bottom: 36px;
+}
 
 /* =========================================================
    SEASON INDEX (GRID)
@@ -481,7 +484,6 @@ h2, h3{
   grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   align-items: stretch;
-  margin-top: 12px;
 }
 .season-index-panel{
   margin-top: 40px;
