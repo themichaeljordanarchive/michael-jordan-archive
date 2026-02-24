@@ -252,7 +252,30 @@ window.addEventListener('load', function() {
       startAuto();
     });
   }
+// ===== Safari Resume Fix =====
+function heroResume() {
+  // force repaint (Safari)
+  document.body.offsetHeight;
 
+  // snap back to whatever slide we were on (no animation)
+  goTo(index, false);
+
+  // restart timer cleanly
+  stopAuto();
+  startAuto();
+}
+
+document.addEventListener("visibilitychange", () => {
+  if (!document.hidden) {
+    setTimeout(heroResume, 150);
+  }
+});
+
+window.addEventListener("pageshow", (e) => {
+  if (e.persisted) {
+    setTimeout(heroResume, 150);
+  }
+});
 });
 </script>
 
