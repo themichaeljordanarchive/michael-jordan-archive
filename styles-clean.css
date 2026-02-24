@@ -865,7 +865,7 @@ body.preseason-page .table-hint{
 .season-card--detail{
   position: relative;
   border-radius: 22px;
-  padding: 64px;
+  padding: 56px;
   background: rgba(255,255,255,0.96);
   border: 1px solid rgba(0,0,0,0.07);
   box-shadow: 0 18px 44px rgba(0,0,0,0.03);
@@ -875,7 +875,7 @@ body.preseason-page .table-hint{
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: start;
-  gap: 48px;
+  gap: 40px;
 }
 
 .season-year-hero{
@@ -1041,7 +1041,7 @@ body.preseason-page .table-hint{
 .season-status-stack{
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 18px;
   align-items: flex-start;
 }
 
@@ -1049,7 +1049,7 @@ body.preseason-page .table-hint{
   font-size: 15px;
   line-height: 1.55;
   color: #333;
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   margin-top: 24px;
 }
 .season-summary > div{ margin: 8px 0; }
