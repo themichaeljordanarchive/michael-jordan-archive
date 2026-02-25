@@ -552,7 +552,7 @@ h2, h3{
   font-family: var(--sans);
   font-size: 13px;
   font-weight: 500;
-  opacity: 0.45;
+  opacity: 0.75;
   letter-spacing: 0.02em;
   color: var(--ink-2);
 }
@@ -1011,7 +1011,7 @@ body.preseason-page .table-hint{
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(20,20,20,0.60);
+  color: rgba(20,20,20,0.80);
 }
 
 .season-header-top .season-metrics .metric-value{
@@ -1251,7 +1251,52 @@ body.preseason-page .table-hint{
   background: rgba(157,15,15,0.85);
   border-radius: 2px;
 }
+.sale-link{
+  margin-top: 14px;
+}
 
+.sale-link a{
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  text-decoration: none;
+}
+
+.sale-link .arrow{
+  color: rgba(157,15,15,1);
+  font-weight: 600;
+  margin-left: 4px;
+  transition: transform 0.15s ease;
+}
+
+.sale-link a:hover .arrow{
+  transform: translateX(3px);
+}
+.case-id-block{
+  margin: 0 0 18px;
+  padding: 12px 0 14px;
+  border-bottom: 1px solid rgba(20,20,20,0.08);
+  text-align: right;
+}
+
+.case-id-block div{
+  margin-bottom: 6px;
+}
+
+.case-id-block .meta-label{
+  text-transform: uppercase;
+  letter-spacing: 0.9px;
+  font-size: 11px;
+  opacity: 0.6;
+  margin-right: 8px;
+}
+
+.case-id-block strong{
+  font-size: 16px;
+  font-weight: 600;
+}
+.case-metrics{
+  max-width: 540px;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
