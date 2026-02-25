@@ -576,6 +576,7 @@ h2, h3{
    Special season cards (watermark / background variables)
    ========================================================= */
 
+.season-card-9798 { --season-card-bg: url("assets/1997-98-bg.jpg"); --season-card-detail: url("assets/1997-98-bg.jpg"); }   
 .season-card-9697 { --season-card-bg: url("assets/1996-97-bg.jpg"); --season-card-detail: url("assets/1996-97-bg.jpg"); }
 .season-card-9293 { --season-card-bg: url("assets/1992-93-bg.jpg"); --season-card-detail: url("assets/1992-93-bg.jpg"); }
 .season-card-8889 { --season-card-bg: url("assets/1988-89-bg.jpg"); --season-card-detail: url("assets/1988-89-bg.jpg"); }
@@ -583,6 +584,7 @@ h2, h3{
 .season-card-8586 { --season-card-bg: url("assets/1985-86-bg.jpg"); --season-card-detail: url("assets/1985-86-detail.jpg"); }
 .season-card-8485 { --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
 
+.season-card-9798,
 .season-card-9697,
 .season-card-9293,
 .season-card-8889,
@@ -598,6 +600,7 @@ h2, h3{
   transition: background-image 0.25s ease, transform 0.2s ease;
 }
 
+.season-card-9798:hover,
 .season-card-9697:hover,
 .season-card-9293:hover,
 .season-card-8889:hover,
@@ -609,6 +612,7 @@ h2, h3{
     var(--season-card-bg);
 }
 
+.season-card-9798::before,
 .season-card-9697::before,
 .season-card-9293::before,
 .season-card-8889::before,
