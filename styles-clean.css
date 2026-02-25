@@ -1229,9 +1229,8 @@ body.preseason-page .table-hint{
    ========================================================= */
 
 .designation-callout{
-  margin: 72px auto 56px;
-  max-width: 640px;
-  padding:  0 20px;
+  margin: 28px auto 48px;
+  max-width: 720px;
 }
 
 .designation-inner{
@@ -1251,6 +1250,7 @@ body.preseason-page .table-hint{
   background: rgba(157,15,15,0.85);
   border-radius: 2px;
 }
+
 .sale-link{
   margin-top: 14px;
 }
