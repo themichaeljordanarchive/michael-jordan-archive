@@ -1475,7 +1475,13 @@ body.season-page .population-card td{
 body.season-page .population-card td:first-child{
   white-space: normal;
 }
-
+  /* Case File: Merge Sale Summary Card on Mobile */
+  .case-file .season-header .population-card{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
 }
 
 @media (max-width: 430px){
