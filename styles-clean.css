@@ -1531,6 +1531,21 @@ body.season-page .population-card td:first-child{
   color: rgba(20,20,20,0.65);
   text-align: right;
 }
+/* Case-file: Sale table values should anchor right and be lighter */
+.season-page.case-file .population-card table{
+  width: 100%;
+}
+
+.season-page.case-file .population-card td:last-child{
+  text-align: right;
+  color: rgba(20,20,20,0.65);
+  font-weight: 500;
+}
+
+.season-page.case-file .population-card td:first-child{
+  font-weight: 650;
+  color: rgba(20,20,20,0.85);
+}
 
 }
 
