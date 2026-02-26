@@ -1583,39 +1583,43 @@ body.season-page .population-card td:first-child{
 @media (max-width: 380px){
   .season-year-hero{ font-size: 54px; }
 }
-/* =========================================
-   9798 – Date Search
-   ========================================= */
 
-#date-search {
-  margin: 48px auto;
-  max-width: 760px;
+
+/* 97–98 Date Search (subtle system tint like audit pill) */
+#date-search{
+  margin: 20px auto;
+  max-width: 760px
+}
+#date-search .season-card{
+  padding: 12px 16px;
+  border-radius: 6px;
 }
 
-#date-search .season-card {
-  padding: 20px 24px;
-}
-
-#date-search h3 {
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(20,20,20,0.55);
-  margin-bottom: 14px;
-}
-
-#dateInput {
+#dateInput{
   width: 100%;
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: 1px solid rgba(20,20,20,0.18);
+  max-width: 760px;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 999px; /* pill */
+  border: 1px solid rgba(46, 88, 64, 0.35); /* soft green-grey */
+  background: rgba(46, 88, 64, 0.06);       /* subtle tint */
   font-size: 14px;
-  background: #fff;
-  transition: border 0.2s ease, box-shadow 0.2s ease;
+  color: rgba(20,20,20,0.85);
 }
 
-#dateInput:focus {
+#dateInput::placeholder{
+  color: rgba(20,20,20,0.55);
+}
+
+#dateInput:focus{
   outline: none;
-  border: 1px solid rgba(157,15,15,0.65);
-  box-shadow: 0 0 0 2px rgba(157,15,15,0.08);
+  border-color: rgba(46, 88, 64, 0.55);
+  box-shadow: 0 0 0 3px rgba(46, 88, 64, 0.10);
+  background: rgba(46, 88, 64, 0.08);
+}
+/* Search block – make thinner + more squared */
+
+#date-search .season-card{
+  padding: 10px 18px;   /* thinner */
+  border-radius: 4px;  /* more square */
 }
