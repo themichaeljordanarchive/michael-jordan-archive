@@ -1308,6 +1308,15 @@ body.preseason-page .table-hint{
   font-weight: 500;
   color: rgba(20,20,20,0.65);
 }
+/* Case-file: Sale link refinement */
+.season-page.case-file .sale-link{
+  font-weight: 500;
+  color: rgba(20,20,20,0.65);
+}
+
+.season-page.case-file .sale-link .arrow{
+  color: rgba(157,15,15,0.85);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
