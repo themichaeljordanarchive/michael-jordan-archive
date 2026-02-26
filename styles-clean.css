@@ -1298,9 +1298,10 @@ body.preseason-page .table-hint{
   max-width: 540px;
 }
 /* Tone down Confirmed Matches size on case-file pages */
-.case-file .main-total{
-  font-size: 22px;   /* was likely 28px+ */
-  font-weight: 600;  /* keep strong, just less loud */
+.case-match-total{
+  font-size: 24px;   /* was likely 28px+ */
+  font-weight: 600;
+  line-height:  1.05;  
 }
 /* =========================================================
    RESPONSIVE — LOCKED
