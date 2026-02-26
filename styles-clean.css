@@ -1303,6 +1303,11 @@ body.preseason-page .table-hint{
   font-weight: 600;
   line-height:  1.05;  
 }
+.season-page.case-file .population-card td:last-child{
+  text-align: right;
+  font-weight: 500;
+  color: rgba(20,20,20,0.65);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
