@@ -1583,3 +1583,39 @@ body.season-page .population-card td:first-child{
 @media (max-width: 380px){
   .season-year-hero{ font-size: 54px; }
 }
+/* =========================================
+   9798 – Date Search
+   ========================================= */
+
+#date-search {
+  margin: 48px auto;
+  max-width: 760px;
+}
+
+#date-search .season-card {
+  padding: 20px 24px;
+}
+
+#date-search h3 {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.55);
+  margin-bottom: 14px;
+}
+
+#dateInput {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid rgba(20,20,20,0.18);
+  font-size: 14px;
+  background: #fff;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+#dateInput:focus {
+  outline: none;
+  border: 1px solid rgba(157,15,15,0.65);
+  box-shadow: 0 0 0 2px rgba(157,15,15,0.08);
+}
