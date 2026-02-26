@@ -1317,6 +1317,12 @@ body.preseason-page .table-hint{
 .season-page.case-file .sale-link .arrow{
   color: rgba(157,15,15,0.85);
 }
+/* Global arrow styling (used across site) */
+.arrow{
+  color: rgba(157,15,15,1);
+  margin-left: 6px;
+  font-weight: 600;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
