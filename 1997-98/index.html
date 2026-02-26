@@ -142,6 +142,26 @@ The designation tracks the garment itself rather than a specific season or chron
   </div>
 </section>
 
+<!-- DATE SEARCH -->
+<section class="season-block" id="date-search">
+  <div class="season-card season-card--detail" style="padding:24px;">
+    <h3 style="margin-bottom:14px;">Search by Game Date</h3>
+
+    <input 
+      type="text" 
+      id="dateInput" 
+      placeholder="Example: Feb 28, 1998"
+      style="
+        width:100%;
+        padding:12px 14px;
+        border-radius:8px;
+        border:1px solid rgba(20,20,20,0.15);
+        font-size:16px;
+      "
+    />
+  </div>
+</section>
+
 <!-- =====================================================
      HOME LANE
 ======================================================= -->
@@ -154,7 +174,7 @@ The designation tracks the garment itself rather than a specific season or chron
 
 <h2 class="section-title">HOME</h2>
 
-<section class="season-block evidence-block">
+<section class="season-block evidence-block" id="home">
 
   <div class="style-summary-card">
     <div class="style-summary-content">
@@ -171,23 +191,23 @@ The designation tracks the garment itself rather than a specific season or chron
     <div class="registry-list">
 
       <a class="registry-row" href="home-a.html">
-        <div class="registry-title">Home Jersey A <span class="arrow">→</span></div>
-        <div class="registry-meta muted">Regular Season · 2 confirmed matches</div>
+        <div class="registry-title">Jersey A <span class="arrow">→</span></div>
+        <div class="registry-meta muted">Feb 28 &amp; Mar 3, 1998 • 2 confirmed matches</div>
       </a>
 
       <a class="registry-row" href="home-c.html">
-        <div class="registry-title">Home Jersey C <span class="arrow">→</span></div>
-        <div class="registry-meta muted">Regular Season · 8 confirmed matches</div>
+        <div class="registry-title">Jersey C <span class="arrow">→</span></div>
+        <div class="registry-meta muted">Dec 17, 1997 – Jan 13, 1998 • 8 cinfirmed matches</div>
       </a>
 
       <a class="registry-row" href="home-d.html">
-        <div class="registry-title">Home Jersey D <span class="arrow">→</span></div>
-        <div class="registry-meta muted">Playoffs · 1 confirmed match</div>
+        <div class="registry-title">Jersey D <span class="muted">(Playoff)</span> <span class="arrow">→</span></div>
+        <div class="registry-meta muted">Apr 4, 1998 • 1 confirmed match</div>
       </a>
 
       <a class="registry-row" href="home-e.html">
-        <div class="registry-title">Home Jersey E <span class="arrow">→</span></div>
-        <div class="registry-meta muted">Playoffs · 1 confirmed match</div>
+        <div class="registry-title">Jersey E <span class="muted">(Playoff)</span> <span class="arrow">→</span></div>
+        <div class="registry-meta muted">May 6, 1998 • 1 confirmed match</div>
       </a>
 
     </div>
@@ -223,8 +243,8 @@ The designation tracks the garment itself rather than a specific season or chron
   <div class="registry-card">
     <div class="registry-list">
       <a class="registry-row" href="away-b.html">
-        <div class="registry-title">Away Jersey B <span class="arrow">→</span></div>
-        <div class="registry-meta muted">Finals · 1 confirmed match</div>
+        <div class="registry-title">Jersey B <span class="muted">(Final)</span> <span class="arrow">→</span></div>
+        <div class="registry-meta muted">June 4, 1998 · 1 confirmed match</div>
       </a>
     </div>
   </div>
@@ -232,8 +252,8 @@ The designation tracks the garment itself rather than a specific season or chron
   <div class="registry-card">
     <div class="registry-list">
       <a class="registry-row" href="away-g.html">
-        <div class="registry-title">Away Jersey G <span class="arrow">→</span></div>
-        <div class="registry-meta muted">Regular Season · 2 confirmed matches</div>
+        <div class="registry-title">Jersey G <span class="muted"></span> <span class="arrow">→</span></div>
+        <div class="registry-meta muted">Jan 27 &amp; Mar 14, 1998 · 2 confirmed matches</div>
       </a>
     </div>
   </div>
@@ -268,8 +288,8 @@ The designation tracks the garment itself rather than a specific season or chron
   <div class="registry-card">
     <div class="registry-list">
       <a class="registry-row" href="alt-f.html">
-        <div class="registry-title">Alternate Jersey F <span class="arrow">→</span></div>
-        <div class="registry-meta muted">Regular Season • 1 confirmed match</div>
+        <div class="registry-title">Jersey F <span class="muted"></span> <span class="arrow">→</span></div>
+        <div class="registry-meta muted">Nov, 7 1997 • 1 confirmed match</div>
       </a>
     </div>
   </div>
@@ -286,6 +306,103 @@ if (btn) {
     btn.setAttribute('aria-expanded', document.body.classList.contains('nav-open'));
   });
 }
+</script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("dateInput");
+    const rows = Array.from(document.querySelectorAll("a.registry-row"));
+    if (!input) return;
+
+    const monthMap = {
+      jan: "01", january: "01",
+      feb: "02", february: "02",
+      mar: "03", march: "03",
+      apr: "04", april: "04",
+      may: "05",
+      jun: "06", june: "06",
+      jul: "07", july: "07",
+      aug: "08", august: "08",
+      sep: "09", sept: "09", september: "09",
+      oct: "10", october: "10",
+      nov: "11", november: "11",
+      dec: "12", december: "12",
+    };
+
+    const normText = (s) => (s || "").toLowerCase().replace(/\s+/g, " ").trim();
+    const digitsOnly = (s) => (s || "").replace(/\D/g, "");
+
+    function extractYear(text) {
+      const m = text.match(/\b(19|20)\d{2}\b/);
+      return m ? m[0] : "";
+    }
+
+    function extractDateVariants(text) {
+      // Finds patterns like "Feb 28" or "Mar 3, 1998"
+      const year = extractYear(text);
+      const variants = new Set();
+
+      const re = /\b(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|jun(?:e)?|jul(?:y)?|aug(?:ust)?|sep(?:t|tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\b[\s\.]+(\d{1,2})(?:,?\s*((?:19|20)\d{2}))?/gi;
+
+      let match;
+      while ((match = re.exec(text)) !== null) {
+        const monWord = match[1].toLowerCase();
+        const mm = monthMap[monWord] || "";
+        const dd = String(match[2]).padStart(2, "0");
+        const yyyy = match[3] || year; // if year isn't attached, use the row's year
+
+        if (!mm) continue;
+
+        // Core variants
+        variants.add(`${mm}${dd}`);                 // 0303
+        variants.add(`${Number(mm)}${Number(dd)}`); // 33, 228 style
+        variants.add(`${mm}-${dd}`);                // 03-03
+        variants.add(`${Number(mm)}-${Number(dd)}`);// 3-3, 2-28
+
+        if (yyyy) {
+          const yy = yyyy.slice(-2);
+          variants.add(`${mm}${dd}${yy}`);          // 030398
+          variants.add(`${mm}${dd}${yyyy}`);        // 03031998
+          variants.add(`${yyyy}${mm}${dd}`);        // 19980303
+          variants.add(`${yyyy}-${mm}-${dd}`);      // 1998-03-03
+        }
+      }
+
+      return variants;
+    }
+
+    function matchesQuery(rowText, query) {
+      const qText = normText(query);
+      if (qText === "") return true;
+
+      // 1) Normal text match (months, opponents, “regular”, etc.)
+      if (normText(rowText).includes(qText)) return true;
+
+      // 2) Numeric date match
+      const qDigits = digitsOnly(query);
+      if (qDigits.length >= 2) {
+        const variants = extractDateVariants(rowText);
+        for (const v of variants) {
+          // Compare digits-only forms so "03/03/98" matches "030398"
+          if (digitsOnly(v) === qDigits) return true;
+          if (digitsOnly(v).includes(qDigits)) return true; // allows partial like "228"
+        }
+      }
+
+      return false;
+    }
+
+    function filter() {
+      const q = input.value;
+      rows.forEach(row => {
+        const rowText = row.textContent || "";
+        row.style.display = matchesQuery(rowText, q) ? "" : "none";
+      });
+    }
+
+    input.addEventListener("input", filter);
+    filter();
+  });
 </script>
 
 </body>
