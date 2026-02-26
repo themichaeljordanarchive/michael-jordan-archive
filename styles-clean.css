@@ -1056,6 +1056,10 @@ body.preseason-page .table-hint{
   margin-bottom: 18px;
   margin-top: 24px;
 }
+.games-total {
+  margin-top: 20px;        /* creates separation from bullets */
+  font-weight: 500;        /* lighter than section header */
+}
 .season-summary > div{ margin: 8px 0; }
 .season-summary strong{ font-weight: 800; }
 
