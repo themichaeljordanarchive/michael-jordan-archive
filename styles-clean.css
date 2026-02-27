@@ -1343,26 +1343,30 @@ body.preseason-page .table-hint{
 }
 /* ======================================
    DOCUMENTATION COLLAPSE MODULE
+   (Styled to match Search Feature)
 ====================================== */
 
 .doc-collapse{
-  margin-top: 14px;
-  border: 1px solid rgba(0,0,0,0.06);
-  border-radius: 14px;
-  padding: 8px 10px;
+  margin-top: 6px;
+  border: 0.5px solid rgba(157,15,15,0.55); /* red border */
+  border-radius: 6px;
+  overflow: hidden;
   background: transparent;
 }
 
-/* summary (clickable header) */
+/* clickable header bar */
 .doc-collapse > summary{
   cursor: pointer;
   font-weight: 600;
   list-style: none;
   position: relative;
-  padding-right: 22px; /* room for arrow */
+  padding: 10px 42px 10px 14px;
+
+  background: rgba(46,88,64,0.06);   /* audit badge green */
+  color: rgba(0, 0, 0, 0.55);
 }
 
-/* remove default browser arrow */
+/* remove default marker */
 .doc-collapse > summary::-webkit-details-marker{
   display: none;
 }
@@ -1371,26 +1375,26 @@ body.preseason-page .table-hint{
 .doc-collapse > summary::after{
   content: "▾";
   position: absolute;
-  right: 0;
-  top: 0;
-  opacity: 0.6;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  right: 14px;
+  top: 10px;
+  color: rgba(0, 0, 0, 0.55);
+  opacity: 0.9;
+  transition: transform 0.2s ease;
 }
 
 .doc-collapse[open] > summary::after{
   content: "▴";
-  opacity: 0.8;
 }
 
-/* inner content spacing */
+/* inner content */
 .doc-inner{
-  margin-top: 10px;
+  padding: 12px 14px 14px;
+  background: #ffffff;
 }
 
 .doc-inner h4{
   margin: 14px 0 6px;
   font-size: 14px;
-  letter-spacing: 0.02em;
 }
 
 .doc-list{
