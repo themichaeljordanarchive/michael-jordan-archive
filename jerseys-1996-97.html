@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Chicago Bulls Jerseys — 1996–97 Season — Michael Jordan Archive</title>
-  <meta name="description" content="Detailed jersey dating and documentation for Michael Jordan’s 1996–97 Chicago Bulls season." />
+  <meta name="description" content="Detailed jersey dating and documentation for Michael Jordan’s 1996–97 Chicago Bulls season, including preseason and regular season wear." />
   <link rel="stylesheet" href="styles-clean.css">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -12,197 +12,279 @@
 <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 </head>
 
-<body class="season-page s-9697">
+<!--
+=========================================================
+SEASON DETAIL TEMPLATE (MASTER)
+To duplicate for a new season:
+1) Update BODY CLASS (s-YYYY)
+2) Update Title + Summary stats
+3) Swap images
+4) Update Population table rows
+=========================================================
+-->
 
-<header class="site-header">
-  <div class="brand">
-    <a href="index.html">
-      <img src="assets/logo.png" alt="Michael Jordan Archive logo">
-    </a>
-    <div class="brand-text">
-      <div class="brand-name">Michael Jordan Archive</div>
+<body class="season-page s-8687”>
+
+  <header class="site-header">
+    <div class="brand">
+      <a href="index.html">
+        <img src="assets/logo.png" alt="Michael Jordan Archive logo">
+      </a>
+      <div class="brand-text">
+        <div class="brand-name">Michael Jordan Archive</div>
+      </div>
     </div>
-  </div>
 
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
+      <span></span><span></span><span></span>
+    </button>
 
-  <nav class="site-nav">
-    <a href="index.html">Home</a>
-    <a href="jerseys.html">← Back to Jersey Archive</a>
-  </nav>
-</header>
+    <nav class="site-nav">
+      <a href="index.html">Home</a>
+      <a href="jerseys.html">← Back to Jersey Archive</a>
+    </nav>
+  </header>
 
-<main>
+  <main>
+
+    <!-- =====================================================
+         SEASON HEADER (WOW CARD)
+         ======================================================= -->
 
 <section class="season-header">
   <div class="season-card season-card--detail">
 
     <div class="season-header-top">
-      <div>
 
+      <!-- LEFT COLUMN -->
+      <div>
         <h1 class="season-year-hero">1996–97</h1>
 
-        <div class="population-total">
-          <div class="population-label">Confirmed Game-Worn Population:</div>
-          <div class="population-number"><strong>1</strong></div>
+        <div class="season-metrics">
+          <div class="metric-row">
+            <div class="metric-label">Season Total</div>
+            <div class="metric-value main-total">2</div>
+          </div>
 
-          <div class="population-breakdown">
-            <span>Home: <strong>0</strong></span>
-            <span class="sep"></span>
-            <span>Away: <strong>1</strong></span>
+          <div class="metric-row">
+            <div class="metric-label">Game Worn Total</div>
+            <div class="metric-value main-total">2</div>
+          </div>
+
+          <div class="metric-row">
+            <div class="metric-label">Publicly Documented (POP)</div>
+            <div class="metric-value">1</div>
+          </div>
+
+          <div class="metric-row">
+            <div class="metric-label">Verified Non-Public (POP)</div>
+            <div class="metric-value">1</div>
           </div>
         </div>
 
+        <!-- STATUS (back on the left) -->
+        <div class="season-status-stack">
+          <div class="audit-badge">AUDIT IN PROGRESS</div>
+          <div class="season-summary muted">
+  <div>Games Reviewed:</div>
+
+  <div>
+    • <a href="preseason.html#s-9697" class="preseason-link">
+      Preseason 1 of 8 <span class="arrow">→</span>
+    </a>
+  </div>
+
+  <div>• Regular Season 10 of 82</div>
+  <div>• Postseason X of 21</div>
+
+  <div class="games-total">Total Games Matched - 10</div>
+  
+
+  <div class="last-updated">Last Updated: February 26, 2026</div>
+</div>
+        </div>
       </div>
 
-      <div class="audit-badge">AUDIT IN PROGRESS</div>
-    </div>
+      <!-- RIGHT COLUMN -->
+      <div class="population-card">
+        <h3>Population Summary</h3>
 
-    <p class="season-summary">
-      Games Reviewed &mdash;
-      <span class="no-wrap">PRE 0 / 0</span> •
-      <span class="no-wrap">REG 17 / 82</span>
-      <br>
-      <span class="last-updated">Last Updated: February 15, 2026</span>
-    </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Style</th>
+              <th>Confirmed</th>
+              <th>Public</th>
+              <th>Audit</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Home</td>
+              <td>1</td>
+              <td>0</td>
+              <td><span class="audit-ok">√</span></td>
+            </tr>
+            <tr>
+              <td>Away</td>
+              <td>1</td>
+              <td>0</td>
+              <td><span class="audit-progress">⏳</span></td>
+            </tr>
+            <tr>
+              <td>Alternatey</td>
+              <td>1</td>
+              <td>0</td>
+              <td><span class="audit-progress">⏳</span></td>
+            </tr>
+          </tbody>
+        </table>
 
-    <div class="population-card">
-      <h3>Population Summary</h3>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Style</th>
-            <th>Confirmed</th>
-            <th>Public</th>
-            <th>Audit</th>
-          </tr>
-        </thead>
-
-        <tbody>
-          <tr>
-            <td>Home</td>
-            <td>0</td>
-            <td>0</td>
-            <td><span class="audit-progress">⏳</span></td>
-          </tr>
-          <tr>
-            <td>Away</td>
-            <td>1</td>
-            <td>1</td>
-            <td><span class="audit-progress">⏳</span></td>
-          </tr>
-        </tbody>
-      </table>
-
-      <div class="summary-footnote">
-        <p>
-          The Michael Jordan Archive population study is an ongoing research initiative. Population conclusions reflect best-available documentation and comparative review.
-        </p>
-        <p>
-          Collectors, researchers, and institutions who wish to contribute relevant primary-source materials are invited to
-          <a href="contact.html" class="archive-link">contact the archive</a>.
-        </p>
-        <p class="muted">
-          Submissions are reviewed independently and treated with discretion.
-        </p>
+        <div class="summary-footnote">
+          <p>
+            The Michael Jordan Archive population study is an ongoing research initiative. Population conclusions reflect best-available documentation and comparative review.
+          </p>
+        </div>
       </div>
 
     </div>
+
   </div>
 </section>
+ 
+    <!-- =====================================================
+         HOME SECTION
+         NOTE: Add your 1985–86 home strip image to /assets/
+         e.g. assets/1996-97-home-strip.jpg
+         ======================================================= -->
 
-<hr>
+    <div class="section-divider" aria-hidden="true"></div>
 
-<!-- HOME SECTION -->
-<section class="season-block evidence-block">
-  <h2>Home (White)</h2>
+    <div class="section-strip">
+      <img src="assets/home-strip.jpg" alt="">
+    </div>
 
-  <!-- ===== HOME A ===== -->
-  <div class="jersey-entry">
-    <h3 class="jersey-entry-title">Home A — (No Public Example Documented)</h3>
+    <h2 class="section-title">HOME</h2>
 
-    <div class="evidence-grid">
-      <div class="evidence-image">
-        <img src="images/1996-97-home.jpg" alt="1996–97 Bulls Home jersey — Home A">
-        <p class="muted evidence-caption">Game imagery used where no physical public example exists.</p>
-      </div>
 
-      <div class="evidence-content">
-        <div class="evidence-meta">
-          <div><span class="meta-label">Confirmed Population</span><span class="meta-value">0</span></div>
-          <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
-          <div><span class="meta-label">Status</span><span class="meta-value">In Progress</span></div>
-        </div>
+<div class="style-summary-card">
+<section class="season-block evidence-block" id="home">
 
-        <div class="evidence-callout">
-          Season audit underway. No public home example documented.
-        </div>
 
-        <h3>Research Notes</h3>
-        <p class="muted">
-          Full-season home audit remains in progress. This entry will be updated as additional primary-source imagery is reviewed.
+    <div class="style-summary-content">
 
-        </p>
+      <div class="evidence-meta">
+        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
+        <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
+        <div><span class="meta-label">Research Confirmed</span><span class="meta-value">1</span></div>
+        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
       </div>
     </div>
   </div>
 
-  <hr class="entry-divider">
 
-  <!-- ===== HOME B (COPY/PASTE TEMPLATE) =====
+  <!-- ===== HOME A ===== -->
 
-<hr class="entry-divider">
-
-<div class="jersey-entry">
-  <h3 class="jersey-entry-title">Home B — (Template)</h3>
+<div class="evidence-block">
 
   <div class="evidence-grid">
+
+    <!-- LEFT: IMAGE -->
     <div class="evidence-image">
-      <img src="images/1996-97-home-b.jpg" alt="1996–97 Bulls Home Jersey B">
-      <p class="muted evidence-caption">Reference image.</p>
+      <img src="images/1996-97-home.jpg" alt="1996–97 Bulls Home jersey — Home A">
+      <p class="muted evidence-caption">
+        Game imagery used where no physical public example exists.
+      </p>
     </div>
 
+    <!-- RIGHT: SUMMARY + PUBLIC SALE -->
     <div class="evidence-content">
 
       <div class="evidence-meta">
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">0</span></div>
+        <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey A</span></div>
+        <div><span class="meta-label">Use</span><span class="meta-value">Regular Season</span></div>
+        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
         <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
         <div><span class="meta-label">Status</span><span class="meta-value">In Progress</span></div>
       </div>
 
       <div class="evidence-callout">
-        Additional home jersey entry (placeholder).
+        1996–97 Chicago Bulls home jersey worn during regular season play.
       </div>
 
-      <h3>Research Notes</h3>
-      <p class="muted">
-        Add notes here (photomatch window, sourcing, tagging, attribution, etc).
-      </p>
+      <details class="doc-collapse">
+  <summary>View Documentation</summary>
+  <div class="doc-inner">
+    <h4>Photo Match Details</h4>
+    <ul class="doc-list">
+      <li><strong>Authentication:</strong> Yes</li>
+      <li><strong>Photo-Matched:</strong> Yes</li>
+      <li><strong>Photo-Matched By:</strong> MeiGray</li>
+      <li><strong>Games Photo-Matched:</strong> 2</li>
+    </ul>
+
+    <h4>Documented Games</h4>
+    <ul class="doc-list">
+      <li><strong>Feb 28, 1998</strong> — Sacramento Kings</li>
+      <li><strong>Mar 3, 1998</strong> — Denver Nuggets</li>
+    </ul>
+
+    <h4>Research &amp; Provenance</h4>
+    <p class="muted">
+      The jersey is accompanied by a letter from the Chicago Bulls referencing its original sale through the team's charitable foundation.
+    </p>
+  </div>
+</details>
+
+      <h3>Public Sale</h3>
+      <ul class="meta-list">
+        <li>
+          <strong>Auction House:</strong>
+          <a href="https://sports.ha.com/itm/basketball-collectibles/uniforms/1986-87-michael-jordan-game-worn-chicago-bulls-uniform-definitively-photo-matched-to-five-games-including-56-points-vs-philadelphia-on-3-24/a/50034-53324.s?ic4=GalleryView-Thumbnail-071515"
+             target="_blank" rel="noopener">
+            Heritage Auctions
+          </a>
+        </li>
+        <li><strong>Sale Date:</strong> October 3, 2020</li>
+        <li><strong>Lot #:</strong> 53324</li>
+        <li><strong>Sale Price (2020):</strong> $480,000.00</li>
+      </ul>
 
     </div>
   </div>
+
 </div>
 
-===== END HOME B TEMPLATE ===== -->
-</section>
+  <hr class="entry-divider">
+
+<!-- =====================================================
+         AWAY SECTION
+         NOTE: Add your 1986–87 away strip image to /assets/
+         e.g. assets/1986-87-away-strip.jpg
+         ======================================================= -->
+
+    <div class="section-divider" aria-hidden="true"></div>
+
+    <div class="section-strip">
+      <img src="assets/away-strip.jpg" alt="">
+    </div>
+
+    <h2 class="section-title">AWAY</h2>
+    <section class="season-block evidence-block" id="away">
+
+<div class="style-summary-card">
 
 
+    <div class="style-summary-content">
 
-<hr>
-
-
-
-<!-- AWAY SECTION -->
-<section class="season-block evidence-block">
-  <h2>Away (Red)</h2>
-
-  <!-- ===== AWAY A ===== -->
-  <div class="jersey-entry">
-    <h3 class="jersey-entry-title">Away A — Sotheby’s (Nov 4, 2024)</h3>
-
+      <div class="evidence-meta">
+        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
+        <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
+        <div><span class="meta-label">Research Confirmed</span><span class="meta-value">NA</span></div>
+        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
+      </div>
+    </div>
+  </div>
     <div class="evidence-grid">
       <div class="evidence-image">
         <img src="images/1996-97-away-fb.jpg" alt="1996–97 Bulls Away jersey — Away A">
@@ -248,46 +330,33 @@
     </div>
   </div>
 
+  <hr class="entry-divider">
 
-<!-- ===== AWAY B (COPY/PASTE TEMPLATE) =====
+<!-- =====================================================
+     ALTERNATE LANE
+======================================================= -->
 
-<hr class="entry-divider">
+<div class="section-divider"></div>
 
-<div class="jersey-entry">
-  <h3 class="jersey-entry-title">Away B — (Template)</h3>
-
-  <div class="evidence-grid">
-    <div class="evidence-image">
-      <img src="images/1996-97-away-b.jpg" alt="1996–97 Bulls Away Jersey B">
-      <p class="muted evidence-caption">Reference image.</p>
-    </div>
-
-    <div class="evidence-content">
-
-      <div class="evidence-meta">
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">—</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">—</span></div>
-        <div><span class="meta-label">Status</span><span class="meta-value">In Progress</span></div>
-      </div>
-
-      <div class="evidence-callout">
-        Additional away jersey entry (placeholder).
-      </div>
-
-      <h3>Research Notes</h3>
-      <p class="muted">
-        Add notes here (photomatch window, sourcing, tagging, attribution, etc).
-      </p>
-
-    </div>
-  </div>
+<div class="section-strip">
+  <img src="assets/alt-strip.jpg" alt="">
 </div>
 
-===== END AWAY B TEMPLATE ===== -->
+<h2 class="section-title">ALTERNATE</h2>
 
-</section>
+<section class="season-block evidence-block">
 
-<hr>
+  <div class="style-summary-card">
+    <div class="style-summary-content">
+      <div class="evidence-meta">
+        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
+        <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
+        <div><span class="meta-label">Research Confirmed</span><span class="meta-value">On-going</span></div>
+        <div><span class="meta-label">Audit</span><span class="meta-value">Audit In Progress</span></div>
+      </div>
+    </div>
+  </div>
+
 
 <p class="muted back-link" style="margin-top:28px;">
   <a href="jerseys.html">← Back to Jersey Archive</a>

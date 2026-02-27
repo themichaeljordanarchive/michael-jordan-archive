@@ -1150,6 +1150,20 @@ body.preseason-page .table-hint{
   padding-bottom: 10px;
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
+.evidence-details{
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.08);
+}
+
+.evidence-content .meta-list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.evidence-content .meta-list li{
+  margin: 6px 0;
+}
 
 .meta-label{
   font-family: var(--sans);
@@ -1326,6 +1340,66 @@ body.preseason-page .table-hint{
   color: rgba(157,15,15,1);
   margin-left: 6px;
   font-weight: 600;
+}
+/* ======================================
+   DOCUMENTATION COLLAPSE MODULE
+====================================== */
+
+.doc-collapse{
+  margin-top: 14px;
+  border: 1px solid rgba(0,0,0,0.06);
+  border-radius: 14px;
+  padding: 8px 10px;
+  background: transparent;
+}
+
+/* summary (clickable header) */
+.doc-collapse > summary{
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  position: relative;
+  padding-right: 22px; /* room for arrow */
+}
+
+/* remove default browser arrow */
+.doc-collapse > summary::-webkit-details-marker{
+  display: none;
+}
+
+/* custom arrow */
+.doc-collapse > summary::after{
+  content: "▾";
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.6;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.doc-collapse[open] > summary::after{
+  content: "▴";
+  opacity: 0.8;
+}
+
+/* inner content spacing */
+.doc-inner{
+  margin-top: 10px;
+}
+
+.doc-inner h4{
+  margin: 14px 0 6px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
+}
+
+.doc-list{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.doc-list li{
+  margin: 6px 0;
 }
 /* =========================================================
    RESPONSIVE — LOCKED
