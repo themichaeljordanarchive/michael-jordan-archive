@@ -1451,6 +1451,19 @@ body.preseason-page .table-hint{
 .scope-link:hover {
   color: rgba(0,0,0,0.8);
 }
+@media (max-width: 800px){
+
+  .style-summary-card,
+  .season-status-stack{
+    width: 100%;
+  }
+
+  .style-summary-content{
+    flex-direction: column;
+    gap: 12px;
+  }
+
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
