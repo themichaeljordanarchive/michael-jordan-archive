@@ -488,11 +488,7 @@ if (btn) {
 <script>
 (function(){
   const btn = document.getElementById('sortToggle');
-  const wrap = document.getElementById('registryRows');
-  if (!btn || !wrap) return;
-
-  const original = Array.from(wrap.children);
-  let mode = "registry";
+  if (!btn) return;
 
   const monthMap = {
     jan:0,feb:1,mar:2,apr:3,may:4,jun:5,
@@ -511,35 +507,52 @@ if (btn) {
     return new Date(year, monthMap[mon], day).getTime();
   }
 
-  function sortChronology(){
-    const rows = Array.from(wrap.children);
+  // Grab ALL registry lists (Home/Away/Alternate, etc.)
+  const lists = Array.from(document.querySelectorAll('.registry-list'));
+  if (!lists.length) return;
 
-    rows.sort((a,b) => {
-      const ta = parseFirstDate(a.textContent || "");
-      const tb = parseFirstDate(b.textContent || "");
+  // Store original order PER list
+  const originals = new Map();
+  lists.forEach(list => originals.set(list, Array.from(list.children)));
 
-      if (ta === null && tb === null) return 0;
-      if (ta === null) return 1;
-      if (tb === null) return -1;
+  let mode = "registry";
+  btn.textContent = "Registry Order ▾";
 
-      return ta - tb;
+  function sortAll(){
+    lists.forEach(list => {
+      const rows = Array.from(list.children);
+
+      rows.sort((a,b) => {
+        const ta = parseFirstDate(a.textContent || "");
+        const tb = parseFirstDate(b.textContent || "");
+
+        // push rows without a parseable date to the bottom
+        if (ta === null && tb === null) return 0;
+        if (ta === null) return 1;
+        if (tb === null) return -1;
+
+        return ta - tb;
+      });
+
+      rows.forEach(r => list.appendChild(r));
     });
-
-    rows.forEach(r => wrap.appendChild(r));
   }
 
-  function restore(){
-    original.forEach(r => wrap.appendChild(r));
+  function restoreAll(){
+    lists.forEach(list => {
+      const orig = originals.get(list) || [];
+      orig.forEach(r => list.appendChild(r));
+    });
   }
 
   btn.addEventListener('click', () => {
     mode = (mode === "registry") ? "chronology" : "registry";
 
     if (mode === "chronology"){
-      sortChronology();
+      sortAll();
       btn.textContent = "Chronological Order ▾";
     } else {
-      restore();
+      restoreAll();
       btn.textContent = "Registry Order ▾";
     }
   });
