@@ -1405,6 +1405,39 @@ body.preseason-page .table-hint{
 .doc-list li{
   margin: 6px 0;
 }
+/* ======================================
+   SEASON CONTROLS
+====================================== */
+
+.season-controls{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: stretch;
+}
+
+.control-card{
+  border-radius: 10px;
+  padding: 16px 18px;
+  border: 0.5px solid rgba(157,15,15,0.55);
+}
+
+.control-input{
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 28px;
+  border: 1px solid rgba(0,0,0,0.10);
+  background: #fff;
+  font-size: 15px;
+}
+
+.control-dropdown{
+  background: rgba(157,15,15,0.08);  /* soft archive red tint */
+  border: 1px solid rgba(157,15,15,0.35);
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
