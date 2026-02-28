@@ -1451,19 +1451,6 @@ body.preseason-page .table-hint{
 .scope-link:hover {
   color: rgba(0,0,0,0.8);
 }
-@media (max-width: 800px){
-
-  .style-summary-card,
-  .season-status-stack{
-    width: 100%;
-  }
-
-  .style-summary-content{
-    flex-direction: column;
-    gap: 12px;
-  }
-
-}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
@@ -1488,6 +1475,12 @@ body.preseason-page .table-hint{
    .brand-text{
     display: none !important;
   }
+
+    .season-controls{
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
   main{ padding: 22px 18px 70px; }
   h1{ font-size: 32px; line-height: 1.08; }
 
