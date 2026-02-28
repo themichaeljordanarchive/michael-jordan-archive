@@ -576,6 +576,7 @@ h2, h3{
    Special season cards (watermark / background variables)
    ========================================================= */
 
+.season-card-9798 { --season-card-bg: url("assets/usa-bg.jpg"); --season-card-detail: url("assets/usa-bg.jpg"); }    
 .season-card-9798 { --season-card-bg: url("assets/1997-98-bg.jpg"); --season-card-detail: url("assets/1997-98-bg.jpg"); }   
 .season-card-9697 { --season-card-bg: url("assets/1996-97-bg.jpg"); --season-card-detail: url("assets/1996-97-bg.jpg"); }
 .season-card-9293 { --season-card-bg: url("assets/1992-93-bg.jpg"); --season-card-detail: url("assets/1992-93-bg.jpg"); }
