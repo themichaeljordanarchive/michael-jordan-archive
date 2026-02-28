@@ -1438,6 +1438,19 @@ body.preseason-page .table-hint{
   cursor: pointer;
   transition: background 0.2s ease, border-color 0.2s ease;
 }
+.scope-link {
+  font-size: 14px;
+  color: rgba(0,0,0,0.55);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  letter-spacing: 0.02em;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.scope-link:hover {
+  color: rgba(0,0,0,0.8);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
