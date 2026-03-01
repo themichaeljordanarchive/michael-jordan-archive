@@ -1492,7 +1492,7 @@ body.preseason-page .table-hint{
 .evidence-image.is-carousel .carousel-dots{
   position: absolute;
   left: 50%;
-  bottom: 20px;
+  bottom: 64px;
   transform: translateX(-50%);
   display: flex;
   gap: 6px;
