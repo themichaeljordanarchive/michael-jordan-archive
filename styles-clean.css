@@ -1507,6 +1507,33 @@ body.preseason-page .table-hint{
   border-radius: 50%;
   background: rgba(0,0,0,0.35);
 }
+/* Buttons base */
+.evidence-image.is-carousel .carousel-btn{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.78);
+  backdrop-filter: blur(6px);
+  color: rgba(0,0,0,0.75);
+  font-size: 22px;
+  line-height: 36px;
+  padding: 0;
+  cursor: pointer;
+}
+
+/* Placement */
+.evidence-image.is-carousel .carousel-btn.prev{ left: 10px; }
+.evidence-image.is-carousel .carousel-btn.next{ right: 10px; }
+
+/* Hide on mobile (swipe-only stays) */
+@media (max-width: 900px){
+  .evidence-image.is-carousel .carousel-btn{ display: none; }
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
