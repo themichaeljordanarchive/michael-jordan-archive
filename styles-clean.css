@@ -1813,3 +1813,4 @@ body.season-page .population-card td:first-child{
   padding: 10px 18px;   /* thinner */
   border-radius: 4px;  /* more square */
 }
+.carousel-dots { outline: 3px solid lime !important; }
