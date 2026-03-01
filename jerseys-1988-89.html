@@ -8,20 +8,9 @@
   <link rel="stylesheet" href="styles-clean.css">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 </head>
-
-<!--
-=========================================================
-SEASON DETAIL TEMPLATE (MASTER)
-To duplicate for a new season:
-1) Update BODY CLASS (s-YYYY)
-2) Update Title + Summary stats
-3) Swap images
-4) Update Population table rows
-=========================================================
--->
 
 <body class="season-page s-8889">
 
@@ -35,7 +24,7 @@ To duplicate for a new season:
       </div>
     </div>
 
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
       <span></span><span></span><span></span>
     </button>
 
@@ -49,205 +38,223 @@ To duplicate for a new season:
 
     <!-- =====================================================
          SEASON HEADER (WOW CARD)
-         ===================================================== -->
-
+         ======================================================= -->
     <section class="season-header">
       <div class="season-card season-card--detail">
-
         <div class="season-header-top">
-          <div>
 
-            <!-- EDIT THESE FOR NEW SEASON -->
+          <!-- LEFT COLUMN -->
+          <div>
             <h1 class="season-year-hero">1988–89</h1>
 
-            <div class="population-total">
-  <div class="population-label">Confirmed Game-Worn Population:</div>
-  <div class="population-number"><strong>1</strong></div>
+            <div class="season-metrics">
+              <div class="metric-row">
+                <div class="metric-label">Confirmed Population</div>
+                <div class="metric-value main-total">2</div>
+              </div>
 
-  <div class="population-breakdown">
-    <span>Home: <strong>1</strong></span>
-    <span class="sep"></span>
-    <span>Away: <strong>0</strong></span>
-  </div>
-</div>
+              <div class="metric-row">
+                <div class="metric-label">Publicly Documented</div>
+                <div class="metric-value">1</div>
+              </div>
 
+              <div class="metric-row">
+                <div class="metric-label">Privately Verified</div>
+                <div class="metric-value">0</div>
+              </div>
+            </div>
+
+            <div class="season-status-stack">
+              <div class="audit-badge">RESEARCH IN PROGRESS</div>
+
+            <div class="season-summary muted">
+             <div>Games Reviewed:</div>
+              <div>• Preseason: 0 of 0</div>
+              <div>• Regular Season: 10 of 82</div>
+              <div>• Postseason: 0 of 0</div>
+              <div class="last-updated">Last Updated: February 27, 2026</div>
+             </div>
+            </div>
           </div>
 
-          <!-- EDIT IF STATUS CHANGES -->
-          <div class="audit-badge">IN PROGRESS</div>
+          <!-- RIGHT COLUMN -->
+          <div class="population-card">
+            <h3>Population Summary</h3>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Style</th>
+                  <th>Confirmed</th>
+                  <th>Public</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Home</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td><span class="audit-progress">⏳</span></td>
+                </tr>
+                <tr>
+                  <td>Away</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td><span class="audit-progress">⏳</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="summary-footnote">
+              <p>
+                Population reflects distinct season-worn garments (jerseys or full uniform sets) confirmed through research and documentation.
+              </p>
+            </div>
+          </div>
+
         </div>
-
-        <p class="season-summary">
-  Games Reviewed &mdash;
-  <span class="no-wrap">PRE 0 / 0</span> •
-<span class="no-wrap">REG 10 / 82</span>
-  <br>
-  <span class="last-updated">Last Updated: February 15, 2026</span>
-</p>
-
-        <div class="population-card">
-          <h3>Population Summary</h3>
-
-          <table>
-            <thead>
-              <tr>
-                <th>Style</th>
-                <th>Confirmed</th>
-                <th>Public</th>
-                <th>Audit</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              <!-- EDIT THESE ROWS FOR NEW SEASON -->
-              <tr>
-                <td>Home</td>
-                <td>1</td>
-                <td>1</td>
-                <td><span class="audit-progress">⏳</span></td>
-              </tr>
-              <tr>
-                <td>Away</td>
-                <td>1</td>
-                <td>0</td>
-               <td><span class="audit-progress">⏳</span></td>
-              </tr>
-            </tbody>
-          </table>
-
-          <!-- Footnote / Ongoing Research (lives INSIDE the Population card) -->
-          <div class="summary-footnote">
-            <p>
-              The Michael Jordan Archive population study is an ongoing research initiative. Population conclusions reflect best-available documentation and comparative review.
-            </p>
-
-            <p>
-              Collectors, researchers, and institutions who wish to contribute relevant primary-source materials are invited to 
-<a href="contact.html" class="archive-link">contact the archive</a>.
-            </p>
-
-            <p class="muted">
-              Submissions are reviewed independently and treated with discretion.
-            </p>
-          </div>
-
       </div>
     </section>
 
-    <hr>
-
     <!-- =====================================================
-         HOME (WHITE)
-         ===================================================== -->
+         HOME
+         ======================================================= -->
+    <div class="section-divider" aria-hidden="true"></div>
 
-    <section class="season-block evidence-block">
-      <h2>Home (White)</h2>
+    <div class="section-strip">
+      <img src="assets/home-strip.jpg" alt="">
+    </div>
 
+    <h2 class="section-title">HOME</h2>
+
+    <div class="style-summary-card">
+      <div class="style-summary-content">
+        <div class="evidence-meta">
+          <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
+          <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
+          <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="evidence-block" id="home">
       <div class="evidence-grid">
+
         <div class="evidence-image">
-          <!-- EDIT IMAGE FOR NEW SEASON -->
           <img src="images/1988-89-home-fb.jpg" alt="1988–89 Bulls Home jersey">
           <p class="muted evidence-caption">Publicly documented example.</p>
         </div>
 
         <div class="evidence-content">
+
           <div class="evidence-meta">
+            <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey A</span></div>
             <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
             <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
-            <div><span class="meta-label">Status</span><span class="meta-value">Confirmed</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Regular Season</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">Confirmed</span></div>
           </div>
 
           <div class="evidence-callout">
             Publicly documented sale confirmed.
           </div>
 
-          <h3>Public Sale Details</h3>
-          <ul>
-            <!-- EDIT THESE FOR NEW SEASON -->
+          <h3>Public Sale</h3>
+          <ul class="meta-list">
             <li>
-  <strong>Auction House:</strong> 
-  <a href="https://www.sothebys.com/en/buy/auction/2024/colossal-the-ultimate-jordan-collection/michael-jordan-1988-1989-chicago-bulls-game-worn" target="_blank" rel="noopener">
-    Sothebys
-  </a>
-</li>
-            <li><strong>Sale Date:</strong> Novemberr 2, 2024</li>
+              <strong>Auction House:</strong>
+              <a href="https://www.sothebys.com/en/buy/auction/2024/colossal-the-ultimate-jordan-collection/michael-jordan-1988-1989-chicago-bulls-game-worn"
+                 target="_blank" rel="noopener">
+                Sotheby’s
+              </a>
+            </li>
+            <li><strong>Sale Date:</strong> November 2, 2024</li>
             <li><strong>Lot #:</strong> Lot 5</li>
             <li><strong>Sale Price:</strong> $1,080,000</li>
-            <li><strong>Photo-Matched:</strong> Yes</li>
-<li><strong>Games Photo-Matched:</strong> 10</li>
-<li><strong>Photo-Matched By:</strong> Mei Gray, SIA,</li>
           </ul>
 
-<h3>Research & Provenance</h3>
+          <h3>Research &amp; Provenance</h3>
+          <p class="muted">
+            This jersey was matched to various dates from January of ’89 to June of ’89 and is accompanied by matching shorts (photomatched to 7 games).
+          </p>
 
-<p class="muted">
-  This jersey was matched to various dates from January of '89 to June of '89 - is accompanied by  matching shorts (photomatched to 7 games).
-</p>
+          <ul class="provenance-list muted">
+            <li>Previously sold wby the Chicago Bulls.</li>
+            <li>Owned by a private institution.</li>
+            <li>Total documented photo-matched games: 10 + 3.</li>
+          </ul>
 
-<ul class="provenance-list muted">
-  <li>Previously sold wby the Chicago Bulls.</li>
-  <li>Owned by a private institution.</li>
-  <li>Total documented photo-matched games: 10 + 3.</li>
-</ul>
+          <!-- Documentation toggle (HOME has documentation) -->
+          <details class="doc-collapse">
+            <summary>Documentation</summary>
+            <div class="doc-inner">
+
+              <h4>Photo Match Details</h4>
+              <ul class="doc-list">
+                <li><strong>Photo-Matched:</strong> Yes</li>
+                <li><strong>Games Photo-Matched:</strong> 10</li>
+                <li><strong>Photo-Matched By:</strong> Mei Gray, SIA,</li>
+              </ul>
+
+            </div>
+          </details>
+
         </div>
       </div>
-    </section>
-
-    <hr>
+    </div>
 
     <!-- =====================================================
-         AWAY (RED)
-         ===================================================== -->
+         AWAY
+         ======================================================= -->
+    <div class="section-divider" aria-hidden="true"></div>
 
-    <section class="season-block evidence-block">
-      <h2>Away (Red)</h2>
+    <div class="section-strip">
+      <img src="assets/away-strip.jpg" alt="">
+    </div>
 
+    <h2 class="section-title">AWAY</h2>
+
+    <div class="style-summary-card">
+      <div class="style-summary-content">
+        <div class="evidence-meta">
+          <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
+          <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
+          <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="evidence-block" id="away">
       <div class="evidence-grid">
+
         <div class="evidence-image">
-          <!-- EDIT IMAGE FOR NEW SEASON -->
           <img src="images/1988-89-away.jpg" alt="1988–89 Bulls Away jersey (game imagery)">
-          <p class="muted evidence-caption">
-            Game imagery used where no physical public example exists.
-          </p>
+          <p class="muted evidence-caption">Game imagery used where no physical public example exists.</p>
         </div>
 
         <div class="evidence-content">
+
           <div class="evidence-meta">
-            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">0</span></div>
+            <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey B</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
             <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
-            <div><span class="meta-label">Status</span><span class="meta-value">In Progress</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Regular Season</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
           </div>
 
           <div class="evidence-callout">
-            Season audit underway. No public example has surfaced.
+            Research in progress. No public example has surfaced.
           </div>
 
-          <h3>Research Notes</h3>
+          <h3>Research &amp; Provenance</h3>
           <p class="muted">
-            <!-- EDIT THESE FOR NEW SEASON -->
-            This entry will be updated if a distinct physical example becomes publicly documented or as complete season audit is underway and new evidence becomes apparent.
+            This entry will be updated if a distinct physical example becomes publicly documented or as the complete season audit progresses and new evidence becomes apparent.
           </p>
+
         </div>
       </div>
-    </section>
-
-    <hr>
-
-    <section class="season-policy">
-      <h2>Methodology & Scope</h2>
-      <p>
-        <strong>Audit status:</strong> Complete<br>
-        <strong>Confidence level:</strong> High
-        <br><br>
-        Population conclusions reflect comprehensive multi-source visual review of all documented regular season games,
-        alongside publicly documented examples where applicable. Detailed audit logs and continuity documentation remain proprietary.
-      </p>
-
-      <p class="muted">
-        Some supporting documentation may not be publicly disclosed. Where possible, public auction records
-        and primary-source imagery references are provided for transparency.
-      </p>
-    </section>
+    </div>
 
     <p class="muted back-link" style="margin-top:28px;">
       <a href="jerseys.html">← Back to Jersey Archive</a>
@@ -264,5 +271,6 @@ To duplicate for a new season:
       });
     }
   </script>
+
 </body>
 </html>
