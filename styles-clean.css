@@ -1463,6 +1463,7 @@ body.preseason-page .table-hint{
   position: relative;
   overflow: hidden;
   width: 100%;
+  border-radius: 14px;
 }
 
 .evidence-image.is-carousel .carousel-track{
