@@ -1546,7 +1546,7 @@ body.preseason-page .table-hint{
    ========================================================= */
 
 @media (max-width: 900px){
-  .season-index{ grid-template-columns: repeat(2, 1fr); }
+  .season-index{ grid-template-columns: 1fr; gap: 26px; }
   .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
   .season-header-top{ gap: 32px; }
 }
