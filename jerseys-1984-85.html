@@ -8,20 +8,9 @@
   <link rel="stylesheet" href="styles-clean.css?v=10">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 </head>
-
-<!--
-=========================================================
-SEASON DETAIL TEMPLATE (MASTER)
-To duplicate for a new season:
-1) Update BODY CLASS (s-YYYY)
-2) Update Title + Summary stats
-3) Swap images
-4) Update Population table rows
-=========================================================
--->
 
 <body class="season-page s-8485">
 
@@ -35,7 +24,7 @@ To duplicate for a new season:
       </div>
     </div>
 
-    <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
       <span></span><span></span><span></span>
     </button>
 
@@ -47,392 +36,324 @@ To duplicate for a new season:
 
   <main>
 
-<!-- =====================================================
-     SEASON HEADER (WOW CARD)
-===============================
-====================== -->
+    <!-- =====================================================
+         SEASON HEADER (WOW CARD)
+         ======================================================= -->
 
-<section class="season-header">
-  <div class="season-card season-card--detail">
+    <section class="season-header">
+      <div class="season-card season-card--detail">
+        <div class="season-header-top">
 
-    <div class="season-header-top">
+          <!-- LEFT COLUMN -->
+          <div>
+            <h1 class="season-year-hero">1984–85</h1>
 
-      <!-- LEFT COLUMN -->
-      <div>
-        <h1 class="season-year-hero">1984–85</h1>
+            <div class="season-metrics">
+              <div class="metric-row">
+                <div class="metric-label">Confirmed Population</div>
+                <div class="metric-value main-total">4</div>
+              </div>
 
-        <div class="season-metrics">
-          <div class="metric-row">
-            <div class="metric-label">Season Total</div>
-            <div class="metric-value main-total">4</div>
-          </div>
+              <div class="metric-row">
+                <div class="metric-label">Game-Worn Total</div>
+                <div class="metric-value main-total">2</div>
+              </div>
 
-          <div class="metric-row">
-            <div class="metric-label">Game Worn Total</div>
-            <div class="metric-value">2</div>
-          </div>
+              <div class="metric-row">
+                <div class="metric-label">Publicly Documented</div>
+                <div class="metric-value">2</div>
+              </div>
 
-          <div class="metric-row">
-            <div class="metric-label">Publicly Documented (POP)</div>
-            <div class="metric-value">2</div>
-          </div>
-
-          <div class="metric-row">
-            <div class="metric-label">Verified Non-Public (POP)</div>
-            <div class="metric-value">2</div>
-          </div>
-        </div>
-
-        <!-- STATUS (LEFT COLUMN) -->
-        <div class="season-status-stack">
-          <div class="audit-badge">AUDIT IN PROGRESS</div>
-
-          <div class="season-summary muted">
-            <div>Games Reviewed:</div>
-            <div>
-              • <a href="preseason.html#s-8485" class="preseason-link">
-                Preseason 7 of 7 <span class="arrow">→</span>
-              </a>
+              <div class="metric-row">
+                <div class="metric-label">Privately Verified</div>
+                <div class="metric-value">2</div>
+              </div>
             </div>
-            <div>• Regular Season 41 of 86</div>
-            <div class="last-updated">Last Updated: February 20, 2026</div>
+
+            <div class="season-status-stack">
+              <div class="audit-badge">RESEARCH IN PROGRESS</div>
+
+              <div class="season-summary muted">
+                <div>Games Reviewed:</div>
+                <div>
+                  • <a href="preseason.html#s-8485" class="preseason-link">
+                    Preseason 7 of 7 <span class="arrow">→</span>
+                  </a>
+                </div>
+                <div>• Regular Season 41 of 86</div>
+                <div>• Postseason 0 of 0</div>
+                <div class="last-updated">Last Updated: February 20, 2026</div>
+              </div>
+            </div>
           </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="population-card">
+            <h3>Population Summary</h3>
+
+            <table>
+              <thead>
+                <tr>
+                  <th>Style</th>
+                  <th>Confirmed</th>
+                  <th>Public</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Promo (Home)</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td><span class="audit-ok">√</span></td>
+                </tr>
+                <tr>
+                  <td>Preseason (Away)</td>
+                  <td>1</td>
+                  <td>1</td>
+                  <td><span class="audit-ok">√</span></td>
+                </tr>
+                <tr>
+                  <td>Home</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td><span class="audit-progress">⏳</span></td>
+                </tr>
+                <tr>
+                  <td>Away</td>
+                  <td>1</td>
+                  <td>0</td>
+                  <td><span class="audit-ok">√</span></td>
+                </tr>
+              </tbody>
+            </table>
+
+            <div class="summary-footnote">
+              <p>
+                Population reflects distinct season-worn garments (jerseys or full uniform sets) confirmed through research and documentation.
+              </p>
+            </div>
+          </div>
+
         </div>
       </div>
+    </section>
 
-      <!-- RIGHT COLUMN -->
-      <div class="population-card">
-        <h3>Population Summary</h3>
+    <!-- =====================================================
+         HOME
+         ======================================================= -->
 
-        <table>
-          <thead>
-            <tr>
-              <th>Style</th>
-              <th>Confirmed</th>
-              <th>Public</th>
-              <th>Audit</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Promo (Home)</td>
-              <td>1</td>
-              <td>1</td>
-              <td><span class="audit-ok">√</span></td>
-            </tr>
-            <tr>
-              <td>Preseason (Away)</td>
-              <td>1</td>
-              <td>1</td>
-              <td><span class="audit-ok">√</span></td>
-            </tr>
-            <tr>
-              <td>Home</td>
-              <td>1</td>
-              <td>0</td>
-              <td><span class="audit-progress">⏳</span></td>
-            </tr>
-            <tr>
-              <td>Away</td>
-              <td>1</td>
-              <td>0</td>
-              <td><span class="audit-ok">√</span></td>
-            </tr>
-          </tbody>
-        </table>
+    <div class="section-divider" aria-hidden="true"></div>
 
-        <div class="summary-footnote">
-          <p>
-            The Michael Jordan Archive population study is an ongoing research initiative. Population conclusions reflect best-available documentation and comparative review.
-          </p>
-        </div>
-      </div>
-
+    <div class="section-strip">
+      <img src="assets/home-strip.jpg" alt="">
     </div>
 
-  </div>
-</section>
+    <h2 class="section-title">HOME</h2>
 
-<!-- =====================================================
-     HOME (WHITE) — STRIP & SUMMARY
-     ======================================================= -->
-
-<div class="section-divider" aria-hidden="true"></div>
-
-<div class="section-strip">
-  <img src="assets/home-strip.jpg" alt="">
-</div>
-
-<h2 class="section-title">HOME</h2>
-<section class="season-block evidence-block" id="home">
-  
-
-  <!-- STYLE SUMMARY  -->
-
-<div class="style-summary-card">
-
-
-    <div class="style-summary-content">
-
-      <div class="evidence-meta">
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Research Confirmed</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
-      </div>
-    </div>
-  </div>
-
-<!-- =====================================================
-     HOME JERSEY — PROMOTIONAL
-     ======================================================= -->
-
-<div class="evidence-subblock" id="home-promo-pop">
-
-  <h3>1984-85 Home Jersey - Promotional</h3>
-  <div class="pop-label">POP 1</div>
-
-  <div class="evidence-grid">
-    <div class="evidence-image">
-      <img src="images/1984-85-home promo-fb.jpg" alt="1984–85 Bulls promo home jersey (front and back)">
-      <div class="image-indentity">1984-85 / Jersey A</div>
-      <p class="muted evidence-caption">
-        Publicly documented promotional example.
-      </p>
-    </div>
-
-    <div class="evidence-content">
-
-      <div class="evidence-meta">
-        <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey A</span></div>
-        <div><span class="meta-label">Use</span><span class="meta-value">Bulls Media/Nike Photos/Hoop Mag</span></div>
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Audit</span><span class="meta-value">Confirmed</span></div>
-      </div>
-
-      <div class="evidence-callout">
-        1984-85 Michael Jordan Earliest Known Player-Worn, Photo-Matched, Significant Rookie Season Chicago Bulls Home Jersey - Photo Featured On Hoop Magazine.
-      </div>
-
-      <h3>Public Sale Details</h3>
-      <ul>
-        <li>
-            <strong>Auction House:</strong>
-            <a href="https://goldin.co/item/1984-85-michael-jordan-player-worn-photo-matched-rookie-season-chicagot5c00?queryId=eyJxdWVyeUlkIjoiYTc3NzZiNWRmZWE5MzUwMTNiYjkxZjhiYWQzNGE1NzAiLCJjYXJkSW5kZXgiOjB9&fbclid=IwY2xjawQAK4lleHRuA2FlbQIxMABicmlkETFIclZDeW1jR1E5WFVHQ1Fkc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjp6oTn1BEC4PIe9-xU6Qzelf6Iqvg_KTEQfyilHxyfWT1XIYcpVLjJJ22qa_aem_n1pcPUDv3l_7aRuDombgvA"_blank" rel="noopener">
-              Goldin
-</a>
-          </li>
-        <li><strong>Sale Date:</strong> Unknown</li>
-        <li><strong>Lot #:</strong> 1</li>
-        <li><strong>Sale Price. - 2020:</strong> $144,000.00</li>
-        <li><strong>Sale Price. - 2024:</strong> $513,985.00</li>
-        <li><strong>Photo-Matched:</strong> Yes</li>
-        <li><strong>Games Photo-Matched:</strong> 0</li>
-        <li><strong>Photo-Matched By:</strong> SIA</li>
-        <li><strong>Authentication / LOA:</strong> Yes</li>
-      </ul>
-
-      <h3>Research & Provenance &amp; Provenance</h3>
-      <ul class="provenance-list muted">
-        <li>Issued during the 1984–85 promotional period.</li>
-        <li>Used for Nike / media photography sessions.</li>
-        <li>Additional provenance details to be added.</li>
-      </ul>
-
-    </div>
-  </div>
-</div>
-
-  <!-- =====================================================
-     HOME JERSEY - REGULAR SEASON (2)
-     ======================================================= -->
-
-<div class="evidence-subblock" id="home-regular-continuity">
-
-  <h3>1984-85 Home Jersey - Regular Season</h3>
-  <div class="pop-label">POP 2</div>
-
-  <div class="evidence-grid">
-    <div class="evidence-image">
-      <img src="images/1984-85-home.jpg" alt="1984–85 Bulls regular season home jersey">
-      <div class="image-indentity">1984-85 / Jersey C</div>
-      <p class="muted evidence-caption">In-season image of Michael Jordan 1984–85.</p>
-    </div>
-
-    <div class="evidence-content">
-
-      <div class="evidence-meta">
-        <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey C</span></div>
-        <div><span class="meta-label">Use</span><span class="meta-value">Regular Season</span></div>
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
-        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
-      </div>
-
-      <div class="evidence-callout">
-        Regular season garment worn throughout the 1984–85 season.
-      </div>
-
-      <h3>Research Notes</h3>
-      <p class="muted">
-        This garment represents the primary regular season home jersey. A full-season visual verification analysis is still progress.
-      </p>
-
-    </div>
-  </div>
-
-
-</section>
-
-<div class="section-divider" aria-hidden="true"></div>
-
-
-<!-- =====================================================
-     AWAY — STRIP & SUMMARY
-     ======================================================= -->
-
-
-<div class="section-strip">
-  <img src="assets/away-strip.jpg" alt="">
-</div>
-
-<h2 class="section-title">AWAY</h2>
-<section class="season-block evidence-block" id="away">
-  
-
-<div class="style-summary-card">
-
-
-    <div class="style-summary-content">
-
-      <div class="evidence-meta">
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Research Confirmed</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
-      </div>
-    </div>
-  </div>
-
-<!-- =====================================================
-       AWAY JERSEY - PRESEASON
-       Nested under Away
-       ======================================================= -->
-
-  <div class="evidence-subblock" id="away-preseason-pop">
-
-    <h3 class="evidence-subtitle">1984-85 Away Jersey - Preseason</h3>
-  <div class="pop-label">POP 1</div>
-
-    <div class="evidence-grid">
-      <div class="evidence-image">
-        <img src="images/1984-85-preseason-fb.jpg" alt="1984–85 Bulls preseason road jersey (front and back)">
-       <div class="image-indentity">1984-85 / Jersey B</div>
-        <p class="muted evidence-caption">Publicly documented example (preseason) 1984/85.</p>
-      </div>
-
-      <div class="evidence-content">
+    <div class="style-summary-card">
+      <div class="style-summary-content">
         <div class="evidence-meta">
-          <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey B</span></div>
-          <div><span class="meta-label">Use</span><span class="meta-value">Full Preseason</span></div>
-          <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
+          <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
           <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
-          <div><span class="meta-label">Audit</span><span class="meta-value">Confirmed</span></div>
+          <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME — Jersey A (Promotional / Public) -->
+    <div class="evidence-block" id="home-promo-pop">
+      <div class="evidence-grid">
+
+        <div class="evidence-image">
+          <img src="images/1984-85-home promo-fb.jpg" alt="1984–85 Bulls promo home jersey (front and back)">
+          <p class="muted evidence-caption">Publicly documented promotional example.</p>
         </div>
 
-        <div class="evidence-callout">
-          Publicly documented preseason sale confirmed.
+        <div class="evidence-content">
+
+          <div class="evidence-meta">
+            <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey A</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Bulls Media / Nike Photos / Hoop Mag</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1 of 2</span></div>
+            <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">Confirmed</span></div>
+          </div>
+
+          <div class="evidence-callout">
+            1984-85 Michael Jordan Earliest Known Player-Worn, Photo-Matched, Significant Rookie Season Chicago Bulls Home Jersey - Photo Featured On Hoop Magazine.
+          </div>
+
+          <h3>Public Sale</h3>
+          <ul class="meta-list">
+            <li>
+              <strong>Auction House:</strong>
+              <a href="https://goldin.co/item/1984-85-michael-jordan-player-worn-photo-matched-rookie-season-chicagot5c00?queryId=eyJxdWVyeUlkIjoiYTc3NzZiNWRmZWE5MzUwMTNiYjkxZjhiYWQzNGE1NzAiLCJjYXJkSW5kZXgiOjB9&fbclid=IwY2xjawQAK4lleHRuA2FlbQIxMABicmlkETFIclZDeW1jR1E5WFVHQ1Fkc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHjp6oTn1BEC4PIe9-xU6Qzelf6Iqvg_KTEQfyilHxyfWT1XIYcpVLjJJ22qa_aem_n1pcPUDv3l_7aRuDombgvA"
+                 target="_blank" rel="noopener">
+                Goldin
+              </a>
+            </li>
+            <li><strong>Sale Date:</strong> Unknown</li>
+            <li><strong>Lot #:</strong> 1</li>
+            <li><strong>Sale Price (2020):</strong> $144,000.00</li>
+            <li><strong>Sale Price (2024):</strong> $513,985.00</li>
+            <li><strong>Photo-Matched:</strong> Yes</li>
+            <li><strong>Games Photo-Matched:</strong> 0</li>
+            <li><strong>Photo-Matched By:</strong> SIA</li>
+            <li><strong>Authentication / LOA:</strong> Yes</li>
+          </ul>
+
+          <h3>Research &amp; Provenance</h3>
+          <ul class="provenance-list muted">
+            <li>Issued during the 1984–85 promotional period.</li>
+            <li>Used for Nike / media photography sessions.</li>
+            <li>Additional provenance details to be added.</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- HOME — Jersey C (Regular Season / Private) -->
+    <div class="evidence-block" id="home-regular-continuity">
+      <div class="evidence-grid">
+
+        <div class="evidence-image">
+          <img src="images/1984-85-home.jpg" alt="1984–85 Bulls regular season home jersey">
+          <p class="muted evidence-caption">In-season image of Michael Jordan — 1984–85.</p>
         </div>
 
-        <h3>Public Sale Details</h3>
-        <ul>
-          <li>
-            <strong>Auction House:</strong>
-            <a href="https://www.sothebys.com/en/buy/auction/2025/dawn-of-an-era-michael-jordans-1984-rookie-jersey/michael-jordan-chicago-bulls-rookie-preseason-game" target="_blank" rel="noopener">
-              Sotheby’s
-            </a>
-          </li>
-          <li><strong>Sale Date:</strong> March 26, 2025</li>
-          <li><strong>Lot #:</strong> Lot 1</li>
-          <li><strong>Sale Price:</strong> $4,215,000</li>
-          <li><strong>Photo-Matched:</strong> Yes</li>
-          <li><strong>Games Photo-Matched:</strong> 2</li>
-          <li><strong>Photo-Matched By:</strong> MeiGray &amp; SIA</li>
-        </ul>
+        <div class="evidence-content">
 
-        <h3>Research & Provenace &amp; Provenance</h3>
-        <ul class="provenance-list muted">
-          <li>Issued by the Chicago Bulls during the 1984–85 preseason.</li>
-          <li>Transferred to the Washington Bullets Auction — May 18, 1985.</li>
-          <li>Acquired by a private collector following the 1985 event.</li>
-          <li>Offered at the Naismith Memorial Basketball Hall of Fame Auction — September 12, 2009.</li>
-          <li>Subsequently acquired by a private collector.</li>
-          <li>Publicly sold via Sotheby’s — March 26, 2025.</li>
-        </ul>
+          <div class="evidence-meta">
+            <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey C</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Regular Season</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2 of 2</span></div>
+            <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+          </div>
+
+          <div class="evidence-callout">
+            Regular season garment worn throughout the 1984–85 season.
+          </div>
+
+          <h3>Research Notes</h3>
+          <p class="muted">
+            This garment represents the primary regular season home jersey. A full-season visual verification analysis is still in progress.
+          </p>
+
+        </div>
       </div>
     </div>
-  </div>
 
+    <!-- =====================================================
+         AWAY
+         ======================================================= -->
 
-<!-- =====================================================
-     AWAY (RED) — IN PROGRESS
-     ======================================================= -->
+    <div class="section-divider" aria-hidden="true"></div>
 
- <div class="evidence-subblock" id="away-preseason-pop">
-
-    <h3 class="evidence-subtitle">1984-85 Away Jersey - Regular Season</h3>
-    <div class="pop-label">POP 2</div>
-
-  <div class="evidence-grid">
-    <div class="evidence-image">
-      <img src="images/1984-85-away.jpg" alt="1984–85 Bulls away jersey (placeholder)">
-      <div class="image-indentity">1984-85 / Jersey D</div>
-      <p class="muted evidence-caption">In-season image of Michael Jordan - 1984-85</p>
+    <div class="section-strip">
+      <img src="assets/away-strip.jpg" alt="">
     </div>
 
-    <div class="evidence-content">
-      <div class="evidence-meta">
-        <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey D</span></div>
-        <div><span class="meta-label">Use</span><span class="meta-value">Regular season</span></div>
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
-      </div>
+    <h2 class="section-title">AWAY</h2>
 
-      <div class="evidence-callout">
-        Away jersey population analysis is in progress.
+    <div class="style-summary-card">
+      <div class="style-summary-content">
+        <div class="evidence-meta">
+          <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
+          <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
+          <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+        </div>
       </div>
-
-      <h3>Research Provenance</h3>
-      <p class="muted">
-        This entry will be updated as the full-season visual continuity review and public documentation review are completed.
-      </p>
     </div>
-  </div>
 
-</section>
-<section class="season-policy">
+    <!-- AWAY — Jersey B (Preseason / Public) -->
+    <div class="evidence-block" id="away-preseason-pop">
+      <div class="evidence-grid">
 
+        <div class="evidence-image">
+          <img src="images/1984-85-preseason-fb.jpg" alt="1984–85 Bulls preseason road jersey (front and back)">
+          <p class="muted evidence-caption">Publicly documented example (preseason) — 1984–85.</p>
+        </div>
 
-  <h2>Methodology & Scope</h2>
+        <div class="evidence-content">
 
-  <p>
-    <strong>Audit status:</strong> In Progress<br>
-    <strong>Confidence level:</strong> Preliminary
-  </p>
+          <div class="evidence-meta">
+            <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey B</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Full Preseason</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1 of 2</span></div>
+            <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">Confirmed</span></div>
+          </div>
 
-  <p>
-    Population conclusions reflect best-available documentation and ongoing multi-source visual review.
-    This entry will be updated as additional verified evidence emerges.
-  </p>
+          <div class="evidence-callout">
+            Publicly documented preseason sale confirmed.
+          </div>
 
-  <p class="muted">
-    Some supporting documentation may not be publicly disclosed.
-    Where possible, public auction records and primary-source imagery references are provided for transparency.
-  </p>
+          <h3>Public Sale</h3>
+          <ul class="meta-list">
+            <li>
+              <strong>Auction House:</strong>
+              <a href="https://www.sothebys.com/en/buy/auction/2025/dawn-of-an-era-michael-jordans-1984-rookie-jersey/michael-jordan-chicago-bulls-rookie-preseason-game"
+                 target="_blank" rel="noopener">
+                Sotheby’s
+              </a>
+            </li>
+            <li><strong>Sale Date:</strong> March 26, 2025</li>
+            <li><strong>Lot #:</strong> Lot 1</li>
+            <li><strong>Sale Price:</strong> $4,215,000</li>
+            <li><strong>Photo-Matched:</strong> Yes</li>
+            <li><strong>Games Photo-Matched:</strong> 2</li>
+            <li><strong>Photo-Matched By:</strong> MeiGray &amp; SIA</li>
+          </ul>
 
-</section>
+          <h3>Research &amp; Provenance</h3>
+          <ul class="provenance-list muted">
+            <li>Issued by the Chicago Bulls during the 1984–85 preseason.</li>
+            <li>Transferred to the Washington Bullets Auction — May 18, 1985.</li>
+            <li>Acquired by a private collector following the 1985 event.</li>
+            <li>Offered at the Naismith Memorial Basketball Hall of Fame Auction — September 12, 2009.</li>
+            <li>Subsequently acquired by a private collector.</li>
+            <li>Publicly sold via Sotheby’s — March 26, 2025.</li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- AWAY — Jersey D (Regular Season / Private) -->
+    <div class="evidence-block" id="away-regular-pop">
+      <div class="evidence-grid">
+
+        <div class="evidence-image">
+          <img src="images/1984-85-away.jpg" alt="1984–85 Bulls away jersey (placeholder)">
+          <p class="muted evidence-caption">In-season image of Michael Jordan — 1984–85.</p>
+        </div>
+
+        <div class="evidence-content">
+
+          <div class="evidence-meta">
+            <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey D</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Regular Season</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1 of 2</span></div>
+            <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+          </div>
+
+          <div class="evidence-callout">
+            Away jersey population analysis is in progress.
+          </div>
+
+          <h3>Research Notes</h3>
+          <p class="muted">
+            This entry will be updated as the full-season visual continuity review and public documentation review are completed.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
     <p class="muted back-link" style="margin-top:28px;">
       <a href="jerseys.html">← Back to Jersey Archive</a>
     </p>
@@ -448,5 +369,6 @@ To duplicate for a new season:
       });
     }
   </script>
+
 </body>
 </html>
