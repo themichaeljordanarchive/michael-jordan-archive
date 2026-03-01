@@ -507,6 +507,14 @@ h2, h3{
 
   box-shadow: 0 6px 16px rgba(0,0,0,0.04);
 }
+/* Force consistent digit widths for season years (prevents “8” jump) */
+.season-title,
+.season-card .season-year,
+.season-card h3,
+.season-card .season-label {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
 
 .season-card:hover{
   border-color: rgba(157,15,15,0.35);
