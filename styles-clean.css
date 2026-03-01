@@ -1455,6 +1455,56 @@ body.preseason-page .table-hint{
 .scope-link:hover {
   color: rgba(0,0,0,0.8);
 }
+/* ======================================
+   Swipe-only Evidence Carousel
+   ====================================== */
+
+.evidence-image.is-carousel{
+  position: relative;
+  overflow: hidden;
+}
+
+.evidence-image.is-carousel .carousel-track{
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.evidence-image.is-carousel .carousel-track::-webkit-scrollbar{
+  display: none;
+}
+
+.evidence-image.is-carousel .carousel-slide{
+  flex: 0 0 100%;
+  scroll-snap-align: center;
+  margin: 0;
+}
+
+.evidence-image.is-carousel img{
+  width: 100%;
+  display: block;
+}
+
+.evidence-image.is-carousel .carousel-dots{
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.75);
+}
+
+.evidence-image.is-carousel .carousel-dots span{
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(0,0,0,0.35);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
