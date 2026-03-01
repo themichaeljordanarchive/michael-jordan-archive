@@ -1839,3 +1839,11 @@ body.season-page .population-card td:first-child{
   padding: 10px 18px;   /* thinner */
   border-radius: 4px;  /* more square */
 }
+/* TEMP TEST: reset evidence grid placement on mobile */
+.evidence-grid > .evidence-left,
+.evidence-grid > .evidence-image,
+.evidence-grid > .evidence-caption,
+.evidence-grid > .evidence-content{
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
