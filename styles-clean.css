@@ -587,6 +587,7 @@ h2, h3{
 .season-card-0000 { --season-card-bg: url("assets/usa-bg.jpg"); --season-card-detail: url("assets/usa-bg.jpg"); }    
 .season-card-9798 { --season-card-bg: url("assets/1997-98-bg.jpg"); --season-card-detail: url("assets/1997-98-bg.jpg"); }   
 .season-card-9697 { --season-card-bg: url("assets/1996-97-bg.jpg"); --season-card-detail: url("assets/1996-97-bg.jpg"); }
+.season-card-9596 { --season-card-bg: url("assets/1995-96-bg.jpg"); --season-card-detail: url("assets/1995-96-bg.jpg"); } 
 .season-card-9293 { --season-card-bg: url("assets/1992-93-bg.jpg"); --season-card-detail: url("assets/1992-93-bg.jpg"); }
 .season-card-8889 { --season-card-bg: url("assets/1988-89-bg.jpg"); --season-card-detail: url("assets/1988-89-bg.jpg"); }
 .season-card-8687 { --season-card-bg: url("assets/1986-87-bg.jpg"); --season-card-detail: url("assets/1986-87-detail.jpg"); }
@@ -596,6 +597,7 @@ h2, h3{
 .season-card-0000,
 .season-card-9798,
 .season-card-9697,
+.season-card-9596,
 .season-card-9293,
 .season-card-8889,
 .season-card-8687,
@@ -613,6 +615,7 @@ h2, h3{
 .season-card-0000:hover,
 .season-card-9798:hover,
 .season-card-9697:hover,
+.season-card-9596:hover,
 .season-card-9293:hover,
 .season-card-8889:hover,
 .season-card-8687:hover,
@@ -626,6 +629,7 @@ h2, h3{
 .season-card-0000::before,
 .season-card-9798::before,
 .season-card-9697::before,
+.season-card-9596::before,
 .season-card-9293::before,
 .season-card-8889::before,
 .season-card-8687::before,
