@@ -8,20 +8,9 @@
   <link rel="stylesheet" href="styles-clean.css">
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
-<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 </head>
-
-<!--
-=========================================================
-SEASON DETAIL TEMPLATE (MASTER)
-To duplicate for a new season:
-1) Update BODY CLASS (s-YYYY)
-2) Update Title + Summary stats
-3) Swap images
-4) Update Population table rows
-=========================================================
--->
 
 <body class="season-page s-8586">
 
@@ -50,111 +39,96 @@ To duplicate for a new season:
     <!-- =====================================================
          SEASON HEADER (WOW CARD)
          ======================================================= -->
-
     <section class="season-header">
-  <div class="season-card season-card--detail">
+      <div class="season-card season-card--detail">
+        <div class="season-header-top">
 
-    <div class="season-header-top">
+          <!-- LEFT COLUMN -->
+          <div>
+            <h1 class="season-year-hero">1985–86</h1>
 
-      <!-- LEFT COLUMN -->
-      <div>
-        <h1 class="season-year-hero">1985–86</h1>
+            <div class="season-metrics">
+              <div class="metric-row">
+                <div class="metric-label">Confirmed Population</div>
+                <div class="metric-value main-total">4</div>
+              </div>
 
-        <div class="season-metrics">
+              <div class="metric-row">
+                <div class="metric-label">Game-Worn Total</div>
+                <div class="metric-value main-total">3</div>
+              </div>
 
-          <div class="metric-row">
-            <div class="metric-label">Season Total</div>
-            <div class="metric-value main-total">4</div>
-          </div>
+              <div class="metric-row">
+                <div class="metric-label">Publicly Documented</div>
+                <div class="metric-value">1</div>
+              </div>
 
-          <div class="metric-row">
-            <div class="metric-label">Game Worn Total</div>
-            <div class="metric-value main-total">3</div>
-          </div>
-
-          <div class="metric-row">
-            <div class="metric-label">Publicly Documented (POP)</div>
-            <div class="metric-value">1</div>
-          </div>
-
-          <div class="metric-row">
-            <div class="metric-label">Verified Non-Public (POP)</div>
-            <div class="metric-value">3</div>
-          </div>
-
-        </div>
-
-        <!-- STATUS (LEFT COLUMN) -->
-        <div class="season-status-stack">
-          <div class="audit-badge">AUDIT IN PROGRESS</div>
-
-          <div class="season-summary muted">
-            <div>Games Reviewed:</div>
-            <div>
-              • <a href="preseason.html#s-8586" class="preseason-link">
-                Preseason 1 of 9 <span class="arrow">→</span>
-              </a>
+              <div class="metric-row">
+                <div class="metric-label">Privately Verified</div>
+                <div class="metric-value">3</div>
+              </div>
             </div>
-            <div>• Regular Season 15 of 18</div>
-            <div class="last-updated">Last Updated: February 14, 2026</div>
+
+            <div class="season-status-stack">
+              <div class="audit-badge">RESEARCH IN PROGRESS</div>
+
+              <div class="season-summary muted">
+                <div>Games Reviewed:</div>
+                <div>
+                  • <a href="preseason.html#s-8586" class="preseason-link">
+                    Preseason 1 of 9 <span class="arrow">→</span>
+                  </a>
+                </div>
+                <div>• Regular Season 15 of 18</div>
+                <div>• Postseason 0 of 0</div>
+                <div class="last-updated">Last Updated: February 14, 2026</div>
+              </div>
+            </div>
           </div>
-        </div>
 
-      </div>
+          <!-- RIGHT COLUMN -->
+          <div class="population-card">
+            <h3>Population Summary</h3>
 
-      <!-- RIGHT COLUMN -->
-      <div class="population-card">
-        <h3>Population Summary</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Style</th>
+                  <th>Confirmed</th>
+                  <th>Public</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Home</td>
+                  <td>2</td>
+                  <td>0</td>
+                  <td><span class="audit-progress">⏳</span></td>
+                </tr>
+                <tr>
+                  <td>Away</td>
+                  <td>2</td>
+                  <td>1</td>
+                  <td><span class="audit-progress">⏳</span></td>
+                </tr>
+              </tbody>
+            </table>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Style</th>
-              <th>Confirmed</th>
-              <th>Public</th>
-              <th>Audit</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Promo</td>
-              <td>2</td>
-              <td>1</td>
-              <td><span class="audit-ok">√</span></td>
-            </tr>
-            <tr>
-              <td>Home</td>
-              <td>1</td>
-              <td>0</td>
-              <td><span class="audit-progress">⏳</span></td>
-            </tr>
-            <tr>
-              <td>Away</td>
-              <td>1</td>
-              <td>0</td>
-              <td><span class="audit-progress">⏳</span></td>
-            </tr>
-          </tbody>
-        </table>
+            <div class="summary-footnote">
+              <p>
+                Population reflects distinct season-worn garments (jerseys or full uniform sets) confirmed through research and documentation.
+              </p>
+            </div>
+          </div>
 
-        <div class="summary-footnote">
-          <p>
-            The Michael Jordan Archive population study is an ongoing research initiative. Population conclusions reflect best-available documentation and comparative review.
-          </p>
         </div>
       </div>
-
-    </div>
-
-  </div>
-</section>
+    </section>
 
     <!-- =====================================================
-         HOME SECTION
-         NOTE: Add your 1985–86 home strip image to /assets/
-         e.g. assets/1985-86-home-strip.jpg
+         HOME
          ======================================================= -->
-
     <div class="section-divider" aria-hidden="true"></div>
 
     <div class="section-strip">
@@ -163,111 +137,81 @@ To duplicate for a new season:
 
     <h2 class="section-title">HOME</h2>
 
-
-<div class="style-summary-card">
-<section class="season-block evidence-block" id="home">
-
-
-    <div class="style-summary-content">
-
-      <div class="evidence-meta">
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
-        <div><span class="meta-label">Research Confirmed</span><span class="meta-value">2</span></div>
-        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
+    <div class="style-summary-card">
+      <div class="style-summary-content">
+        <div class="evidence-meta">
+          <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
+          <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
+          <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-    <!-- =====================================================
-         REGULAR SEASON HOME (WHITE) — IN PROGRESS
-         ======================================================= -->
-
-    <section class="season-block evidence-block">
-
-      <div class="evidence-subblock">
-        <h3>1985–86 Home Jersey — Regular Promotional</h3>
-        <div class="pop-label">POP 1</div>
-      </div>
-
+    <!-- HOME — Jersey A (Promotional) -->
+    <div class="evidence-block">
       <div class="evidence-grid">
+
         <div class="evidence-image">
-          <img src="images/1985-86-home.jpg" alt="1985–86 Bulls regular season home jersey (placeholder)">
-         <div class="image-indentity">1985-86 / Jersey A</div>
-          <p class="muted evidence-caption">Promotional image of Michael Jordan — 1985/86</p>
+          <img src="images/1985-86-home.jpg" alt="1985–86 Bulls promotional home jersey">
+          <p class="muted evidence-caption">Promotional image of Michael Jordan — 1985–86</p>
         </div>
 
         <div class="evidence-content">
           <div class="evidence-meta">
             <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey A</span></div>
-            <div><span class="meta-label">Use</span><span class="meta-value">Promotional</span></div>
-            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Promotional</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1 of 2</span></div>
             <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
-            <div><span class="meta-label">Status</span><span class="meta-value">In Progress</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
           </div>
 
           <div class="evidence-callout">
-            1985–86 Chicago Bulls home jersey worn during regular season play. Represents the primary home uniform variation documented for this season. Full-season visual continuity review is currently in progress.
+            Promotional home garment documented via period imagery. Full-season continuity review remains in progress.
           </div>
 
-          <h3>Research & Provenance</h3>
+          <h3>Research &amp; Provenance</h3>
           <p class="muted">
             This entry will be updated as the full-season visual review and public documentation review are completed.
           </p>
         </div>
+
       </div>
-    </section>
-
- <!-- =====================================================
-     HOME JERSEY - REGULAR SEASON (2)
-     ======================================================= -->
-
-<div class="evidence-subblock" id="home-regular-continuity">
-
-  <h3>1985-86 Home Jersey - Regular Season</h3>
-  <div class="pop-label">POP 2</div>
-
-  <div class="evidence-grid">
-    <div class="evidence-image">
-      <img src="images/85-86-home.jpg" alt="85–86 Bulls regular season home jersey">
-      <div class="image-indentity">1985-86 / Jersey C</div>
-      <p class="muted evidence-caption">In-season image of Michael Jordan 1985–86.</p>
     </div>
 
-    <div class="evidence-content">
+    <!-- HOME — Jersey C (Regular Season) -->
+    <div class="evidence-block" id="home-regular-continuity">
+      <div class="evidence-grid">
 
-      <div class="evidence-meta">
-        <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey C</span></div>
-        <div><span class="meta-label">Use</span><span class="meta-value">Regular Season</span></div>
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
-        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
+        <div class="evidence-image">
+          <img src="images/85-86-home.jpg" alt="1985–86 Bulls regular season home jersey">
+          <p class="muted evidence-caption">In-season image of Michael Jordan — 1985–86.</p>
+        </div>
+
+        <div class="evidence-content">
+          <div class="evidence-meta">
+            <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey C</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Regular Season</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1 of 2</span></div>
+            <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+          </div>
+
+          <div class="evidence-callout">
+            Regular season home garment worn throughout the 1985–86 season.
+          </div>
+
+          <h3>Research &amp; Provenance</h3>
+          <p class="muted">
+            This garment represents the primary regular season home jersey. A full-season visual verification analysis is still in progress.
+          </p>
+        </div>
+
       </div>
-
-      <div class="evidence-callout">
-        Regular season garment worn throughout the 1985–86 season.
-      </div>
-
-      <h3>Research & Provenance</h3>
-      <p class="muted">
-        This garment represents the primary regular season home jersey. A full-season visual verification analysis is still progress.
-      </p>
-
     </div>
-  </div>
-
-
-</section>
-
-<div class="section-divider" aria-hidden="true"></div>
-
 
     <!-- =====================================================
-         AWAY SECTION
-         NOTE: Add your 1985–86 away strip image to /assets/
-         e.g. assets/1985-86-away-strip.jpg
+         AWAY
          ======================================================= -->
-
     <div class="section-divider" aria-hidden="true"></div>
 
     <div class="section-strip">
@@ -275,62 +219,45 @@ To duplicate for a new season:
     </div>
 
     <h2 class="section-title">AWAY</h2>
-    <section class="season-block evidence-block" id="away">
 
-<div class="style-summary-card">
-
-
-    <div class="style-summary-content">
-
-      <div class="evidence-meta">
-        <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
-        <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
-        <div><span class="meta-label">Research Confirmed</span><span class="meta-value">2</span></div>
-        <div><span class="meta-label">Audit</span><span class="meta-value">In Progress</span></div>
+    <div class="style-summary-card">
+      <div class="style-summary-content">
+        <div class="evidence-meta">
+          <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
+          <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
+          <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
+        </div>
       </div>
     </div>
-  </div>
 
-    <!-- =====================================================
-         PROMO (ROAD / RED) — PUBLIC EXAMPLE
-         ======================================================= -->
-
-    <section class="season-block evidence-block">
-
-      <div class="evidence-subblock">
-        <h3>1985–86 Away Jersey — Promotional</h3>
-        <div class="pop-label">POP 1</div>
-      </div>
-
+    <!-- AWAY — Jersey B (Promotional / Public Example) -->
+    <div class="evidence-block">
       <div class="evidence-grid">
+
         <div class="evidence-image">
           <img src="images/1985-86-promo-fb.jpg" alt="1985–86 Bulls promotional road jersey (front and back)">
-        <div class="image-indentity">1985-86 / Jersey B</div>
           <p class="muted evidence-caption">Publicly documented promotional example.</p>
         </div>
 
         <div class="evidence-content">
           <div class="evidence-meta">
             <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey B</span></div>
-            <div><span class="meta-label">Use</span><span class="meta-value">Photoshoot, Promo, Game</span></div>
-            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2</span></div>
-            <div><span class="meta-label">Public Examples (AWAY)</span><span class="meta-value">1</span></div>
-            <div><span class="meta-label">Audit</span><span class="meta-value">Confirmed</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Photoshoot, Promo, Game</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">2 of 2</span></div>
+            <div><span class="meta-label">Public Examples</span><span class="meta-value">1</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">Confirmed</span></div>
           </div>
 
           <div class="evidence-callout">
-            1985-86 Chicago Bulls Jersey worn during promotional photography sessions (September-October). Visually consistent to imagery associated with the October 29, match vs. Golden State (first away game). Currently the only documented example to surface publicly.
+            Worn during promotional photography sessions (September–October) and visually consistent with October 29, 1985 vs Golden State. Currently the only away example documented publicly.
           </div>
 
-          <h3>Public Sale Details</h3>
-          <ul>
+          <h3>Public Sale</h3>
+          <ul class="meta-list">
             <li><strong>Auction House:</strong> NA</li>
             <li><strong>Sale Date:</strong> NA</li>
             <li><strong>Lot #:</strong> NA</li>
             <li><strong>Sale Price:</strong> NA</li>
-            <li><strong>Photo-Matched:</strong> Yes</li>
-            <li><strong>Games Photo-Matched:</strong> Promo</li>
-            <li><strong>Photo-Matched By:</strong> MJA</li>
           </ul>
 
           <h3>Research Notes &amp; Provenance</h3>
@@ -342,35 +269,39 @@ To duplicate for a new season:
             <li>Consistent to (October 29, 1985 vs Golden State).</li>
             <li>Same jersey worn while breaking his ankle on 10-29-85.</li>
           </ul>
+
+          <details class="doc-collapse">
+            <summary>Documentation</summary>
+            <div class="doc-inner">
+              <h4>Photo Match Details</h4>
+              <ul class="doc-list">
+                <li><strong>Photo-Matched:</strong> Yes</li>
+                <li><strong>Games Photo-Matched:</strong> Promo</li>
+                <li><strong>Photo-Matched By:</strong> MJA</li>
+              </ul>
+            </div>
+          </details>
+
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- =====================================================
-         REGULAR SEASON AWAY (RED) — IN PROGRESS
-         ======================================================= -->
-
-    <section class="season-block evidence-block">
-
-      <div class="evidence-subblock">
-        <h3>1985–86 Away Jersey — Regular Season</h3>
-        <div class="pop-label">POP 2</div>
-      </div>
-
+    <!-- AWAY — Jersey D (Regular Season) -->
+    <div class="evidence-block">
       <div class="evidence-grid">
+
         <div class="evidence-image">
-          <img src="images/1985-86-away.jpg" alt="1985–86 Bulls regular season away jersey (placeholder)">
-        <div class="image-indentity">1985-86 / Jersey D</div>
-          <p class="muted evidence-caption">In-season image of Michael Jordan - 1985-86. </p>
+          <img src="images/1985-86-away.jpg" alt="1985–86 Bulls regular season away jersey">
+          <p class="muted evidence-caption">In-season image of Michael Jordan — 1985–86.</p>
         </div>
 
         <div class="evidence-content">
           <div class="evidence-meta">
             <div><span class="meta-label">Archive Reference</span><span class="meta-value">Jersey D</span></div>
-            <div><span class="meta-label">Use</span><span class="meta-value">Regular season</span></div>
-            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1</span></div>
+            <div><span class="meta-label">Usage</span><span class="meta-value">Regular Season</span></div>
+            <div><span class="meta-label">Confirmed Population</span><span class="meta-value">1 of 2</span></div>
             <div><span class="meta-label">Public Examples</span><span class="meta-value">0</span></div>
-            <div><span class="meta-label">Status</span><span class="meta-value">In Progress</span></div>
+            <div><span class="meta-label">Research Status</span><span class="meta-value">In Progress</span></div>
           </div>
 
           <div class="evidence-callout">
@@ -382,33 +313,9 @@ To duplicate for a new season:
             This entry will be updated as the full-season visual review and public documentation review are completed.
           </p>
         </div>
+
       </div>
-    </section>
-
-    <!-- =====================================================
-         POLICY / METHODOLOGY
-         ======================================================= -->
-
-    <div class="section-divider" aria-hidden="true"></div>
-
-    <section class="season-policy">
-      <h2>Methodology &amp; Scope</h2>
-
-      <p>
-        <strong>Audit status:</strong> In Progress<br>
-        <strong>Confidence level:</strong> Preliminary
-      </p>
-
-      <p>
-        Population conclusions reflect best-available documentation and ongoing multi-source visual review.
-        This entry will be updated as additional verified evidence emerges.
-      </p>
-
-      <p class="muted">
-        Some supporting documentation may not be publicly disclosed.
-        Where possible, public auction records and primary-source imagery references are provided for transparency.
-      </p>
-    </section>
+    </div>
 
     <p class="muted back-link" style="margin-top:28px;">
       <a href="jerseys.html">← Back to Jersey Archive</a>
