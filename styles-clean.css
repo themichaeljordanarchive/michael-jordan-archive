@@ -1507,7 +1507,32 @@ body.preseason-page .table-hint{
   border-radius: 50%;
   background: rgba(0,0,0,0.35);
 }
+/* Lock the 2-column evidence layout */
+.evidence-grid{
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 24px;
+  align-items: start;
+}
 
+/* Left column */
+.evidence-grid > .evidence-image{
+  grid-column: 1;
+  grid-row: 1;
+}
+
+/* Right column (force it back to the right) */
+.evidence-grid > .evidence-content{
+  grid-column: 2;
+  grid-row: 1 / span 2; /* keeps it aligned with image + caption */
+}
+
+/* Caption under the image (left column, second row) */
+.evidence-grid > .evidence-caption{
+  grid-column: 1;
+  grid-row: 2;
+  margin-top: 8px;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
