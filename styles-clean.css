@@ -1880,19 +1880,20 @@ body.season-page .population-card td:first-child{
 }
 
 .designation-toggle{
-  margin: 18px 0 8px;
+  margin: 14px 0 4px;
 }
 
 .designation-toggle summary{
-  padding-bottom: 4px;
-  border-bottom: 1.5px solid var(--accent-red);
-  font-size: 14px;
-  letter-spacing: 0.08em;
+  padding-bottom: 3px;
+  border-bottom: 1px solid var(--accent-red);
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  color: rgba(0, 0, 0, 0.6)
 }
 
 .designation-toggle .designation-inner{
-  margin-top: 10px;
-  font-size: 14px;
+  margin-top: 8px;
+  font-size: 13px;
   line-height: 1.55;
 }
 
