@@ -1581,7 +1581,7 @@ season-index-heading{
 }
 .season-index-intro{
   margin-top: 48px;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .season-index-heading::after{
   content: "";
