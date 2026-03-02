@@ -1626,6 +1626,33 @@ season-index-heading{
   line-height: 1.6;
   color: rgba(0,0,0,0.7);
 }
+.designation-callout details {
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  padding: 18px 22px;
+  background: rgba(255,255,255,0.95);
+}
+
+.designation-callout summary {
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+.designation-callout summary::-webkit-details-marker {
+  display: none;
+}
+
+.designation-callout summary::after {
+  content: " +";
+  font-weight: 400;
+}
+
+.designation-callout details[open] summary::after {
+  content: " –";
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
