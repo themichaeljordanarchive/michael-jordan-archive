@@ -1705,29 +1705,29 @@ season-index-heading{
 }
 
 .registry-stamp{
-  width:92px;
-  min-width:92px;
-  border:1px solid rgba(157,15,15,0.35);
-  border-radius:10px;
-  padding:8px 10px;
-  text-align:center;
-  background:rgba(255,255,255,0.7);
+  width: 92px;
+  border: 1px solid rgba(157,15,15,0.35);
+  border-radius: 10px;
+  padding: 8px 10px;
+  text-align: center;
+  background: rgba(255,255,255,0.7);
+  margin: 10px 0 10px; /* anchors it under the heading */
 }
 
 .registry-stamp-label{
-  font-size:11px;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  color:rgba(0,0,0,0.55);
-  line-height:1.1;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.55);
+  line-height: 1.1;
 }
 
 .registry-stamp-number{
-  font-size:42px;
-  font-weight:600;
-  line-height:1;
-  margin:4px 0 3px;
-  color:rgba(0,0,0,0.25);
+  font-size: 42px;
+  font-weight: 600;
+  line-height: 1;
+  margin: 4px 0 3px;
+  color: rgba(0,0,0,0.25);
 }
 /* =========================================================
    RESPONSIVE — LOCKED
