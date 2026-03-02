@@ -500,12 +500,18 @@ h2, h3{
   border-radius: var(--radius);
   padding: 20px 22px;
   min-height: 161px;
+  display: flex;
+  flex-direction: column;
 
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
   position: relative;
   overflow: hidden;
 
   box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+}
+.season-card .season-metric:last-child,
+.season-card p:last-child{
+  margin-top: auto;
 }
 /* Force consistent digit widths for season years (prevents “8” jump) */
 .season-title,
