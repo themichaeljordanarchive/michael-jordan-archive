@@ -1587,7 +1587,7 @@ season-index-heading{
   content: "";
   display: block;
   height: 2px;
-  width: 100px;
+  width: 115px;
   background: var(--accent-red);
   margin-top: 4px;
 }
