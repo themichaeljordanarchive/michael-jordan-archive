@@ -1457,6 +1457,9 @@ body.preseason-page .table-hint{
   padding: 16px 18px;
   border: 0.5px solid rgba(157,15,15,0.55);
 }
+.control-card h3 {
+  margin: 0 0 8px 0;
+}
 
 .control-input{
   width: 100%;
