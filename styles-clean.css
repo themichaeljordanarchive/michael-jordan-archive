@@ -509,8 +509,7 @@ h2, h3{
 
   box-shadow: 0 6px 16px rgba(0,0,0,0.04);
 }
-.season-card .season-metric:last-child,
-.season-card p:last-child{
+.season-card .season-metric{
   margin-top: auto;
 }
 /* Force consistent digit widths for season years (prevents “8” jump) */
