@@ -1638,11 +1638,13 @@ season-index-heading{
   cursor: pointer;
   list-style: none;
   display: inline-block;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--accent-red); /* thin red underline */
-  letter-spacing: 0.12em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--accent-red);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.65);
+  color: rgba(0,0,0,0.6);
 }
 
 .designation-toggle summary::-webkit-details-marker{
