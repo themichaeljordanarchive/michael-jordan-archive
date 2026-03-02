@@ -1574,9 +1574,13 @@ body.preseason-page .table-hint{
 }
 season-index-heading{
   margin-top: 48px;
-  margin-bottom: 10px;
+  margin-bottom: px;
   letter-spacing: 0.12em;
   font-size: 14px;
+}
+.season-index-intro{
+  margin-top: 48px;
+  margin-bottom: 8px;
 }
 /* =========================================================
    RESPONSIVE — LOCKED
