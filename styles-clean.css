@@ -1575,6 +1575,9 @@ body.preseason-page .table-hint{
   color: rgba(0,0,0,0.45);
   max-width: none;
 }
+.season-card{
+  min-height: 161px;
+}
 }
 
 @media (max-width: 700px){
