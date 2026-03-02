@@ -1711,7 +1711,7 @@ season-index-heading{
   padding: 8px 10px;
   text-align: center;
   background: rgba(255, 255, 255, 0.833);
-  margin: 10px 0 10px; /* anchors it under the heading */
+  margin: 4px 0 10px; /* anchors it under the heading */
 }
 
 .registry-stamp-label{
