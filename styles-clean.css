@@ -1566,11 +1566,11 @@ body.preseason-page .table-hint{
   margin-top: 8px;
 }
 .index-note{
-  font-size: 12px;
-  line-height: 1.45;
-  margin: 8px 0 22px 0;
-  max-width: 560px;
-  color: rgba(0,0,0,0.55);
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 10px 0 28px 0;
+  max-width: 600px;
+  color: rgba(0,0,0,0.5);
 }
 /* =========================================================
    RESPONSIVE — LOCKED
