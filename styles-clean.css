@@ -1572,6 +1572,12 @@ body.preseason-page .table-hint{
   max-width: 520px;
   color: rgba(0,0,0,0.45);
 }
+season-index-heading{
+  margin-top: 48px;
+  margin-bottom: 10px;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
