@@ -988,6 +988,9 @@ body.preseason-page .table-hint{
   color: rgba(0,0,0,0.45);
   max-width: 400px;
 }
+.population-note{
+  padding-top: 6px;
+}
 
 .population-card td:nth-child(2),
 .population-card td:nth-child(3),
