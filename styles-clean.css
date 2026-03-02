@@ -1626,11 +1626,42 @@ season-index-heading{
   line-height: 1.6;
   color: rgba(0,0,0,0.7);
 }
-.designation-callout details {
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
-  padding: 18px 22px;
-  background: rgba(255,255,255,0.95);
+/* =====================================
+   Archival Designation Toggle (no box)
+   ===================================== */
+
+.designation-toggle{
+  margin: 28px 0 18px;
+}
+
+.designation-toggle summary{
+  cursor: pointer;
+  list-style: none;
+  display: inline-block;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--accent-red); /* thin red underline */
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.65);
+}
+
+.designation-toggle summary::-webkit-details-marker{
+  display: none;
+}
+
+.designation-toggle summary::after{
+  content: "  +";
+  font-weight: 400;
+}
+
+.designation-toggle[open] summary::after{
+  content: "  –";
+}
+
+.designation-toggle .designation-inner{
+  margin-top: 14px;
+  color: rgba(0,0,0,0.7);
+  line-height: 1.6;
 }
 
 .designation-callout summary {
