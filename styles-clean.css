@@ -1591,6 +1591,41 @@ season-index-heading{
   background: var(--accent-red);
   margin-top: 4px;
 }
+.designation-toggle {
+  margin: 24px 0 32px 0;
+  border-top: 1px solid rgba(0,0,0,0.08);
+  padding-top: 18px;
+}
+
+.designation-toggle summary {
+  font-family: var(--serif);
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: rgba(0,0,0,0.65);
+  list-style: none;
+}
+
+.designation-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.designation-toggle summary::after {
+  content: " +";
+  font-weight: 400;
+}
+
+.designation-toggle[open] summary::after {
+  content: " –";
+}
+
+.designation-inner {
+  margin-top: 14px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(0,0,0,0.7);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
