@@ -1564,6 +1564,13 @@ body.preseason-page .table-hint{
   .season-index{ grid-template-columns: 1fr; gap: 26px; }
   .evidence-grid{ grid-template-columns: 1fr; gap: 22px; }
   .season-header-top{ gap: 32px; }
+  .population-note{
+  font-size: 11px;
+  line-height: 1.35;
+  margin: 8px 0 14px 0;
+  color: rgba(0,0,0,0.45);
+  max-width: none;
+}
 }
 
 @media (max-width: 700px){
