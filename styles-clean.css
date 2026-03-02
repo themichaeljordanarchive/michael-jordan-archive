@@ -1879,6 +1879,22 @@ body.season-page .population-card td:first-child{
   white-space: normal;
 }
 
+.designation-toggle{
+  margin: 18px 0 8px;
+}
+
+.designation-toggle summary{
+  padding-bottom: 4px;
+  border-bottom: 1.5px solid var(--accent-red);
+  font-size: 14px;
+  letter-spacing: 0.08em;
+}
+
+.designation-toggle .designation-inner{
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.55;
+}
 
 /* Case file: sale summary should be full-width and centered on mobile */
   .case-file .season-header .population-card{
