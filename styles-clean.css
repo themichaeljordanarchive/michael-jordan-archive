@@ -1551,6 +1551,7 @@ body.preseason-page .table-hint{
 .evidence-grid > .evidence-image{
   grid-column: 1;
   grid-row: 1;
+
 }
 
 /* Right column (force it back to the right) */
@@ -1581,6 +1582,14 @@ season-index-heading{
 .season-index-intro{
   margin-top: 48px;
   margin-bottom: 8px;
+}
+.season-index-heading::after{
+  content: "";
+  display: block;
+  height: 2px;
+  width: 90px;
+  background: var(--accent-red);
+  margin-top: 6px;
 }
 /* =========================================================
    RESPONSIVE — LOCKED
