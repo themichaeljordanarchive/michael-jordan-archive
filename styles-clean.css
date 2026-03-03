@@ -1846,6 +1846,35 @@ season-index-heading{
   font-weight: 600;
   color: var(--accent-red);
 }
+/* =====================================
+   Case File Evidence Layout
+===================================== */
+
+.cf-evidence{
+  margin: 48px 0;
+}
+
+.cf-evidence-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: start;
+}
+
+.cf-evidence-item img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+}
+
+.cf-evidence-label{
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  color: rgba(0,0,0,0.55);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
@@ -1864,6 +1893,11 @@ season-index-heading{
 .case-meta-panel{ max-width: none; }
 .case-meta-row{ flex-direction: column; }
 .case-meta-value{ text-align: left; }
+
+.cf-evidence-grid{
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
 
 .season-card{
   min-height: 161px;
