@@ -1964,6 +1964,13 @@ season-index-heading{
   border-radius:50%;
   background:#9d0f0f; /* red */
 }
+.casefile-back{
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.55);
+  text-decoration: none;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
@@ -2264,6 +2271,15 @@ body.season-page .population-card td:first-child{
   color: rgba(20,20,20,0.85);
 }
 
+  .casefile-page .site-nav{
+    display: block !important;   /* force nav visible on case file pages */
+  }
+
+  .casefile-page .site-nav .casefile-back{
+    display: inline-block;
+    margin-left: auto;
+    text-align: right;
+  }
 }
 
 
