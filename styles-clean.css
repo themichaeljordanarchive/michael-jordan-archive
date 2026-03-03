@@ -1898,7 +1898,15 @@ season-index-heading{
   grid-template-columns: 1fr;
   gap: 28px;
 }
+  .case-meta-row{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
 
+  .case-meta-value{
+    text-align: right;
+  }
 .season-card{
   min-height: 161px;
 }
