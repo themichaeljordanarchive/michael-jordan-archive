@@ -1971,6 +1971,13 @@ season-index-heading{
   color: rgba(0,0,0,0.55);
   text-decoration: none;
 }
+.case-section-title{
+font-size:12px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:rgba(0,0,0,.55);
+margin:36px 0 12px;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
