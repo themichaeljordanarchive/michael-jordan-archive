@@ -1875,6 +1875,68 @@ season-index-heading{
   margin-bottom: 14px;
   color: rgba(0,0,0,0.55);
 }
+/* =========================
+   DOCUMENTED WORK — CASE FILE CARDS
+   ========================= */
+
+.research-card{
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.research-item{
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.92);
+  padding: 18px 18px 16px;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  overflow: hidden;
+}
+
+/* subtle “file tab” accent */
+.research-item::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:14px;
+  bottom:14px;
+  width:3px;
+  background: rgba(157,15,15,0.45);
+  border-radius: 3px;
+}
+
+/* typography inside */
+.research-item h3{
+  margin: 0 0 6px 10px;
+  font-size: 18px;
+  line-height: 1.15;
+}
+
+.research-item p{
+  margin: 0 0 0 10px;
+  font-size: 13px;
+  color: rgba(0,0,0,0.62);
+}
+
+/* hover */
+.research-card:hover .research-item{
+  border-color: rgba(157,15,15,0.25);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+/* active/current card (when you add .is-active to the <a>) */
+.research-card.is-active .research-item{
+  border-color: rgba(157,15,15,0.35);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.08);
+}
+
+/* active accent slightly stronger */
+.research-card.is-active .research-item::before{
+  background: rgba(157,15,15,0.65);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
