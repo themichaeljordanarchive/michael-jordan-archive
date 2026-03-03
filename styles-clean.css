@@ -1937,6 +1937,33 @@ season-index-heading{
 .research-card.is-active .research-item::before{
   background: rgba(157,15,15,0.65);
 }
+/* Status Dot Indicator */
+
+.research-item{
+  position: relative;
+}
+
+.research-card.has-report .research-item::after{
+  content:"";
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#2e7d32; /* green */
+}
+
+.research-card.no-report .research-item::after{
+  content:"";
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#9d0f0f; /* red */
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
