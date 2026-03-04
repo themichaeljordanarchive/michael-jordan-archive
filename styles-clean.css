@@ -2144,8 +2144,8 @@ margin:36px 0 12px;
     top: 100%;
     left: 0;
     right: 0;
+    background: #f2f2f2;
 
-    background: var(--bg);
     padding: 20px 24px;
     border-top: 1px solid var(--rule);
 
@@ -2163,13 +2163,7 @@ margin:36px 0 12px;
     left: 0;
     right: 0;
   }
-  .nav-menu {
-  background: rgba(0,0,0,0.05);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-  .nav-links{
-    background: #f5f5f5;
-  }
+
 /* Your mobile population fix */
 body.season-page .population-card{
   padding: 14px;
