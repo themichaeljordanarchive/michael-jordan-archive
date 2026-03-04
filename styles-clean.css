@@ -1978,6 +1978,29 @@ text-transform:uppercase;
 color:rgba(0,0,0,.55);
 margin:36px 0 12px;
 }
+.services-contact{
+  margin-top:80px;
+  padding-top:40px;
+  border-top:1px solid rgba(0,0,0,0.15);
+  text-align:center;
+}
+
+.services-contact h3{
+  margin-bottom:10px;
+}
+
+.services-contact p{
+  max-width:600px;
+  margin:0 auto 20px;
+}
+
+.contact-button{
+  display:inline-block;
+  padding:10px 22px;
+  border:1px solid #000;
+  text-decoration:none;
+  font-weight:600;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
