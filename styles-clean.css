@@ -2046,6 +2046,23 @@ margin:36px 0 12px;
 .finals-breakdown li{
   margin:2px 0;
 }
+.finals-callout{
+  border-left:2px solid rgba(157,15,15,0.45);
+  padding-left:12px;
+  margin:10px 0 14px;
+}
+
+.finals-breakdown{
+  list-style:none;
+  padding:0;
+  margin:0;
+  font-size:13px;
+  line-height:1.55;
+}
+
+.finals-breakdown li{
+  margin:3px 0;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
