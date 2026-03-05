@@ -2036,6 +2036,16 @@ margin:36px 0 12px;
   font-size:11px;
   color:rgba(0,0,0,.5);
 }
+.finals-breakdown{
+  margin:10px 0 14px;
+  padding-left:18px;
+  font-size:13px;
+  line-height:1.6;
+}
+
+.finals-breakdown li{
+  margin:2px 0;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
