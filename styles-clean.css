@@ -2005,6 +2005,37 @@ margin:36px 0 12px;
   margin-top: 10px;
   max-width: 360px;
 }
+/* =====================================================
+   Population Context Toggle (Finals context etc.)
+   ===================================================== */
+
+.population-toggle{
+  border:none;
+  background:none;
+  padding:0;
+  margin-top:14px;
+}
+
+.population-toggle summary{
+  font-size:13px;
+  font-weight:500;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:rgba(0,0,0,.65);
+  cursor:pointer;
+}
+
+.population-toggle .doc-inner{
+  font-size:13px;
+  line-height:1.55;
+  color:rgba(0,0,0,.65);
+  margin-top:8px;
+}
+
+.population-toggle .muted{
+  font-size:12px;
+  color:rgba(0,0,0,.5);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
