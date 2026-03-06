@@ -2068,6 +2068,10 @@ margin:36px 0 12px;
   opacity:.6;
   font-weight:400;
 }
+.metric-row.total-research .metric-value{
+opacity:.75;
+font-weight:500;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
