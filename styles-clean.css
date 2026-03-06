@@ -2063,6 +2063,11 @@ margin:36px 0 12px;
 .finals-breakdown li{
   margin:3px 0;
 }
+.metric-note{
+  font-size:.85em;
+  opacity:.6;
+  font-weight:400;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
