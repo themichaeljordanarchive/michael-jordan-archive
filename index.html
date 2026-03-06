@@ -188,7 +188,7 @@ window.addEventListener('load', function() {
 
   if (!heroCarousel || !track) return;
 
-  // Grab REAL slides (now .hero-slide)
+  // Grab REAL slides
   const realSlides = Array.from(track.querySelectorAll('.hero-slide'));
   const totalReal = realSlides.length;
   if (totalReal <= 1) return;
@@ -201,7 +201,8 @@ window.addEventListener('load', function() {
   track.appendChild(firstClone);
 
   let index = 1;
-  let heroTimer;
+  let heroTimer = null;
+  let isTransitioning = false;
 
   const computedTransition = window.getComputedStyle(track).transition;
   const TRANSITION_ON = (computedTransition && computedTransition !== 'all 0s ease 0s')
@@ -215,19 +216,56 @@ window.addEventListener('load', function() {
 
   function goTo(i, animate = true) {
     index = i;
+    isTransitioning = animate;
     setTransform(index, animate);
   }
 
-  function nextSlide() { goTo(index + 1, true); }
-  function prevSlide() { goTo(index - 1, true); }
+  function nextSlide() {
+    if (isTransitioning) return;
+    goTo(index + 1, true);
+  }
 
-  function startAuto() { heroTimer = setInterval(nextSlide, 6000); }
-  function stopAuto()  { clearInterval(heroTimer); }
+  function prevSlide() {
+    if (isTransitioning) return;
+    goTo(index - 1, true);
+  }
+
+  function startAuto() {
+    stopAuto();
+    heroTimer = setInterval(nextSlide, 6000);
+  }
+
+  function stopAuto() {
+    if (heroTimer) {
+      clearInterval(heroTimer);
+      heroTimer = null;
+    }
+  }
+
+  function normalizeHeroPosition() {
+    // If we're sitting on a clone, snap back to the matching real slide
+    if (index === totalReal + 1) {
+      goTo(1, false);
+    } else if (index === 0) {
+      goTo(totalReal, false);
+    } else {
+      goTo(index, false);
+    }
+
+    // force repaint for Safari
+    track.offsetHeight;
+    isTransitioning = false;
+  }
 
   // Seamless wrap
   track.addEventListener('transitionend', function() {
-    if (index === totalReal + 1) goTo(1, false);
-    if (index === 0)            goTo(totalReal, false);
+    isTransitioning = false;
+
+    if (index === totalReal + 1) {
+      goTo(1, false);
+    } else if (index === 0) {
+      goTo(totalReal, false);
+    }
   });
 
   // Initial position
@@ -237,50 +275,51 @@ window.addEventListener('load', function() {
   // Pause on hover
   heroCarousel.addEventListener('mouseenter', stopAuto);
   heroCarousel.addEventListener('mouseleave', function() {
-    stopAuto();
     startAuto();
   });
 
   // Arrow controls
-  if (nextBtn){
-    nextBtn.addEventListener('click', function(){
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function() {
       stopAuto();
       nextSlide();
       startAuto();
     });
   }
 
-  if (prevBtn){
-    prevBtn.addEventListener('click', function(){
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function() {
       stopAuto();
       prevSlide();
       startAuto();
     });
   }
-// ===== Safari Resume Fix =====
-function heroResume() {
-  // force repaint (Safari)
-  document.body.offsetHeight;
 
-  // snap back to whatever slide we were on (no animation)
-  goTo(index, false);
-
-  // restart timer cleanly
-  stopAuto();
-  startAuto();
-}
-
-document.addEventListener("visibilitychange", () => {
-  if (!document.hidden) {
-    setTimeout(heroResume, 150);
+  // ===== Safari / tab resume fix =====
+  function heroResume() {
+    stopAuto();
+    normalizeHeroPosition();
+    startAuto();
   }
-});
 
-window.addEventListener("pageshow", (e) => {
-  if (e.persisted) {
+  document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      stopAuto();
+    } else {
+      setTimeout(heroResume, 150);
+    }
+  });
+
+  window.addEventListener('pageshow', function(e) {
+    if (e.persisted) {
+      setTimeout(heroResume, 150);
+    }
+  });
+
+  window.addEventListener('focus', function() {
     setTimeout(heroResume, 150);
-  }
-});
+  });
+
 });
 </script>
 
