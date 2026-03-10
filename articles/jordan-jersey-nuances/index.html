@@ -127,11 +127,24 @@ For collectors and researchers, this nuance carries an important implication. In
 
 </section>
 
+<p class="muted back-link" style="margin-top:28px;">
+    <a href="../../index.html">← Back to Archive Notes</a>
+  </p>
+
 <footer class="site-footer">
 © Michael Jordan Archive
 </footer>
 
 </main>
 
+<script>
+const btn = document.querySelector('.nav-toggle');
+if (btn) {
+  btn.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+    btn.setAttribute('aria-expanded', document.body.classList.contains('nav-open'));
+  });
+}
+</script>
 </body>
 </html>
