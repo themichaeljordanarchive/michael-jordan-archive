@@ -2634,6 +2634,9 @@ body.season-page .population-card td:first-child{
 .notes-header p{
   font-size:15px;
   line-height:1.7px;
+  letter-spacing:normal;
+  text-transform:none;
+  white-space:normal;
 }
 .article-header h1{
   margin: 0 0 18px;
