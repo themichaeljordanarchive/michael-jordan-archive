@@ -2269,6 +2269,13 @@ color:#000;
   margin-bottom:14px;
 }
 
+.notes-header p{
+  font-size:17px;
+  line-height:1.75;
+  max-width:720px;
+  color:#555;
+}
+
 .notes-index{
   display:grid;
   gap:18px;
