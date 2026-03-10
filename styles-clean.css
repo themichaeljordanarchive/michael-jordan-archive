@@ -2182,6 +2182,13 @@ font-weight:500;
   min-width: 0;
 }
 
+.article-intro{
+font-size:19px;
+line-height:1.5;
+color:#444;
+margin-bottom:32px;
+}
+
 @media (max-width: 900px){
   .article-container{
     padding: 36px 18px 64px;
