@@ -2189,6 +2189,15 @@ color:#444;
 margin-bottom:32px;
 }
 
+.article-section-label{
+margin-top:36px;
+margin-bottom:14px;
+font-size:13px;
+letter-spacing:.18em;
+text-transform:uppercase;
+color:#777;
+}
+
 @media (max-width: 900px){
   .article-container{
     padding: 36px 18px 64px;
