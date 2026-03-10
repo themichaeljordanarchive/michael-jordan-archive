@@ -2272,6 +2272,7 @@ color:#000;
 .notes-index{
   display:grid;
   gap:18px;
+  margin-top: 32px;
 }
 
 .note-card{
