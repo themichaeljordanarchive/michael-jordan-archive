@@ -2137,6 +2137,15 @@ font-weight:500;
   width:100%;
   margin:18px 0;
 }
+/* Archive Notes article captions */
+
+.article-figure figcaption,
+.article-figure-wide figcaption{
+  margin-top:6px;
+  font-size:12px;
+  line-height:1.45;
+  color:rgba(0,0,0,.5);
+}
 
 }
 /* =========================================================
