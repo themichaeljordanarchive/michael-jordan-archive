@@ -2594,6 +2594,17 @@ body.season-page .population-card td:first-child{
   display:block;
   margin:0 auto;
 }
+@media (max-width:700px){
+
+.notes-page{
+  padding:28px 18px 70px;
+}
+
+.note-card{
+  padding:18px;
+}
+
+}
 }
 
 
