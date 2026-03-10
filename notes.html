@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Archive Notes — Michael Jordan Archive</title>
   <meta name="description" content="Observations, discoveries, and commentary drawn from ongoing research within the Michael Jordan Archive." />
-  <link rel="stylesheet" href="styles-clean.css">
+  <link rel="stylesheet" href="styles-clean.css?v=1">
 </head>
 
 <body>
@@ -27,6 +27,15 @@
     <span></span>
   </button>
 
+  <nav class="site-nav">
+    <a href="index.html">Home</a>
+    <a href="jerseys.html">Jersey Index</a>
+    <a href="research.html">Documented Work</a>
+    <a href="notes.html">Archive Notes</a>
+    <a href="methodology.html">Methodology</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
 </header>
 
 
@@ -42,6 +51,7 @@
 <p class="lead">
 Observations, discoveries, and commentary drawn from ongoing archival research within the Michael Jordan Archive.
 </p>
+
 
 <section class="notes-index">
 
@@ -69,9 +79,11 @@ Observations, discoveries, and commentary drawn from ongoing archival research w
 
 <script>
 const toggle = document.querySelector('.nav-toggle');
-toggle.addEventListener('click', () => {
-  document.body.classList.toggle('nav-open');
-});
+if (toggle) {
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('nav-open');
+  });
+}
 </script>
 
 </body>
