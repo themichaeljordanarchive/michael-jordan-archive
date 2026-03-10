@@ -2545,6 +2545,16 @@ body.season-page .population-card td:first-child{
     margin-left: auto;
     text-align: right;
   }
+  .article-body figure{
+  display:block;
+  margin: 28px auto;
+  text-align:center;
+}
+
+.article-body figure img{
+  display:block;
+  margin:0 auto;
+}
 }
 
 
