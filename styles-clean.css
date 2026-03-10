@@ -2643,7 +2643,16 @@ body.season-page .population-card td:first-child{
   font-size: 16px;
   line-height: 1.65;
 }
-
+.notes-header p{
+  display:block;
+  font-size:15px;
+  line-height:1.6;
+  letter-spacing:normal;
+  text-transform:none;
+  white-space:normal;
+  max-width:100%;
+  margin:0;
+}
 }
 }
 
