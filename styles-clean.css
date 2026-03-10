@@ -2234,6 +2234,45 @@ color:inherit;
 .article-nav a:hover{
 color:#000;
 }
+.notes-page{
+  max-width:900px;
+  margin:0 auto;
+  padding:40px 32px 80px;
+}
+
+.notes-header{
+  margin-bottom:36px;
+}
+
+.notes-header h1{
+  margin-bottom:14px;
+}
+
+.notes-index{
+  display:grid;
+  gap:18px;
+}
+
+.note-card{
+  padding:22px 24px;
+  border:1px solid #dedede;
+  border-radius:14px;
+  background:#f7f7f5;
+}
+
+.note-card h3{
+  margin:0 0 8px;
+}
+
+.note-card a{
+  text-decoration:none;
+  color:inherit;
+}
+
+.note-card:hover{
+  border-color:#cfcfcf;
+  background:#fbfbfa;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
