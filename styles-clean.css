@@ -2097,7 +2097,7 @@ font-weight:500;
 }
 
 .article-figure figcaption,
-.article-figure-wide figcaption{
+.article-figure-center figcaption{
   font-size:11px;
   line-height:1.4;
   color:rgba(0,0,0,.55);
