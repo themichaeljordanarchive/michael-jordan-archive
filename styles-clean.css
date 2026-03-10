@@ -2631,10 +2631,13 @@ body.season-page .population-card td:first-child{
 .note-card{
   padding:18px;
 }
+.notes-header p{
+  font-size:15px;
+  line-height:1.7px;
+}
 
 }
 }
-
 
 @media (max-width: 430px){
   .season-year-hero{ font-size: 52px; line-height: 0.95; }
