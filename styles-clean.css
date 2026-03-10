@@ -2096,7 +2096,8 @@ font-weight:500;
   grid-template-columns:1fr 1.2fr;
 }
 
-.article-figure figcaption{
+.article-figure figcaption,
+.article-figure-wide figcaption{
   font-size:11px;
   line-height:1.4;
   color:rgba(0,0,0,.55);
