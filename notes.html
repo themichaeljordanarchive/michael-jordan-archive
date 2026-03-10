@@ -3,42 +3,76 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Notes — Michael Jordan Archive</title>
+  <title>Archive Notes — Michael Jordan Archive</title>
+  <meta name="description" content="Observations, discoveries, and commentary drawn from ongoing research within the Michael Jordan Archive." />
   <link rel="stylesheet" href="styles-clean.css">
 </head>
 
 <body>
 
 <header class="site-header">
-  <!-- copy your existing header from another page -->
+
+  <div class="brand">
+    <a href="index.html">
+      <img src="assets/logo.png" alt="Michael Jordan Archive logo">
+    </a>
+    <div class="brand-text">
+      <div class="brand-name">Michael Jordan Archive</div>
+    </div>
+  </div>
+
+  <button class="nav-toggle" aria-label="Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
 </header>
 
-<main class="casefile-container">
 
-<h1>Notes</h1>
+<div class="hero-bleed">
+  <img src="assets/header.jpg" alt="Archive header image">
+</div>
 
-<p class="muted">
-Research observations, discoveries, and commentary drawn from ongoing archival work within the Michael Jordan Archive.
+
+<main style="padding:40px; max-width:820px; margin:auto;">
+
+<h1>Archive Notes</h1>
+
+<p class="lead">
+Observations, discoveries, and commentary drawn from ongoing archival research within the Michael Jordan Archive.
 </p>
 
-<section class="research-grid">
+<section class="notes-index">
 
-<a class="research-card has-report" href="articles/jordan-jersey-nuances/index.html">
-  <article class="research-item">
-    <h3>The Nuances of the Jordan Jersey</h3>
-    <p class="muted">
-      Sand-Knit tagging, uniform inventory practices, and carryover stock during the late 1980s.
-    </p>
-  </article>
-</a>
+<article class="note-card">
+  <h3>
+    <a href="articles/jordan-jersey-nuances/index.html">
+      The Nuances of the Jordan Jersey
+    </a>
+  </h3>
+
+  <p class="muted">
+    Sand-Knit tagging, uniform inventory practices, and carryover stock during the late 1980s.
+  </p>
+</article>
 
 </section>
 
 </main>
 
+
 <footer class="site-footer">
-© Michael Jordan Archive
+  © Michael Jordan Archive
 </footer>
+
+
+<script>
+const toggle = document.querySelector('.nav-toggle');
+toggle.addEventListener('click', () => {
+  document.body.classList.toggle('nav-open');
+});
+</script>
 
 </body>
 </html>
