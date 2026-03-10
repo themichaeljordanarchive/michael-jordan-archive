@@ -2206,6 +2206,15 @@ font-weight:500;
     gap: 18px;
   }
 }
+.article-figure-center{
+  margin: 30px auto;
+  max-width: 520px;
+}
+
+.article-figure-center img{
+  width:100%;
+  height:auto;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
