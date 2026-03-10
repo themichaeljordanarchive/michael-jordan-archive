@@ -2218,6 +2218,22 @@ font-weight:500;
 .article-figure-small{
   max-width:320px;
 }
+.article-nav{
+font-size:14px;
+letter-spacing:.08em;
+text-transform:uppercase;
+color:#777;
+margin-bottom:28px;
+}
+
+.article-nav a{
+text-decoration:none;
+color:inherit;
+}
+
+.article-nav a:hover{
+color:#000;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
