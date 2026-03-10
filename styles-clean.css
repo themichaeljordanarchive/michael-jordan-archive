@@ -2197,6 +2197,11 @@ letter-spacing:.18em;
 text-transform:uppercase;
 color:#777;
 }
+.article-body{
+border-top:1px solid #e5e5e5;
+margin-top:34px;
+padding-top:34px;
+}
 
 @media (max-width: 900px){
   .article-container{
