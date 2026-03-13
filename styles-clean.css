@@ -2109,6 +2109,12 @@ font-weight:500;
   width:42%;
   margin:6px 0 18px 28px;
 }
+.article-figure-right figcaption{
+  font-size:12px;
+  line-height:1.4;
+  color:rgba(0,0,0,.50);
+  margin-top: 8px;
+}
 
 @media (max-width:900px){
   .article-row,
