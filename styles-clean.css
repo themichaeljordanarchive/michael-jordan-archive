@@ -2143,6 +2143,10 @@ font-weight:500;
 .article-body p{
   padding-right:10px;
 }
+.article-body h3{
+  margin-top:48px;
+  margin-bottom:12px;
+}
 
 @media (max-width:900px){
   .article-row,
