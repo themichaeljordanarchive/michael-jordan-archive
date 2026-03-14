@@ -2116,6 +2116,25 @@ font-weight:500;
   margin-top: 8px;
 }
 
+.article-figure-left{
+  float:left;
+  width:320px;
+  margin:8px 28px 16px 0;
+}
+
+.article-figure-left img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.article-figure-left figcaption{
+  font-size:0.85rem;
+  color:#777;
+  margin-top:8px;
+  line-height:1.4;
+}
+
 @media (max-width:900px){
   .article-row,
   .article-row.reverse{
