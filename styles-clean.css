@@ -2165,7 +2165,7 @@ font-weight:500;
   grid-template-columns: 1fr 1fr;
   gap: 28px;
   align-items: start;
-  margin: 28px 0 34px;
+  margin: 28px 0 14px;
 }
 
 .article-row.reverse{
