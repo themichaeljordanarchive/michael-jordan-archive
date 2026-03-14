@@ -2140,6 +2140,9 @@ font-weight:500;
 .article-text{
   padding-left:12px;
 }
+.article-body p{
+  padding-right:10px;
+}
 
 @media (max-width:900px){
   .article-row,
