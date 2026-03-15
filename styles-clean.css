@@ -2395,6 +2395,8 @@ vertical-align:middle;
   margin:32px 0 14px;
   font-weight:600;
   color:#333;
+  border-left:3px solid #ce1141;
+  padding-left:10px;
 }
 
 /* =========================================================
