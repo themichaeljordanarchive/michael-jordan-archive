@@ -2343,12 +2343,13 @@ color:#000;
 }
 
 .article-note{
-  margin-top:40px;
-  padding-top:16px;
+  margin-top:64px;
+  padding-top:18px;
   border-top:1px solid #e5e5e5;
   font-size:0.85em;
   color:#7a7a7a;
   line-height:1.6;
+  padding:0 6px;
 }
 /* =========================
    FOOTER
