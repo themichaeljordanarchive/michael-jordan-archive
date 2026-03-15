@@ -2388,6 +2388,13 @@ vertical-align:middle;
  font-size:0.8rem;
  margin:0;
 }
+.artifact-title{
+  font-size:15px;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  margin:30px 0 10px;
+  color:#333;
+}
 
 /* =========================================================
    RESPONSIVE — LOCKED
