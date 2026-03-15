@@ -2379,6 +2379,17 @@ vertical-align:middle;
   line-height:1.6;
   padding:0 6px;
 }
+
+.research-note{
+  margin-top:64px;
+  padding-top:18px;
+  border-top:1px solid #e5e5e5;
+  font-size:0.85em;
+  color:#7a7a7a;
+  line-height:1.6;
+  padding:0 6px;
+}
+
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
