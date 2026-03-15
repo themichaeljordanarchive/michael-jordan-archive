@@ -2372,15 +2372,16 @@ vertical-align:middle;
 
 .article-note,
 .research-note{
-  margin-top:90px;
-  padding:18px 14px;
+  margin-top:70px;
+  padding:14px;
   border-top:1px solid #e5e5e5;
   background:#fafafa;
-  border-radius:6px;
 
-  font-size:0.6em;
-  color:#666;
-  line-height:1.6;
+  font-size:0.8rem;
+  color:#7a7a7a;
+  line-height:1.55;
+
+  max-width:760px;
 }
 
 /* =========================================================
