@@ -2389,10 +2389,10 @@ vertical-align:middle;
  margin:0;
 }
 .artifact-title{
-  font-size:18px;
-  letter-spacing:.06em;
+  font-size:13px;
+  letter-spacing:.08em;
   text-transform:uppercase;
-  margin:36px 0 18px;
+  margin:32px 0 14px;
   font-weight:600;
   color:#333;
 }
