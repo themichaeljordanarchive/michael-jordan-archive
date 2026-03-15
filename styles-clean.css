@@ -2383,6 +2383,10 @@ vertical-align:middle;
 
   max-width:760px;
 }
+.article-note p,
+.research-note p{
+ font-size:0.8rem;
+}
 
 /* =========================================================
    RESPONSIVE — LOCKED
