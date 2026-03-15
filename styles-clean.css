@@ -2373,13 +2373,14 @@ vertical-align:middle;
 .article-note,
 .research-note{
   margin-top:90px;
-  padding-top:18px;
+  padding:18px 14px;
   border-top:1px solid #e5e5e5;
-  font-size:0.85em;
-  color:#7a7a7a;
+  background:#fafafa;
+  border-radius:6px;
+
+  font-size:0.9em;
+  color:#666;
   line-height:1.6;
-  padding-left:6px;
-  padding-right:6px;
 }
 
 /* =========================================================
