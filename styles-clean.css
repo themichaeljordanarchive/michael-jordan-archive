@@ -590,7 +590,7 @@ h2, h3{
    ========================================================= */
 
 .season-card-unc { --season-card-bg: url("assets/unc-bg.jpg"); --season-card-detail: url("assets/unc-bg.jpg"); }
-.season-card-wizards { --season-card-bg: url("assets/wizards-bg.jpg"); --season-card-detail: url("assets/wizards-bg.jpg"); }
+.season-card-0102 { --season-card-bg: url("assets/wizards-bg.jpg"); --season-card-detail: url("assets/wizards-bg.jpg"); }
 .season-card-0000 { --season-card-bg: url("assets/usa-bg.jpg"); --season-card-detail: url("assets/usa-bg.jpg"); }    
 .season-card-9798 { --season-card-bg: url("assets/1997-98-bg.jpg"); --season-card-detail: url("assets/1997-98-bg.jpg"); }   
 .season-card-9697 { --season-card-bg: url("assets/1996-97-bg.jpg"); --season-card-detail: url("assets/1996-97-bg.jpg"); }
