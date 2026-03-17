@@ -603,7 +603,7 @@ h2, h3{
 .season-card-8485 { --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
 
 .season-card-unc,
-.season-card-wizards,
+.season-card-0102,
 .season-card-0000,
 .season-card-9798,
 .season-card-9697,
@@ -624,7 +624,7 @@ h2, h3{
 }
 
 .season-card-unc:hover,
-.season-card-wizards:hover,
+.season-card-0102:hover,
 .season-card-0000:hover,
 .season-card-9798:hover,
 .season-card-9697:hover,
@@ -641,7 +641,7 @@ h2, h3{
 }
 
 .season-card-unc::before,
-.season-card-wizards::before,
+.season-card-0102::before,
 .season-card-0000::before,
 .season-card-9798::before,
 .season-card-9697::before,
