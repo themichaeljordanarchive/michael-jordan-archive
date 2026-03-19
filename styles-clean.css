@@ -2402,6 +2402,10 @@ vertical-align:middle;
 margin-top:48px;
 margin-bottom:10px;
 }
+.sneaker-context{
+  max-width: 680px;
+  margin-top: 22px;
+}
 .sneaker-context summary{
   font-size: 12px;
   letter-spacing: 0.2em;
