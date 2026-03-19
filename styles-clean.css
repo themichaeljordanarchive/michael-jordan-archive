@@ -2475,6 +2475,10 @@ margin-bottom:10px;
   width: 100%;
   object-fit: cover;
 }
+.sneaker-hero-image {
+  height: 420px;
+  overflow: hidden;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
