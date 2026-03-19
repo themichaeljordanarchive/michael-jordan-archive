@@ -2442,32 +2442,7 @@ margin-bottom:10px;
 .season-card .metric .label {
   color: rgba(0,0,0,0.5);
 }
-/* Sneaker card background image + overlay */
-.sneaker-card{
-  position: relative;
 
-  background-image: url('images/sneakers/air-ship.jpg'); /* adjust path if needed */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  overflow: hidden;
-}
-
-/* Soft white overlay for readability */
-.sneaker-card::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255,255,255,0.75);
-  z-index: 1;
-}
-
-/* Keep all card content above overlay */
-.sneaker-card > *{
-  position: relative;
-  z-index: 2;
-}
 .badge-row{
   display: inline-flex;
   flex-wrap: wrap;
