@@ -2470,6 +2470,11 @@ margin-bottom:10px;
 .verify-badge:first-child{
   border-color: rgba(170,20,20,0.45);
 }
+.sneaker-hero-image img{
+  height: 420px;
+  width: 100%;
+  object-fit: cover;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
