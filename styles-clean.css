@@ -2402,6 +2402,12 @@ vertical-align:middle;
 margin-top:48px;
 margin-bottom:10px;
 }
+.sneaker-context summary{
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.6);
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
