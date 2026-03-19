@@ -2402,6 +2402,10 @@ vertical-align:middle;
 margin-top:48px;
 margin-bottom:10px;
 }
+.content-wrap{
+ max-width: 860px
+ margin: 0 auto;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
