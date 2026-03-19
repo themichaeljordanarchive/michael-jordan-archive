@@ -2471,14 +2471,9 @@ margin-bottom:10px;
   border-color: rgba(170,20,20,0.45);
 }
 .sneaker-hero-image img{
-  height: 420px;
-  width: 100%;
-  object-fit: cover;
+  outline: 4px solid red;
 }
-.sneaker-hero-image {
-  height: 420px;
-  overflow: hidden;
-}
+  
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
