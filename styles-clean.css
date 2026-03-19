@@ -2470,20 +2470,6 @@ margin-bottom:10px;
 .verify-badge:first-child{
   border-color: rgba(170,20,20,0.45);
 }
-.sneaker-hero-image img {
-  height: 420px;
-  width: 100%;
-  object-fit: cover;
-}
-.style-summary-card + .evidence-block .evidence-grid{
-  grid-template-columns: 1.25fr 0.85fr;
-}
-
-.style-summary-card + .evidence-block .evidence-image img{
-  width: 100%;
-  height: 460px;
-  object-fit: cover;
-}
 .model-overview-block .evidence-grid{
   grid-template-columns: 1.35fr 0.85fr;
   align-items: start;
