@@ -178,7 +178,7 @@ h2, h3{
 /* Nav (Desktop) */
 .site-nav{
   display: flex;
-  gap: 16px;
+  gap: 22px;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -191,7 +191,7 @@ h2, h3{
 .site-nav a:visited{
   font-family: var(--sans);
   font-size: 11px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.28em;
   text-transform: uppercase;
   font-weight: 450;
   color: rgba(20,20,20,0.55);
