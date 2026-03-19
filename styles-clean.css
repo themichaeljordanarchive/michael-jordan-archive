@@ -2442,6 +2442,25 @@ margin-bottom:10px;
 .season-card .metric .label {
   color: rgba(0,0,0,0.5);
 }
+.badge-row{
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.verify-badge{
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid rgba(0,0,0,0.12);
+  border-radius: 999px;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(20,20,20,0.72);
+  background: #fff;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
