@@ -2412,23 +2412,35 @@ margin-bottom:10px;
   text-transform: uppercase;
   color: rgba(0,0,0,0.6);
 }
-.sneaker-card{
-  border: 1px solid #e9e9e9;
-  border-left: 3px solid #b22222;
-  border-radius: 12px;
-  padding: 20px 22px;
-  background: #fff;
+/* Sneaker card tweaks (using existing season-card) */
+
+.season-card {
+  padding: 22px 22px 20px;
 }
-.sneaker-card h3{
-  font-size: 20px;
+
+/* Title (Nike Air Ship) */
+.season-card .season-year {
+  font-size: 18px;
+  font-weight: 600;
   letter-spacing: 0.04em;
 }
-.sneaker-card .model-label{
+
+/* MODEL OVERVIEW */
+.season-card .season-status {
   font-size: 11px;
   letter-spacing: 0.18em;
-  color: #888;
-  margin-bottom: 10px;
-  display: block;
+  color: rgba(0,0,0,0.45);
+  margin-top: 6px;
+}
+
+/* Metrics (Use / Classification) */
+.season-card .metric {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.season-card .metric .label {
+  color: rgba(0,0,0,0.5);
 }
 /* =========================================================
    RESPONSIVE — LOCKED
