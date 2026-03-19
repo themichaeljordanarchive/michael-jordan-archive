@@ -2475,7 +2475,15 @@ margin-bottom:10px;
   width: 100%;
   object-fit: cover;
 }
-  
+.style-summary-card + .evidence-block .evidence-grid{
+  grid-template-columns: 1.25fr 0.85fr;
+}
+
+.style-summary-card + .evidence-block .evidence-image img{
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+}  
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
