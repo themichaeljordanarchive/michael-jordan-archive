@@ -589,6 +589,7 @@ h2, h3{
    Special season cards (watermark / background variables)
    ========================================================= */
 
+.season-card-aj1 { --season-card-bg: url("assets/aj-1-font.jpg"); --season-card-detail: url("assets/aj-1-font.jpg"); }
 .season-card-airship { --season-card-bg: url("assets/air-ship.jpg"); --season-card-detail: url("assets/air-ship.jpg"); }
 .season-card-unc { --season-card-bg: url("assets/unc-bg.jpg"); --season-card-detail: url("assets/unc-bg.jpg"); }
 .season-card-0102 { --season-card-bg: url("assets/wizards-bg.jpg"); --season-card-detail: url("assets/wizards-bg.jpg"); }
@@ -603,6 +604,7 @@ h2, h3{
 .season-card-8586 { --season-card-bg: url("assets/1985-86-bg.jpg"); --season-card-detail: url("assets/1985-86-detail.jpg"); }
 .season-card-8485 { --season-card-bg: url("assets/1984-85-bg.jpg"); --season-card-detail: url("assets/1984-85-detail.jpg"); }
 
+.season-card-aj1,
 .season-card-airship,
 .season-card-unc,
 .season-card-0102,
@@ -625,6 +627,7 @@ h2, h3{
   transition: background-image 0.25s ease, transform 0.2s ease;
 }
 
+.season-card-aj1:hover,
 .season-card-airship:hover,
 .season-card-unc:hover,
 .season-card-0102:hover,
@@ -643,6 +646,7 @@ h2, h3{
     var(--season-card-bg);
 }
 
+.season-card-aj1::before,
 .season-card-airship::before,
 .season-card-unc::before,
 .season-card-0102::before,
