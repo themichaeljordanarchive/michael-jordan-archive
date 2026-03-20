@@ -2491,14 +2491,28 @@ margin-bottom:10px;
   border-radius: 12px;
   margin-bottom: 18px;
 }
-.mini-section-label,
-.evidence-content h3{
+.mini-section-label {
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: rgba(0,0,0,0.45);
   margin: 18px 0 8px;
   font-weight: 600;
+}
+
+.evidence-content h3 {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.45);
+  margin: 22px 0 10px;
+  font-weight: 600;
+}
+
+.evidence-callout{
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 400;
 }
 .mini-section-label{
   margin-top: 14px;
