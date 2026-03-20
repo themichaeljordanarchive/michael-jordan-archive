@@ -2484,14 +2484,6 @@ margin-bottom:10px;
   height: 600px;
   object-fit: cover;
 }
-.mini-section-label{
-  font-size: 11px;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(0,0,0,0.45);
-  margin: 16px 0 6px;
-  font-weight: 600;
-}
 .artifact-keydata{
   padding: 14px 16px;
   background: #faf8f6;
