@@ -2508,6 +2508,11 @@ margin-bottom:10px;
   margin: 22px 0 10px;
   font-weight: 600;
 }
+.evidence-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .evidence-callout{
   font-size: 15px;
