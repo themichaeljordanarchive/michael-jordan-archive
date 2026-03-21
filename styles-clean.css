@@ -2967,25 +2967,4 @@ body.season-page .population-card td:first-child{
   grid-column: auto !important;
   grid-row: auto !important;
 }
-/* ===============================
-   MODEL STORY (SAFE ISOLATED RULE)
-=============================== */
 
-/* Desktop: hide toggle label */
-@media (min-width: 701px){
-  .model-story-toggle summary{
-    display: none;
-  }
-}
-
-/* Mobile: hide story, show label */
-@media (max-width: 700px){
-  .model-story-toggle[open] .model-story{
-    display: none;
-  }
-
-  .model-story-toggle summary{
-    display: block;
-    cursor: pointer;
-  }
-}
