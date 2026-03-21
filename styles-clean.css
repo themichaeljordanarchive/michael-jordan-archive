@@ -2569,6 +2569,18 @@ margin-bottom:10px;
   }
 
 }
+.model-hero-full{
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
+
+.model-hero-full img{
+  display: block;
+  width: 100%;
+  height: 70vh;
+  object-fit: cover;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
