@@ -613,7 +613,7 @@ h5{
 /* First two metric rows = primary */
 .season-header-top .season-metrics .metric-row:nth-child(-n+2) .metric-label{
   color: #000;
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.01em;;
 }
 
@@ -960,7 +960,7 @@ body.preseason-page .table-hint{
   font-size: 72px;
   line-height: 0.92;
   letter-spacing: -0.03em;
-  font-weight: 700;
+  font-weight: 450;
   margin-bottom: 10px;
   color: #000;
   position: relative;
