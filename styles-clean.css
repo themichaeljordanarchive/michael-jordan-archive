@@ -2524,6 +2524,10 @@ margin-bottom:10px;
 .model-story p + p{
   margin-top: 14px;
 }
+.model-story{
+  max-width: 680px;
+  margin: 24px auto 28px;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
