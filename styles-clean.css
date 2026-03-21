@@ -1292,7 +1292,7 @@ body.preseason-page .table-hint{
   border-bottom-color: var(--accent-red);
   color: rgba(177,13,13,0.85);
 }
-.evidence-image.sneaker-hero-img img{
+.evidence-image.sneaker-hero-image{
   width: 100%;
   height: 60vh;
   object-fit: cover;
