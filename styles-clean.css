@@ -118,7 +118,7 @@ h1{
   font-size: 42px;
   line-height: 1.05;
   letter-spacing: 0.005em;
-  font-weight: 520;
+  font-weight: 450;
   color: var(--ink);
   max-width: 28ch;
 }
