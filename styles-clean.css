@@ -2517,6 +2517,13 @@ margin-bottom:10px;
 .mini-section-label{
   margin-top: 14px;
 }
+.model-overview-text {
+  max-width: 650px;
+  margin: 24px auto 48px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #444;
+}
 /* =========================================================
    RESPONSIVE — LOCKED
    ========================================================= */
