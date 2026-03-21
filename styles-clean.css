@@ -146,6 +146,7 @@ h6{
   font-weight: 500;
   color: var(--ink);
   margin: 0 0 8px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -159,6 +160,7 @@ h5{
   color: var(--muted);
   margin: 0;
   margin-top: 14px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
