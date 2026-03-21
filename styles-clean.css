@@ -2507,12 +2507,7 @@ margin-bottom:10px;
   color: rgba(0,0,0,0.45);
   margin: 22px 0 10px;
   font-weight: 600;
-}
-.evidence-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  }
 
 .evidence-callout{
   font-size: 15px;
