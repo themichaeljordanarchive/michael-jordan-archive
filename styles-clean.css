@@ -613,7 +613,7 @@ h5{
 /* First two metric rows = primary */
 .season-header-top .season-metrics .metric-row:nth-child(-n+2) .metric-label{
   color: #000;
-  font-weight: 700;
+  font-weight: 400;
   letter-spacing: 0.01em;;
 }
 
