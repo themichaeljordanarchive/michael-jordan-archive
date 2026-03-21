@@ -2906,12 +2906,6 @@ body.season-page .population-card td:first-child{
 }
 }
 
-@media (min-width: 701px){
-  .model-story-toggle summary{
-    display: none;
-  }
-}
-
 @media (max-width: 430px){
   .season-year-hero{ font-size: 52px; line-height: 0.95; }
 }
