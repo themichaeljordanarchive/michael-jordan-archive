@@ -2333,10 +2333,12 @@ color:#000;
    JOURNAL / NOTES INDEX
    ========================================= */
 
+/* JOURNAL / NOTES (single system) */
+
 .notes-page{
   max-width: 1180px;
   margin: 0 auto;
-  padding: 40px 32px 80px;
+  padding: 40px 32px 64px;
 }
 
 .notes-header{
@@ -2363,15 +2365,12 @@ color:#000;
 
 .notes-index{
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px 28px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
 }
 
 .note-card{
   margin: 0;
-  padding: 0;
-  border: none;
-  background: none;
 }
 
 .note-card a{
@@ -2381,11 +2380,11 @@ color:#000;
 }
 
 .note-card img{
-  display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 180px;
   object-fit: cover;
-  margin: 0 0 12px;
+  display: block;
+  margin-bottom: 12px;
 }
 
 .note-card h3{
@@ -2402,9 +2401,6 @@ color:#000;
   color: rgba(0,0,0,0.68);
 }
 
-.article-note{
-  margin-top: 56px;
-}
 
 /* =========================================
    MOBILE
@@ -2421,17 +2417,15 @@ color:#000;
   }
 
   .note-card img{
-    margin-bottom: 14px;
+    height: 220px;
   }
 
   .note-card h3{
     font-size: 20px;
-    line-height: 1.28;
   }
 
   .note-card .muted{
     font-size: 15px;
-    line-height: 1.5;
   }
 }
 
