@@ -256,7 +256,7 @@ h5{
 
 .hero-carousel{
   width: 100%;
-  aspect-ratio: 16/9;
+  height: 56vh;
   overflow: hidden;
   position: relative;
   margin-left: calc(50% - 50vw);
@@ -2707,7 +2707,7 @@ margin-bottom:10px;
 
   .hero-carousel{
     aspect-ratio: auto;
-    height: 50vh;
+    height: 58vh;
 
   }
   .hero-viewport, .hero-track{ height: 100%; }
