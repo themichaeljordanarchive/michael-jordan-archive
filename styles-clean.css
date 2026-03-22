@@ -2204,7 +2204,7 @@ font-weight:500;
 
 .article-header{
   max-width: 760px;
-  margin: 0 auto 28px;
+  margin: 0 auto 0;
 }
 
 .article-header h1{
