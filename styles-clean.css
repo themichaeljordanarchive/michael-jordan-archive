@@ -3000,7 +3000,7 @@ body.season-page .population-card td:first-child{
 }
 #date-search .season-card{
   padding: 12px 16px;
-  border-radius: 6;
+  border-radius: 0;
 }
 
 #dateInput{
@@ -3029,7 +3029,7 @@ body.season-page .population-card td:first-child{
 
 #date-search .season-card{
   padding: 10px 18px;   /* thinner */
-  border-radius: 0;  /* more square */
+  border-radius: 6;  /* more square */
 }
 /* TEMP TEST: reset evidence grid placement on mobile */
 .evidence-grid > .evidence-left,
