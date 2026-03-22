@@ -2279,7 +2279,7 @@ color:#777;
 
 @media (max-width: 900px){
   .article-container{
-    padding: 36px 18px 64px;
+    padding: 0px 18px 64px;
   }
 
   .article-header h1{
