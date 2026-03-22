@@ -3046,6 +3046,10 @@ body.season-page .population-card td:first-child{
   color: #fff;
   max-width: none;
 }
+.article-hero-inner{
+  position: sticky;
+  top: 18vh;
+}
 
 .article-hero-deck{
   margin: 0 auto;
