@@ -2366,15 +2366,9 @@ color:#000;
 
 .note-card img{
   width:100%;
+  max-width: 560px;
   display:block;
-  margin-bottom:16px;
-}
-
-.journal-thumb img{
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
-  display: block;
+  margin: 0 0 16px 0;
 }
 
 .note-card h3{
