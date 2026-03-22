@@ -2329,6 +2329,10 @@ color:inherit;
 .article-nav a:hover{
 color:#000;
 }
+/* =========================================
+   JOURNAL / NOTES INDEX
+   ========================================= */
+
 .notes-page{
   max-width:900px;
   margin:0 auto;
@@ -2336,7 +2340,7 @@ color:#000;
 }
 
 .notes-header{
-  margin-bottom:36px;
+  margin-bottom:48px;
 }
 
 .notes-header h1{
@@ -2350,19 +2354,27 @@ color:#000;
 }
 
 .notes-index{
-  display:grid;
-  gap:18px;
+  display:block;
 }
 
 .note-card{
-  padding:22px 24px;
-  border:1px solid #dedede;
-  border-radius:14px;
-  background:#f7f7f5;
+  margin-bottom:48px;
+  padding:0;
+  border:none;
+  background:none;
+}
+
+.note-card img{
+  width:100%;
+  display:block;
+  margin-bottom:16px;
 }
 
 .note-card h3{
-  margin:0 0 8px;
+  margin:12px 0 8px;
+  font-size:26px;
+  line-height:1.25;
+  font-weight:500;
 }
 
 .note-card a{
@@ -2370,13 +2382,35 @@ color:#000;
   color:inherit;
 }
 
-.note-card:hover{
-  border-color:#cfcfcf;
-  background:#fbfbfa;
+.note-card .muted{
+  font-size:14px;
+  line-height:1.6;
+  color:rgba(0,0,0,0.65);
 }
-.article-body .muted{
-  color: var(--ink-3);
-  font-size: 0.92em;
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width:700px){
+
+  .notes-page{
+    padding:28px 18px 64px;
+  }
+
+  .note-card{
+    margin-bottom:40px;
+  }
+
+  .note-card h3{
+    font-size:22px;
+  }
+
+  .note-card .muted{
+    font-size:15px;
+    line-height:1.55;
+  }
+
 }
 
 /* =========================
@@ -2889,25 +2923,12 @@ body.season-page .population-card td:first-child{
 }
 @media (max-width:700px){
 
-.notes-page{
-  padding:28px 18px 70px;
-}
 .article-figure-right{
     float:none;
     width:100%;
     margin:24px 0;
 }
 
-.note-card{
-  padding:18px;
-}
-.notes-header p{
-  font-size:14px;
-  line-height:1.7px;
-  letter-spacing:normal;
-  text-transform:none;
-  white-space:normal;
-}
 .article-header h1{
   margin: 0 0 18px;
 }
@@ -2915,16 +2936,6 @@ body.season-page .population-card td:first-child{
 .article-intro{
   font-size: 16px;
   line-height: 1.65;
-}
-.notes-header p{
-  display:block;
-  font-size:15px;
-  line-height:1.6;
-  letter-spacing:normal;
-  text-transform:none;
-  white-space:normal;
-  max-width:100%;
-  margin:0;
 }
 .article-body figure.mobile-stack{
   float:none !important;
