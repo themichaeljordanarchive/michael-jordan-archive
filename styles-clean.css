@@ -3186,19 +3186,6 @@ body.season-page .population-card td:first-child{
     grid-auto-columns: 78vw;
   }
 }
-.season-thumb{
-  background: #7a0000; /* your red tone */
-  padding: 12px;
-  margin-bottom: 14px;
-}
-
-.season-thumb img{
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: contain;
-  display: block;
-}
 .season-card-unc-new{
   background: none;
   border: none;
