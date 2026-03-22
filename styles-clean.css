@@ -422,9 +422,9 @@ h5{
 .home-tile{
   display: block;
   text-decoration: none;
-  border: 1px solid rgba(0,0,0,0.28);
-  border-radius: 18px;
-  padding: 22px 22px 20px;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   background: #f1f0ec;
   position: relative;
   transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
