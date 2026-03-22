@@ -1501,7 +1501,7 @@ body.preseason-page .table-hint{
 }
 
 .control-card{
-  border-radius: 0;
+  border-radius: 6px;
   padding: 16px 18px;
   border: 0.5px solid rgba(157,15,15,0.55);
 }
