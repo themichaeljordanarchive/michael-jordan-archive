@@ -3079,3 +3079,9 @@ body.season-page .population-card td:first-child{
   line-height: 1.6;
   color: rgba(255,255,255,0.92);
 }
+.notes-index{
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 24px !important;
+  outline: 3px solid red !important;
+}
