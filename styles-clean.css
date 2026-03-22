@@ -3189,11 +3189,12 @@ body.season-page .population-card td:first-child{
 .season-thumb{
   background: #7a0000; /* your red tone */
   padding: 12px;
-  max-width: 220px;
+  margin-bottom: 14px;
 }
 
 .season-thumb img{
   width: 100%;
+  height: 100%;
   aspect-ratio: 3 / 4;
   object-fit: contain;
   display: block;
