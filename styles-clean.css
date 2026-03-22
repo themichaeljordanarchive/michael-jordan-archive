@@ -2395,11 +2395,11 @@ color:#000;
   font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #777;
+  color: rgba(0,0,0,0.5);
 }
 
 .journal-title{
-  margin: 0 0 8px;
+  margin: 0 0 6px;
   font-size: 18px;
   line-height: 1.28;
   font-weight: 400;
