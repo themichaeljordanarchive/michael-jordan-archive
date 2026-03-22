@@ -3186,3 +3186,33 @@ body.season-page .population-card td:first-child{
     grid-auto-columns: 78vw;
   }
 }
+.season-thumb{
+  background: #7a0000; /* your red tone */
+  padding: 12px;
+  max-width: 220px;
+}
+
+.season-thumb img{
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  display: block;
+}
+.season-card-unc-new{
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.season-card-unc-new .season-thumb{
+  background: #7a0000;
+  margin-bottom: 14px;
+  padding: 12px;
+}
+
+.season-card-unc-new .season-thumb img{
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: contain;
+  display: block;
+}
