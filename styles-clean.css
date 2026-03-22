@@ -1268,7 +1268,7 @@ body.preseason-page .table-hint{
   background: rgba(0,0,0,0.03);
   border-left: 3px solid rgba(0,0,0,0.22);
   padding: 12px 14px;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 14px;
   color: rgba(20,20,20,0.82);
 }
@@ -1323,7 +1323,7 @@ body.preseason-page .table-hint{
   padding: 22px;
   background: rgba(248,248,248,0.85);
   border: 1px solid rgba(20,20,20,0.10);
-  border-radius: 4px;
+  border-radius: 0;
   box-shadow: 0 10px 24px rgba(0,0,0,0.05);
 }
 /* =========================================================
@@ -1338,7 +1338,7 @@ body.preseason-page .table-hint{
 .designation-inner{
   padding: 24px 28px;
   background: #f5f5f5;
-  border-radius: 4px;
+  border-radius: 0;
   position: relative;
 }
 
@@ -1350,7 +1350,7 @@ body.preseason-page .table-hint{
   bottom: 14px;
   width: 4px;
   background: rgba(157,15,15,0.85);
-  border-radius: 2px;
+  border-radius: 0;
 }
 
 .sale-link{
@@ -1433,7 +1433,7 @@ body.preseason-page .table-hint{
 .doc-collapse{
   margin-top: 6px;
   border: 0.5px solid rgba(157,15,15,0.55); /* red border */
-  border-radius: 6px;
+  border-radius: 0;
   overflow: hidden;
   background: transparent;
 }
@@ -1501,7 +1501,7 @@ body.preseason-page .table-hint{
 }
 
 .control-card{
-  border-radius: 10px;
+  border-radius: 0;
   padding: 16px 18px;
   border: 0.5px solid rgba(157,15,15,0.55);
 }
@@ -1512,7 +1512,7 @@ body.preseason-page .table-hint{
 .control-input{
   width: 100%;
   padding: 10px 14px;
-  border-radius: 28px;
+  border-radius: 6px;
   border: 1px solid rgba(0,0,0,0.10);
   background: #fff;
   font-size: 15px;
