@@ -2223,6 +2223,8 @@ font-weight:500;
 .article-body{
   max-width: 760px;
   margin: 72px auto 0;
+  border-top: 1px solid #e5e5e5;
+  padding-top: 48px;
 }
 
 .article-body p{
@@ -2273,11 +2275,6 @@ font-size:13px;
 letter-spacing:.18em;
 text-transform:uppercase;
 color:#777;
-}
-.article-body{
-border-top:1px solid #e5e5e5;
-margin-top:74px;
-padding-top:48px;
 }
 
 @media (max-width: 900px){
