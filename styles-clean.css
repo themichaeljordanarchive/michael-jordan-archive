@@ -291,6 +291,26 @@ h5{
   object-fit: cover;
 }
 
+.hero-1 img{
+  object-position: center 35%;
+}
+
+.hero-2 img{
+  object-position: center 50%;
+}
+
+.hero-3 img{
+  object-position: center 40%;
+}
+
+.hero-4 img{
+  object-position: center 55%;
+}
+
+.hero-5 img{
+  object-position: center 45%;
+}
+
 /* Caption lives inside slide */
 .hero-slide .hero-caption{
   position: absolute;
