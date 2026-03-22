@@ -3210,3 +3210,21 @@ body.season-page .population-card td:first-child{
 .season-card-unc{
   background-image: none !important;
 }
+.season-card-unc{
+  background-image: none !important;
+}
+
+.season-card-unc .season-thumb{
+  background: #111 !important;
+  margin: 0 0 12px 0 !important;
+  padding: 8px !important;
+  height: 180px !important;
+  overflow: hidden !important;
+}
+
+.season-card-unc .season-thumb img{
+  display: block !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+}
