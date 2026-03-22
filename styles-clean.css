@@ -981,7 +981,7 @@ body.preseason-page .table-hint{
 .population-card{
   background: #f3f1ec;
   border: 1px solid rgba(0,0,0,0.12);
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 32px;
   margin-top: 18px;
 }
@@ -1014,7 +1014,7 @@ body.preseason-page .table-hint{
   border-collapse: collapse;
   table-layout: auto;
   background: #f7f7f5;
-  border-radius: 12px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
@@ -1159,7 +1159,7 @@ body.preseason-page .table-hint{
 .population-card{
   background: #f9f9f7;
   border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 16px;
+  border-radius: 4px;
   padding: 32px;
   margin-bottom: 24px;
   box-shadow: none;
@@ -1208,7 +1208,7 @@ body.preseason-page .table-hint{
 
 .evidence-image img{
   width: 100%;
-  border-radius: var(--radius);
+  border-radius: none;
   border: 1px solid rgba(0,0,0,0.08);
   background: #fff;
 }
@@ -1217,7 +1217,7 @@ body.preseason-page .table-hint{
 .evidence-content{
   background: rgba(255,255,255,0.96);
   border: 1px solid rgba(0,0,0,0.08);
-  border-radius: var(--radius);
+  border-radius: none;
   padding: 22px;
 }
 
@@ -1268,7 +1268,7 @@ body.preseason-page .table-hint{
   background: rgba(0,0,0,0.03);
   border-left: 3px solid rgba(0,0,0,0.22);
   padding: 12px 14px;
-  border-radius: 10px;
+  border-radius: 4px;
   font-size: 14px;
   color: rgba(20,20,20,0.82);
 }
@@ -1323,7 +1323,7 @@ body.preseason-page .table-hint{
   padding: 22px;
   background: rgba(248,248,248,0.85);
   border: 1px solid rgba(20,20,20,0.10);
-  border-radius: 18px;
+  border-radius: 4px;
   box-shadow: 0 10px 24px rgba(0,0,0,0.05);
 }
 /* =========================================================
