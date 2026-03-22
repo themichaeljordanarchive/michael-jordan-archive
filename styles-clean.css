@@ -2329,11 +2329,10 @@ color:inherit;
 .article-nav a:hover{
 color:#000;
 }
-/* =========================================
-   JOURNAL / NOTES INDEX
-   ========================================= */
 
-/* JOURNAL / NOTES (single system) */
+/* =========================================
+   JOURNAL INDEX
+   ========================================= */
 
 .notes-page{
   max-width: 1180px;
@@ -2363,69 +2362,81 @@ color:#000;
   color: #777;
 }
 
-.notes-index{
+.journal-list{
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
 }
 
-.note-card{
+.journal-item{
   margin: 0;
 }
 
-.note-card a{
+.journal-link{
   display: block;
   text-decoration: none;
   color: inherit;
 }
 
-.note-card img{
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  display: block;
+.journal-thumb{
   margin-bottom: 12px;
 }
 
-.note-card h3{
+.journal-thumb img{
+  display: block;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.journal-meta{
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.journal-title{
   margin: 0 0 8px;
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 1.28;
   font-weight: 400;
 }
 
-.note-card .muted{
+.journal-deck{
   margin: 0;
   font-size: 14px;
   line-height: 1.45;
   color: rgba(0,0,0,0.68);
 }
 
-
-/* =========================================
-   MOBILE
-   ========================================= */
+.article-note{
+  margin-top: 56px;
+}
 
 @media (max-width: 900px){
-  .notes-index{
-    grid-template-columns: 1fr;
-    gap: 36px;
-  }
-
   .notes-page{
     padding: 28px 18px 64px;
   }
 
-  .note-card img{
+  .journal-list{
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .journal-thumb img{
     height: 220px;
   }
 
-  .note-card h3{
+  .journal-title{
     font-size: 20px;
   }
 
-  .note-card .muted{
+  .journal-deck{
     font-size: 15px;
+    line-height: 1.5;
   }
 }
 
@@ -3078,10 +3089,4 @@ body.season-page .population-card td:first-child{
   font-size: 18px;
   line-height: 1.6;
   color: rgba(255,255,255,0.92);
-}
-.notes-index{
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important;
-  gap: 24px !important;
-  outline: 3px solid red !important;
 }
