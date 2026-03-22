@@ -3008,7 +3008,7 @@ body.season-page .population-card td:first-child{
   max-width: 760px;
   height: 36px;
   padding: 0 12px;
-  border-radius: 999px; /* pill */
+  border-radius: 6px; /* pill */
   border: 1px solid rgba(46, 88, 64, 0.35); /* soft green-grey */
   background: rgba(46, 88, 64, 0.06);       /* subtle tint */
   font-size: 14px;
