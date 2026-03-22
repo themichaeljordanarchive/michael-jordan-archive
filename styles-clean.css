@@ -3130,78 +3130,96 @@ body.season-page .population-card td:first-child{
   line-height: 1.6;
   color: rgba(255,255,255,0.92);
 }
+
 /* =========================================================
-   JERSEY RAIL TEST
+   DEV TEST — NEW JERSEY RAIL SYSTEM
    ========================================================= */
 
-.jersey-rail-test .season-index-panel{
-  margin-top: 40px;
+.season-rail-section{
+  margin-top: 28px;
 }
 
-.jersey-rail-test .season-rail-shell{
-  position: relative;
-}
-
-.jersey-rail-test .season-rail{
-  overflow-x: auto;
-  overflow-y: hidden;
-  padding-bottom: 8px;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: thin;
-}
-
-.jersey-rail-test .season-index{
+.season-rail{
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 1fr);
-  grid-template-columns: none;
-  gap: 18px;
-  align-items: stretch;
-  min-width: max-content;
+  gap: 22px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 10px;
+  scroll-snap-type: x proximity;
+  -webkit-overflow-scrolling: touch;
 }
 
-.jersey-rail-test .season-card{
-  min-height: 180px;
+.season-rail-card{
+  display: block;
+  color: inherit;
+  text-decoration: none;
   scroll-snap-align: start;
 }
 
-.jersey-rail-test .season-rail{
-  scroll-snap-type: x proximity;
-}
-
-@media (min-width: 1400px){
-  .jersey-rail-test .season-index{
-    grid-auto-columns: minmax(250px, 1fr);
-  }
-}
-
-@media (max-width: 1100px){
-  .jersey-rail-test .season-index{
-    grid-auto-columns: 260px;
-  }
-}
-
-@media (max-width: 700px){
-  .jersey-rail-test .season-index{
-    grid-auto-columns: 78vw;
-  }
-}
-.season-card-unc{
-  background-image: none !important;
-}
-
-.season-card-unc .season-thumb{
-  background: #111;
-  margin-bottom: 12px;
+.season-rail-thumb{
+  width: 100%;
   aspect-ratio: 3 / 4;
+  background: #151515;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 14px;
+  overflow: hidden;
 }
 
-.season-card-unc .season-thumb img{
+.season-rail-thumb img{
   width: 100%;
   height: 100%;
   object-fit: contain;
   display: block;
+}
+
+.season-rail-thumb--empty{
+  background: #f3f1ec;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.season-rail-year{
+  font-family: var(--sans);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.season-rail-status{
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.55);
+  margin-bottom: 8px;
+}
+
+.season-rail-metric{
+  font-size: 14px;
+  color: var(--ink);
+}
+
+.season-rail-card:hover .season-rail-year{
+  color: var(--accent-red);
+}
+
+@media (max-width: 1100px){
+  .season-rail{
+    grid-auto-columns: 230px;
+  }
+}
+
+@media (max-width: 700px){
+  .season-rail{
+    grid-auto-columns: 72vw;
+    gap: 16px;
+  }
+
+  .season-rail-thumb{
+    margin-bottom: 12px;
+  }
 }
