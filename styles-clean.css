@@ -2370,6 +2370,13 @@ color:#000;
   margin-bottom:16px;
 }
 
+.journal-thumb img{
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  display: block;
+}
+
 .note-card h3{
   margin:12px 0 8px;
   font-size:26px;
