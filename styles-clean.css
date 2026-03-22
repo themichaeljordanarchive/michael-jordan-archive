@@ -3190,6 +3190,8 @@ body.season-page .population-card td:first-child{
   background: none;
   border: none;
   padding: 0;
+  display: inline-block;
+  width: 100%;
 }
 
 .season-card-unc-new .season-thumb{
@@ -3200,7 +3202,8 @@ body.season-page .population-card td:first-child{
 
 .season-card-unc-new .season-thumb img{
   width: 100%;
-  aspect-ratio: 3 / 4;
+  height: auto;
+  max-height: 220px;
   object-fit: contain;
   display: block;
 }
