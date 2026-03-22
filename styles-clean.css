@@ -3130,3 +3130,59 @@ body.season-page .population-card td:first-child{
   line-height: 1.6;
   color: rgba(255,255,255,0.92);
 }
+/* =========================================================
+   JERSEY RAIL TEST
+   ========================================================= */
+
+.jersey-rail-test .season-index-panel{
+  margin-top: 40px;
+}
+
+.jersey-rail-test .season-rail-shell{
+  position: relative;
+}
+
+.jersey-rail-test .season-rail{
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding-bottom: 8px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.jersey-rail-test .season-index{
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(240px, 1fr);
+  grid-template-columns: none;
+  gap: 18px;
+  align-items: stretch;
+  min-width: max-content;
+}
+
+.jersey-rail-test .season-card{
+  min-height: 180px;
+  scroll-snap-align: start;
+}
+
+.jersey-rail-test .season-rail{
+  scroll-snap-type: x proximity;
+}
+
+@media (min-width: 1400px){
+  .jersey-rail-test .season-index{
+    grid-auto-columns: minmax(250px, 1fr);
+  }
+}
+
+@media (max-width: 1100px){
+  .jersey-rail-test .season-index{
+    grid-auto-columns: 260px;
+  }
+}
+
+@media (max-width: 700px){
+  .jersey-rail-test .season-index{
+    grid-auto-columns: 78vw;
+  }
+}
