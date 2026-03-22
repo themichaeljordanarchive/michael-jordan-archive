@@ -674,7 +674,7 @@ h5{
 .season-card-8586,
 .season-card-8485{
   background-image:
-    linear-gradient(rgba(0,0,0,0.16), rgba(0,0,0,0.16)),
+    linear-gradient(rgba(255,255,255,0.94), rgba(255,255,255,0.94)),
     var(--season-card-bg);
   background-size: cover;
   background-position: center;
@@ -697,7 +697,7 @@ h5{
 .season-card-8586:hover,
 .season-card-8485:hover{
   background-image:
-    linear-gradient(rgba(0,0,0,0.08), rgba(0,0,0,0.08)),
+    linear-gradient(rgba(255,255,255,0.88), rgba(255,255,255,0.88)),
     var(--season-card-bg);
 }
 
