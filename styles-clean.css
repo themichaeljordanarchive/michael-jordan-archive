@@ -3000,7 +3000,7 @@ body.season-page .population-card td:first-child{
 }
 #date-search .season-card{
   padding: 12px 16px;
-  border-radius: 0;
+  border-radius: 6;
 }
 
 #dateInput{
