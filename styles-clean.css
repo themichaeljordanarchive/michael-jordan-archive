@@ -941,7 +941,7 @@ body.preseason-page .table-hint{
 
 .season-card--detail{
   position: relative;
-  border-radius: 22px;
+  border-radius: 4px;
   padding: 56px;
   background: #fcfbf9;
   border: 1px solid rgba(0,0,0,0.07);
