@@ -2398,6 +2398,19 @@ color:#000;
   margin-bottom: 14px;
   text-transform: uppercase;
   color: rgba(0,0,0,0.5);
+  position: relative;
+  padding-left: 12px;
+}
+
+.journal-meta::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2px;
+  height: 14px;
+  background: #a21a1a;
 }
 
 .journal-title{
