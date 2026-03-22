@@ -3186,45 +3186,22 @@ body.season-page .population-card td:first-child{
     grid-auto-columns: 78vw;
   }
 }
-.season-card-unc-new{
-  background: none;
-  border: none;
-  padding: 0;
-  display: inline-block;
-  width: 100%;
-}
-
-.season-card-unc-new .season-thumb{
-  background: #7a0000;
-  margin-bottom: 14px;
-  padding: 12px;
-}
-
-.season-card-unc-new .season-thumb img{
-  width: 100%;
-  height: auto;
-  max-height: 220px;
-  object-fit: contain;
-  display: block;
-}
-.season-card-unc{
-  background-image: none !important;
-}
 .season-card-unc{
   background-image: none !important;
 }
 
 .season-card-unc .season-thumb{
-  background: #111 !important;
-  margin: 0 0 12px 0 !important;
-  padding: 8px !important;
-  height: 180px !important;
-  overflow: hidden !important;
+  background: #111;
+  margin-bottom: 12px;
+  aspect-ratio: 3 / 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .season-card-unc .season-thumb img{
-  display: block !important;
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: contain !important;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
 }
