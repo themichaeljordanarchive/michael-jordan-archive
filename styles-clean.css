@@ -3003,7 +3003,7 @@ body.season-page .population-card td:first-child{
   grid-row: auto !important;
 }
 /* =====================================================
-   ARTICLE HERO (FULL BLEED IMAGE)
+   ARTICLE HERO
    ===================================================== */
 
 .article-hero{
@@ -3021,21 +3021,24 @@ body.season-page .population-card td:first-child{
   object-position: center 30%;
 }
 
-/* =====================================================
-   ARTICLE HERO TEXT (FLOATING BELOW)
-   ===================================================== */
-
-.article-hero-text{
-  position: relative;
-  margin-top: -120px;
-  z-index: 2;
+.article-hero-overlay{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  padding-top: 16vh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.35)
+  );
 }
 
 .article-hero-inner{
   max-width: 900px;
-  margin: 0 auto;
-  padding: 0 24px;
-  text-align: center;
   color: #fff;
 }
 
@@ -3051,29 +3054,4 @@ body.season-page .population-card td:first-child{
   font-size: 18px;
   line-height: 1.6;
   color: rgba(255,255,255,0.92);
-}
-
-/* =====================================================
-   MOBILE
-   ===================================================== */
-
-@media (max-width: 700px){
-
-  .article-hero-image{
-    height: 55vh;
-  }
-
-  .article-hero-text{
-    margin-top: -80px;
-  }
-
-  .article-hero-inner{
-    padding: 0 18px;
-  }
-
-  .article-hero-deck{
-    font-size: 15px;
-    line-height: 1.55;
-  }
-
 }
