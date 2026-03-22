@@ -3013,7 +3013,7 @@ body.season-page .population-card td:first-child{
 .article-hero-image{
   display: block;
   width: 100%;
-  height: 80vh;
+  height: 60vh;
   object-fit: cover;
   object-position: center 20%;
 }
