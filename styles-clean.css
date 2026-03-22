@@ -869,7 +869,7 @@ body.preseason-page .table-hint{
   padding: 12px 12px;
   background: #fff;
   border: 1px solid var(--rule);
-  border-radius: 12px;
+  border-radius: 4px;
   font-size: 14px;
   color: var(--ink);
   outline: none;
