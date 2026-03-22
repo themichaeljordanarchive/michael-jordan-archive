@@ -901,7 +901,7 @@ body.preseason-page .table-hint{
 .site-footer{
   padding: 22px 24px 34px;
   border-top: 1px solid var(--rule);
-  background: transparent;
+  background: rgba(247,247,245,0.92);
   color: rgba(0,0,0,0.55);
   font-family: var(--sans);
   font-size: 12px;
@@ -2446,7 +2446,7 @@ color:#000;
 ========================= */
 
 .site-footer{
-font-size:13px;
+font-size:16px;
 color:#777;
 }
 
