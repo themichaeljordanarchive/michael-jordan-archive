@@ -3212,7 +3212,7 @@ body.season-page .population-card td:first-child{
   gap: 12px;
   overflow-x: auto;
   overflow-y: visible;
-  padding: 10px 0 10px;
+  padding: 10px 0 24px;
   scroll-snap-type: none;
   -webkit-overflow-scrolling: auto;
 }
