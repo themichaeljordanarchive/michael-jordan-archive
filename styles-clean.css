@@ -1646,6 +1646,7 @@ body.preseason-page .table-hint{
   margin: 6px 0 22px 0;
   max-width: 520px;
   color: rgba(0,0,0,0.45);
+  margin-bottom: 18px;
 }
 season-index-heading{
   margin-top: 48px;
