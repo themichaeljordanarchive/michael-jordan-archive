@@ -3306,3 +3306,8 @@ body.season-page .population-card td:first-child{
 .jersey-rail-test .season-rail{
   padding-top: 10px;
 }
+.jersey-rail-test .top-controls{
+  margin-left: auto;
+  display: flex;
+  gap: 12px;
+}
