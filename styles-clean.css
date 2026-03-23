@@ -784,6 +784,10 @@ main.methodology-page{
 .methodology-page h2{
   color: rgba(0,0,0,0.9)
 }
+.methodology-page{
+  font-size: 15px;
+  line-height: 1.6;
+}
 /* =========================================================
    PRESEASON PAGE (RESTORED MODULE STYLES)
    ========================================================= */
