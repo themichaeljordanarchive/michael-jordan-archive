@@ -3339,30 +3339,3 @@ body.season-page .population-card td:first-child{
     transform: scale(1.03);
   }
 }
-.jersey-rail-test .season-rail{
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: 280px;
-  gap: 12px;
-
-  overflow-x: auto;
-  overflow-y: hidden;
-
-  padding: 10px 0 10px;
-
-  -webkit-overflow-scrolling: touch;
-
-  cursor: grab;
-}
-
-.jersey-rail-test .season-rail:active{
-  cursor: grabbing;
-}
-
-.jersey-rail-test .season-rail-card{
-  pointer-events: auto;
-}
-
-.jersey-rail-test .season-rail{
-  pointer-events: auto;
-}
