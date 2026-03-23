@@ -3368,11 +3368,11 @@ body.season-page .population-card td:first-child{
   overflow-x: auto;
   overflow-y: hidden;
   padding: 0 0 14px;
-  margin: 0 0 18px;
+  margin: 6px 0 18px;
   white-space: nowrap;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 
 .jersey-rail-test .season-jump-strip::-webkit-scrollbar{
