@@ -3211,17 +3211,17 @@ body.season-page .population-card td:first-child{
   grid-auto-columns: 280px;
   gap: 12px;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   padding: 10px 0 10px;
-  scroll-snap-type: x proximity;
-  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: none;
+  -webkit-overflow-scrolling: auto;
 }
 
 .jersey-rail-test .season-rail-card{
-  display: block;
+  display: flex;
+  flex-direction: column;
   color: inherit;
   text-decoration: none;
-  scroll-snap-align: start;
   cursor: pointer;
 }
 
@@ -3322,8 +3322,13 @@ body.season-page .population-card td:first-child{
   .jersey-rail-test .season-topbar .population-toggle summary{
     min-width: 200px;
   }
-}@media (hover: hover) and (pointer: fine){
-  .jersey-rail-test .season-rail-card{
-    cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine){
+  .jersey-rail-test .season-rail-card:hover .season-rail-year{
+    color: var(--accent-red);
+  }
+
+  .jersey-rail-test .season-rail-card:hover .season-rail-thumb img{
+    transform: scale(1.03);
   }
 }
