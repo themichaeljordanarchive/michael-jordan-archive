@@ -3281,6 +3281,23 @@ body.season-page .population-card td:first-child{
 .jersey-rail-test .season-rail-card:hover .season-rail-thumb img{
   transform: scale(1.03);
 }
+.jersey-rail-test .season-rail{
+  pointer-events: auto;
+}
+
+.jersey-rail-test .season-rail-card{
+  position: relative;
+  z-index: 1;
+  pointer-events: auto;
+}
+
+.jersey-rail-test .season-rail-card *{
+  pointer-events: none;
+}
+
+.jersey-rail-test .season-rail-card{
+  pointer-events: auto;
+}
 
 @media (max-width: 1100px){
   .jersey-rail-test .season-rail{
@@ -3304,5 +3321,9 @@ body.season-page .population-card td:first-child{
 
   .jersey-rail-test .season-topbar .population-toggle summary{
     min-width: 200px;
+  }
+}@media (hover: hover) and (pointer: fine){
+  .jersey-rail-test .season-rail-card{
+    cursor: pointer;
   }
 }
