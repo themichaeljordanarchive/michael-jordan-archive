@@ -3391,7 +3391,8 @@ body.season-page .population-card td:first-child{
   outline: none;
   box-shadow: none;
   border: none;
-}.jersey-rail-test .research-actions{
+}
+.jersey-rail-test .research-actions{
   display: flex;
   justify-content: center;
   gap: 20px;
