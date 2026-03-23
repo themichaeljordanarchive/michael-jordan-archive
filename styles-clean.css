@@ -3429,3 +3429,12 @@ body.season-page .population-card td:first-child{
   height: 1px;
   background: currentColor;
 }
+.jersey-rail-test .season-rail-card,
+.jersey-rail-test .season-rail-card:focus,
+.jersey-rail-test .season-rail-card:focus-visible,
+.jersey-rail-test .season-rail-card:active,
+.jersey-rail-test .season-rail-card:target{
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
