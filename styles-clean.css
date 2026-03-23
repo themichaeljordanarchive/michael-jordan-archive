@@ -3143,7 +3143,7 @@ body.season-page .population-card td:first-child{
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 1fr);
-  gap: 22px;
+  gap: 18px;
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 10px;
@@ -3170,8 +3170,8 @@ body.season-page .population-card td:first-child{
 }
 
 .season-rail-thumb img{
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   object-fit: contain;
   display: block;
 }
