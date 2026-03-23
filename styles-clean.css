@@ -3145,6 +3145,9 @@ body.season-page .population-card td:first-child{
 .jersey-rail-test .research-note{
   max-width: none;
 }
+.jersey-rail-test .season-index-feature{
+  background: #f7f4ee;
+}
 
 /* Top intro */
 .jersey-rail-test .intro-text{
