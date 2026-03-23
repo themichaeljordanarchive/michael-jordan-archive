@@ -3149,7 +3149,6 @@ body.season-page .population-card td:first-child{
   background: #f3f0ea;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding: 32px 0 28px;
 }
 .jersey-rail-test .season-rail-section .season-rail{
   max-width: 1500px;
@@ -3222,10 +3221,10 @@ body.season-page .population-card td:first-child{
   grid-auto-columns: 280px;
   gap: 12px;
   overflow-x: auto;
-  overflow-y: visible;
+  overflow-y: hidden;
   padding: 32px 20px 28px;
-  scroll-snap-type: none;
-  -webkit-overflow-scrolling: auto;
+  max-width: 1500px;
+  margin: 0 auto;
 }
 
 .jersey-rail-test .season-rail-card{
