@@ -3319,5 +3319,5 @@ body.season-page .population-card td:first-child{
 .jersey-rail-test .top-controls{
   display: flex;
   gap: 12px;
-  align-items: flex-start;
+  align-items: center;
 }
