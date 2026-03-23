@@ -3312,3 +3312,17 @@ body.season-page .population-card td:first-child{
   width: max-content;
   margin-left: auto;
 }
+.jersey-rail-test .season-index-feature{
+  display: flex;
+  align-items: flex-start;
+}
+
+.jersey-rail-test .season-index-feature h1{
+  margin-right: auto;
+}
+
+.jersey-rail-test .top-controls{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
