@@ -3384,7 +3384,9 @@ body.season-page .population-card td:first-child{
   color: inherit;
   text-decoration: none;
 }
-
+.jersey-rail-test .season-jump-strip a:hover{
+  border-bottom: 1px solid rgba(0,0,0,0.85);
+}
 .jersey-rail-test .season-rail-card:target{
   outline: none;
   box-shadow: none;
