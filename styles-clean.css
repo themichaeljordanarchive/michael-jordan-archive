@@ -3366,86 +3366,26 @@ body.season-page .population-card td:first-child{
   display: flex;
   gap: 18px;
   overflow-x: auto;
-  overflow-y: hidden;
-  padding: 0 0 14px;
-  margin: 6px 0 18px;
   white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
+  margin: 6px 0 18px;
+  padding: 0 0 14px;
   border-bottom: 1px solid rgba(0,0,0,0.05);
 
+  font-family: var(--sans);
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(0,0,0,0.6);
 }
 
-.jersey-rail-test .season-jump-strip::-webkit-scrollbar{
-  display: none;
-}
-
-.jersey-rail-test .season-jump-link{
-  position: relative;
+.jersey-rail-test .season-jump-strip a{
   display: inline-block;
-  padding: 0 0 8px;
+  padding: 0 0 6px;
   color: inherit;
   text-decoration: none;
-  flex: 0 0 auto;
 }
 
-.jersey-rail-test .season-jump-link:hover{
-  color: rgba(0,0,0,0.88);
-}
-
-.jersey-rail-test .season-jump-link.is-active{
-  color: rgba(0,0,0,0.9);
-}
-
-.jersey-rail-test .season-jump-link.is-active::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: currentColor;
-}
-
-@media (max-width: 700px){
-  .jersey-rail-test .season-jump-strip{
-    gap: 14px;
-    margin: 0 0 16px;
-    padding: 0 0 12px;
-  }
-}
-.jersey-rail-test .season-jump-link.is-active{
+.jersey-rail-test .season-jump-strip a.is-active{
   color: rgba(0,0,0,0.85);
-}
-
-.jersey-rail-test .season-jump-link.is-active::after{
-  content: "";
-  display: block;
-  margin-top: 4px;
-  height: 1px;
-  background: currentColor;
-}
-.jersey-rail-test .season-rail-card,
-.jersey-rail-test .season-rail-card:focus,
-.jersey-rail-test .season-rail-card:focus-visible,
-.jersey-rail-test .season-rail-card:active,
-.jersey-rail-test .season-rail-card:target{
-  outline: none !important;
-  box-shadow: none !important;
-  -webkit-tap-highlight-color: transparent;
-}
-.jersey-rail-test .season-jump-link.is-active{
-  color: rgba(0,0,0,0.85);
-}
-
-.jersey-rail-test .season-jump-link.is-active::after{
-  content: "";
-  display: block;
-  margin-top: 4px;
-  height: 1px;
-  background: currentColor;
+  border-bottom: 1px solid currentColor;
 }
