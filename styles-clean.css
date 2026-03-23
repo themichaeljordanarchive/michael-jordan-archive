@@ -3245,6 +3245,8 @@ body.season-page .population-card td:first-child{
   outline: none;
   box-shadow: none;
   transition: transform 0.2s ease;
+
+  pointer-events: none;
 }
 
 .jersey-rail-test .season-rail-thumb--empty{
