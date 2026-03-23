@@ -3161,12 +3161,13 @@ body.season-page .population-card td:first-child{
 .season-rail-thumb{
   width: 100%;
   aspect-ratio: 3 / 4;
-  background: #151515;
+  background: #111;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
   overflow: hidden;
+  padding: 0;
 }
 
 .season-rail-thumb img{
