@@ -781,16 +781,10 @@ main.methodology-page{
   color: rgba(0,0,0,0.85);
   letter-spacing: 0.12em;
 }
-.methodology-page h2{
-  font-family: var(--sans);
-  font-size: 12px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(0,0,0,0.9);
-  margin-top: 48px;
-  margin-bottom: 12px;
-}
 
+.methodology-page h2{
+  color: rgba(0,0,0,0.9)
+}
 .methodology-page{
   font-size: 15px;
   line-height: 1.6;
