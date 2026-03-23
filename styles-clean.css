@@ -3174,13 +3174,29 @@ body.season-page .population-card td:first-child{
 
 .jersey-rail-test .season-topbar .population-toggle summary{
   min-width: 240px;
-  padding: 10px 14px;
+  padding: 10px 40px 10px 14px;
   border: 1px solid rgba(0,0,0,0.14);
   background: #fff;
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   line-height: 1.2;
+  position: relative;
+  cursor: pointer;
+  list-style: none;
+}
+
+.jersey-rail-test .season-topbar .population-toggle summary::after{
+  content: "▾";
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 11px;
+}
+
+.jersey-rail-test .season-topbar .population-toggle summary::-webkit-details-marker{
+  display: none;
 }
 
 /* Stamp */
