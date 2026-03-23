@@ -3298,6 +3298,9 @@ body.season-page .population-card td:first-child{
 .jersey-rail-test .season-rail-card{
   pointer-events: auto;
 }
+.jersey-rail-test .season-rail-card:hover{
+  outline: 2px solid red !important;
+}
 
 @media (max-width: 1100px){
   .jersey-rail-test .season-rail{
