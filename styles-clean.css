@@ -3285,11 +3285,11 @@ body.season-page .population-card td:first-child{
   background:
   linear-gradient(
     90deg,
-    #f3f1ec 0%,
-    #e7e2db 40%,
-    #dcd4ca 50%,
-    #e7e2db 60%,
-    #f3f1ec 100%
+    #ffffff 0%,
+    #f4f1ec 25%,
+    #e7e2db 50%,
+    #f4f1ec 75%,
+    #ffffff 100%
   );
 
   z-index: -1;
