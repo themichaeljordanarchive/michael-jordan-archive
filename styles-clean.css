@@ -3356,7 +3356,7 @@ body.season-page .population-card td:first-child{
   max-width: 600px;
 }
 .jersey-rail-test .season-rail-card:hover{
-  transform: translateY(-2px);
+  transform: translateY(-8px);
 }
 
 .jersey-rail-test .season-rail-thumb img{
