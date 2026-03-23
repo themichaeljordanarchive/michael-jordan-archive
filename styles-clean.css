@@ -3339,3 +3339,6 @@ body.season-page .population-card td:first-child{
     transform: scale(1.03);
   }
 }
+.jersey-rail-test a:hover {
+  outline: 2px solid red !important;
+}
