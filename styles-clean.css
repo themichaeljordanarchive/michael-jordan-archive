@@ -3373,6 +3373,11 @@ body.season-page .population-card td:first-child{
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
   border-bottom: 1px solid rgba(0,0,0,0.05);
+
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.6);
 }
 
 .jersey-rail-test .season-jump-strip::-webkit-scrollbar{
@@ -3383,11 +3388,8 @@ body.season-page .population-card td:first-child{
   position: relative;
   display: inline-block;
   padding: 0 0 8px;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  color: inherit;
   text-decoration: none;
-  color: rgba(0,0,0,0.58);
   flex: 0 0 auto;
 }
 
@@ -3406,7 +3408,7 @@ body.season-page .population-card td:first-child{
   right: 0;
   bottom: 0;
   height: 1px;
-  background: rgba(0,0,0,0.8);
+  background: currentColor;
 }
 
 @media (max-width: 700px){
@@ -3415,20 +3417,4 @@ body.season-page .population-card td:first-child{
     margin: 0 0 16px;
     padding: 0 0 12px;
   }
-
-  .jersey-rail-test .season-jump-link{
-    font-size: 10px;
-    letter-spacing: 0.1em;
-  }
-}
-.jersey-rail-test .season-jump-link.is-active{
-  color: rgba(0,0,0,0.85);
-}
-
-.jersey-rail-test .season-jump-link.is-active::after{
-  content: "";
-  display: block;
-  margin-top: 4px;
-  height: 1px;
-  background: currentColor;
 }
