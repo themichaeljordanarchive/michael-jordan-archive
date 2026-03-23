@@ -3387,5 +3387,5 @@ body.season-page .population-card td:first-child{
 
 .jersey-rail-test .season-jump-strip a.is-active{
   color: rgba(0,0,0,0.85);
-  border-bottom: 1px solid currentColor;
+  border-bottom: 1px solid rgba(0,0,0,0.85);
 }
