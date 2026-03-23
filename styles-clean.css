@@ -3438,3 +3438,14 @@ body.season-page .population-card td:first-child{
   box-shadow: none !important;
   -webkit-tap-highlight-color: transparent;
 }
+.jersey-rail-test .season-jump-link.is-active{
+  color: rgba(0,0,0,0.85);
+}
+
+.jersey-rail-test .season-jump-link.is-active::after{
+  content: "";
+  display: block;
+  margin-top: 4px;
+  height: 1px;
+  background: currentColor;
+}
