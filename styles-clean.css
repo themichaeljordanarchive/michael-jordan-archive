@@ -3258,3 +3258,9 @@ body.season-page .population-card td:first-child{
     margin-bottom: 12px;
   }
 }
+.jersey-rail-test .season-index-feature{
+  padding: 18px 32px 14px;
+}
+.jersey-rail-test .index-note{
+  margin: 10px 0 8px;
+}
