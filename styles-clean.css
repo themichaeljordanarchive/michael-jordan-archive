@@ -3421,3 +3421,14 @@ body.season-page .population-card td:first-child{
     letter-spacing: 0.1em;
   }
 }
+.jersey-rail-test .season-jump-link.is-active{
+  color: rgba(0,0,0,0.85);
+}
+
+.jersey-rail-test .season-jump-link.is-active::after{
+  content: "";
+  display: block;
+  margin-top: 4px;
+  height: 1px;
+  background: currentColor;
+}
