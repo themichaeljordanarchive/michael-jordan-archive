@@ -3432,17 +3432,3 @@ body.season-page .population-card td:first-child{
   color: rgba(0,0,0,0.55);
   flex: 0 0 auto;
 }
-
-.jersey-rail-test .season-jump-link.is-active{
-  color: rgba(0,0,0,0.9);
-}
-
-.jersey-rail-test .season-jump-link.is-active::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  background: rgba(0,0,0,0.85);
-}
