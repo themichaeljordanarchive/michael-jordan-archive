@@ -3268,3 +3268,39 @@ body.season-page .population-card td:first-child{
 .jersey-rail-test .research-note{
   max-width: none;
 }
+.jersey-rail-test .season-rail-section{
+  position: relative;
+  padding: 28px 0 24px;
+}
+
+.jersey-rail-test .season-rail-section::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  top: 0;
+  bottom: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #0f0f0f 0%,
+      #2a0000 40%,
+      #5a0000 50%,
+      #2a0000 60%,
+      #0f0f0f 100%
+    );
+
+  z-index: -1;
+}
+.jersey-rail-test .season-rail{
+  position: relative;
+  z-index: 1;
+}
+
+.jersey-rail-test .rail-heading{
+  position: relative;
+  z-index: 1;
+  color: #fff;
+}
