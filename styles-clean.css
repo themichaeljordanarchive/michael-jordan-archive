@@ -3457,10 +3457,7 @@ body.season-page .population-card td:first-child{
 .sneaker-index .season-rail-thumb{
   aspect-ratio: 4 / 3;
 }
-.methodology-page h3 + *{
-  margin-top: 12px;
-}
-
 .methodology-page h3{
-  margin-top: 40px;
+  margin-top: 52px;
+  margin-bottom: 14px;
 }
