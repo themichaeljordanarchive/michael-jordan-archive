@@ -3172,7 +3172,7 @@ body.season-page .population-card td:first-child{
 .season-rail{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: 300px;
+  grid-auto-columns: 280px;
   gap: 12px;
   overflow-x: auto;
   overflow-y: hidden;
