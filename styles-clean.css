@@ -361,9 +361,11 @@ h5{
 .hero-next{ right: 18px; }
 .hero-arrow:hover{ background: rgba(0,0,0,0.65); }
 
- .hero-bleed{
-  padding: 56px 0 !important;
-  min-height: auto !important;
+.hero-bleed img{
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 /* =========================================================
