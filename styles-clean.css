@@ -800,15 +800,7 @@ main.methodology-page{
   color: rgba(0,0,0,0.55);
 }
 
-.methodology-page #research-note{
-  font-family: var(--sans);
-  font-size: 15px;
-  line-height: 1.65;
-  letter-spacing: normal;
-  text-transform: none;
-  color: rgba(0,0,0,0.9);
-  margin-top: 24px;
-}
+
 /* =========================================================
    PRESEASON PAGE (RESTORED MODULE STYLES)
    ========================================================= */
@@ -3371,30 +3363,6 @@ body.season-page .population-card td:first-child{
 
 .jersey-rail-test .season-rail-card:hover .season-rail-thumb img{
   transform: scale(1.03);
-}
-.jersey-rail-test .season-rail{
-  pointer-events: auto;
-}
-
-.jersey-rail-test .season-rail-card{
-  position: relative;
-  z-index: 1;
-  pointer-events: auto;
-}
-
-.jersey-rail-test .season-rail-card *{
-  pointer-events: none;
-}
-
-.jersey-rail-test .season-rail-card{
-  pointer-events: auto;
-}
-.jersey-rail-test .season-rail-thumb:hover{
-  outline: 2px solid blue !important;
-}
-
-.jersey-rail-test .season-rail-card:hover{
-  outline: none !important;
 }
 
 @media (max-width: 1100px){
