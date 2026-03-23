@@ -3421,14 +3421,3 @@ body.season-page .population-card td:first-child{
     letter-spacing: 0.1em;
   }
 }
-.jersey-rail-test .season-jump-link{
-  position: relative;
-  display: inline-block;
-  padding: 0 0 8px;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  text-decoration: none;
-  color: rgba(0,0,0,0.55);
-  flex: 0 0 auto;
-}
