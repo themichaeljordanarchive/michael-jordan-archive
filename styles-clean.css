@@ -3386,7 +3386,10 @@ body.season-page .population-card td:first-child{
   color: inherit;
   text-decoration: none;
   flex: 0 0 auto;
-  font: inherit;
+
+  font-size: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
 }
 
 .jersey-rail-test .season-jump-link:hover{
