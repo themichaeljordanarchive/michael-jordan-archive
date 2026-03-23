@@ -3444,6 +3444,7 @@ body.season-page .population-card td:first-child{
   justify-content: center;
   gap: 20px;
   margin: 40px 0 60px;
+  flex-wrap: nowrap;
 }
 
 .jersey-rail-test .research-box{
