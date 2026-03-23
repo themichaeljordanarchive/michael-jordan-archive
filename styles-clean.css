@@ -775,6 +775,11 @@ main.methodology-page{
 .methodology-page ul{
   margin-bottom: 18px;
 }
+.methodology-page h3{
+  margin-top: 36px;
+  margin-bottom: 10px;
+  color: rgba(0,0,0,0.85);
+}
 /* =========================================================
    PRESEASON PAGE (RESTORED MODULE STYLES)
    ========================================================= */
