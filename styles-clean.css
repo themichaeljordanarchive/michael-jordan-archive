@@ -3341,3 +3341,14 @@ body.season-page .population-card td:first-child{
   flex: 0 0 auto;
   margin-bottom: 18px;
 }
+.jersey-rail-test .top-controls{
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  margin-left: auto;
+  align-items: flex-end;
+}
+.jersey-rail-test .section-divider{
+  margin-top: 12px;
+  margin-bottom: 18px;
+}
