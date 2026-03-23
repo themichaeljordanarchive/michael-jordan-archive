@@ -3374,6 +3374,9 @@ body.season-page .population-card td:first-child{
   scrollbar-width: none;
   border-bottom: 1px solid rgba(0,0,0,0.05);
 
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
   color: rgba(0,0,0,0.6);
 }
 
