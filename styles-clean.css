@@ -3146,17 +3146,16 @@ body.season-page .population-card td:first-child{
 }
 
 .jersey-rail-test .population-toggle summary{
-  height: 64px;
-  display: flex;
-  align-items: center;
-  padding: 0 16px;
-
-  border: 1px solid rgba(0,0,0,0.12);
+  padding: 10px 14px;
+  border: 1px solid rgba(0,0,0,0.14);
   background: #fff;
 
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+
+  width: auto;
+  min-width: 220px;
 }
 
 .index-note{
