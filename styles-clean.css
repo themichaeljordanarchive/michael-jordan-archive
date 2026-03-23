@@ -3150,11 +3150,6 @@ body.season-page .population-card td:first-child{
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
 }
-.jersey-rail-test .season-rail-section .season-rail{
-  max-width: 1500px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
 
 /* Top intro */
 .jersey-rail-test .intro-text{
