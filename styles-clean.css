@@ -800,15 +800,6 @@ main.methodology-page{
   color: rgba(0,0,0,0.55);
 }
 
-.methodology-page #research-note{
-  font-family: var(--serif);
-  font-size: 15px;
-  line-height: 1.65;
-  letter-spacing: normal;
-  text-transform: none;
-  color: rgba(0,0,0,0.9);
-  margin-top: 24px;
-}
 /* =========================================================
    PRESEASON PAGE (RESTORED MODULE STYLES)
    ========================================================= */
