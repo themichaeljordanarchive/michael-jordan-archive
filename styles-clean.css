@@ -3397,6 +3397,17 @@ body.season-page .population-card td:first-child{
   .jersey-rail-test .season-rail-card:hover .season-rail-thumb img{
     transform: scale(1.03);
   }
+   .jersey-rail-test .research-actions{
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .jersey-rail-test .research-box{
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
 }
 .jersey-rail-test .season-jump-strip{
   display: flex;
