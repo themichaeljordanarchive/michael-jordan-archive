@@ -3355,9 +3355,6 @@ body.season-page .population-card td:first-child{
   margin-bottom: 24px;
   max-width: 600px;
 }
-.jersey-rail-test .season-rail-card:hover{
-  transform: translateY(-8px);
-}
 
 .jersey-rail-test .season-rail-thumb img{
   transition: transform 0.2s ease;
@@ -3369,4 +3366,11 @@ body.season-page .population-card td:first-child{
 
 .jersey-rail-test .season-rail-card{
   cursor: pointer;
+}
+.jersey-rail-test .season-rail-thumb img{
+  transition: transform 0.2s ease;
+}
+
+.jersey-rail-test .season-rail-card:hover .season-rail-thumb img{
+  transform: scale(1.03);
 }
