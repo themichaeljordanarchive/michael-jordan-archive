@@ -3304,3 +3304,8 @@ body.season-page .population-card td:first-child{
   z-index: 1;
   color: #fff;
 }
+.jersey-rail-test .season-rail-year,
+.jersey-rail-test .season-rail-status,
+.jersey-rail-test .season-rail-metric{
+  color: #fff;
+}
