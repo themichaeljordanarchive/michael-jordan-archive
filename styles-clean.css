@@ -3339,3 +3339,38 @@ body.season-page .population-card td:first-child{
     transform: scale(1.03);
   }
 }
+/* --- HOVER FIX LAYER TEST --- */
+
+.jersey-rail-test .season-index-feature{
+  position: relative;
+}
+
+.jersey-rail-test .season-topbar{
+  position: relative;
+  z-index: 1;
+}
+
+.jersey-rail-test .population-toggle{
+  position: relative;
+  z-index: 2;
+}
+
+.jersey-rail-test .section-divider{
+  position: relative;
+  z-index: 1;
+}
+
+.jersey-rail-test .season-rail-section{
+  position: relative;
+  z-index: 5;
+}
+
+.jersey-rail-test .season-rail{
+  position: relative;
+  z-index: 5;
+}
+
+.jersey-rail-test .season-rail-card{
+  position: relative;
+  z-index: 6;
+}
