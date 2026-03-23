@@ -361,6 +361,10 @@ h5{
 .hero-next{ right: 18px; }
 .hero-arrow:hover{ background: rgba(0,0,0,0.65); }
 
+.methodology-page .hero-bleed{
+  padding: 56px 0 !important;
+  min-height: auto !important;
+}
 
 /* =========================================================
    LINKS (preseason + archive inline)
