@@ -3131,19 +3131,48 @@ body.season-page .population-card td:first-child{
   line-height: 1.6;
   color: rgba(255,255,255,0.92);
 }
-
 /* =========================================================
    DEV TEST — NEW JERSEY RAIL SYSTEM
    ========================================================= */
 
+.season-index-intro{
+  margin-bottom: 20px;
+}
+
+.registry-stamp{
+  display: inline-block;
+  margin-right: 18px;
+  vertical-align: top;
+}
+
+.population-toggle{
+  display: inline-block;
+  min-width: 280px;
+  vertical-align: top;
+}
+
+.index-note{
+  margin: 18px 0 14px;
+}
+
 .season-rail-section{
-  margin-top: 28px;
+  margin-top: 0;
+  padding-top: 10px;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.rail-heading{
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  color: rgba(0,0,0,0.6);
 }
 
 .season-rail{
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: minmax(240px, 1fr);
+  grid-auto-columns: 240px;
   gap: 12px;
   overflow-x: auto;
   overflow-y: hidden;
@@ -3162,12 +3191,14 @@ body.season-page .population-card td:first-child{
 .season-rail-thumb{
   width: 100%;
   aspect-ratio: 3 / 4;
-  background: #151515;
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
   overflow: hidden;
+  padding: 0;
+  border: none;
 }
 
 .season-rail-thumb img{
@@ -3175,6 +3206,9 @@ body.season-page .population-card td:first-child{
   height: 100%;
   object-fit: contain;
   display: block;
+  border: none;
+  outline: none;
+  box-shadow: none;
 }
 
 .season-rail-thumb--empty{
@@ -3206,11 +3240,6 @@ body.season-page .population-card td:first-child{
 
 .season-rail-card:hover .season-rail-year{
   color: var(--accent-red);
-}
-
-.season-rail-section{
-  border-top: 1px solid rgba(0,0,0,0.06);
-  padding-top: 16px;
 }
 
 @media (max-width: 1100px){
