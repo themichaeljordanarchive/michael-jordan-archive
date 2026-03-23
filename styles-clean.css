@@ -788,6 +788,22 @@ main.methodology-page{
   font-size: 15px;
   line-height: 1.6;
 }
+.methodology-page p{
+  font-size: 15px;
+  line-height: 1.65;
+  color: rgba(0,0,0,0.85);
+}
+
+.methodology-page .muted{
+  font-size: 14px;
+  color: rgba(0,0,0,0.55);
+}
+
+.methodology-page #research-note{
+  font-size: 16px;
+  color: rgba(0,0,0,0.9);
+  margin-top: 24px;
+}
 /* =========================================================
    PRESEASON PAGE (RESTORED MODULE STYLES)
    ========================================================= */
