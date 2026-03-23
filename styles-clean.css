@@ -3362,3 +3362,62 @@ body.season-page .population-card td:first-child{
     transform: scale(1.03);
   }
 }
+.jersey-rail-test .season-jump-strip{
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0 0 14px;
+  margin: 0 0 18px;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.jersey-rail-test .season-jump-strip::-webkit-scrollbar{
+  display: none;
+}
+
+.jersey-rail-test .season-jump-link{
+  position: relative;
+  display: inline-block;
+  padding: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(0,0,0,0.58);
+  flex: 0 0 auto;
+}
+
+.jersey-rail-test .season-jump-link:hover{
+  color: rgba(0,0,0,0.88);
+}
+
+.jersey-rail-test .season-jump-link.is-active{
+  color: rgba(0,0,0,0.9);
+}
+
+.jersey-rail-test .season-jump-link.is-active::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: rgba(0,0,0,0.8);
+}
+
+@media (max-width: 700px){
+  .jersey-rail-test .season-jump-strip{
+    gap: 14px;
+    margin: 0 0 16px;
+    padding: 0 0 12px;
+  }
+
+  .jersey-rail-test .season-jump-link{
+    font-size: 10px;
+    letter-spacing: 0.1em;
+  }
+}
