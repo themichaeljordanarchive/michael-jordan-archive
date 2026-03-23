@@ -3143,7 +3143,7 @@ body.season-page .population-card td:first-child{
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(240px, 1fr);
-  gap: 22px;
+  gap: 16px;
   overflow-x: auto;
   overflow-y: hidden;
   padding-bottom: 10px;
