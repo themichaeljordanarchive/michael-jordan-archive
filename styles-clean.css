@@ -658,15 +658,7 @@ h5{
 .selected-work{
   margin: 0;
   padding: 72px 0 40px;
-  background: linear-gradient(
-  90deg,
-  #1f2a44 0%,
-  #243252 35%,
-  #1f2a44 70%,
-  #1b2540 100%
-);
-background-size: 200% 200%;
-animation: archiveBandDrift 24s ease-in-out infinite;
+  background: #1f2a44;
   color: rgba(255,255,255,0.85);
 }
 
@@ -758,12 +750,6 @@ animation: archiveBandDrift 24s ease-in-out infinite;
 .selected-work{
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-}
-
-@keyframes archiveBandDrift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
 }
 
 @media (max-width: 900px){
