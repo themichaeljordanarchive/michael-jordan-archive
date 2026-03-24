@@ -752,13 +752,9 @@ h5{
 }
 
 .home-research-feature-image{
-  height: 100%;
-  max-height: 100%;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
-}
-
-.home-research-feature-inner{
-  align-items: stretch;
+  background: #f3f0ea;
 }
 
 .home-research-feature-image img{
