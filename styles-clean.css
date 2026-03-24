@@ -4002,7 +4002,7 @@ body.season-page .population-card td:first-child{
   padding: 0 32px;
 
   /* BREAK OUT OF CONTAINER */
-  width: 90vw;
+  width: 80vw;
   margin-left: calc(50% - 50vw);
 }
 
