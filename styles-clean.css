@@ -452,10 +452,10 @@ h5{
 }
 
 .home-grid{
-  margin-top: 28px;
+  margin-top: 36px;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px;
+  gap: 28px 22px;
 }
 
 .home-tile{
@@ -463,10 +463,14 @@ h5{
   text-decoration: none;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 4px;
-  padding: 22px 22px 20px;
+  padding: 26px 24px 24px;
   background: #f7f7f5;
   position: relative;
-  transition: border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  transition: 
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
 }
 
 .home-tile::before{
@@ -481,9 +485,10 @@ h5{
 }
 
 .home-tile:hover{
-  border-color: rgba(157,15,15,0.45);
+  border-color: rgba(157,15,15,0.4);
   transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  background: #ffffff;
 }
 
 .home-tile:active{
@@ -497,6 +502,23 @@ h5{
   margin-bottom: 6px;
 }
 
+.tile-sub{
+  color: rgba(0,0,0,0.58);
+}
+
+.home-tile:nth-child(1),
+.home-tile:nth-child(2){
+  padding: 28px 26px 26px;
+}
+
+.home-tile::before{
+  transition: background 0.2s ease;
+}
+
+.home-tile:hover::before{
+  background: rgba(157,15,15,0.9);
+}
+
 .home-list{
   margin-top: 14px;
   padding-left: 20px;
@@ -505,6 +527,7 @@ h5{
 .home-list li{
   margin-bottom: 12px;
 }
+
 
 /* Archive & Population Research */
 .home-research{
