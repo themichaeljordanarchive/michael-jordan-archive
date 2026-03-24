@@ -766,17 +766,17 @@ h5{
 }
 
 .home-research-feature-title{
-  margin: 0 0 20px;
+  margin: 0 0 14px;
   font-family: var(--serif);
-  font-size: 28px;
+  font-size: 26px;
   line-height: 1.08;
   color: rgba(0,0,0,0.95);
 }
 
 .home-research-feature-text{
   margin: 0 0 20px;
-  font-size: 17px;
-  line-height: 1.75;
+  font-size: 15px;
+  line-height: 1.65;
   color: rgba(0,0,0,0.74);
   margin-bottom: 14px;
 }
