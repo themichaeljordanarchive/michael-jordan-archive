@@ -497,7 +497,7 @@ h5{
   background: #f7f5f1;
   border: 1px solid rgba(0,0,0,0.06);
   position: relative;
-  text-align: center;
+  text-align: left;
 }
 
 .home-research::before{
@@ -514,6 +514,7 @@ h5{
   max-width: 720px;
   margin: 0 auto 30px;
   color: rgba(0,0,0,0.74);
+  text-align: center;
 }
 
 .home-research .section-title{
