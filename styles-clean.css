@@ -626,14 +626,12 @@ h5{
     aspect-ratio: 4 / 3;
   }
 
-    .home-research-feature-image{
-    width: 100%;
-    max-width: none;
-    margin-left: 0;
-    margin-right: 0;
-    justify-self: stretch;
-    align-self: start;
-  }
+  .home-research-feature-image{
+  width: calc(100% + 48px);
+  max-width: none;
+  margin: 0 0 20px -24px;
+  aspect-ratio: 4 / 3;
+}
 
   .home-research-feature-image img{
     width: 100%;
