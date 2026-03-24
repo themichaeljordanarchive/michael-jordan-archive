@@ -747,14 +747,18 @@ h5{
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(320px, 480px) minmax(0, 1fr);
-  gap: 72px;
+  gap: 96px;
   align-items: center;
 }
 
 .home-research-feature-image{
-  aspect-ratio: 4 / 5;
+  height: 100%;
+  max-height: 100%;
   overflow: hidden;
-  background: #f3f0ea;
+}
+
+.home-research-feature-inner{
+  align-items: stretch;
 }
 
 .home-research-feature-image img{
@@ -832,6 +836,21 @@ h5{
 .home-method-link:hover{
   color: rgba(0,0,0,0.92);
   border-bottom-color: rgba(0,0,0,0.7);
+}
+
+.home-research-feature-copy{
+  position: relative;
+  padding-left: 28px;
+}
+
+.home-research-feature-copy::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(0,0,0,0.12);
 }
 
 @media (max-width: 900px){
