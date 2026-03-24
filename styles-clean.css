@@ -739,7 +739,7 @@ h5{
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(320px, 480px) minmax(0, 1fr);
-  gap: 48px;
+  gap: 72px;
   align-items: center;
 }
 
