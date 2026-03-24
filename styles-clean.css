@@ -4066,8 +4066,8 @@ body.season-page .population-card td:first-child{
 
 .archive-band .archive-grid{
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
+  margin: 0;
+  padding: 0 32px;
 }
 .archive-band{
   margin-top: 48px;
