@@ -734,6 +734,14 @@ h5{
   padding: 0 24px;
 }
 
+.home-research-feature-image{
+  margin-left: -10px;
+}
+
+.home-research-feature-copy{
+  margin-right: -10px;
+}
+
 .home-research-feature-inner{
   max-width: 1180px;
   margin: 0 auto;
