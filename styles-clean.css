@@ -753,11 +753,11 @@ h5{
 }
 
 .selected-work-card{
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .selected-work-card:hover{
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 @media (max-width: 900px){
