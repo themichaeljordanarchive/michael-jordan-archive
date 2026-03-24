@@ -748,6 +748,7 @@ h5{
 
 .selected-work-card:hover .selected-work-image img{
   transform: scale(1.02);
+  
 }
 
 .selected-work-card:hover .selected-work-card-title{
