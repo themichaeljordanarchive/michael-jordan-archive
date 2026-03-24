@@ -4069,3 +4069,11 @@ body.season-page .population-card td:first-child{
   margin: 0 auto;
   padding: 0 24px;
 }
+.archive-band{
+  margin-top: 48px;
+  padding: 48px 0 56px;
+  background: #f3f0ea;
+
+  width: calc(100vw - 64px);
+  margin-left: calc(50% - 50vw + 32px);
+}
