@@ -509,6 +509,21 @@ h5{
   gap: 24px;
 }
 
+.home-research-inner{
+  position: relative;
+  padding-left: 18px;
+}
+
+.home-research-inner::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  background: rgba(157,15,15,0.45);
+}
+
 .home-research::before{
   content: "";
   position: absolute;
