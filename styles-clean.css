@@ -604,6 +604,10 @@ h5{
   .home-research-points{
     grid-template-columns: 1fr;
   }
+
+  .home-research-feature-copy{
+    padding-left: 0;
+  }
 }
 
 /* =========================================================
