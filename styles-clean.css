@@ -3433,8 +3433,8 @@ body.season-page .population-card td:first-child{
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin: 40px 0 60px;
-  flex-wrap: nowrap;
+  margin: 60px 0 80px;
+  flex-wrap: wrap;
 }
 
 .jersey-rail-test .research-box{
@@ -3448,6 +3448,9 @@ body.season-page .population-card td:first-child{
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(0,0,0,0.7);
+  
+  width: 220px;
+  text-align: center;
 }
 
 .jersey-rail-test .research-box:hover{
