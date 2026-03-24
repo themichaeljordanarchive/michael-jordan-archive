@@ -3920,8 +3920,7 @@ body.season-page .population-card td:first-child{
     display: none;
   }
 }
-
-/* ===== ARCHIVE GRID (ISOLATED — SAFE) ===== */
+/* ===== ARCHIVE INDEX — ISOLATED PORTRAIT CARDS ===== */
 
 .archive-grid{
   margin-top: 36px;
@@ -3930,24 +3929,66 @@ body.season-page .population-card td:first-child{
   gap: 28px;
 }
 
-.archive-grid .home-tile{
-  padding: 22px 22px 20px;
+.archive-card{
+  display: block;
+  text-decoration: none;
   border: 1px solid rgba(0,0,0,0.06);
   background: #f7f7f5;
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-.archive-grid .home-tile:hover{
+.archive-card:hover{
   transform: translateY(-2px);
   border-color: rgba(157,15,15,0.28);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
-.archive-grid .tile-title{
+.archive-card-image{
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #ece8e1;
+}
+
+.archive-card-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.archive-card:hover .archive-card-image img{
+  transform: scale(1.02);
+}
+
+.archive-card-body{
+  padding: 16px 18px 18px;
+}
+
+.archive-card-title{
+  margin: 0 0 6px;
+  font-weight: 700;
   font-size: 16px;
-  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: 0.01em;
+  color: rgba(0,0,0,0.92);
 }
 
-.archive-grid .tile-sub{
+.archive-card-text{
+  margin: 0;
   font-size: 14px;
-  color: rgba(0,0,0,0.6);
+  line-height: 1.6;
+  color: rgba(0,0,0,0.62);
+}
+
+@media (max-width: 900px){
+  .archive-grid{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .archive-card-image{
+    aspect-ratio: 4 / 3;
+  }
 }
