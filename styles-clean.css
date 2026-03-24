@@ -726,6 +726,120 @@ h5{
   margin: 32px auto 12px;
 }
 /* =========================================================
+   HOME — RESEARCH FEATURE
+   ========================================================= */
+
+.home-research-feature{
+  margin: 72px 0 0;
+  padding: 0 24px;
+}
+
+.home-research-feature-inner{
+  max-width: 1180px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 480px) minmax(0, 1fr);
+  gap: 72px;
+  align-items: center;
+}
+
+.home-research-feature-image{
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #f3f0ea;
+}
+
+.home-research-feature-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.home-research-feature-copy{
+  max-width: 560px;
+}
+
+.home-research-feature-title{
+  margin: 0 0 20px;
+  font-family: var(--serif);
+  font-size: 44px;
+  line-height: 1.08;
+  color: rgba(0,0,0,0.95);
+}
+
+.home-research-feature-text{
+  margin: 0 0 20px;
+  font-size: 17px;
+  line-height: 1.75;
+  color: rgba(0,0,0,0.74);
+}
+
+.home-research-feature-list{
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+
+.home-research-feature-list li{
+  margin-bottom: 10px;
+  color: rgba(0,0,0,0.82);
+  line-height: 1.6;
+}
+
+.home-method-card{
+  margin-top: 28px;
+  padding: 18px 20px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #f7f7f5;
+  max-width: 420px;
+}
+
+.home-method-label{
+  margin-bottom: 8px;
+  font-family: var(--sans);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(0,0,0,0.9);
+}
+
+.home-method-text{
+  margin: 0 0 10px;
+  color: rgba(0,0,0,0.72);
+  line-height: 1.6;
+}
+
+.home-method-link{
+  font-family: var(--sans);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: rgba(0,0,0,0.72);
+  border-bottom: 1px solid rgba(0,0,0,0.16);
+  padding-bottom: 3px;
+}
+
+.home-method-link:hover{
+  color: rgba(0,0,0,0.92);
+  border-bottom-color: rgba(0,0,0,0.7);
+}
+
+@media (max-width: 900px){
+  .home-research-feature-inner{
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .home-research-feature-image{
+    aspect-ratio: 4 / 3;
+  }
+
+  .home-research-feature-title{
+    font-size: 34px;
+  }
+}
+/* =========================================================
    JERSEY ARCHIVE — FEATURE LINK
    ========================================================= */
 
