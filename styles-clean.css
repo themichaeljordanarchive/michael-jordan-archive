@@ -676,7 +676,7 @@ h5{
 .selected-work-title{
   margin: 0 0 14px;
   font-family: var(--sans);
-  font-size: 12px;
+  font-size: 18px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(255,255,255,0.95);
@@ -726,7 +726,7 @@ h5{
 
 .selected-work-card-title{
   margin: 0 0 8px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.25;
   color: rgba(255,255,255,0.95);
 }
