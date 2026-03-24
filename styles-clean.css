@@ -628,8 +628,9 @@ h5{
 
   .home-research-feature-image{
   width: calc(100% + 48px);
-  max-width: none;
-  margin: 0 0 20px -24px;
+  margin-left: -24px;
+  margin-right: -24px;
+  margin-bottom: 20px;
   aspect-ratio: 4 / 3;
 }
 
