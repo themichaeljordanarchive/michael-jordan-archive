@@ -3839,3 +3839,8 @@ body.season-page .population-card td:first-child{
   margin-bottom: 14px;
   color: rgba(0,0,0,0.95);
 }
+@media (max-width: 900px){
+  .home-research-feature-copy::before{
+    display: none;
+  }
+}
