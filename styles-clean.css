@@ -4073,8 +4073,4 @@ body.season-page .population-card td:first-child{
   padding: 48px 0 56px;
   background: #f0ede6;
   overflow: hidden;
-
-  width: min(90vw, 1400px);
-  margin-left: auto;
-  margin-right: auto;
 }
