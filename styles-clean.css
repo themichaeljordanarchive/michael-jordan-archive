@@ -3992,3 +3992,65 @@ body.season-page .population-card td:first-child{
     aspect-ratio: 4 / 3;
   }
 }
+/* ===== ARCHIVE SCROLL ROW ===== */
+
+.archive-scroll{
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  padding: 0 24px;
+  margin-top: 36px;
+
+  scroll-snap-type: x mandatory;
+}
+
+.archive-scroll::-webkit-scrollbar{
+  display: none;
+}
+
+/* CARD */
+.archive-card{
+  flex: 0 0 260px;   /* card width */
+  text-decoration: none;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #f7f7f5;
+  overflow: hidden;
+  scroll-snap-align: start;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.archive-card:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* IMAGE */
+.archive-card-image{
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.archive-card-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* TEXT */
+.archive-card-body{
+  padding: 14px 16px 16px;
+}
+
+.archive-card-title{
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: rgba(0,0,0,0.9);
+}
+
+.archive-card-text{
+  font-size: 14px;
+  color: rgba(0,0,0,0.6);
+  line-height: 1.5;
+}
