@@ -736,19 +736,9 @@ h5{
   color: rgba(255,255,255,0.75);
   line-height: 1.6;
 }
-@keyframes archiveBreath {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.015); }
-  100% { transform: scale(1); }
-}
-
-.selected-work-image img{
-  animation: archiveBreath 16s ease-in-out infinite;
-}
 
 .selected-work-card:hover .selected-work-image img{
   transform: scale(1.02);
-  animation: none;
 }
 
 .selected-work-card:hover .selected-work-card-title{
