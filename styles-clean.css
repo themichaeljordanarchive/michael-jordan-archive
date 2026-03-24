@@ -626,11 +626,9 @@ h5{
     aspect-ratio: 4 / 3;
   }
 
-  .home-research-feature-image{
-  width: calc(100% + 48px);
-  margin-left: -24px;
-  margin-right: -24px;
-  margin-bottom: 20px;
+ .home-research-feature-image{
+  width: 100%;
+  margin: 0 0 20px;
   aspect-ratio: 4 / 3;
 }
 
