@@ -3998,12 +3998,11 @@ body.season-page .population-card td:first-child{
   display: flex;
   gap: 28px;
   overflow-x: auto;
-
   padding: 0 32px;
-
-  /* BREAK OUT OF CONTAINER */
-  width: 80vw;
-  margin-left: calc(50% - 50vw);
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  scroll-padding-left: 32px;
 }
 
 .archive-scroll::-webkit-scrollbar{
@@ -4072,8 +4071,6 @@ body.season-page .population-card td:first-child{
 .archive-band{
   margin-top: 48px;
   padding: 48px 0 56px;
-  background: #f3f0ea;
-
-  width: calc(100vw - 64px);
-  margin-left: calc(50% - 50vw + 32px);
+  background: #f0ede6;
+  overflow: hidden;
 }
