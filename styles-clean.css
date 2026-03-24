@@ -842,7 +842,7 @@ h5{
 .home-research-feature-copy::before{
   content: "";
   position: absolute;
-  left: 0;
+  left: -16px;
 
   top: 16px;
   bottom: 52px;
