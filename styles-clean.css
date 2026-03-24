@@ -606,9 +606,15 @@ h5{
   }
 }
 
+/* =========================================================
+   HOME — SELECTED WORK (FULL BAND)
+   ========================================================= */
+
 .selected-work{
-  margin: 84px 0 0;
-  padding: 0 0 20px;
+  margin: 0;
+  padding: 72px 0 40px;
+  background: #1f2a44;
+  color: rgba(255,255,255,0.85);
 }
 
 .selected-work-inner{
@@ -628,12 +634,12 @@ h5{
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.9);
+  color: rgba(255,255,255,0.95);
 }
 
 .selected-work-intro{
   margin: 0;
-  color: rgba(0,0,0,0.75);
+  color: rgba(255,255,255,0.7);
   line-height: 1.7;
 }
 
@@ -652,7 +658,7 @@ h5{
 .selected-work-image{
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  background: #f3f0ea;
+  background: rgba(255,255,255,0.06);
   margin-bottom: 14px;
 }
 
@@ -670,19 +676,19 @@ h5{
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(0,0,0,0.55);
+  color: rgba(255,255,255,0.5);
 }
 
 .selected-work-card-title{
   margin: 0 0 8px;
   font-size: 20px;
   line-height: 1.25;
-  color: rgba(0,0,0,0.92);
+  color: rgba(255,255,255,0.95);
 }
 
 .selected-work-card-text{
   margin: 0;
-  color: rgba(0,0,0,0.72);
+  color: rgba(255,255,255,0.75);
   line-height: 1.6;
 }
 
@@ -691,7 +697,7 @@ h5{
 }
 
 .selected-work-card:hover .selected-work-card-title{
-  color: rgba(157,15,15,0.9);
+  color: rgba(255,255,255,1);
 }
 
 @media (max-width: 900px){
