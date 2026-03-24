@@ -699,6 +699,9 @@ h5{
 .selected-work-card:hover .selected-work-card-title{
   color: rgba(255,255,255,1);
 }
+.selected-work{
+  border-top: 1px solid rgba(0,0,0,0.12);
+}
 
 @media (max-width: 900px){
   .selected-work-grid{
