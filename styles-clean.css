@@ -702,6 +702,10 @@ h5{
 .selected-work{
   border-top: 1px solid rgba(0,0,0,0.12);
 }
+.selected-work{
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+}
 
 @media (max-width: 900px){
   .selected-work-grid{
