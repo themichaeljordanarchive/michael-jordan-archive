@@ -730,7 +730,7 @@ h5{
    ========================================================= */
 
 .home-research-feature{
-  margin: 72px 0 0;
+  margin: 56px 0 0;
   padding: 0 24px;
 }
 
@@ -739,12 +739,12 @@ h5{
   margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(320px, 480px) minmax(0, 1fr);
-  gap: 72px;
+  gap: 48px;
   align-items: center;
 }
 
 .home-research-feature-image{
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 4 / 4;
   overflow: hidden;
   background: #f3f0ea;
 }
@@ -763,7 +763,7 @@ h5{
 .home-research-feature-title{
   margin: 0 0 20px;
   font-family: var(--serif);
-  font-size: 44px;
+  font-size: 36px;
   line-height: 1.08;
   color: rgba(0,0,0,0.95);
 }
