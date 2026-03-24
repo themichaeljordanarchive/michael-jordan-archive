@@ -3448,8 +3448,8 @@ body.season-page .population-card td:first-child{
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: rgba(0,0,0,0.7);
-  
-  width: 220px;
+
+  min-width: 200px;
   text-align: center;
 }
 
