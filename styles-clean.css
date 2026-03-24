@@ -608,16 +608,13 @@ h5{
   .home-research-feature-copy{
     padding-left: 0;
   }
-    .home-research-feature{
-    padding: 0;   /* remove side padding for full bleed */
-  }
-
+  
   .home-research-feature-image{
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    width: 100vw;
-    aspect-ratio: 4 / 3;   /* better for mobile */
-  }
+  width: calc(100vw - 48px);
+  max-width: none;
+  margin: 0 auto 20px;
+  aspect-ratio: 4 / 3;
+}
 
 }
 
