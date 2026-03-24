@@ -610,8 +610,7 @@ h5{
   }
   
   .home-research-feature-image{
-  width: calc(100vw - 48px);
-  max-width: none;
+  width: 100%;
   margin: 0 auto 20px;
   aspect-ratio: 4 / 3;
 }
