@@ -605,16 +605,30 @@ h5{
     grid-template-columns: 1fr;
   }
 
+  .home-research-feature-inner{
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .home-research-feature{
+    padding: 0 24px;
+  }
+
   .home-research-feature-copy{
     padding-left: 0;
+    margin: 0;
+    max-width: none;
   }
-  
-  .home-research-feature-image{
-  width: 100%;
-  margin: 0 auto 20px;
-  aspect-ratio: 4 / 3;
-}
 
+  .home-research-feature-image{
+    width: 100%;
+    margin: 0 0 20px;
+    aspect-ratio: 4 / 3;
+  }
+
+  .home-research-feature-copy::before{
+    display: none;
+  }
 }
 
 /* =========================================================
