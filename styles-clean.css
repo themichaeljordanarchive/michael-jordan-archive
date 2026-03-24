@@ -560,6 +560,20 @@ h5{
 .home-research .purpose{
   margin-top: 16px;
 }
+.section-title{
+  text-align: left;
+  margin: 48px 0 18px;
+  color: rgba(0,0,0,0.9);
+}
+
+.home-list{
+  max-width: 720px;
+  margin-left: 0;
+}
+
+.home-list li{
+  margin-bottom: 12px;
+}
 /* Divider */
 .section-divider{
   width: 100%;
