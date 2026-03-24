@@ -3996,12 +3996,14 @@ body.season-page .population-card td:first-child{
 
 .archive-scroll{
   display: flex;
-  gap: 24px;
+  gap: 28px;
   overflow-x: auto;
-  padding: 0 32px;
-  margin-top: 36px;
 
-  scroll-snap-type: x mandatory;
+  padding: 0 32px;
+
+  /* BREAK OUT OF CONTAINER */
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
 }
 
 .archive-scroll::-webkit-scrollbar{
