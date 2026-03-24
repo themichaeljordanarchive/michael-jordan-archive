@@ -453,16 +453,9 @@ h5{
 
 .home-grid{
   margin-top: 28px;
-
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
-
-  max-width: 1200px;   /* wider than your other sections */
-  margin-left: auto;
-  margin-right: auto;
-
-  padding: 0 16px;     /* slightly tighter than rest */
 }
 
 .home-tile{
