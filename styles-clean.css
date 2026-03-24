@@ -764,10 +764,6 @@ h5{
   display: block;
 }
 
-.home-research-feature-copy{
-  max-width: 560px;
-}
-
 .home-research-feature-title{
   margin: 0 0 20px;
   font-family: var(--serif);
@@ -835,8 +831,15 @@ h5{
 }
 
 .home-research-feature-copy{
+  max-width: 520px;
+  min-height: 525px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
   position: relative;
-  padding-left: 28px;
+  padding-left: 24px;
 }
 
 .home-research-feature-copy::before{
