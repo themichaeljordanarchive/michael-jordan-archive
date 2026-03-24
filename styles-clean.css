@@ -752,6 +752,14 @@ h5{
   margin-right: calc(50% - 50vw);
 }
 
+.selected-work-card{
+  transition: transform 0.2s ease;
+}
+
+.selected-work-card:hover{
+  transform: translateY(-2px);
+}
+
 @media (max-width: 900px){
   .selected-work-grid{
     grid-template-columns: 1fr;
