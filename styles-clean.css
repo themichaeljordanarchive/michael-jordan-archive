@@ -4054,3 +4054,16 @@ body.season-page .population-card td:first-child{
   color: rgba(0,0,0,0.6);
   line-height: 1.5;
 }
+/* ===== ARCHIVE BAND ===== */
+
+.archive-band{
+  margin-top: 48px;
+  padding: 48px 0 56px;
+  background: #f3f0ea;
+}
+
+.archive-band .archive-grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
