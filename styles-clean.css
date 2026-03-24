@@ -767,7 +767,7 @@ h5{
 .home-research-feature-title{
   margin: 0 0 20px;
   font-family: var(--serif);
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.08;
   color: rgba(0,0,0,0.95);
 }
@@ -777,6 +777,7 @@ h5{
   font-size: 17px;
   line-height: 1.75;
   color: rgba(0,0,0,0.74);
+  margin-bottom: 14px;
 }
 
 .home-research-feature-list{
@@ -791,7 +792,7 @@ h5{
 }
 
 .home-method-card{
-  margin-top: 28px;
+  margin-top: 16px;
   margin-bottom: 42px;
   padding: 18px 20px;
   border: 1px solid rgba(0,0,0,0.08);
@@ -839,7 +840,7 @@ h5{
   justify-content: space-between;
 
   position: relative;
-  padding-left: 24px;
+  padding-left: 18px;
 }
 
 .home-research-feature-copy::before{
