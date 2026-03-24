@@ -3449,7 +3449,7 @@ body.season-page .population-card td:first-child{
   text-transform: uppercase;
   color: rgba(0,0,0,0.7);
 
-  min-width: 200px;
+  width: 260px;
   text-align: center;
 }
 
