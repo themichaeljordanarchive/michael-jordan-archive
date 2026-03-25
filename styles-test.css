@@ -967,7 +967,7 @@ main{
   }
 
   .hero-title{
-    font-size: clamp(42px, 14vw, 72px);
+    font-size: clamp(36px, 10vw, 48px);
     line-height: 0.95;
   }
 
@@ -977,18 +977,18 @@ main{
   }
 
   .hero-copy p{
-    font-size: 17px;
+    font-size: 15px;
     line-height: 1.55;
   }
 
   .hero-caption-panel{
     width: 100%;
-    padding: 18px 18px 20px;
-    border-radius: 20px;
+    padding: 14px 16px;
+    border-radius: 16px;
   }
 
   .hero-caption-title{
-    font-size: 22px;
+    font-size: 18px;
   }
 
   .hero-caption-sub{
