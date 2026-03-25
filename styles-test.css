@@ -1031,6 +1031,28 @@ main{
     border-radius: 28px;
   }
 
+  .archive-rail-band{
+  display: none;
+}
+ 
+  .rail-shell{
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(17,17,17,0.06);
+  border-radius: 24px;
+  padding: 18px 18px 20px;
+ } 
+
+  .archive-rail-section .section-head{
+  margin-bottom: 14px;
+ }
+
+  .archive-rail-section .section-head h2{
+  margin-bottom: 8px;
+  }
+
+ .archive-rail-section .section-head p{
+  margin-bottom: 0;
+  }
   .archive-card{
     min-height: 430px;
     border-radius: 22px;
