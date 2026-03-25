@@ -601,9 +601,26 @@ button{
     gap: 18px;
   }
 
+  .season-card{
+  border-radius: 18px;
+  }
+
+  .season-card-body{
+  padding: 12px 14px 14px;
+  gap: 6px;
+  }
+
+  .season-card-title{
+  font-size: 16px;
+  }
+
   .season-card-year{
     font-size: 26px;
   }
+
+  .season-card-meta{
+  font-size: 12px;
+ }
 
   .site-footer{
     padding-left: 14px;
