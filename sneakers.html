@@ -4,19 +4,21 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Michael Jordan Sneaker Index — Michael Jordan Archive</title>
-  <meta name="description" content="A chronological record of Michael Jordan game-worn footwear, organized by model and documented example." />
-  <link rel="stylesheet" href="styles-clean.css">
+  <meta name="description" content="A chronological record of Michael Jordan’s game-worn footwear, organized by model and supported by documented public examples, photo matches, and classification through verified coding." />
+
+  <link rel="stylesheet" href="sneakers.css">
+
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
 </head>
 
-<body>
+<body class="sneaker-index-page">
 
 <header class="site-header">
   <div class="brand">
-    <a href="index.html">
+    <a href="index.html" aria-label="Michael Jordan Archive home">
       <img src="assets/logo.png" alt="Michael Jordan Archive logo">
     </a>
     <div class="brand-text">
@@ -24,10 +26,8 @@
     </div>
   </div>
 
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-    <span></span>
-    <span></span>
-    <span></span>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
+    <span></span><span></span><span></span>
   </button>
 
   <nav class="site-nav">
@@ -42,126 +42,169 @@
   </nav>
 </header>
 
-<main class="jersey-rail-test sneaker-index">
+<main>
 
-  <section class="season-index-feature">
+  <section class="index-hero">
+    <div class="page-shell">
+      <div class="section-kicker">Archive Entry</div>
 
-    <h1>Sneaker Index</h1>
+      <div class="hero-grid">
+        <div class="hero-main">
+          <h1>Sneaker Index</h1>
 
-    <p class="muted intro-text">
-      A chronological record of Michael Jordan’s game-worn footwear, organized by model and supported by documented public examples, photo matches, and classification through verified coding.
-    </p>
+          <p class="hero-intro">
+            A chronological record of Michael Jordan’s game-worn footwear, organized by model and supported by documented public examples, photo matches, and classification through verified coding.
+          </p>
 
-    <div class="season-topbar">
-      <details class="doc-collapse population-toggle">
-        <summary>Authentication Classes</summary>
-        <div class="doc-inner">
-          <p><strong>Authentication within the archive is defined by two classifications.</strong></p>
-<p>
-  <strong>Photo-Matched</strong> identifies pairs confirmed through direct visual correspondence to game imagery, supported by observable wear and pair-specific characteristics.
-</p>
+          <details class="auth-toggle">
+            <summary>Authentication Classes</summary>
+            <div class="auth-panel">
+              <p><strong>Authentication within the archive is defined by two classifications.</strong></p>
 
-<p>
-  <strong>Verified by Code &amp; Research</strong> identifies pairs authenticated through production coding, model chronology, and supporting research, confirming manufacture for Michael Jordan when a direct photo-match is not established.
-</p>
+              <p>
+                <strong>Photo-Matched</strong> identifies pairs confirmed through direct visual correspondence to game imagery, supported by observable wear and pair-specific characteristics.
+              </p>
+
+              <p>
+                <strong>Verified by Code &amp; Research</strong> identifies pairs authenticated through production coding, model chronology, and supporting research, confirming manufacture for Michael Jordan when a direct photo-match is not established.
+              </p>
+            </div>
+          </details>
         </div>
-      </details>
 
-      <div class="registry-stamp" aria-label="Total documented sneaker models">
-        <div class="registry-stamp-label">Documented</div>
-        <div class="registry-stamp-number">8</div>
-        <div class="registry-stamp-label">Sneakers</div>
+        <aside class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-label">Documented</div>
+            <div class="stat-value">8</div>
+            <div class="stat-note">Sneaker Models</div>
+          </div>
+        </aside>
       </div>
     </div>
+  </section>
 
-    <div class="section-divider" aria-hidden="true"></div>
+  <section class="jump-section">
+    <div class="page-shell">
+      <div class="section-divider" aria-hidden="true"></div>
 
-    <h2 class="rail-heading">Browse by Model</h2>
+      <div class="section-head">
+        <h2>Browse by Model</h2>
+      </div>
 
-    <div class="season-jump-strip">
-      <a href="#model-air-ship">Nike Air Ship</a>
-      <a href="#model-aj1">Air Jordan I</a>
-      <a href="#model-aj2">Air Jordan II</a>
-      <a href="#model-aj3">Air Jordan III</a>
-      <a href="#model-aj4">Air Jordan IV</a>
-      <a href="#model-aj5">Air Jordan V</a>
-      <a href="#model-aj6">Air Jordan VI</a>
-      <a href="#model-aj7">Air Jordan VII</a>
+      <div class="jump-strip">
+        <a href="#model-airship">Nike Air Ship</a>
+        <a href="#model-aj1">Air Jordan I</a>
+        <a href="#model-aj2">Air Jordan II</a>
+        <a href="#model-aj3">Air Jordan III</a>
+        <a href="#model-aj4">Air Jordan IV</a>
+        <a href="#model-aj5">Air Jordan V</a>
+        <a href="#model-aj6">Air Jordan VI</a>
+        <a href="#model-aj7">Air Jordan VII</a>
+      </div>
     </div>
+  </section>
 
-    <section class="season-rail-section">
-      <div class="season-rail">
+  <section class="model-grid-section">
+    <div class="page-shell">
 
-        <a class="season-rail-card" id="model-air-ship" href="sneakers-nike-airship.html">
-          <div class="season-rail-thumb">
+      <div class="model-grid">
+
+        <a class="model-card" id="model-airship" href="sneakers-nike-airship.html">
+          <div class="model-media">
             <img src="assets/sneaker-airship.jpg" alt="Nike Air Ship">
           </div>
-          <div class="season-rail-year">Nike Air Ship</div>
-          <div class="season-rail-status">Model Overview</div>
-          <div class="season-rail-metric">Use: Early 1984–85</div>
+          <div class="model-body">
+            <div class="model-title">Nike Air Ship</div>
+            <div class="model-meta">Early 1984–85</div>
+          </div>
         </a>
 
-        <a class="season-rail-card" id="model-aj1" href="sneakers-aj1.html">
-          <div class="season-rail-thumb">
+        <a class="model-card" id="model-aj1" href="sneakers-aj1.html">
+          <div class="model-media">
             <img src="assets/sneaker-aj1.jpg" alt="Air Jordan I">
           </div>
-          <div class="season-rail-year">Air Jordan I</div>
-          <div class="season-rail-status">Model Overview</div>
-          <div class="season-rail-metric">Use: 1984–85</div>
+          <div class="model-body">
+            <div class="model-title">Air Jordan I</div>
+            <div class="model-meta">1984–85</div>
+          </div>
         </a>
 
-         <a class="season-rail-card" id="model-aj2" href="#">
-          <div class="season-rail-thumb">
+        <a class="model-card" id="model-aj2" href="#">
+          <div class="model-media">
             <img src="assets/sneaker-aj2.jpg" alt="Air Jordan II">
           </div>
-          <div class="season-rail-year">Air Jordan II</div>
-          <div class="season-rail-status">Model Overview</div>
-          <div class="season-rail-metric">Use: 1986–87</div>
+          <div class="model-body">
+            <div class="model-title">Air Jordan II</div>
+            <div class="model-meta">1986–87</div>
+          </div>
         </a>
 
-        <a class="season-rail-card" id="model-aj3" href="#">
-          <div class="season-rail-thumb">
+        <a class="model-card" id="model-aj3" href="#">
+          <div class="model-media">
             <img src="assets/sneaker-aj3.jpg" alt="Air Jordan III">
           </div>
-          <div class="season-rail-year">Air Jordan II</div>
-          <div class="season-rail-status">Model Overview</div>
-          <div class="season-rail-metric">Use: 1987–88</div>
+          <div class="model-body">
+            <div class="model-title">Air Jordan III</div>
+            <div class="model-meta">1987–88</div>
+          </div>
         </a>
 
-          <a class="season-rail-card" id="model-aj4" href="#">
-          <div class="season-rail-thumb">
+        <a class="model-card" id="model-aj4" href="#">
+          <div class="model-media">
             <img src="assets/sneaker-aj4.jpg" alt="Air Jordan IV">
           </div>
-          <div class="season-rail-year">Air Jordan IV</div>
-          <div class="season-rail-status">Model Overview</div>
-          <div class="season-rail-metric">Use: 1988–89</div>
+          <div class="model-body">
+            <div class="model-title">Air Jordan IV</div>
+            <div class="model-meta">1988–89</div>
+          </div>
         </a>
 
-         <a class="season-rail-card" id="model-aj5" href="#">
-          <div class="season-rail-thumb">
+        <a class="model-card" id="model-aj5" href="#">
+          <div class="model-media">
             <img src="assets/sneaker-aj5.jpg" alt="Air Jordan V">
           </div>
-          <div class="season-rail-year">Air Jordan V</div>
-          <div class="season-rail-status">Model Overview</div>
-          <div class="season-rail-metric">Use: 1989–90</div>
+          <div class="model-body">
+            <div class="model-title">Air Jordan V</div>
+            <div class="model-meta">1989–90</div>
+          </div>
         </a>
 
+        <a class="model-card" id="model-aj6" href="#">
+          <div class="model-media">
+            <img src="assets/sneaker-aj6.jpg" alt="Air Jordan VI">
+          </div>
+          <div class="model-body">
+            <div class="model-title">Air Jordan VI</div>
+            <div class="model-meta">1990–91</div>
+          </div>
+        </a>
+
+        <a class="model-card" id="model-aj7" href="#">
+          <div class="model-media">
+            <img src="assets/sneaker-aj7.jpg" alt="Air Jordan VII">
+          </div>
+          <div class="model-body">
+            <div class="model-title">Air Jordan VII</div>
+            <div class="model-meta">1991–92</div>
+          </div>
+        </a>
 
       </div>
-    </section>
 
-    <div class="research-actions">
-  <a href="methodology.html#sneaker-research" class="research-box">Sneaker Research</a>
-  <a href="methodology.html#research-note" class="research-box">Research Note</a>
-  <a href="methodology.html#acknowledgments" class="research-box">Acknowledgments</a>
-   </div> 
+      <div class="index-actions">
+        <a href="methodology.html#sneaker-research" class="action-box">Sneaker Research</a>
+        <a href="methodology.html#research-note" class="action-box">Research Note</a>
+        <a href="methodology.html#acknowledgments" class="action-box">Acknowledgments</a>
+      </div>
 
+    </div>
   </section>
 
 </main>
 
 <footer class="site-footer">
-  © Michael Jordan Archive
+  <div>© Michael Jordan Archive</div>
+
   <a href="https://www.instagram.com/themichaeljordanarchive" target="_blank" class="social-icon" aria-label="Instagram">
     <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
       <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5z"/>
