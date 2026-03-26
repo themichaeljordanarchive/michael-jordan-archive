@@ -68,14 +68,15 @@ body{
 }
 
 .article-hero-title h1{
-  font-size: clamp(42px, 5vw, 68px);
+  font-size: clamp(48px, 6vw, 76px);
   font-weight: 400;
-  line-height: 1.1;
+  line-height: 1.05;
+  letter-spacing: -0.02;
 }
 
 .article-hero-deck{
   margin-top: 14px;
-  font-size: 17px;
+  font-size: 18px;
   margin: 16px auto 0;
   opacity: 0.9;
 }
