@@ -1,0 +1,318 @@
+/* =========================================
+   WIZARDS REGISTRY CSS
+   Only fixes:
+   1. Search / Sort
+   2. Individual jersey cards
+   ========================================= */
+
+
+/* =========================
+   SEARCH / SORT
+   ========================= */
+
+#date-search{
+  padding-top: 18px;
+  padding-bottom: 8px;
+}
+
+.season-controls{
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 14px;
+  align-items: center;
+}
+
+.control-card{
+  border: 1px solid rgba(17,17,17,0.10);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.72);
+  padding: 14px 16px;
+}
+
+.control-card h3{
+  margin: 0 0 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.55);
+}
+
+#dateInput{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(17,17,17,0.12);
+  background: #fff;
+  font-size: 15px;
+  color: #111;
+  box-sizing: border-box;
+}
+
+#dateInput:focus{
+  outline: none;
+  border-color: rgba(17,17,17,0.22);
+  box-shadow: 0 0 0 2px rgba(17,17,17,0.05);
+}
+
+.control-dropdown{
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid rgba(17,17,17,0.12);
+  background: #fff;
+  box-sizing: border-box;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: left;
+  cursor: pointer;
+
+  transition:
+    border-color 180ms ease,
+    transform 120ms ease,
+    box-shadow 180ms ease;
+}
+
+@media (hover: hover){
+  .control-dropdown:hover{
+    border-color: rgba(17,17,17,0.18);
+    transform: translateY(-1px);
+  }
+}
+
+.control-dropdown:active{
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   INDIVIDUAL JERSEY CARDS
+   ========================= */
+
+/* remove the “one huge stack card” look */
+.registry-card{
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  overflow: visible;
+}
+
+/* make the jersey links become separate cards */
+.registry-list{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+/* each jersey row becomes its own card */
+.registry-row{
+  display: block;
+  padding: 14px 14px 15px;
+  border: 1px solid rgba(17,17,17,0.10);
+  border-radius: 18px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.96), rgba(255,255,255,0.88));
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.registry-title{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+  color: #111;
+}
+
+.registry-title .muted{
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.55);
+  opacity: 0.7;
+}
+
+.registry-meta{
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 0;
+  opacity: 0.75;
+  line-height: 1.45;
+}
+
+.registry-row .arrow{
+  font-size: 14px;
+  opacity: 0.55;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+@media (hover: hover){
+  .registry-row:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 22px 60px rgba(0,0,0,0.12);
+    background: linear-gradient(to bottom, rgba(255,255,255,1), rgba(255,255,255,0.92));
+  }
+
+  .registry-row:hover .arrow{
+    transform: translateX(4px);
+    opacity: 1;
+  }
+
+  .registry-row:hover .registry-title{
+    color: var(--accent);
+  }
+}
+
+.registry-row:active{
+  transform: scale(0.98);
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 900px){
+  .season-controls{
+    grid-template-columns: 1fr;
+  }
+
+  .registry-list{
+    grid-template-columns: 1fr;
+  }
+}
+.registry-controls-grid{
+  display: grid !important;
+  grid-template-columns: 1fr 220px !important;
+}
+
+.registry-sort{
+  width: 100%;
+  padding: 14px 16px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(17,17,17,0.12) !important;
+  background: rgba(255,255,255,0.9) !important;
+  font-family: Arial, Helvetica, sans-serif !important;
+  font-size: 12px !important;
+  letter-spacing: 0.12em !important;
+  text-transform: uppercase !important;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+}
+/* exact control card tone */
+.registry-control-card{
+  padding: 0 !important;
+  border-radius: 16px !important;
+  background-color: rgba(255,255,255,0.65) !important;
+  border: none !important;
+  box-shadow: none !important;
+  position: static !important;
+}
+
+/* kill the fake backing plate */
+.registry-control-card::before{
+  content: none !important;
+}
+
+/* exact label feel */
+.registry-control-label{
+  margin-bottom: 14px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.55);
+}
+
+/* keep sort/search aligned */
+.registry-controls-grid{
+  display: grid !important;
+  grid-template-columns: 1fr 220px !important;
+  gap: 14px !important;
+  align-items: center !important;
+}
+/* =========================
+   POPULATION NOTE SPACING
+   ========================= */
+
+.population-note{
+  max-width: 720px;
+  margin-top: 10px;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* footnote inside card */
+.summary-footnote{
+  padding: 0 24px 18px;
+}
+
+.summary-footnote p{
+  margin: 0;
+  line-height: 1.55;
+}
+.registry-control-label{
+  margin-bottom: 14px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.2;
+  letter-spacing: 0;
+  text-transform: none;
+  color: rgba(17,17,17,0.82);
+  font-weight: 400;
+}
+/* =========================
+   CASE PAGE SPACING TUNE
+   ========================= */
+
+/* tighten space under strip */
+.section-strip{
+  margin-bottom: 14px;
+}
+
+/* header card spacing */
+.season-header{
+  margin-top: 18px;
+}
+
+/* tighten gap between header and designation */
+.designation-callout{
+  margin-top: 18px;
+}
+
+/* evidence section spacing */
+.season-block{
+  margin-top: 22px;
+}
+
+/* reduce extra vertical air inside content */
+.entry-block{
+  margin-top: 18px;
+}
+
+/* tighten meta + callout relationship */
+.entry-meta{
+  margin-bottom: 10px;
+}
+
+.entry-callout{
+  margin-bottom: 16px;
+}
+
+/* bottom spacing before back link */
+.entry-divider{
+  margin-top: 28px;
+  margin-bottom: 0;
+}
+
+.back-link-wrap{
+  margin-top: 24px;
+}
+
