@@ -954,3 +954,16 @@ main{
     transform: scale(1.01);
   }
 }
+.reveal{
+  opacity: 0;
+  transform: translateY(54px);
+  transition:
+    opacity 0.95s ease,
+    transform 0.95s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}

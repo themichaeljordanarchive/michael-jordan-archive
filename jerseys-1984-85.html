@@ -426,15 +426,14 @@
 <script>
   document.documentElement.classList.remove('no-js');
 
-  const btn = document.querySelector('.nav-toggle');
-  if (btn) {
-    btn.addEventListener('click', () => {
-      document.body.classList.toggle('nav-open');
-      btn.setAttribute('aria-expanded', document.body.classList.contains('nav-open'));
-    });
-  }
+  const revealItems = document.querySelectorAll(
+    '.season-hero, .population-summary-section, .season-section, .back-link-wrap'
+  );
 
-  const cards = document.querySelectorAll('.entry-card');
+  revealItems.forEach((item, index) => {
+    item.classList.add('reveal');
+    item.style.transitionDelay = `${index * 0.07}s`;
+  });
 
   if ('IntersectionObserver' in window) {
     const observer = new IntersectionObserver((entries, obs) => {
@@ -445,13 +444,13 @@
         }
       });
     }, {
-      threshold: 0.14,
-      rootMargin: '0px 0px -8% 0px'
+      threshold: 0.16,
+      rootMargin: '0px 0px -10% 0px'
     });
 
-    cards.forEach(card => observer.observe(card));
+    revealItems.forEach(item => observer.observe(item));
   } else {
-    cards.forEach(card => card.classList.add('is-visible'));
+    revealItems.forEach(item => item.classList.add('is-visible'));
   }
 </script>
 
