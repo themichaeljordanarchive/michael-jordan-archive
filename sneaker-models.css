@@ -948,6 +948,10 @@ button{
     min-height: 66px;
     font-size: 11px;
   }
+   .artifact-card:active,
+  .summary-card:active{
+    transform: scale(0.98);
+  }
 }
 /* =========================================================
    MOTION
