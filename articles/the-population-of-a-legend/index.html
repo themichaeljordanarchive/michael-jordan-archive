@@ -528,17 +528,25 @@ if (btn) {
 <script>
 const heroMedia = document.querySelector('.article-hero-media');
 const title = document.getElementById('articleHeroTitle');
+const isMobile = window.innerWidth <= 700;
 
 window.addEventListener('scroll', () => {
   const scrolled = window.scrollY;
 
   if (title){
-    title.style.transform = `translate(-50%, ${scrolled * -0.3}px)`;
-    title.style.opacity = 1 - scrolled / 400;
+    title.style.transform = isMobile
+      ? `translate(-50%, ${scrolled * -0.12}px)`
+      : `translate(-50%, ${scrolled * -0.25}px)`;
+
+    title.style.opacity = isMobile
+      ? 1 - scrolled / 900
+      : 1 - scrolled / 700;
   }
 
   if (heroMedia){
-    heroMedia.style.transform = `translateY(${scrolled * 0.18}px) scale(1.02)`;
+    heroMedia.style.transform = isMobile
+      ? `translateY(${scrolled * 0.08}px) scale(1.01)`
+      : `translateY(${scrolled * 0.15}px) scale(1.02)`;
   }
 });
 </script>
