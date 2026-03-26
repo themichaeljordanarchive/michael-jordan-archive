@@ -20,26 +20,27 @@ body{
   line-height: 1.7;
 }
 
-.article-main{
-  padding-top: 0;
-}
-
 /* =========================================================
    HERO
 ========================================================= */
 
 .article-hero{
   position: relative;
-  height: 90vh;
-  min-height: 520px;
+  height: 92vh;
+  min-height: 540px;
   overflow: hidden;
 }
 
-.article-hero img{
+.article-hero-media{
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.article-hero-image{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.05);
 }
 
 .article-hero-overlay{
@@ -59,44 +60,81 @@ body{
   z-index: 2;
 }
 
+.article-hero-kicker{
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
 .article-hero-title h1{
   font-size: clamp(36px, 5vw, 60px);
   font-weight: 400;
   line-height: 1.1;
 }
 
+.article-hero-deck{
+  margin-top: 14px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
 /* =========================================================
-   CONTENT WRAP
+   SHELL / INTRO
 ========================================================= */
 
-.article-body{
+.article-shell{
   width: min(100%, var(--max));
   margin: 0 auto;
   padding: 80px 20px;
 }
 
-.article-content{
+.article-intro-card{
+  max-width: var(--text);
+  margin: 0 auto 70px;
+}
+
+.article-lead{
+  font-size: 20px;
+  margin-bottom: 16px;
+}
+
+.article-lead--secondary{
+  color: var(--muted);
+}
+
+/* =========================================================
+   BODY
+========================================================= */
+
+.article-body{
   max-width: var(--text);
   margin: 0 auto;
 }
 
-/* INTRO */
-
-.article-intro{
-  font-size: 18px;
-  color: #2a2724;
-  margin-bottom: 60px;
-}
-
-/* PARAGRAPHS */
-
-.article-content p{
+.article-body p{
   margin-bottom: 26px;
   font-size: 17px;
 }
 
 /* =========================================================
-   IMAGES
+   HEADINGS
+========================================================= */
+
+.article-body h2{
+  font-size: 26px;
+  margin: 60px 0 20px;
+  font-weight: 400;
+}
+
+.article-body h3{
+  font-size: 20px;
+  margin: 50px 0 14px;
+  font-weight: 400;
+}
+
+/* =========================================================
+   FULL FIGURE
 ========================================================= */
 
 .figure-full{
@@ -105,54 +143,92 @@ body{
 
 .figure-full img{
   width: 100%;
-  border-radius: 6px;
 }
 
 .figure-full figcaption{
+  margin-top: 10px;
   font-size: 13px;
   color: var(--muted);
-  margin-top: 10px;
-}
-
-/* SPLIT BLOCK */
-
-.split-block{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  margin: 70px 0;
-  align-items: center;
-}
-
-.split-block img{
-  width: 100%;
-  border-radius: 6px;
-}
-
-.split-block p{
-  margin: 0;
 }
 
 /* =========================================================
-   SECTION HEADINGS
+   SPLIT BLOCKS
 ========================================================= */
 
-.article-content h2{
-  font-size: 26px;
-  margin: 60px 0 20px;
-  font-weight: 400;
+.article-split{
+  display: grid;
+  grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+  margin: 60px 0;
+}
+
+.article-split--image-right{
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+}
+
+.article-split-copy p{
+  margin-top: 0;
+}
+
+.article-figure{
+  margin: 0;
+}
+
+.article-figure img{
+  width: 100%;
+}
+
+.article-figure figcaption{
+  margin-top: 10px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* =========================================================
+   CLOSING
+========================================================= */
+
+.article-closing{
+  max-width: var(--text);
+  margin: 80px auto 0;
+}
+
+.article-note{
+  margin: 40px 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.article-back-link{
+  margin-top: 20px;
+}
+
+.article-back-link a{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
 }
 
 /* =========================================================
    MOBILE
 ========================================================= */
 
-@media (max-width: 800px){
-  .split-block{
+@media (max-width: 900px){
+
+  .article-split,
+  .article-split--image-right{
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .article-hero{
     height: 70vh;
   }
+
+  .article-hero-title{
+    bottom: 40px;
+  }
+
 }
