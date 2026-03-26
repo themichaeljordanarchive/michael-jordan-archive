@@ -767,6 +767,15 @@ main{
   background: rgba(0,0,0,0.35);
 }
 
+.back-link-wrap{
+  margin-top: 40px;
+}
+.registry-item,
+.population-toggle summary,
+.designation-toggle summary,
+.registry-sort{
+  cursor: pointer;
+}
 /* =========================
    RESPONSIVE
    ========================= */
