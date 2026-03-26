@@ -143,25 +143,91 @@
 }
 
 /* =========================
-   POPULATION SUMMARY TWEAK
-========================= */
+   POPULATION SUMMARY
+   ========================= */
+
+.population-summary-section{
+  padding-top: 10px;
+}
 
 .population-summary-card{
-  border: 1px solid rgba(17,17,17,0.12);
+  border: 1px solid rgba(17,17,17,0.88);
+  border-radius: 28px;
+  background: rgba(255,255,255,0.84);
+  box-shadow: var(--shadow-soft);
+  overflow: hidden;
 }
 
-
-.population-toggle summary::-webkit-details-marker{
-  display: none;
+.population-summary-head{
+  padding: 28px 28px 20px;
+  margin-bottom: 10px;
 }
 
-.population-toggle .doc-inner{
-  padding: 16px 16px 6px;
+.population-summary-head h2{
+  margin: 0 0 12px;
+  font-size: clamp(30px, 4vw, 50px);
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.03em;
 }
 
-.population-toggle summary:hover{
-  background: rgba(255,255,255,0.96);
-  border-color: rgba(17,17,17,0.18);
+.population-summary-head p{
+  margin: 0;
+  max-width: 760px;
+  color: var(--muted);
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+.population-table-wrap{
+  overflow-x: auto;
+  padding: 0 28px 28px;
+}
+
+.population-table{
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+.population-table th,
+.population-table td{
+  padding: 10px 10px;
+  border-top: 1px solid rgba(17,17,17,0.12);
+  text-align: left;
+}
+
+.population-table th{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.55);
+}
+
+.population-table td{
+  font-size: 17px;
+  line-height: 1.45;
+}
+
+.table-status{
+  display: inline-flex;
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.table-status.is-complete{
+  background: rgba(31,91,47,0.08);
+  color: #1f5b2f;
+}
+
+.table-status.is-progress{
+  background: rgba(17,17,17,0.06);
+  color: rgba(17,17,17,0.60);
 }
 
 .toggle-plus{
