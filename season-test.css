@@ -958,8 +958,8 @@ main{
   opacity: 0;
   transform: translateY(54px);
   transition:
-    opacity 0.95s ease,
-    transform 0.95s ease;
+    opacity 0.85s ease,
+    transform 0.85s ease;
   will-change: opacity, transform;
 }
 

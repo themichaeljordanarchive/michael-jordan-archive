@@ -394,5 +394,36 @@
   });
 </script>
 
+<script>
+  document.documentElement.classList.remove('no-js');
+
+  const revealItems = document.querySelectorAll(
+    '.season-hero, .population-summary-section, .season-section, .back-link-wrap'
+  );
+
+  revealItems.forEach((item, index) => {
+    item.classList.add('reveal');
+    item.style.transitionDelay = `${index * 0.07}s`;
+  });
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.16,
+      rootMargin: '0px 0px -10% 0px'
+    });
+
+    revealItems.forEach(item => observer.observe(item));
+  } else {
+    revealItems.forEach(item => item.classList.add('is-visible'));
+  }
+</script>
+
 </body>
 </html>
