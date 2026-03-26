@@ -1,0 +1,345 @@
+/* =========================
+   REGISTRY CONTROLS
+   ========================= */
+
+.registry-controls{
+  padding: 20px 0 10px;
+  margin-top: 6px;
+  margin-bottom: 10px;
+}
+
+.registry-controls-grid{
+  display: grid;
+  grid-template-columns: 1fr 220px;
+  gap: 14px;
+  align-items: center;
+}
+.registry-control-card{
+    border-radius: 16px;
+    background-color: rgba(255,255,255,0.65);
+}
+
+.registry-search{
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(17,17,17,0.12);
+  background: rgba(255,255,255,0.9);
+  font-size: 15px;
+}
+
+.registry-sort{
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(17,17,17,0.12);
+  background: rgba(255,255,255,0.9);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.registry-search,
+.registry-sort{
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 120ms ease;
+}
+
+.registry-search:focus{
+  outline: none;
+  border-color: rgba(17,17,17,0.22);
+  box-shadow: 0 0 0 2px rgba(17,17,17,0.06);
+}
+
+@media (hover: hover){
+  .registry-sort:hover{
+    transform: translateY(-1px);
+    border-color: rgba(17,17,17,0.18);
+  }
+}
+
+.registry-sort:active{
+  transform: scale(0.98);
+}
+
+/* =========================
+   REGISTRY GRID
+   ========================= */
+
+.registry-grid{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.registry-item{
+  display: block;
+  padding: 14px 14px 15px;
+  border: 1px solid rgba(17,17,17,0.10);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.88);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.08);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.registry-item-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.registry-name{
+  font-size: 17px;
+  letter-spacing: -0.01em;
+  font-weight: 500;
+}
+
+.registry-arrow{
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.registry-item-meta{
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+  opacity: 0.75;
+}
+
+.registry-item-sub{
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.55);
+  opacity: 0.6;
+}
+
+.population-toggle{
+  margin: 0 28px 22px;
+}
+
+.population-toggle summary{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  list-style: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  border: 1px solid rgba(17,17,17,0.10);
+  border-radius: 16px;
+  background: rgba(255,255,255,0.78);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.78);
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+/* =========================
+   POPULATION SUMMARY TWEAK
+========================= */
+
+.population-summary-card{
+  border: 1px solid rgba(17,17,17,0.12);
+}
+
+
+.population-toggle summary::-webkit-details-marker{
+  display: none;
+}
+
+.population-toggle .doc-inner{
+  padding: 16px 16px 6px;
+}
+
+.population-toggle summary:hover{
+  background: rgba(255,255,255,0.96);
+  border-color: rgba(17,17,17,0.18);
+}
+
+.toggle-plus{
+  flex: 0 0 auto;
+  font-size: 16px;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.population-toggle[open] .toggle-plus{
+  transform: rotate(45deg);
+}
+
+.finals-callout{
+  margin: 14px 0;
+  padding: 14px 16px;
+  border-left: 2px solid rgba(143,17,22,0.34);
+  background: rgba(17,17,17,0.03);
+}
+
+.finals-breakdown{
+  margin: 0;
+  padding-left: 18px;
+}
+
+.finals-breakdown li{
+  margin-bottom: 6px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.summary-footnote{
+  padding: 0 28px 24px;
+}
+
+.summary-footnote p{
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.population-toggle summary,
+.designation-toggle summary{
+  transition:
+    background 200ms ease,
+    border-color 200ms ease,
+    transform 200ms ease;
+}
+
+@media (hover: hover){
+  .population-toggle summary:hover,
+  .designation-toggle summary:hover{
+    background: rgba(255,255,255,0.95);
+    border-color: rgba(17,17,17,0.18);
+    transform: translateY(-1px);
+  }
+}
+
+.population-toggle[open] summary .toggle-plus,
+.designation-toggle[open] summary .toggle-plus{
+  transform: rotate(45deg);
+  transition: transform 200ms ease;
+}
+
+@media (max-width: 700px){
+  .population-toggle{
+    margin: 0 20px 18px;
+  }
+
+  .summary-footnote{
+    padding: 0 20px 20px;
+  }
+}
+
+/* =========================
+   HOVER
+   ========================= */
+
+@media (hover:hover){
+  .registry-item:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 22px 60px rgba(0,0,0,0.12);
+    opacity: 1;
+  }
+}
+/* =========================
+   EXTRA POLISH
+   ========================= */
+
+.registry-item{
+  background: linear-gradient(to bottom, rgba(255,255,255,0.96), rgba(255,255,255,0.88));
+}
+
+.registry-name{
+  transition: color 200ms ease;
+}
+
+@media (hover: hover){
+  .registry-item:hover .registry-name{
+    color: var(--accent);
+  }
+}
+
+/* make sections feel a little more separated */
+.registry-controls{
+  padding-top: 8px;
+}
+
+.registry-note-section{
+  padding-top: 10px;
+  padding-bottom: 8px;
+}
+
+/* stronger summary card presence */
+.style-summary-card{
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+}
+
+@media (hover: hover){
+  .style-summary-card:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.10);
+    border-color: rgba(17,17,17,0.16);
+  }
+}
+
+/* subtle emphasis on section heads */
+.section-head h2{
+  transition: letter-spacing 220ms ease, transform 220ms ease;
+}
+
+@media (hover: hover){
+  .season-section:hover .section-head h2{
+    transform: translateY(-1px);
+  }
+}
+
+/* tighten overall rhythm */
+
+.season-hero{
+  padding-bottom: clamp(36px, 5vw, 60px);
+}
+
+.population-summary-section{
+  padding-top: 10px;
+  padding-bottom: clamp(36px, 5vw, 60px);
+}
+
+.registry-controls{
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.registry-note-section{
+  padding-top: 8px;
+  padding-bottom: 18px;
+}
+
+.season-section{
+  padding-top: clamp(40px, 6vw, 70px);
+  padding-bottom: clamp(40px, 6vw, 70px);
+}
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 900px){
+  .registry-controls-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .registry-grid{
+    grid-template-columns: 1fr;
+  }
+  .registry-item:active{
+  transform: scale(0.97);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.14);
+}
+}
