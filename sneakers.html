@@ -6,7 +6,9 @@
   <title>Michael Jordan Sneaker Index — Michael Jordan Archive</title>
   <meta name="description" content="A chronological record of Michael Jordan’s game-worn footwear, organized by model and supported by documented public examples, photo matches, and classification through verified coding." />
 
+  <link rel="stylesheet" href="styles-test.css">
   <link rel="stylesheet" href="sneakers.css">
+
 
   <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
@@ -18,7 +20,7 @@
 
 <header class="site-header">
   <div class="brand">
-    <a href="index.html" aria-label="Michael Jordan Archive home">
+    <a href="index-test.html" aria-label="Michael Jordan Archive home">
       <img src="assets/logo.png" alt="Michael Jordan Archive logo">
     </a>
     <div class="brand-text">
@@ -26,11 +28,13 @@
     </div>
   </div>
 
-  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
-    <span></span><span></span><span></span>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="siteNav">
+    <span></span>
+    <span></span>
+    <span></span>
   </button>
 
-  <nav class="site-nav">
+  <nav class="site-nav" id="siteNav">
     <a href="index.html">Home</a>
     <a href="jerseys.html">Jersey Index</a>
     <a href="sneakers.html">Sneaker Index</a>

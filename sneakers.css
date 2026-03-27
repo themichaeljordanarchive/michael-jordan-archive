@@ -18,17 +18,8 @@
   box-sizing: border-box;
 }
 
-html{
-  scroll-behavior: smooth;
-}
-
 body{
-  margin: 0;
   background: var(--bg);
-  color: var(--ink);
-  font-family: Georgia, "Times New Roman", serif;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 img{
@@ -46,81 +37,9 @@ a{
   margin: 0 auto;
 }
 
-.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  padding: 14px 24px;
-  background: rgba(245,243,239,0.94);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--line);
-}
-
-.brand{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-}
-
-.brand img{
-  height: 40px;
-  width: auto;
-}
-
-.brand-text{
-  min-width: 0;
-}
-
-.brand-name{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  white-space: nowrap;
-}
-
-.site-nav{
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.site-nav a{
-  color: rgba(17,17,17,0.78);
-  transition: color 180ms ease;
-}
-
-.site-nav a:hover{
-  color: var(--accent);
-}
-
-.nav-toggle{
-  display: none;
-  width: 42px;
-  height: 42px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.nav-toggle span{
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 5px auto;
-  background: var(--ink);
-  transition: transform 180ms ease, opacity 180ms ease;
-}
+/* =========================================================
+   INDEX HERO
+========================================================= */
 
 .index-hero{
   padding: 52px 0 28px;
@@ -248,6 +167,10 @@ a{
   color: rgba(17,17,17,0.54);
 }
 
+/* =========================================================
+   JUMP SECTION
+========================================================= */
+
 .jump-section{
   padding: 0 0 18px;
 }
@@ -302,6 +225,10 @@ a{
   transform: translateY(-1px);
   background: rgba(255,255,255,0.96);
 }
+
+/* =========================================================
+   MODEL GRID
+========================================================= */
 
 .model-grid-section{
   padding: 18px 0 72px;
@@ -370,6 +297,10 @@ a{
   color: var(--accent);
 }
 
+/* =========================================================
+   ACTIONS
+========================================================= */
+
 .index-actions{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -401,32 +332,9 @@ a{
   color: var(--ink);
 }
 
-.site-footer{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  padding: 24px;
-  border-top: 1px solid var(--line);
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(17,17,17,0.62);
-}
-
-.social-icon{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  color: rgba(17,17,17,0.72);
-  transition: color 180ms ease, transform 180ms ease;
-}
-
-.social-icon:hover{
-  color: var(--accent);
-  transform: translateY(-1px);
-}
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
 @media (max-width: 1100px){
   .hero-grid{
@@ -443,42 +351,6 @@ a{
 }
 
 @media (max-width: 760px){
-  .site-header{
-    padding: 12px 18px;
-  }
-
-  .brand-text{
-    display: none;
-  }
-
-  .nav-toggle{
-    display: block;
-  }
-
-  .site-nav{
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 8px 18px 14px;
-    background: rgba(245,243,239,0.98);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .nav-open .site-nav{
-    display: flex;
-  }
-
-  .site-nav a{
-    display: block;
-    width: 100%;
-    padding: 12px 0;
-  }
-
   .page-shell{
     width: min(var(--max), calc(100% - 32px));
   }
