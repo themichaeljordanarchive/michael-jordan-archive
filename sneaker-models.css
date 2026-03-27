@@ -16,7 +16,6 @@
   --radius-sm: 12px;
   --max: 1380px;
   --text-max: 780px;
-  --header-h: 84px;
 }
 
 *,
@@ -56,88 +55,6 @@ button{
 
 .archive-model-page{
   min-height: 100vh;
-}
-
-/* =========================================================
-   HEADER
-========================================================= */
-
-.site-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  backdrop-filter: blur(16px);
-  background: rgba(244,241,236,0.82);
-  border-bottom: 1px solid rgba(20,20,20,0.08);
-}
-
-.site-header__inner{
-  width: min(calc(100% - 40px), var(--max));
-  margin: 0 auto;
-  min-height: var(--header-h);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-}
-
-.brand{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  min-width: 0;
-}
-
-.brand__mark img{
-  width: auto;
-  height: 48px;
-}
-
-.brand__name{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--ink);
-  white-space: nowrap;
-}
-
-.site-nav{
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.site-nav a{
-  color: var(--muted);
-  transition: color 0.2s ease;
-}
-
-.site-nav a:hover{
-  color: var(--ink);
-}
-
-.nav-toggle{
-  display: none;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  width: 42px;
-  height: 42px;
-  cursor: pointer;
-}
-
-.nav-toggle span{
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 4px auto;
-  background: var(--ink);
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 /* =========================================================
@@ -251,6 +168,7 @@ button{
 .hero-figure{
   margin: 0;
   height: 100%;
+  overflow: hidden;
 }
 
 .hero-figure img{
@@ -258,6 +176,9 @@ button{
   height: 100%;
   min-height: 540px;
   object-fit: cover;
+  transition: transform 0.8s ease, filter 0.5s ease;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .model-hero-card__body{
@@ -529,6 +450,7 @@ button{
   font-size: clamp(1.55rem, 2.5vw, 2.2rem);
   line-height: 1.08;
   font-weight: 400;
+  transition: transform 0.32s ease, color 0.32s ease;
 }
 
 .artifact-summary-bar{
@@ -536,6 +458,11 @@ button{
   border-radius: var(--radius-lg);
   background: rgba(255,255,255,0.65);
   overflow: hidden;
+  transition:
+    transform 0.38s ease,
+    box-shadow 0.38s ease,
+    border-color 0.38s ease,
+    background 0.38s ease;
 }
 
 .artifact-summary-bar__grid{
@@ -555,6 +482,12 @@ button{
 
 .artifact-card{
   overflow: hidden;
+  transition:
+    transform 0.38s ease,
+    box-shadow 0.38s ease,
+    border-color 0.38s ease,
+    background 0.38s ease;
+  will-change: transform;
 }
 
 .artifact-card__grid{
@@ -581,6 +514,9 @@ button{
   width: 100%;
   height: auto;
   object-fit: cover;
+  transition: transform 0.8s ease, filter 0.5s ease;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .artifact-caption{
@@ -607,6 +543,10 @@ button{
   background: linear-gradient(180deg, rgba(142,17,22,0.04), rgba(142,17,22,0.02));
   font-size: 1rem;
   color: #231f1c;
+  transition:
+    transform 0.32s ease,
+    border-color 0.32s ease,
+    background 0.32s ease;
 }
 
 .record-block{
@@ -643,11 +583,21 @@ button{
 
 .record-link a{
   color: var(--accent);
+  transition: color 0.22s ease, transform 0.22s ease, opacity 0.22s ease;
+}
+
+.record-link a:hover{
+  transform: translateX(3px);
 }
 
 .record-link span{
   display: inline-block;
   margin-left: 6px;
+  transition: transform 0.22s ease;
+}
+
+.record-link a:hover span{
+  transform: translateX(3px);
 }
 
 .provenance-list{
@@ -690,6 +640,9 @@ button{
   width: 100%;
   height: auto;
   display: block;
+  transition: transform 0.8s ease, filter 0.5s ease;
+  transform-origin: center center;
+  will-change: transform;
 }
 
 .model-carousel__controls{
@@ -743,11 +696,17 @@ button{
 }
 
 /* =========================================================
-   FOOTER NAV / FOOTER
+   FOOTER NAV
 ========================================================= */
 
 .model-footer-nav{
   padding: 22px 24px;
+  transition:
+    transform 0.38s ease,
+    box-shadow 0.38s ease,
+    border-color 0.38s ease,
+    background 0.38s ease;
+  will-change: transform;
 }
 
 .model-footer-nav a{
@@ -756,37 +715,106 @@ button{
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
+  transition: color 0.22s ease, transform 0.22s ease, opacity 0.22s ease;
 }
 
 .model-footer-nav a:hover{
   color: var(--ink);
+  transform: translateX(3px);
 }
 
-.site-footer{
-  border-top: 1px solid rgba(20,20,20,0.08);
-  background: rgba(255,255,255,0.36);
+/* =========================================================
+   MOTION
+========================================================= */
+
+.model-hero-card,
+.summary-card,
+.verification-card,
+.examples-intro__card,
+.archive-disclosure{
+  transition:
+    transform 0.38s ease,
+    box-shadow 0.38s ease,
+    border-color 0.38s ease,
+    background 0.38s ease;
+  will-change: transform;
 }
 
-.site-footer__inner{
-  width: min(calc(100% - 40px), var(--max));
-  margin: 0 auto;
-  min-height: 74px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
+.summary-card:hover,
+.verification-card:hover,
+.examples-intro__card:hover,
+.archive-disclosure:hover,
+.model-footer-nav:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(17,17,17,0.09);
+  border-color: rgba(20,20,20,0.14);
 }
 
-.social-icon{
-  color: var(--ink);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.artifact-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 24px 56px rgba(17,17,17,0.11);
+  border-color: rgba(20,20,20,0.15);
+}
+
+.artifact-summary-bar:hover{
+  transform: translateY(-2px);
+  border-color: rgba(20,20,20,0.14);
+}
+
+.model-hero-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 24px 58px rgba(17,17,17,0.10);
+}
+
+.model-hero-card:hover .hero-figure img{
+  transform: scale(1.025);
+}
+
+.artifact-card:hover .artifact-figure img,
+.artifact-card:hover .model-carousel__slide img{
+  transform: scale(1.03);
+}
+
+.artifact-card:hover .record-callout{
+  transform: translateY(-2px);
+  border-color: rgba(142,17,22,0.18);
+  background: linear-gradient(180deg, rgba(142,17,22,0.06), rgba(142,17,22,0.025));
+}
+
+.artifact-record:hover .artifact-record__title{
+  transform: translateX(4px);
+  color: #1b1715;
+}
+
+/* =========================================================
+   SCROLL REVEAL
+========================================================= */
+
+.reveal{
+  opacity: 0;
+  transform: translateY(54px);
+  transition:
+    opacity 0.95s ease,
+    transform 0.95s ease;
+  will-change: opacity, transform;
+}
+
+.reveal.is-visible{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-soft{
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+
+.reveal-soft.is-visible{
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* =========================================================
@@ -828,66 +856,8 @@ button{
 }
 
 @media (max-width: 700px){
-  :root{
-    --header-h: 72px;
-  }
-
-  .site-header__inner,
-  .model-main,
-  .site-footer__inner{
-    width: min(calc(100% - 28px), var(--max));
-  }
-
-  .brand__mark img{
-    height: 40px;
-  }
-
-  .brand__text{
-    display: none;
-  }
-
-  .nav-toggle{
-    display: inline-block;
-  }
-
-  .site-nav{
-    position: absolute;
-    top: calc(100% + 1px);
-    right: 14px;
-    left: 14px;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0;
-    padding: 14px 0;
-    border: 1px solid var(--line);
-    border-radius: 18px;
-    background: rgba(255,255,255,0.96);
-    box-shadow: var(--shadow-soft);
-  }
-
-  .site-nav a{
-    width: 100%;
-    padding: 12px 16px;
-  }
-
-  body.nav-open .site-nav{
-    display: flex;
-  }
-
-  body.nav-open .nav-toggle span:nth-child(1){
-    transform: translateY(6px) rotate(45deg);
-  }
-
-  body.nav-open .nav-toggle span:nth-child(2){
-    opacity: 0;
-  }
-
-  body.nav-open .nav-toggle span:nth-child(3){
-    transform: translateY(-6px) rotate(-45deg);
-  }
-
   .model-main{
+    width: min(calc(100% - 28px), var(--max));
     padding-top: 26px;
     padding-bottom: 70px;
   }
@@ -944,156 +914,8 @@ button{
     padding: 20px;
   }
 
-  .site-footer__inner{
-    min-height: 66px;
-    font-size: 11px;
-  }
-   .artifact-card:active,
+  .artifact-card:active,
   .summary-card:active{
     transform: scale(0.98);
   }
-}
-/* =========================================================
-   MOTION
-========================================================= */
-
-.model-hero-card,
-.summary-card,
-.verification-card,
-.examples-intro__card,
-.artifact-card,
-.archive-disclosure,
-.model-footer-nav,
-.artifact-summary-bar{
-  transition:
-    transform 0.38s ease,
-    box-shadow 0.38s ease,
-    border-color 0.38s ease,
-    background 0.38s ease;
-  will-change: transform;
-}
-
-.summary-card:hover,
-.verification-card:hover,
-.examples-intro__card:hover,
-.archive-disclosure:hover,
-.model-footer-nav:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 20px 48px rgba(17,17,17,0.09);
-  border-color: rgba(20,20,20,0.14);
-}
-
-.artifact-card:hover{
-  transform: translateY(-6px);
-  box-shadow: 0 24px 56px rgba(17,17,17,0.11);
-  border-color: rgba(20,20,20,0.15);
-}
-
-.artifact-summary-bar:hover{
-  transform: translateY(-2px);
-  border-color: rgba(20,20,20,0.14);
-}
-
-.model-hero-card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 24px 58px rgba(17,17,17,0.10);
-}
-
-/* image motion */
-.hero-figure,
-.artifact-figure,
-.model-carousel__viewport{
-  overflow: hidden;
-}
-
-.hero-figure img,
-.artifact-figure img,
-.model-carousel__slide img{
-  transition: transform 0.8s ease, filter 0.5s ease;
-  transform-origin: center center;
-  will-change: transform;
-}
-
-.model-hero-card:hover .hero-figure img{
-  transform: scale(1.025);
-}
-
-.artifact-card:hover .artifact-figure img,
-.artifact-card:hover .model-carousel__slide img{
-  transform: scale(1.03);
-}
-
-/* links feel more alive */
-.record-link a,
-.model-footer-nav a,
-.site-nav a{
-  transition: color 0.22s ease, transform 0.22s ease, opacity 0.22s ease;
-}
-
-.record-link a:hover,
-.model-footer-nav a:hover{
-  transform: translateX(3px);
-}
-
-.record-link span{
-  transition: transform 0.22s ease;
-}
-
-.record-link a:hover span{
-  transform: translateX(3px);
-  display: inline-block;
-}
-
-/* callout slight polish */
-.record-callout{
-  transition:
-    transform 0.32s ease,
-    border-color 0.32s ease,
-    background 0.32s ease;
-}
-
-.artifact-card:hover .record-callout{
-  transform: translateY(-2px);
-  border-color: rgba(142,17,22,0.18);
-  background: linear-gradient(180deg, rgba(142,17,22,0.06), rgba(142,17,22,0.025));
-}
-
-/* subtle heading movement */
-.artifact-record__title{
-  transition: transform 0.32s ease, color 0.32s ease;
-}
-
-.artifact-record:hover .artifact-record__title{
-  transform: translateX(4px);
-  color: #1b1715;
-}
-/* =========================================================
-   SCROLL REVEAL
-========================================================= */
-
-.reveal{
-  opacity: 0;
-  transform: translateY(54px);
-  transition:
-    opacity 0.95s ease,
-    transform 0.95s ease;
-  will-change: opacity, transform;
-}
-
-.reveal.is-visible{
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.reveal-soft{
-  opacity: 0;
-  transform: translateY(18px);
-  transition:
-    opacity 0.65s ease,
-    transform 0.65s ease;
-}
-
-.reveal-soft.is-visible{
-  opacity: 1;
-  transform: translateY(0);
 }
