@@ -476,7 +476,24 @@
   .journal-title{
     font-size: 26px;
   }
+
+  .feature-card{
+  border: 1px solid var(--journal-line);
+  border-radius: 22px;
+  background: rgba(255,255,255,0.76);
+  box-shadow: 0 14px 34px rgba(17,17,17,0.06);
+  overflow: hidden;
+ }
+
+.feature-link{
+  gap: 0;
+ }
+
+.feature-copy{
+  padding: 20px 18px 22px;
 }
+}
+
 /* FEATURE EMPHASIS */
 
 .feature-card{
