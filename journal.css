@@ -153,56 +153,65 @@
 ========================================================= */
 
 .feature-card{
-  border: 1px solid var(--journal-line);
-  border-radius: 28px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.82);
-  box-shadow: var(--journal-shadow);
+  border: none;
+  border-radius: 0;
+  overflow: visible;
+  background: none;
+  box-shadow: none;
 }
 
 .feature-link{
   display: grid;
-  grid-template-columns: 1.05fr 0.95fr;
+  grid-template-columns: minmax(0, 1.18fr) minmax(320px, 0.82fr);
   align-items: stretch;
+  gap: 46px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .feature-media{
   min-height: 420px;
   overflow: hidden;
+  border-radius: 22px;
+  background: #e9e4dc;
 }
 
 .feature-media img{
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
+  transition: transform 0.7s ease;
 }
 
 .feature-copy{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 38px 36px 40px;
+  padding: 8px 0;
 }
 
 .feature-meta{
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 10px;
-  letter-spacing: 0.18em;
+  font-size: 11px;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--journal-muted);
+  color: rgba(17,17,17,0.42);
 }
 
 .feature-copy h3{
-  margin: 0 0 16px;
-  font-size: clamp(34px, 4vw, 54px);
-  line-height: 0.96;
-  letter-spacing: -0.03em;
+  margin: 0 0 18px;
+  font-size: clamp(40px, 4.2vw, 64px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
   font-weight: 500;
+  max-width: 11ch;
 }
 
 .feature-copy p{
   margin: 0 0 24px;
+  max-width: 31rem;
   font-size: 18px;
   line-height: 1.65;
   color: var(--journal-muted);
@@ -211,13 +220,22 @@
 .feature-cta{
   display: inline-flex;
   width: fit-content;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--accent);
+  padding-bottom: 0;
+  border-bottom: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--accent);
+  transition: transform 0.22s ease, opacity 0.22s ease;
+}
+
+.feature-link:hover .feature-media img{
+  transform: scale(1.03);
+}
+
+.feature-link:hover .feature-cta{
+  transform: translateX(4px);
 }
 
 /* =========================================================
@@ -298,14 +316,28 @@
 /* =========================================================
    RESPONSIVE
 ========================================================= */
-
-@media (max-width: 1000px){
+@media (max-width: 900px){
   .feature-link{
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
   .feature-media{
     min-height: 320px;
+    border-radius: 18px;
+  }
+
+  .feature-copy{
+    padding: 0;
+  }
+
+  .feature-copy h3{
+    max-width: none;
+    font-size: clamp(34px, 8vw, 52px);
+  }
+
+  .feature-copy p{
+    max-width: none;
   }
 
   .journal-grid{
@@ -314,6 +346,32 @@
 }
 
 @media (max-width: 700px){
+  .feature-link{
+    gap: 18px;
+  }
+
+  .feature-media{
+    min-height: 260px;
+    border-radius: 16px;
+  }
+
+  .feature-meta{
+    margin-bottom: 12px;
+    font-size: 10px;
+  }
+
+  .feature-copy h3{
+    margin-bottom: 12px;
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 0.98;
+  }
+
+  .feature-copy p{
+    margin-bottom: 18px;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  
   .journal-hero{
     min-height: 520px;
   }
