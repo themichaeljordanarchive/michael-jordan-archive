@@ -187,5 +187,24 @@ if (toggle) {
   });
 </script>
 
+<script>
+  const featureCard = document.querySelector('.feature-card');
+
+  if (featureCard) {
+    const featureObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          console.log("FEATURE TRIGGERED"); // 👈 DEBUG
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    featureObserver.observe(featureCard);
+  }
+</script>
+
 </body>
 </html>
