@@ -243,7 +243,7 @@
 ========================================================= */
 
 .dw-registry{
-  padding-top: 8px;
+  padding-top: 18px;
 }
 
 .dw-section-head{
@@ -385,7 +385,7 @@
   }
 
   .dw-hero{
-    padding: 92px 0 26px;
+    padding: 76px 0 20px;
   }
 
   .dw-title{
@@ -403,13 +403,13 @@
   }
 
   .dw-intro-card{
-    padding: 22px 20px 24px;
+    padding: 20px 18px 22px;
     border-radius: 22px;
   }
 
   .dw-intro-copy p{
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: 15px;
+    line-height: 1.62;
   }
 
   .dw-stat-value{
@@ -425,7 +425,7 @@
   }
 
   .dw-feature-media{
-    min-height: 240px;
+    min-height: 180px;
   }
 
   .dw-feature-media-inner{
@@ -454,7 +454,7 @@
   }
 
   .dw-section-head{
-    margin-bottom: 22px;
+    margin-bottom: 26px;
   }
 
   .dw-section-head h2{
