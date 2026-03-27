@@ -176,5 +176,16 @@ if (toggle) {
 }
 </script>
 
+<script>
+  window.addEventListener('load', () => {
+    const featureCard = document.querySelector('.feature-card');
+    if (!featureCard) return;
+
+    requestAnimationFrame(() => {
+      featureCard.classList.add('is-visible');
+    });
+  });
+</script>
+
 </body>
 </html>

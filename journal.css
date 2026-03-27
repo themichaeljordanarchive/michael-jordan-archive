@@ -239,6 +239,43 @@
 }
 
 /* =========================================================
+   FEATURE LOAD REVEAL
+========================================================= */
+
+.feature-copy > *{
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.8s cubic-bezier(.22,.61,.36,1),
+    transform 0.8s cubic-bezier(.22,.61,.36,1);
+  will-change: opacity, transform;
+}
+
+.feature-card.is-visible .feature-meta{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.06s;
+}
+
+.feature-card.is-visible .feature-copy h3{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.14s;
+}
+
+.feature-card.is-visible .feature-copy p{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.22s;
+}
+
+.feature-card.is-visible .feature-cta{
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.30s;
+}
+
+/* =========================================================
    GRID
 ========================================================= */
 
