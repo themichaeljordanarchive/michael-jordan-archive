@@ -545,17 +545,26 @@ window.addEventListener('scroll', () => {
   const scrolled = window.scrollY;
   const isMobile = window.innerWidth <= 700;
 
+  // TITLE (moves faster)
   if (heroTitle) {
     if (isMobile) {
       heroTitle.style.transform = `translateY(${scrolled * -0.10}px)`;
       heroTitle.style.opacity = 1 - scrolled / 500;
     } else {
       heroTitle.style.transform = `translateX(-50%) translateY(${scrolled * -0.22}px)`;
-      heroTitle.style.opacity = 1 - scrolled / 650;
+      heroTitle.style.opacity = 1 - scrolled / 900;
+    }
+  }
+
+  // IMAGE (slow lag / slight follow)
+  if (heroImage) {
+    if (isMobile) {
+      heroImage.style.transform = 'scale(1.28)';
+    } else {
+      heroImage.style.transform = `scale(1.16) translateY(${scrolled * 0.02}px)`;
     }
   }
 });
-
 </script>
 
 </body>
