@@ -5,13 +5,13 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Archive Journal — Michael Jordan Archive</title>
   <meta name="description" content="Observations, discoveries, and commentary drawn from ongoing research within the Michael Jordan Archive." />
-  <link rel="stylesheet" href="styles-clean.css?v=23">
+  <link rel="stylesheet" href="styles-test.css">
+  <link rel="stylesheet" href="journal.css">
 </head>
 
-<body>
+<body class="journal-page">
 
 <header class="site-header">
-
   <div class="brand">
     <a href="index.html">
       <img src="assets/logo.png" alt="Michael Jordan Archive logo">
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <button class="nav-toggle" aria-label="Menu">
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false" type="button">
     <span></span>
     <span></span>
     <span></span>
@@ -37,111 +37,141 @@
     <a href="methodology.html">Methodology</a>
     <a href="contact.html">Contact</a>
   </nav>
-
 </header>
 
+<main class="journal-main">
 
-<main class="notes-page">
+  <section class="journal-hero">
+    <div class="journal-hero-media">
+      <img src="assets/card-article-legend.jpg" alt="Archive Journal hero image">
+      <div class="journal-hero-overlay"></div>
+    </div>
 
-  <section class="notes-header">
-    <h1>Archive Journal</h1>
-
-    <p class="muted">
-      Observations, discoveries, and commentary drawn from ongoing archival research within the Michael Jordan Archive.
-    </p>
+    <div class="journal-hero-inner">
+      <div class="journal-hero-kicker">Editorial Research</div>
+      <h1>Archive Journal</h1>
+      <p class="journal-hero-deck">
+        Observational writing, research entries, and long-form articles drawn from ongoing archival work within the Michael Jordan Archive.
+      </p>
+    </div>
   </section>
 
-  <p class="notes-label">Research Articles</p>
+  <section class="journal-intro section-shell">
+    <div class="journal-intro-card">
+      <p class="journal-lead">
+        The journal functions as the publication layer of the archive — a place for broader observations, case studies, and longer arguments that sit alongside the underlying season and artifact documentation.
+      </p>
+    </div>
+  </section>
 
-  <section class="journal-list">
+  <section class="journal-feature section-shell">
+    <div class="journal-section-head">
+      <div class="section-kicker">Featured</div>
+      <h2>Current feature</h2>
+    </div>
 
-    <article class="journal-item">
-      <a class="journal-link" href="articles/jordan-jersey-nuances/index.html">
-
-        <div class="journal-thumb">
-          <img src="assets/card-article-nuances-89.jpg" alt="The Nuances of the Jordan Jersey">
-        </div>
-
-        <p class="journal-meta">
-           Feb 2026 — Observational Research
-        </p>
-
-        <h2 class="journal-title">The Nuances of the Jordan Jersey</h2>
-
-        <p class="journal-deck">
-          Sand-Knit tagging, uniform inventory practices, and carryover stock during the late 1980s.
-        </p>
-
-      </a>
-    </article>
-
-    <article class="journal-item">
-      <a class="journal-link" href="articles/research-standards/index.html">
-
-        <div class="journal-thumb">
-          <img src="assets/card-article-match-86.jpg" alt="Research Standards in Photo Matching">
-        </div>
-
-        <p class="journal-meta">
-           Feb 2026 — Research Entry
-        </p>
-
-        <h2 class="journal-title">Research Standards in Photo Matching</h2>
-
-        <p class="journal-deck">
-          A case study in research and image context surrounding an early 1980s jersey.
-        </p>
-
-      </a>
-    </article>
-
-    <article class="journal-item">
-      <a class="journal-link" href="articles/the-population-of-a-legend/index.html">
-
-        <div class="journal-thumb">
+    <article class="feature-card">
+      <a class="feature-link" href="articles/the-population-of-a-legend/index.html">
+        <div class="feature-media">
           <img src="assets/card-article-legend.jpg" alt="The Population of a Legend">
         </div>
 
-        <p class="journal-meta">
-           Mar 2026 — Observational Research
-        </p>
-
-        <h2 class="journal-title">The Population of a Legend</h2>
-
-        <p class="journal-deck">
-          A season-by-season look at the number of jerseys worn by Michael Jordan during his Chicago Bulls career.
-        </p>
-
+        <div class="feature-copy">
+          <div class="feature-meta">March 2026 — Research Article</div>
+          <h3>The Population of a Legend</h3>
+          <p>
+            A season-by-season look at the number of jerseys worn by Michael Jordan during his Chicago Bulls career, and what that surviving population reveals about rarity, circulation, and historical preservation.
+          </p>
+          <span class="feature-cta">Read article</span>
+        </div>
       </a>
     </article>
+  </section>
 
+  <section class="journal-archive section-shell">
+    <div class="journal-section-head">
+      <div class="section-kicker">Archive</div>
+      <h2>Published entries</h2>
+      <p>
+        Research writing organized by article type rather than blog chronology.
+      </p>
+    </div>
+
+    <div class="journal-grid">
+
+      <article class="journal-card">
+        <a class="journal-link" href="articles/jordan-jersey-nuances/index.html">
+          <div class="journal-thumb">
+            <img src="assets/card-article-nuances-89.jpg" alt="The Nuances of the Jordan Jersey">
+          </div>
+
+          <div class="journal-card-body">
+            <p class="journal-meta">February 2026 — Observational Research</p>
+            <h3 class="journal-title">The Nuances of the Jordan Jersey</h3>
+            <p class="journal-deck">
+              Sand-Knit tagging, uniform inventory practices, and carryover stock during the late 1980s.
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <article class="journal-card">
+        <a class="journal-link" href="articles/research-standards/index.html">
+          <div class="journal-thumb">
+            <img src="assets/card-article-match-86.jpg" alt="Research Standards in Photo Matching">
+          </div>
+
+          <div class="journal-card-body">
+            <p class="journal-meta">February 2026 — Research Entry</p>
+            <h3 class="journal-title">Research Standards in Photo Matching</h3>
+            <p class="journal-deck">
+              A case study in research method, image dating, and contextual control around an early 1980s jersey.
+            </p>
+          </div>
+        </a>
+      </article>
+
+      <article class="journal-card">
+        <a class="journal-link" href="articles/the-population-of-a-legend/index.html">
+          <div class="journal-thumb">
+            <img src="assets/card-article-legend.jpg" alt="The Population of a Legend">
+          </div>
+
+          <div class="journal-card-body">
+            <p class="journal-meta">March 2026 — Research Article</p>
+            <h3 class="journal-title">The Population of a Legend</h3>
+            <p class="journal-deck">
+              A season-by-season study of Michael Jordan Bulls jersey population and the rarity revealed through archival documentation.
+            </p>
+          </div>
+        </a>
+      </article>
+
+    </div>
   </section>
 
 </main>
 
-
 <footer class="site-footer">
+  <span>© Michael Jordan Archive</span>
 
-© Michael Jordan Archive
-
-<a href="https://www.instagram.com/themichaeljordanarchive?igsh=YzRlcjhnc2dsdzV5&utm_source=qr" target="_blank" class="social-icon" aria-label="Instagram">
-
-<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
-<path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5z"/>
-<circle cx="12" cy="12" r="3.5"/>
-<circle cx="17.5" cy="6.5" r="1"/>
-</svg>
-
-</a>
-
+  <div class="footer-right">
+    <a href="https://www.instagram.com/themichaeljordanarchive?igsh=YzRlcjhnc2dsdzV5&utm_source=qr" target="_blank" class="social-icon" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+        <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5z"/>
+        <circle cx="12" cy="12" r="3.5"/>
+        <circle cx="17.5" cy="6.5" r="1"/>
+      </svg>
+    </a>
+  </div>
 </footer>
-
 
 <script>
 const toggle = document.querySelector('.nav-toggle');
 if (toggle) {
   toggle.addEventListener('click', () => {
     document.body.classList.toggle('nav-open');
+    toggle.setAttribute('aria-expanded', document.body.classList.contains('nav-open'));
   });
 }
 </script>
