@@ -92,11 +92,14 @@
   text-shadow: 0 14px 40px rgba(0,0,0,0.38);
 }
 
-.article-hero-deck{
-  width: min(100%, 640px);
-  margin: 20px auto 0;
-  color: rgba(255,255,255,0.92);
-  font-size: clamp(17px, 2vw, 23px);
+.article-mid-hero-deck{
+  width: min(100%, 520px);
+  margin: 14px auto 0;
+
+  text-align: center;
+
+  color: rgba(255,255,255,0.70);
+  font-size: clamp(16px, 2vw, 20px);
   line-height: 1.5;
 }
 
