@@ -38,15 +38,23 @@ body{
 }
 
 .article-hero-image{
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 
 .article-hero-overlay{
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.35);
+  z-index: 1;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.08) 0%,
+    rgba(0,0,0,0.22) 55%,
+    rgba(0,0,0,0.38) 100%
+  );
 }
 
 .article-hero-title{
@@ -72,18 +80,15 @@ body{
   font-size: clamp(48px, 6vw, 76px);
   font-weight: 400;
   line-height: 1.05;
-  letter-spacing: -0.02;
+  letter-spacing: -0.02em;
   color: #ffffff;
   text-shadow: 0 10px 40px rgba(0,0,0,0.45);
-  bottom: 110px;
-  white-space: nowrap;
 }
 
 .article-hero-deck{
-  margin-top: 14px;
-  font-size: 17px;
   margin: 16px auto 0;
-  opacity: 0.9;
+  font-size: 17px;
+  max-width: 640px;
   color: rgba(255,255,255,0.9);
 }
 
@@ -99,8 +104,7 @@ body{
 
 .article-intro-card{
   max-width: 900px;
-  margin: 0 auto 70px;
-  margin-bottom: 80px;
+  margin: 0 auto 80px;
 }
 
 .article-lead{
@@ -122,7 +126,7 @@ body{
 }
 
 .article-body p{
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   font-size: 17px;
 }
 
@@ -132,13 +136,13 @@ body{
 
 .article-body h2{
   font-size: 26px;
-  margin: 60px 0 20px;
+  margin: 70px 0 20px;
   font-weight: 400;
 }
 
 .article-body h3{
   font-size: 20px;
-  margin: 50px 0 14px;
+  margin: 60px 0 14px;
   font-weight: 400;
 }
 
@@ -152,13 +156,14 @@ body{
 
 .figure-full img{
   width: 100%;
-  
+  display: block;
 }
 
 .figure-full figcaption{
   margin-top: 10px;
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.55);
 }
 
 /* =========================================================
@@ -187,12 +192,14 @@ body{
 
 .article-figure img{
   width: 100%;
+  display: block;
 }
 
 .article-figure figcaption{
   margin-top: 10px;
-  font-size: 13px;
-  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(0,0,0,0.55);
 }
 
 /* =========================================================
@@ -222,21 +229,6 @@ body{
 }
 
 /* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 900px){
-
-  .article-split,
-  .article-split--image-right{
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-}
-
-}
-
-/* =========================================================
    SECTION BREAK
 ========================================================= */
 
@@ -255,48 +247,127 @@ body{
   height: 1px;
   background: #8f1116;
 }
+
 /* =========================================================
-   HERO FIX (FINAL)
+   TABLET / MOBILE LAYOUT
 ========================================================= */
 
-.article-hero{
-  position: relative;
-  height: 92vh;
-  min-height: 540px;
-  overflow: hidden;
+@media (max-width: 900px){
+
+  .article-split,
+  .article-split--image-right{
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
 }
 
-.article-hero-media{
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
+/* =========================================================
+   MOBILE HERO
+========================================================= */
 
-.article-hero-image{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center 40%;
-}
+@media (max-width: 700px){
 
-.article-hero-overlay{
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background: linear-gradient(
-    to bottom,
-    rgba(0,0,0,0.08) 0%,
-    rgba(0,0,0,0.22) 55%,
-    rgba(0,0,0,0.38) 100%
-  );
-}
+  .article-hero{
+    height: auto;
+    min-height: 0;
+    overflow: hidden;
+  }
 
-.article-hero-title{
-  position: absolute;
-  z-index: 3;
-  left: 50%;
-  bottom: 80px;
-  transform: translateX(-50%);
-  width: min(90%, 720px);
-  text-align: center;
+  .article-hero-media{
+    position: relative;
+    inset: auto;
+    height: 320px;
+    will-change: auto;
+  }
+
+  .article-hero-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+
+  .article-hero-overlay{
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.08) 0%,
+      rgba(0,0,0,0.16) 55%,
+      rgba(0,0,0,0.26) 100%
+    );
+  }
+
+  .article-hero-title{
+    position: relative;
+    left: auto;
+    bottom: auto;
+    transform: none !important;
+    width: auto;
+    max-width: none;
+    text-align: center;
+    padding: 34px 18px 38px;
+    background: #d6d3ce;
+  }
+
+  .article-hero-kicker{
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    margin-bottom: 12px;
+    color: rgba(255,255,255,0.92);
+  }
+
+  .article-hero-title h1{
+    margin: 0;
+    font-size: clamp(34px, 9vw, 50px);
+    line-height: 1.04;
+    letter-spacing: -0.02em;
+    color: #fff;
+    text-shadow: 0 8px 24px rgba(0,0,0,0.22);
+    white-space: normal;
+  }
+
+  .article-hero-deck{
+    margin: 16px auto 0;
+    max-width: 92%;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.94);
+  }
+
+  .article-shell{
+    padding: 48px 18px 64px;
+  }
+
+  .article-intro-card{
+    margin-bottom: 52px;
+  }
+
+  .article-lead{
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+  .article-body{
+    max-width: 100%;
+  }
+
+  .article-body p{
+    font-size: 16px;
+    line-height: 1.68;
+  }
+
+  .figure-full{
+    margin: 48px 0;
+  }
+
+  .article-split,
+  .article-split--image-right{
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin: 44px 0;
+  }
+
 }
