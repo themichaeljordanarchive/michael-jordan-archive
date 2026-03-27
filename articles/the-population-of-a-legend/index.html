@@ -536,5 +536,27 @@ if (btn) {
   });
 }
 </script>
+
+<script>
+const heroTitle = document.querySelector('.article-hero-title');
+const heroImage = document.querySelector('.article-hero-image');
+
+window.addEventListener('scroll', () => {
+  const scrolled = window.scrollY;
+  const isMobile = window.innerWidth <= 700;
+
+  if (heroTitle) {
+    if (isMobile) {
+      heroTitle.style.transform = `translateY(${scrolled * -0.10}px)`;
+      heroTitle.style.opacity = 1 - scrolled / 500;
+    } else {
+      heroTitle.style.transform = `translateX(-50%) translateY(${scrolled * -0.22}px)`;
+      heroTitle.style.opacity = 1 - scrolled / 650;
+    }
+  }
+});
+
+</script>
+
 </body>
 </html>
