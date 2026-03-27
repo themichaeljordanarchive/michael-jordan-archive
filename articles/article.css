@@ -363,12 +363,18 @@
 .article-mid-hero-title{
   position: absolute;
   z-index: 2;
-  left: 40px;
+
+  left: 50%;
   bottom: 58px;
+
+  transform: translateX(-50%);
+
   max-width: 640px;
-  text-align: left;
-  color: #fff;
-  transform: translate(-10px);
+  width: calc(100% - 40px);
+
+  text-align: center;
+  color: rgba(255,255,255,0.88);
+
   text-shadow: 0 14px 36px rgba(0,0,0,0.30);
 }
 
@@ -394,10 +400,14 @@
 
 .article-mid-hero-deck{
   width: min(100%, 560px);
-  margin: 18px 0 0;
-  color: rgba(255,255,255,0.92);
+  margin: 14px 0 0;
+  color: rgba(255,255,255,0.70);
   font-size: clamp(17px, 2vw, 22px);
   line-height: 1.5;
+}
+
+.article-mid-hero-title h2{
+  text-rendering: optimizeLegibility;
 }
 
 /* =========================================================
@@ -419,13 +429,16 @@
 }
 
   .article-mid-hero-title{
-    left: 16px;
-    right: 16px;
-    bottom: 28px;
-    max-width: none;
-    text-align: left;
-    transform: none;
-  }
+  left: 50%;
+  right: auto;
+  bottom: 28px;
+
+  width: calc(100% - 32px);
+  max-width: 560px;
+
+  transform: translateX(-50%);
+  text-align: center;
+}
 
   .article-mid-hero-title h2{
     font-size: clamp(38px, 11vw, 56px);
@@ -437,6 +450,8 @@
     margin-top: 14px;
     font-size: 15px;
     line-height: 1.5;
+    text-align: center;
+    margin: 14px auto 0;;
   }
 }
 
