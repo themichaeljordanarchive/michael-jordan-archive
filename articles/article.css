@@ -316,6 +316,129 @@
   text-transform: uppercase;
   color: var(--article-muted);
 }
+/* =========================================================
+   MID ARTICLE HERO (EDITORIAL BREAK)
+========================================================= */
+
+.article-mid-hero{
+  position: relative;
+  width: 100vw;
+  margin: 96px 0;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  min-height: 76vh;
+  max-height: 860px;
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(17,17,17,0.08);
+  box-shadow: 0 24px 60px rgba(0,0,0,0.12);
+}
+
+.article-mid-hero-media{
+  position: absolute;
+  inset: 0;
+}
+
+.article-mid-hero-media img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 34%;
+  transform: scale(1.06);
+}
+
+.article-mid-hero-overlay{
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.06) 0%,
+      rgba(0,0,0,0.14) 28%,
+      rgba(0,0,0,0.28) 62%,
+      rgba(0,0,0,0.60) 100%
+    );
+}
+
+.article-mid-hero-title{
+  position: absolute;
+  z-index: 2;
+  left: 40px;
+  bottom: 58px;
+  max-width: 640px;
+  text-align: left;
+  color: #fff;
+  transform: translate(-10px);
+  text-shadow: 0 14px 36px rgba(0,0,0,0.30);
+}
+
+.article-mid-hero-kicker{
+  display: inline-block;
+  margin-bottom: 16px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.84);
+}
+
+.article-mid-hero-title h2{
+  margin: 0;
+  font-size: clamp(60px, 7vw, 100px);
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+  color: #fff;
+  text-shadow: 0 14px 40px rgba(0,0,0,0.38);
+}
+
+.article-mid-hero-deck{
+  width: min(100%, 560px);
+  margin: 18px 0 0;
+  color: rgba(255,255,255,0.92);
+  font-size: clamp(17px, 2vw, 22px);
+  line-height: 1.5;
+}
+
+/* =========================================================
+   MOBILE MID HERO
+========================================================= */
+
+@media (max-width: 700px){
+
+ .article-mid-hero{
+  width: calc(100% + 32px);
+  min-height: 460px;
+  border-radius: 10px;
+
+  margin-top: 64px;
+  margin-bottom: 64px;
+  margin-left: 50%;
+
+  transform: translateX(-50%);
+}
+
+  .article-mid-hero-title{
+    left: 16px;
+    right: 16px;
+    bottom: 28px;
+    max-width: none;
+    text-align: left;
+    transform: none;
+  }
+
+  .article-mid-hero-title h2{
+    font-size: clamp(38px, 11vw, 56px);
+    line-height: 0.98;
+  }
+
+  .article-mid-hero-deck{
+    width: min(100%, 92%);
+    margin-top: 14px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+}
 
 /* =========================================================
    RESPONSIVE
