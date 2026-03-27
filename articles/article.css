@@ -34,7 +34,9 @@ body{
 .article-hero-media{
   position: absolute;
   inset: 0;
-  will-change: transform;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 
 .article-hero-image{
@@ -42,7 +44,8 @@ body{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center center;
+  object-position: center 40%;
+  transform: scale(1.15);
 }
 
 .article-hero-overlay{
@@ -270,16 +273,17 @@ body{
 
   .article-hero{
     position: relative;
-    height: 72vh;
-    min-height: 480px;
+    height: 68svh;
+    min-height: 440px;
     overflow: hidden;
   }
 
   .article-hero-media{
     position: absolute;
     inset: 0;
+    width: 100%;
     height: 100%;
-    z-index: 1;
+    overflow: hidden;
     will-change: auto;
   }
 
@@ -288,27 +292,28 @@ body{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 35%;
+    object-position: center 42%;
+    transform: scale(1.32);
   }
 
   .article-hero-overlay{
     position: absolute;
     inset: 0;
-    z-index: 2;
+    z-index: 1;
     background: linear-gradient(
       to bottom,
-      rgba(0,0,0,0.08) 0%,
-      rgba(0,0,0,0.18) 58%,
-      rgba(0,0,0,0.34) 100%
+      rgba(0,0,0,0.06) 0%,
+      rgba(0,0,0,0.16) 55%,
+      rgba(0,0,0,0.32) 100%
     );
   }
 
   .article-hero-title{
     position: absolute;
-    z-index: 3;
+    z-index: 2;
     left: 16px;
     right: 16px;
-    bottom: 28px;
+    bottom: 26px;
     width: auto;
     max-width: none;
     transform: none !important;
@@ -327,8 +332,8 @@ body{
 
   .article-hero-title h1{
     margin: 0;
-    font-size: clamp(34px, 10vw, 50px);
-    line-height: 1.04;
+    font-size: 40px;
+    line-height: 1.02;
     letter-spacing: -0.02em;
     white-space: normal;
     color: #fff;
@@ -336,43 +341,11 @@ body{
   }
 
   .article-hero-deck{
-    margin: 14px auto 0;
+    margin: 12px auto 0;
     max-width: 92%;
     font-size: 15px;
     line-height: 1.45;
     color: rgba(255,255,255,0.94);
   }
 
-  .article-shell{
-    padding: 48px 18px 64px;
-  }
-
-  .article-intro-card{
-    margin-bottom: 52px;
-  }
-
-  .article-lead{
-    font-size: 18px;
-    line-height: 1.5;
-  }
-
-  .article-body{
-    max-width: 100%;
-  }
-
-  .article-body p{
-    font-size: 16px;
-    line-height: 1.68;
-  }
-
-  .figure-full{
-    margin: 48px 0;
-  }
-
-  .article-split,
-  .article-split--image-right{
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin: 44px 0;
-  }
 }
