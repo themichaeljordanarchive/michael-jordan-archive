@@ -260,13 +260,13 @@
 .feature-card.is-visible .feature-copy h3{
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.14s;
+  transition-delay: 0.18s;
 }
 
 .feature-card.is-visible .feature-copy p{
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 0.22s;
+  transition-delay: 0.28s;
 }
 
 .feature-card.is-visible .feature-cta{
