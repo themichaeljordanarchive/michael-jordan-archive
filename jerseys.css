@@ -174,9 +174,12 @@ button{
   padding: clamp(56px, 7vw, 96px) 0;
 }
 
+/* HERO */
+
 .index-hero{
   padding-top: clamp(56px, 7vw, 88px);
-  border-bottom: 1px solid rgba(17,17,17,0.06);
+  padding-bottom: 20px;
+  border-bottom: 0;
 }
 
 .hero-grid{
@@ -203,7 +206,7 @@ button{
 }
 
 .auth-toggle{
-  margin-top: 28px;
+  margin-top: 18px;
   border: 1px solid var(--line);
   border-radius: 18px;
   background: rgba(255,255,255,0.92);
@@ -292,15 +295,21 @@ button{
   color: rgba(17,17,17,0.54);
 }
 
-/* JUMP STRIP */
+/* JUMP SECTION */
 
 .jump-nav-section{
-  padding-top: 16px;
-  padding-bottom: 22px;
+  padding-top: 8px;
+  padding-bottom: 10px;
+}
+
+.section-divider{
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(17,17,17,0.14), transparent);
+  margin: 0 0 28px;
 }
 
 .section-head{
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
 .section-head h2{
@@ -315,7 +324,7 @@ button{
   display: flex;
   gap: 10px;
   overflow-x: auto;
-  padding: 4px 2px 8px;
+  padding: 2px 2px 0;
   scrollbar-width: none;
 }
 
@@ -345,8 +354,8 @@ button{
 
 /* SEASON GRID */
 
-season-directory-section{
-  padding-top: 0px;
+.season-directory-section{
+  padding: 0 0 72px;
 }
 
 .season-grid{
@@ -597,9 +606,18 @@ season-directory-section{
     width: min(calc(100% - 28px), var(--max));
   }
 
-  .index-hero,
-  .jump-nav-section,
-  .season-directory-section,
+  .index-hero{
+    padding: 44px 0 20px;
+  }
+
+  .jump-nav-section{
+    padding: 0 0 8px;
+  }
+
+  .season-directory-section{
+    padding: 0 0 44px;
+  }
+
   .support-links-section{
     padding: 44px 0;
   }
@@ -613,7 +631,7 @@ season-directory-section{
     line-height: 1.6;
   }
 
-  .jump-nav-head h2{
+  .section-head h2{
     font-size: 34px;
   }
 
