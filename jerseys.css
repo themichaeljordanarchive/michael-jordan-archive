@@ -14,6 +14,7 @@
   --radius: 24px;
   --shadow-soft: 0 20px 50px rgba(0,0,0,0.08);
   --shadow-card: 0 22px 58px rgba(0,0,0,0.11);
+  --shadow-hover: 0 20px 50px rgba(0,0,0,0.10);
 }
 
 *,
@@ -59,12 +60,12 @@ button{
 
 .section-kicker{
   display: inline-block;
-  margin-bottom: 14px;
+  margin-bottom: 18px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(17,17,17,0.48);
+  color: rgba(17,17,17,0.52);
 }
 
 /* HEADER */
@@ -170,7 +171,6 @@ button{
 .jump-nav-section,
 .season-directory-section,
 .support-links-section{
-  padding-top: 32px;
   padding: clamp(56px, 7vw, 96px) 0;
 }
 
@@ -179,94 +179,117 @@ button{
   border-bottom: 1px solid rgba(17,17,17,0.06);
 }
 
-.index-hero h1{
-  margin: 0 0 18px;
-  font-size: clamp(46px, 7vw, 92px);
-  line-height: 0.95;
-  font-weight: 500;
-  letter-spacing: -0.04em;
-}
-
-.index-intro{
-  width: min(100%, 860px);
-  margin: 0;
-  color: var(--muted);
-  font-size: clamp(18px, 2vw, 23px);
-  line-height: 1.6;
-}
-
-.hero-meta-row{
+.hero-grid{
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 190px;
-  gap: 22px;
+  grid-template-columns: minmax(0, 1.5fr) 300px;
+  gap: 28px;
   align-items: start;
-  margin-top: 34px;
 }
 
-.meta-panel{
+.hero-main h1{
+  margin: 0 0 14px;
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+  font-weight: 500;
+}
+
+.hero-intro{
+  max-width: 760px;
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.62;
+  color: rgba(17,17,17,0.80);
+}
+
+.auth-toggle{
+  margin-top: 28px;
   border: 1px solid var(--line);
-  border-radius: 22px;
-  background: var(--surface);
-  box-shadow: var(--shadow-soft);
+  border-radius: 18px;
+  background: rgba(255,255,255,0.92);
+  box-shadow: 0 14px 36px rgba(0,0,0,0.06);
   overflow: hidden;
 }
 
-.meta-panel summary{
+.auth-toggle summary{
   list-style: none;
   cursor: pointer;
   padding: 18px 20px;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 12px;
-  letter-spacing: 0.14em;
+  font-size: 11px;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
+  color: rgba(17,17,17,0.78);
+  position: relative;
 }
 
-.meta-panel summary::-webkit-details-marker{
+.auth-toggle summary::-webkit-details-marker{
   display: none;
 }
 
-.meta-panel-body{
+.auth-toggle summary::after{
+  content: "+";
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  letter-spacing: 0;
+  color: rgba(17,17,17,0.55);
+}
+
+.auth-toggle[open] summary::after{
+  content: "–";
+}
+
+.auth-panel{
   padding: 0 20px 20px;
-  border-top: 1px solid rgba(17,17,17,0.08);
+  border-top: 1px solid var(--line);
 }
 
-.meta-list{
-  margin: 16px 0 0;
-  padding-left: 18px;
+.auth-panel p{
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 1.66;
+  color: rgba(17,17,17,0.80);
 }
 
-.meta-list li{
-  margin-bottom: 10px;
-  color: var(--muted);
-  font-size: 16px;
-  line-height: 1.55;
+.hero-stats{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-.meta-stamp{
-  display: grid;
-  place-items: center;
-  aspect-ratio: 1 / 1;
-  padding: 14px;
-  border: 1px solid var(--line-strong);
-  border-radius: 50%;
-  background: rgba(255,255,255,0.84);
-  box-shadow: var(--shadow-soft);
-  text-align: center;
+.stat-card{
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: #ffffff;
+  padding: 22px 22px 20px;
+  box-shadow: 0 14px 36px rgba(0,0,0,0.06);
 }
 
-.meta-stamp-label{
+.stat-label{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: rgba(17,17,17,0.50);
 }
 
-.meta-stamp-number{
-  margin: 6px 0;
-  font-size: clamp(34px, 4vw, 52px);
+.stat-value{
+  margin-top: 10px;
+  font-size: clamp(34px, 4vw, 44px);
   line-height: 1;
-  font-weight: 500;
+  letter-spacing: -0.04em;
+}
+
+.stat-note{
+  margin-top: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(17,17,17,0.54);
 }
 
 /* JUMP STRIP */
@@ -345,6 +368,7 @@ button{
     transform 260ms ease,
     box-shadow 260ms ease,
     border-color 260ms ease;
+  outline: none;
 }
 
 .season-card:hover{
@@ -375,7 +399,6 @@ button{
   flex-direction: column;
   gap: 14px;
   padding: 20px 18px 22px;
-
   background: #ffffff;
   border-top: 1px solid rgba(17,17,17,0.08);
 }
@@ -402,8 +425,8 @@ button{
 }
 
 .season-card-status{
-    opacity: 0.5;
-    letter-spacing: 0.12em;
+  opacity: 0.5;
+  letter-spacing: 0.12em;
   color: rgba(17,17,17,0.54);
 }
 
@@ -422,11 +445,7 @@ button{
 .season-card.is-empty .season-card-image img{
   opacity: 0.44;
 }
-.season-card{
-  outline: none;
-}
 
-/* ONLY show focus if user is tabbing (keyboard) */
 .season-card:focus:not(:focus-visible){
   outline: none;
   box-shadow: none;
@@ -512,6 +531,16 @@ button{
   }
 }
 
+@media (max-width: 1100px){
+  .hero-grid{
+    grid-template-columns: 1fr;
+  }
+
+  .hero-stats{
+    max-width: 320px;
+  }
+}
+
 @media (max-width: 900px){
   :root{
     --header-h: 74px;
@@ -554,14 +583,6 @@ button{
     transform: translateY(0);
   }
 
-  .hero-meta-row{
-    grid-template-columns: 1fr;
-  }
-
-  .meta-stamp{
-    width: 190px;
-  }
-
   .season-grid{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -583,11 +604,11 @@ button{
     padding: 44px 0;
   }
 
-  .index-hero h1{
+  .hero-main h1{
     font-size: clamp(40px, 12vw, 62px);
   }
 
-  .index-intro{
+  .hero-intro{
     font-size: 17px;
     line-height: 1.6;
   }
@@ -602,16 +623,16 @@ button{
   }
 
   .season-card{
-  border-radius: 18px;
+    border-radius: 18px;
   }
 
   .season-card-body{
-  padding: 12px 14px 14px;
-  gap: 6px;
+    padding: 12px 14px 14px;
+    gap: 6px;
   }
 
   .season-card-title{
-  font-size: 16px;
+    font-size: 16px;
   }
 
   .season-card-year{
@@ -619,14 +640,15 @@ button{
   }
 
   .season-card-meta{
-  font-size: 12px;
- }
+    font-size: 12px;
+  }
 
   .site-footer{
     padding-left: 14px;
     padding-right: 14px;
   }
 }
+
 .season-card:focus,
 .season-card:focus-visible{
   outline: none !important;
