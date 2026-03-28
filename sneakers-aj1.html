@@ -198,10 +198,29 @@
     </section>
 
     <!-- =========================================================
+         SORT CONTROL
+    ========================================================== -->
+
+  <div class="archive-controls">
+  <label for="sort">Sort by</label>
+   <select id="sort">
+    <option value="reference">Archive Reference</option>
+    <option value="date">Chronological (Earliest Known Use)</option>
+    <option value="sale">Highest Sale Price</option>
+  </select>
+ </div>
+
+ <div class="artifact-records">
+
+    <!-- =========================================================
          EXAMPLE A
     ========================================================== -->
 
-    <section class="artifact-record">
+  <section class="artifact-record"
+  data-reference="A"
+  data-date="1984-10-18"
+  data-sale="325000"
+>
       <div class="artifact-record__divider"></div>
 
       <header class="artifact-record__header">
@@ -317,7 +336,11 @@
          EXAMPLE B
     ========================================================== -->
 
-    <section class="artifact-record">
+  <section class="artifact-record"
+  data-reference="B"
+  data-date="1984-11-06"
+  data-sale="142000"
+>
       <div class="artifact-record__divider"></div>
 
       <header class="artifact-record__header">
@@ -408,7 +431,11 @@
          EXAMPLE C
     ========================================================== -->
 
-    <section class="artifact-record">
+  <section class="artifact-record"
+  data-reference="C"
+  data-date="1985-08-26"
+  data-sale="444080"
+>
       <div class="artifact-record__divider"></div>
 
       <header class="artifact-record__header">
@@ -513,7 +540,11 @@
          EXAMPLE D
     ========================================================== -->
 
-    <section class="artifact-record">
+  <section class="artifact-record"
+  data-reference="D"
+  data-date="1986-03-21"
+  data-sale="579500"
+>
       <div class="artifact-record__divider"></div>
 
       <header class="artifact-record__header">
@@ -620,7 +651,11 @@
          EXAMPLE E
     ========================================================== -->
 
-    <section class="artifact-record">
+  <section class="artifact-record"
+  data-reference="E"
+  data-date="1984-11-08"
+  data-sale="11595"
+>
       <div class="artifact-record__divider"></div>
 
       <header class="artifact-record__header">
@@ -717,7 +752,11 @@
          EXAMPLE F
     ========================================================== -->
 
-    <section class="artifact-record">
+  <section class="artifact-record"
+  data-reference="F"
+  data-date="1985-10-26"
+  data-sale="205118"
+>
       <div class="artifact-record__divider"></div>
 
       <header class="artifact-record__header">
@@ -823,7 +862,11 @@
          EXAMPLE G
     ========================================================== -->
 
-    <section class="artifact-record">
+  <section class="artifact-record"
+  data-reference="G"
+  data-date="1986-04-06"
+  data-sale="675000"
+>
       <div class="artifact-record__divider"></div>
 
       <header class="artifact-record__header">
@@ -928,7 +971,7 @@
       </article>
     </section>
 
-
+</div>
 
     <section class="model-footer-nav">
       <a href="sneakers.html">← Back to Sneaker Index</a>
@@ -1030,6 +1073,36 @@
 
     revealItems.forEach((item) => revealObserver.observe(item));
   </script>
+
+  <script>
+  const sortSelect = document.getElementById('sort');
+  const container = document.querySelector('.artifact-records');
+
+  if (sortSelect && container) {
+    sortSelect.addEventListener('change', () => {
+      const records = Array.from(container.querySelectorAll('.artifact-record'));
+      const sorted = [...records];
+
+      if (sortSelect.value === 'reference') {
+        sorted.sort((a, b) =>
+          a.dataset.reference.localeCompare(b.dataset.reference, undefined, {
+            numeric: true
+          })
+        );
+      }
+
+      if (sortSelect.value === 'date') {
+        sorted.sort((a, b) => a.dataset.date.localeCompare(b.dataset.date));
+      }
+
+      if (sortSelect.value === 'sale') {
+        sorted.sort((a, b) => Number(b.dataset.sale) - Number(a.dataset.sale));
+      }
+
+      sorted.forEach((record) => container.appendChild(record));
+    });
+  }
+</script>
 
 </body>
 </html>
