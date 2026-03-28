@@ -1056,7 +1056,7 @@
 
     revealItems.forEach((item, index) => {
       item.classList.add('reveal');
-      item.style.transitionDelay = `${index * 0.08}s`;
+      item.style.transitionDelay = `${index * 0.04}s`;
     });
 
     const revealObserver = new IntersectionObserver((entries) => {
@@ -1067,8 +1067,8 @@
         }
       });
     }, {
-      threshold: 0.18,
-      rootMargin: '0px 0px -90px 0px'
+      threshold: 0.04,
+      rootMargin: '0px 0px -45px 0px'
     });
 
     revealItems.forEach((item) => revealObserver.observe(item));
