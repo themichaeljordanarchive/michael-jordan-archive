@@ -956,3 +956,31 @@ button {
   align-content: center;
   gap: 12px;
 }
+/* ======================================
+   FINAL META SPACING (BALANCED)
+   ====================================== */
+
+.record-meta-strip {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+/* spacing between each group */
+.record-meta-strip > div {
+  margin-bottom: 12px;
+}
+
+.record-meta-strip > div:last-child {
+  margin-bottom: 0;
+}
+
+/* spacing inside each group */
+.meta-label {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.meta-value {
+  display: block;
+}
