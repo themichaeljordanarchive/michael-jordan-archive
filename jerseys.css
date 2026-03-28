@@ -362,6 +362,7 @@ button{
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 22px;
+  margin-top: 32px;
 }
 
 .season-card{
