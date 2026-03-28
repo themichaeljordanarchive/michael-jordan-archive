@@ -295,20 +295,20 @@ button{
 /* JUMP STRIP */
 
 .jump-nav-section{
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 16px;
+  padding-bottom: 22px;
 }
 
-.jump-nav-head{
+.section-head{
   margin-bottom: 18px;
 }
 
-.jump-nav-head h2{
+.section-head h2{
   margin: 0;
-  font-size: clamp(30px, 4vw, 52px);
-  line-height: 1;
+  font-size: clamp(24px, 3vw, 34px);
+  line-height: 1.05;
+  letter-spacing: -0.025em;
   font-weight: 500;
-  letter-spacing: -0.03em;
 }
 
 .jump-strip{
