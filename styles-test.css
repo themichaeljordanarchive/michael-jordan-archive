@@ -1410,3 +1410,326 @@ main {
     line-height: 1.68;
   }
 }
+/* =========================
+   SERVICES PAGE
+   ========================= */
+
+.service-hero {
+  padding: clamp(60px, 8vw, 110px) 0 42px;
+}
+
+.service-hero__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) 320px;
+  gap: 28px;
+  align-items: start;
+}
+
+.service-hero__kicker {
+  display: inline-block;
+  margin-bottom: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.service-hero__title {
+  margin: 0 0 16px;
+  font-size: clamp(44px, 6vw, 74px);
+  line-height: 0.94;
+  letter-spacing: -0.04em;
+  font-weight: 500;
+}
+
+.service-hero__lead {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 20px;
+  line-height: 1.62;
+}
+
+.service-hero__panel {
+  padding: 24px 24px 26px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: var(--shadow-soft);
+}
+
+.service-hero__panel-label {
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.service-hero__panel-title {
+  margin-bottom: 10px;
+  font-size: 28px;
+  line-height: 1.06;
+  font-weight: 500;
+}
+
+.service-hero__panel-text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+.service-grid-section {
+  padding: 10px 0 56px;
+}
+
+.service-grid-head {
+  margin-bottom: 28px;
+}
+
+.service-grid-head__line {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(17, 17, 17, 0.14),
+    transparent
+  );
+  margin: 0 0 24px;
+}
+
+.service-grid-head__eyebrow {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 0.48);
+}
+
+.service-grid-head__title {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 44px);
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.service-panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  border: 1px solid rgba(17, 17, 17, 0.12);
+  border-radius: 26px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: var(--shadow-card);
+  transition:
+    transform 280ms ease,
+    box-shadow 280ms ease,
+    border-color 280ms ease;
+}
+
+.service-panel:hover {
+  transform: translateY(-8px);
+  border-color: rgba(17, 17, 17, 0.18);
+  box-shadow: 0 26px 64px rgba(0, 0, 0, 0.14);
+}
+
+.service-panel__media {
+  aspect-ratio: 1 / 0.78;
+  overflow: hidden;
+  background: rgba(17, 17, 17, 0.04);
+}
+
+.service-panel__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-panel__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px 20px 24px;
+}
+
+.service-panel__meta {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.service-panel__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.04;
+  font-weight: 500;
+}
+
+.service-panel__text {
+  margin: 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.service-panel__list {
+  margin: 2px 0 0;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.service-panel__list li {
+  margin-bottom: 8px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.service-panel__list li:last-child {
+  margin-bottom: 0;
+}
+
+.service-note-section {
+  padding: 0 0 36px;
+}
+
+.service-note {
+  max-width: 760px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
+}
+
+.service-note p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.72;
+  color: var(--muted);
+}
+
+.service-inquiry-section {
+  padding: 0 0 84px;
+}
+
+.service-inquiry {
+  max-width: 760px;
+  padding: 28px 28px 32px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.82),
+    rgba(255, 255, 255, 0.66)
+  );
+  box-shadow: var(--shadow-soft);
+}
+
+.service-inquiry__meta {
+  margin-bottom: 12px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 0.48);
+}
+
+.service-inquiry__title {
+  margin: 0 0 14px;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.03;
+  letter-spacing: -0.03em;
+  font-weight: 500;
+}
+
+.service-inquiry__text {
+  margin: 0 0 22px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.service-inquiry__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  padding: 12px 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background 180ms ease;
+}
+
+.service-inquiry__button:hover {
+  transform: translateY(-2px);
+  border-color: rgba(17, 17, 17, 0.2);
+  background: rgba(255, 255, 255, 0.96);
+}
+
+@media (max-width: 1180px) {
+  .service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1100px) {
+  .service-hero__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .service-hero {
+    padding: 42px 0 28px;
+  }
+
+  .service-hero__title {
+    font-size: clamp(38px, 11vw, 54px);
+  }
+
+  .service-hero__lead {
+    font-size: 17px;
+    line-height: 1.58;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-panel__title {
+    font-size: 24px;
+  }
+
+  .service-panel__text,
+  .service-panel__list li,
+  .service-note p,
+  .service-inquiry__text {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .service-inquiry {
+    padding: 22px 18px 24px;
+  }
+}
