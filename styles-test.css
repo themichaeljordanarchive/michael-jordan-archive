@@ -27,13 +27,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(
-      circle at top left,
-      rgba(143, 17, 22, 0.04),
-      transparent 32%
-    ),
-    linear-gradient(to bottom, #f7f4f0 0%, #f3f1ed 100%);
+  background: var(--bg);
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
@@ -1732,4 +1726,15 @@ main {
   .service-inquiry {
     padding: 22px 18px 24px;
   }
+}
+html,
+body,
+main,
+section,
+div {
+  background-color: transparent !important;
+}
+
+body {
+  background: #f5f3ef !important;
 }
