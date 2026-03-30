@@ -1059,3 +1059,34 @@ button {
   color: rgba(17, 17, 17, 0.5);
   pointer-events: none;
 }
+.verification-badge {
+  display: inline-block;
+  margin-top: 2px;
+  padding: 4px 8px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.verification-badge.photo-matched {
+  color: var(--accent);
+  border-color: rgba(143, 17, 22, 0.25);
+}
+
+.verification-badge.coded {
+  color: #444;
+}
+
+.verification-badge.supported {
+  color: #666;
+  opacity: 0.9;
+}
+
+.verification-badge.unknown {
+  color: #888;
+  opacity: 0.7;
+}
