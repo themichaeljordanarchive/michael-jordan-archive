@@ -207,6 +207,7 @@
     <option value="reference">Archive Reference</option>
     <option value="date">Chronological (Earliest Known Use)</option>
     <option value="sale">Highest Sale Price</option>
+    <option value="photo-matched">Photo Matched</option>
   </select>
  </div>
 
@@ -220,6 +221,7 @@
   data-reference="A"
   data-date="1984-10-16"
   data-sale="325000"
+  data-verification="photo-matched"
 >
       <div class="artifact-record__divider"></div>
 
@@ -340,6 +342,8 @@
   data-reference="B"
   data-date="1984-11-06"
   data-sale="142000"
+  data-verification="coded"
+  
 >
       <div class="artifact-record__divider"></div>
 
@@ -435,6 +439,7 @@
   data-reference="C"
   data-date="1985-08-26"
   data-sale="444080"
+  data-verification="photo-matched"
 >
       <div class="artifact-record__divider"></div>
 
@@ -544,6 +549,7 @@
   data-reference="D"
   data-date="1986-03-21"
   data-sale="579500"
+  data-verification="photo-matched"
 >
       <div class="artifact-record__divider"></div>
 
@@ -655,6 +661,7 @@
   data-reference="E"
   data-date="1984-11-08"
   data-sale="11595"
+  data-verification="coded"
 >
       <div class="artifact-record__divider"></div>
 
@@ -756,6 +763,7 @@
   data-reference="F"
   data-date="1985-10-26"
   data-sale="205118"
+  data-verification="photo-matched"
 >
       <div class="artifact-record__divider"></div>
 
@@ -865,6 +873,7 @@
   data-reference="G"
   data-date="1986-04-06"
   data-sale="675000"
+  data-verification="photo-matched"
 >
       <div class="artifact-record__divider"></div>
 
@@ -978,6 +987,7 @@
   data-reference="H"
   data-date="1986-04-20"
   data-sale=""
+  data-verification="photo-matched"
 >
       <div class="artifact-record__divider"></div>
 
@@ -1077,6 +1087,7 @@
   data-reference="I"
   data-date="1984-10-14"
   data-sale=""
+  data-verification="photo-matched"
 >
       <div class="artifact-record__divider"></div>
 
@@ -1207,7 +1218,8 @@
   <section class="artifact-record"
   data-reference="I"
   data-date="1986-03-01"
-  data-sale=""
+  data-sale="55000"
+  data-verification="photo-matched"
 >
       <div class="artifact-record__divider"></div>
 
@@ -1455,6 +1467,26 @@
       if (sortSelect.value === 'sale') {
         sorted.sort((a, b) => Number(b.dataset.sale) - Number(a.dataset.sale));
       }
+
+      if (sortSelect.value === 'photo-matched') {
+  const order = {
+    "photo-matched": 0,
+    "coded": 1,
+    "supported": 2,
+    "unknown": 3
+  };
+
+  sorted.sort((a, b) => {
+    const aRank = order[a.dataset.verification] ?? 99;
+    const bRank = order[b.dataset.verification] ?? 99;
+
+    if (aRank !== bRank) return aRank - bRank;
+
+    return a.dataset.reference.localeCompare(b.dataset.reference, undefined, {
+      numeric: true
+    });
+  });
+ }
 
       sorted.forEach((record) => container.appendChild(record));
     });
