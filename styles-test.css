@@ -1080,6 +1080,27 @@ main {
     padding-left: 14px;
     padding-right: 14px;
   }
+  .site-footer {
+    display: grid;
+    grid-template-columns: 1.2fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .site-footer > div {
+    text-align: left;
+  }
+
+  .site-footer .social-icon {
+    justify-self: center;
+  }
+
+  .site-footer .footer-link {
+    justify-self: end;
+    text-align: right;
+  }
 }
 /* =========================
    METHODOLOGY PAGE
