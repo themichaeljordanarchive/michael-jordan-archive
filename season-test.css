@@ -1,73 +1,71 @@
-:root{
+:root {
   --bg: #f5f3ef;
-  --surface: rgba(255,255,255,0.84);
+  --surface: rgba(255, 255, 255, 0.84);
   --ink: #111111;
   --muted: #68615a;
-  --line: rgba(17,17,17,0.10);
+  --line: rgba(17, 17, 17, 0.1);
   --accent: #8f1116;
   --max: 1380px;
   --pad: clamp(20px, 3vw, 44px);
   --header-h: 82px;
-  --shadow-soft: 0 20px 50px rgba(0,0,0,0.08);
-  --shadow-card: 0 22px 58px rgba(0,0,0,0.11);
+  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 22px 58px rgba(0, 0, 0, 0.11);
 }
 
 *,
 *::before,
-*::after{
+*::after {
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   margin: 0;
-  background:
-    radial-gradient(circle at top left, rgba(143,17,22,0.04), transparent 30%),
-    linear-gradient(to bottom, #f7f4f0 0%, #f3f1ed 100%);
+  background: var(--bg);
   color: var(--ink);
   font-family: Georgia, "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
-img{
+img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-a{
+a {
   color: inherit;
   text-decoration: none;
 }
 
-button{
+button {
   font: inherit;
 }
 
-.page-shell{
+.page-shell {
   width: min(calc(100% - 40px), var(--max));
   margin: 0 auto;
 }
 
-.section-kicker{
+.section-kicker {
   display: inline-block;
   margin-bottom: 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(17,17,17,0.48);
+  color: rgba(17, 17, 17, 0.48);
 }
 
 /* =========================
    HEADER
    ========================= */
 
-.site-header{
+.site-header {
   position: sticky;
   top: 0;
   z-index: 50;
@@ -77,25 +75,25 @@ button{
   justify-content: space-between;
   gap: 24px;
   padding: 0 var(--pad);
-  background: rgba(248,246,242,0.82);
+  background: rgba(248, 246, 242, 0.82);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  border-bottom: 1px solid rgba(17,17,17,0.08);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
 }
 
-.brand{
+.brand {
   display: flex;
   align-items: center;
   gap: 14px;
   min-width: 0;
 }
 
-.brand img{
+.brand img {
   width: auto;
   height: 40px;
 }
 
-.brand-name{
+.brand-name {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   letter-spacing: 0.18em;
@@ -104,14 +102,14 @@ button{
   white-space: nowrap;
 }
 
-.site-nav{
+.site-nav {
   display: flex;
   align-items: center;
   gap: 24px;
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.site-nav a{
+.site-nav a {
   position: relative;
   font-size: 12px;
   letter-spacing: 0.12em;
@@ -119,7 +117,7 @@ button{
   color: #222;
 }
 
-.site-nav a::after{
+.site-nav a::after {
   content: "";
   position: absolute;
   left: 0;
@@ -132,32 +130,32 @@ button{
   transition: transform 250ms ease;
 }
 
-.site-nav a:hover::after{
+.site-nav a:hover::after {
   transform: scaleX(1);
 }
 
-.nav-toggle{
+.nav-toggle {
   display: none;
   width: 46px;
   height: 46px;
   padding: 0;
-  border: 1px solid rgba(17,17,17,0.12);
+  border: 1px solid rgba(17, 17, 17, 0.12);
   border-radius: 50%;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
   align-items: center;
   justify-content: center;
   flex-direction: column;
   gap: 4px;
 }
 
-.nav-toggle span{
+.nav-toggle span {
   width: 18px;
   height: 1.5px;
   background: #111;
   display: block;
 }
 
-main{
+main {
   padding-bottom: 40px;
 }
 
@@ -167,11 +165,11 @@ main{
 
 .season-hero,
 .population-summary-section,
-.season-section{
+.season-section {
   padding: clamp(56px, 7vw, 96px) 0;
 }
 
-.season-hero{
+.season-hero {
   padding-top: clamp(56px, 7vw, 88px);
 }
 
@@ -179,18 +177,18 @@ main{
    HERO
    ========================= */
 
-.season-hero-grid{
+.season-hero-grid {
   display: grid;
   grid-template-columns: 1.35fr 0.65fr;
   gap: 32px;
   align-items: start;
 }
 
-.season-hero-main{
+.season-hero-main {
   max-width: 700px;
 }
 
-.season-hero-main h1{
+.season-hero-main h1 {
   margin: 0 0 18px;
   font-size: clamp(46px, 7vw, 92px);
   line-height: 0.95;
@@ -198,22 +196,22 @@ main{
   letter-spacing: -0.04em;
 }
 
-.season-hero-intro{
+.season-hero-intro {
   width: min(100%, 560px); /* slightly tighter line length */
   margin-top: 6px;
-  color: rgba(17,17,17,0.72); /* darker than muted */
+  color: rgba(17, 17, 17, 0.72); /* darker than muted */
   font-size: clamp(19px, 2.1vw, 24px);
   line-height: 1.55;
   letter-spacing: 0.01em;
   margin-bottom: 12px;
 }
 
-.season-hero-stats{
+.season-hero-stats {
   display: grid;
   gap: 12px;
 }
 
-.hero-stat-card{
+.hero-stat-card {
   padding: 20px 20px 22px;
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -221,11 +219,11 @@ main{
   box-shadow: var(--shadow-soft);
 }
 
-.hero-stat-card-strong{
-  background: rgba(255,255,255,0.92);
+.hero-stat-card-strong {
+  background: rgba(255, 255, 255, 0.92);
 }
 
-.hero-stat-label{
+.hero-stat-label {
   margin-bottom: 10px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
@@ -234,42 +232,42 @@ main{
   color: var(--muted);
 }
 
-.hero-stat-value{
+.hero-stat-value {
   font-size: clamp(28px, 4vw, 46px);
   line-height: 1;
   font-weight: 500;
 }
 
-.hero-stat-note{
+.hero-stat-note {
   margin-top: 8px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(17,17,17,0.52);
+  color: rgba(17, 17, 17, 0.52);
 }
 
 /* =========================
    REVIEW BLOCK
    ========================= */
 
-.season-review-block{
+.season-review-block {
   margin-top: 36px;
-  border: 1px solid rgba(17,17,17,0.10);
+  border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 20px;
-  background: rgba(255,255,255,0.82);
+  background: rgba(255, 255, 255, 0.82);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
   max-width: 400px;
 }
 
-.season-review-banner{
+.season-review-banner {
   padding: 10px 14px;
-  border-bottom: 1px solid rgba(17,17,17,0.08);
-  background: rgba(17,17,17,0.03);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  background: rgba(17, 17, 17, 0.03);
 }
 
-.season-review-status{
+.season-review-status {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   letter-spacing: 0.22em;
@@ -277,36 +275,36 @@ main{
   color: #1f5b2f;
 }
 
-.season-review-list{
+.season-review-list {
   padding: 12px 14px 8px;
   display: grid;
   gap: 4px;
 }
 
-.season-review-row{
+.season-review-row {
   display: flex;
   align-items: baseline;
   justify-content: space-between;
   gap: 12px;
 }
 
-.season-review-text{
+.season-review-text {
   color: var(--muted);
   font-size: 16px;
   line-height: 1.45;
 }
 
-.season-review-value{
+.season-review-value {
   color: #111;
   font-size: 16px;
   line-height: 1.45;
 }
 
-.season-review-link{
+.season-review-link {
   display: inline;
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px solid rgba(17,17,17,0.32);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.32);
   padding-bottom: 1px;
 
   font-family: "Inter", sans-serif;
@@ -316,41 +314,41 @@ main{
   font-weight: 600;
 }
 
-.season-review-link:hover{
+.season-review-link:hover {
   border-bottom-color: var(--accent);
 }
 
-.season-last-updated{
+.season-last-updated {
   padding: 8px 16px 14px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(17,17,17,0.45);
+  color: rgba(17, 17, 17, 0.45);
 }
 
 /* =========================
    POPULATION SUMMARY
    ========================= */
 
-.population-summary-section{
+.population-summary-section {
   padding-top: 10px;
 }
 
-.population-summary-card{
-  border: 1px solid rgba(17,17,17,0.88);
+.population-summary-card {
+  border: 1px solid rgba(17, 17, 17, 0.88);
   border-radius: 28px;
-  background: rgba(255,255,255,0.84);
+  background: rgba(255, 255, 255, 0.84);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
 }
 
-.population-summary-head{
+.population-summary-head {
   padding: 28px 28px 20px;
   margin-bottom: 10px;
 }
 
-.population-summary-head h2{
+.population-summary-head h2 {
   margin: 0 0 12px;
   font-size: clamp(30px, 4vw, 50px);
   line-height: 1;
@@ -358,7 +356,7 @@ main{
   letter-spacing: -0.03em;
 }
 
-.population-summary-head p{
+.population-summary-head p {
   margin: 0;
   max-width: 760px;
   color: var(--muted);
@@ -366,38 +364,38 @@ main{
   line-height: 1.65;
 }
 
-.population-table-wrap{
+.population-table-wrap {
   overflow-x: auto;
   padding: 0 28px 28px;
 }
 
-.population-table{
+.population-table {
   width: 100%;
   border-collapse: collapse;
   min-width: 620px;
 }
 
 .population-table th,
-.population-table td{
+.population-table td {
   padding: 10px 10px;
-  border-top: 1px solid rgba(17,17,17,0.12);
+  border-top: 1px solid rgba(17, 17, 17, 0.12);
   text-align: left;
 }
 
-.population-table th{
+.population-table th {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(17,17,17,0.55);
+  color: rgba(17, 17, 17, 0.55);
 }
 
-.population-table td{
+.population-table td {
   font-size: 17px;
   line-height: 1.45;
 }
 
-.table-status{
+.table-status {
   display: inline-flex;
   padding: 5px 8px;
   border-radius: 999px;
@@ -407,46 +405,50 @@ main{
   text-transform: uppercase;
 }
 
-.table-status.is-complete{
-  background: rgba(31,91,47,0.08);
+.table-status.is-complete {
+  background: rgba(31, 91, 47, 0.08);
   color: #1f5b2f;
 }
 
-.table-status.is-progress{
-  background: rgba(17,17,17,0.06);
-  color: rgba(17,17,17,0.60);
+.table-status.is-progress {
+  background: rgba(17, 17, 17, 0.06);
+  color: rgba(17, 17, 17, 0.6);
 }
 
 /* =========================
    SECTION HEADERS / STRIPS
    ========================= */
 
-.section-divider{
+.section-divider {
   height: 1px;
   margin-bottom: 22px;
-  background: linear-gradient(to right, rgba(17,17,17,0.05), rgba(17,17,17,0.14), rgba(17,17,17,0.05));
+  background: linear-gradient(
+    to right,
+    rgba(17, 17, 17, 0.05),
+    rgba(17, 17, 17, 0.14),
+    rgba(17, 17, 17, 0.05)
+  );
 }
 
-.section-strip{
+.section-strip {
   margin-bottom: -6px;
   border-radius: 18px;
   overflow: hidden;
   position: relative;
 }
- 
 
-.section-strip img{
+.section-strip img {
   width: 100%;
   height: clamp(72px, 10vw, 110px);
   object-fit: cover;
   opacity: 0.86;
 }
 
-.section-head{
+.section-head {
   margin-bottom: 24px;
 }
 
-.section-head h2{
+.section-head h2 {
   margin: 0;
   font-size: clamp(34px, 5vw, 60px);
   line-height: 1;
@@ -458,32 +460,32 @@ main{
    STYLE SUMMARY
    ========================= */
 
-.style-summary-card{
+.style-summary-card {
   margin-top: -10px;
   margin-bottom: 28px;
   padding: 20px 22px;
-  border: 1px solid rgba(17,17,17,0.10);
+  border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 22px;
-  background: rgba(255,255,255,0.78);
+  background: rgba(255, 255, 255, 0.78);
   box-shadow: var(--shadow-soft);
 }
 
-.style-summary-grid{
+.style-summary-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
 }
 
-.style-summary-label{
+.style-summary-label {
   margin-bottom: 8px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(17,17,17,0.54);
+  color: rgba(17, 17, 17, 0.54);
 }
 
-.style-summary-value{
+.style-summary-value {
   font-size: 24px;
   line-height: 1.1;
   font-weight: 500;
@@ -493,22 +495,22 @@ main{
    ENTRY CARDS
    ========================= */
 
-.entry-card{
+.entry-card {
   margin-bottom: 26px;
-  border: 1px solid rgba(17,17,17,0.10);
+  border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 28px;
   background: #ffffff;
   box-shadow: var(--shadow-card);
   overflow: hidden;
 }
 
-.entry-grid{
+.entry-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 320px;
   align-items: stretch;
 }
 
-.entry-image{
+.entry-image {
   min-width: 0;
   background: transparent;
   border-right: 0;
@@ -516,7 +518,7 @@ main{
   flex-direction: column;
 }
 
-.entry-image-media{
+.entry-image-media {
   display: grid;
   place-items: center;
   padding: 16px 16px 12px;
@@ -524,7 +526,7 @@ main{
   background: transparent;
 }
 
-.entry-image img{
+.entry-image img {
   display: block;
   width: 100%;
   height: auto;
@@ -532,7 +534,7 @@ main{
   object-fit: contain;
 }
 
-.entry-caption{
+.entry-caption {
   margin: 0;
   padding: 12px 16px 16px;
   font-size: 13px;
@@ -542,38 +544,38 @@ main{
   border-top: 0;
 }
 
-.entry-content{
+.entry-content {
   min-width: 0;
   padding: 16px 16px 18px;
   background: transparent;
   margin-top: 12px;
 }
 
-.entry-meta{
+.entry-meta {
   display: grid;
   gap: 5px;
   margin-bottom: 14px;
 }
 
-.entry-meta > div{
+.entry-meta > div {
   display: flex;
   justify-content: space-between;
   align-items: start;
   gap: 12px;
   padding-bottom: 6px;
-  border-bottom: 1px solid rgba(17,17,17,0.06);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.06);
 }
 
-.meta-label{
+.meta-label {
   flex: 0 0 auto;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 8.5px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(17,17,17,0.48);
+  color: rgba(17, 17, 17, 0.48);
 }
 
-.meta-value{
+.meta-value {
   text-align: right;
   font-size: 14px;
   line-height: 1.3;
@@ -581,21 +583,21 @@ main{
   overflow-wrap: anywhere;
 }
 
-.entry-callout{
+.entry-callout {
   margin-bottom: 10px;
   padding: 10px 12px;
-  border-left: 2px solid rgba(143,17,22,0.34);
-  background: rgba(17,17,17,0.03);
+  border-left: 2px solid rgba(143, 17, 22, 0.34);
+  background: rgba(17, 17, 17, 0.03);
   font-size: 16px;
   line-height: 1.42;
   color: #222;
 }
 
-.entry-block + .entry-block{
+.entry-block + .entry-block {
   margin-top: 18px;
 }
 
-.entry-block h3{
+.entry-block h3 {
   margin: 10px;
   font-size: 22px;
   line-height: 1.08;
@@ -604,20 +606,20 @@ main{
 }
 
 .data-list,
-.note-list{
+.note-list {
   margin: 0;
   padding-left: 18px;
 }
 
 .data-list li,
-.note-list li{
+.note-list li {
   margin-bottom: 5px;
   color: var(--muted);
   font-size: 14px;
   line-height: 1.45;
 }
 
-.muted-copy{
+.muted-copy {
   margin: 0;
   color: var(--muted);
   font-size: 15px;
@@ -627,11 +629,11 @@ main{
    EXTERNAL REFS / AUCTION LINKS
    ========================= */
 
-.external-ref{
+.external-ref {
   display: inline;
   color: var(--accent);
   text-decoration: none;
-  border-bottom: 1px solid rgba(17,17,17,0.32);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.32);
   padding-bottom: 1px;
 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -645,30 +647,30 @@ main{
    BACK LINK / FOOTER
    ========================= */
 
-.back-link-wrap{
+.back-link-wrap {
   margin-top: 30px;
 }
 
-.back-link{
+.back-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding-bottom: 3px;
-  border-bottom: 1px solid rgba(17,17,17,0.20);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.2);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: rgba(17,17,17,0.64);
+  color: rgba(17, 17, 17, 0.64);
 }
 
-.site-footer{
+.site-footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
   padding: 24px var(--pad) 30px;
-  border-top: 1px solid rgba(17,17,17,0.08);
+  border-top: 1px solid rgba(17, 17, 17, 0.08);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   letter-spacing: 0.12em;
@@ -676,55 +678,57 @@ main{
   color: var(--muted);
 }
 
-.social-icon{
+.social-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 42px;
   height: 42px;
-  border: 1px solid rgba(17,17,17,0.18);
+  border: 1px solid rgba(17, 17, 17, 0.18);
   border-radius: 50%;
-  background: rgba(255,255,255,0.85);
+  background: rgba(255, 255, 255, 0.85);
 }
-.section-head-wrap{
+.section-head-wrap {
   margin-bottom: 24px;
 }
 
-.section-head-wrap .section-head{
+.section-head-wrap .section-head {
   margin-bottom: 0;
 }
 
-.section-head-wrap .section-kicker{
+.section-head-wrap .section-kicker {
   margin-bottom: 8px;
 }
 
-.section-head-wrap .section-head h2{
+.section-head-wrap .section-head h2 {
   margin: 0;
 }
 /* --- your normal styles --- */
 
 /* ENTRY CARD TAP FEEDBACK (add here) */
-.entry-card{
-  transition: transform 120ms ease, box-shadow 120ms ease;
+.entry-card {
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease;
 }
 
-.entry-card:active{
+.entry-card:active {
   transform: scale(0.98);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 /* ======================================
    Entry Card Carousel Bridge
    ====================================== */
 
-.entry-image-media.is-carousel{
+.entry-image-media.is-carousel {
   position: relative;
   overflow: hidden;
   width: 100%;
   padding: 0;
 }
 
-.entry-image-media.is-carousel .carousel-track{
+.entry-image-media.is-carousel .carousel-track {
   display: flex;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
@@ -732,23 +736,23 @@ main{
   scrollbar-width: none;
 }
 
-.entry-image-media.is-carousel .carousel-track::-webkit-scrollbar{
+.entry-image-media.is-carousel .carousel-track::-webkit-scrollbar {
   display: none;
 }
 
-.entry-image-media.is-carousel .carousel-slide{
+.entry-image-media.is-carousel .carousel-slide {
   flex: 0 0 100%;
   scroll-snap-align: center;
   margin: 0;
 }
 
-.entry-image-media.is-carousel img{
+.entry-image-media.is-carousel img {
   width: 100%;
   display: block;
   height: auto;
 }
 
-.entry-image-media.is-carousel .carousel-dots{
+.entry-image-media.is-carousel .carousel-dots {
   position: absolute;
   left: 50%;
   bottom: 14px;
@@ -757,58 +761,58 @@ main{
   gap: 6px;
   padding: 6px 8px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.75);
+  background: rgba(255, 255, 255, 0.75);
 }
 
-.entry-image-media.is-carousel .carousel-dots span{
+.entry-image-media.is-carousel .carousel-dots span {
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0, 0, 0, 0.35);
 }
 
-.back-link-wrap{
+.back-link-wrap {
   margin-top: 40px;
 }
 .registry-item,
 .population-toggle summary,
 .designation-toggle summary,
-.registry-sort{
+.registry-sort {
   cursor: pointer;
 }
 /* =========================
    RESPONSIVE
    ========================= */
 
-@media (max-width: 980px){
-  .entry-grid{
+@media (max-width: 980px) {
+  .entry-grid {
     grid-template-columns: 1fr;
   }
 
-  .entry-image{
+  .entry-image {
     border-right: 0;
-    border-bottom: 1px solid rgba(17,17,17,0.06);
+    border-bottom: 1px solid rgba(17, 17, 17, 0.06);
   }
 
-  .entry-image-media{
+  .entry-image-media {
     min-height: 0;
   }
 }
 
-@media (max-width: 900px){
-  :root{
+@media (max-width: 900px) {
+  :root {
     --header-h: 74px;
   }
 
-  .brand-text{
+  .brand-text {
     display: none;
   }
 
-  .nav-toggle{
+  .nav-toggle {
     display: inline-flex;
   }
 
-  .site-nav{
+  .site-nav {
     position: absolute;
     top: calc(100% + 8px);
     right: 20px;
@@ -816,145 +820,149 @@ main{
     display: grid;
     gap: 0;
     padding: 10px 0;
-    border: 1px solid rgba(17,17,17,0.08);
+    border: 1px solid rgba(17, 17, 17, 0.08);
     border-radius: 22px;
-    background: rgba(248,246,242,0.96);
+    background: rgba(248, 246, 242, 0.96);
     backdrop-filter: blur(16px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
     opacity: 0;
     pointer-events: none;
     transform: translateY(-10px);
-    transition: opacity 250ms ease, transform 250ms ease;
+    transition:
+      opacity 250ms ease,
+      transform 250ms ease;
   }
 
-  .site-nav a{
+  .site-nav a {
     padding: 14px 18px;
   }
 
-  body.nav-open .site-nav{
+  body.nav-open .site-nav {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0);
   }
 
-  .season-hero-grid{
+  .season-hero-grid {
     grid-template-columns: 1fr;
   }
 
-  .season-hero-stats{
+  .season-hero-stats {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .style-summary-grid{
+  .style-summary-grid {
     grid-template-columns: 1fr;
   }
 }
 
-@media (max-width: 700px){
-  .page-shell{
+@media (max-width: 700px) {
+  .page-shell {
     width: min(calc(100% - 28px), var(--max));
   }
 
   .season-hero,
   .population-summary-section,
-  .season-section{
+  .season-section {
     padding: 44px 0;
   }
 
-  .season-hero-main h1{
+  .season-hero-main h1 {
     font-size: clamp(40px, 12vw, 62px);
   }
 
   .season-hero-intro,
-  .population-summary-head p{
+  .population-summary-head p {
     font-size: 16px;
     line-height: 1.65;
   }
 
-  .season-review-block{
+  .season-review-block {
     max-width: none;
   }
 
   .season-review-text,
   .season-review-value,
-  .season-review-link{
+  .season-review-link {
     font-size: 16px;
   }
 
-  .season-hero-stats{
+  .season-hero-stats {
     grid-template-columns: 1fr;
   }
 
-  .population-summary-head{
+  .population-summary-head {
     padding: 22px 20px 18px;
   }
 
-  .population-table-wrap{
+  .population-table-wrap {
     padding: 0 20px 20px;
   }
 
-  .entry-image-media{
+  .entry-image-media {
     padding: 12px;
   }
 
-  .entry-content{
+  .entry-content {
     padding: 18px 16px 20px;
   }
 
-  .entry-meta{
+  .entry-meta {
     gap: 6px;
     margin-bottom: 14px;
   }
 
-  .entry-meta > div{
+  .entry-meta > div {
     gap: 12px;
     padding-bottom: 7px;
   }
 
-  .meta-label{
+  .meta-label {
     font-size: 9px;
     letter-spacing: 0.14em;
   }
 
-  .meta-value{
+  .meta-value {
     font-size: 14px;
     line-height: 1.3;
   }
 
-  .entry-callout{
+  .entry-callout {
     font-size: 16px;
     line-height: 1.5;
     padding: 14px;
   }
 
-  .entry-block h3{
+  .entry-block h3 {
     font-size: 22px;
   }
 
-  .site-footer{
+  .site-footer {
     padding-left: 14px;
     padding-right: 14px;
   }
 }
-@media (hover: hover){
-  .entry-card{
-    transition: transform 220ms ease, box-shadow 220ms ease;
+@media (hover: hover) {
+  .entry-card {
+    transition:
+      transform 220ms ease,
+      box-shadow 220ms ease;
   }
 
-  .entry-card:hover{
+  .entry-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 30px 70px rgba(0,0,0,0.12);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.12);
   }
 
-  .entry-image img{
+  .entry-image img {
     transition: transform 400ms ease;
   }
 
-  .entry-card:hover img{
+  .entry-card:hover img {
     transform: scale(1.01);
   }
 }
-.reveal{
+.reveal {
   opacity: 0;
   transform: translateY(54px);
   transition:
@@ -963,7 +971,7 @@ main{
   will-change: opacity, transform;
 }
 
-.reveal.is-visible{
+.reveal.is-visible {
   opacity: 1;
   transform: translateY(0);
 }
