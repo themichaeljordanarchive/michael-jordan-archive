@@ -601,6 +601,7 @@ button {
 }
 
 .record-link a {
+  display: block;
   color: var(--accent);
   transition:
     color 0.22s ease,
