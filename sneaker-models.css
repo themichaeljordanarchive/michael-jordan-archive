@@ -1073,21 +1073,30 @@ button {
   background: rgba(255, 255, 255, 0.6);
 }
 
+/* strongest */
 .verification-badge.photo-matched {
   color: var(--accent);
-  border-color: rgba(143, 17, 22, 0.25);
+  border-color: rgba(143, 17, 22, 0.32);
+  background: rgba(143, 17, 22, 0.06);
 }
 
+/* secondary */
 .verification-badge.coded {
-  color: #444;
+  color: #7a5f4e;
+  border-color: rgba(122, 95, 78, 0.22);
+  background: rgba(122, 95, 78, 0.05);
 }
 
+/* tertiary */
 .verification-badge.supported {
-  color: #666;
-  opacity: 0.9;
+  color: #8a817a;
+  border-color: rgba(138, 129, 122, 0.18);
+  background: rgba(138, 129, 122, 0.04);
 }
 
+/* lowest */
 .verification-badge.unknown {
-  color: #888;
-  opacity: 0.7;
+  color: #aaa;
+  border-color: rgba(170, 170, 170, 0.18);
+  background: rgba(170, 170, 170, 0.03);
 }
