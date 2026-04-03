@@ -1079,6 +1079,7 @@ button {
   border-color: rgba(143, 17, 22, 0.45);
   background: rgba(143, 17, 22, 0.08);
   font-weight: 500;
+  box-shadow: 0 0 0 1px rgba(143, 17, 22, 0.15);
 }
 
 /* secondary */
