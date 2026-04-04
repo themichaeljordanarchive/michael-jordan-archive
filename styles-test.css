@@ -417,7 +417,7 @@ main {
 
 .section-kicker {
   display: inline-block;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   letter-spacing: 0.18em;
@@ -472,8 +472,8 @@ main {
   padding: 22px 22px 24px;
   border: 1px solid var(--line);
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: var(--shadow-soft);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
 .stat-label {
@@ -606,7 +606,7 @@ main {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: minmax(260px, 300px);
-  gap: 22px;
+  gap: 24px;
   overflow-x: auto;
   overflow-y: visible;
   padding: 14px 2px 18px;
@@ -667,21 +667,23 @@ main {
 .archive-card-meta {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
+  margin-bottom: 6px;
 }
 
 .archive-card-title {
   font-size: 28px;
-  line-height: 1.02;
+  line-height: 1.1;
   font-weight: 500;
+  margin-top: 8px;
 }
 
 .archive-card-text {
   color: var(--muted);
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
 /* =========================
@@ -755,13 +757,14 @@ main {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 22px;
+  margin-bottom: 80px;
 }
 
 .selected-work-card {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: 0 0 24px;
+  padding: 0 0 28px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 26px;
   overflow: hidden;
@@ -796,8 +799,8 @@ main {
 }
 
 .selected-work-meta {
-  margin-top: 18px;
-  margin-bottom: 10px;
+  margin-top: 14px;
+  margin-bottom: 8px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
   letter-spacing: 0.18em;
@@ -808,15 +811,17 @@ main {
 .selected-work-card-title {
   margin: 0 0 12px;
   font-size: 28px;
-  line-height: 1.04;
+  line-height: 1.1;
   font-weight: 500;
+  margin-top: 8px;
 }
 
 .selected-work-card-text {
   margin: 0;
   font-size: 16px;
-  line-height: 1.58;
+  line-height: 1.62;
   color: var(--muted);
+  margin-top: 8px;
 }
 
 /* =========================
