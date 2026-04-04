@@ -215,9 +215,9 @@ button {
   background:
     linear-gradient(
       to right,
-      rgba(13, 13, 13, 0.52) 0%,
-      rgba(13, 13, 13, 0.28) 38%,
-      rgba(13, 13, 13, 0.12) 62%,
+      rgba(13, 13, 13, 0.62) 0%,
+      rgba(13, 13, 13, 0.36) 38%,
+      rgba(13, 13, 13, 0.14) 62%,
       rgba(13, 13, 13, 0.34) 100%
     ),
     linear-gradient(
@@ -235,7 +235,7 @@ button {
   width: min(calc(100% - 40px), var(--max));
   min-height: calc(100svh - var(--header-h));
   margin: 0 auto;
-  padding: clamp(56px, 9vh, 110px) 0 80px;
+  padding: clamp(56px, 9vh, 110px) 32px 80px;
   display: grid;
   align-content: end;
 }
@@ -307,8 +307,9 @@ button {
 }
 
 .hero-copy {
-  width: min(100%, 680px);
+  width: min(100%, 520px);
   margin-top: 28px;
+  transform: translate(-12px);
 }
 
 .hero-copy p {
