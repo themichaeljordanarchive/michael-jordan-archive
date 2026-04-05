@@ -1082,6 +1082,14 @@ button {
   box-shadow: 0 0 0 1px rgba(143, 17, 22, 0.15);
 }
 
+.verification-badge.apparent {
+  color: #2f7fbf;
+  border-color: rgba(47, 127, 191, 0.45);
+  background: rgba(135, 206, 235, 0.18);
+  font-weight: 500;
+  box-shadow: 0 0 0 1px rgba(143, 17, 22, 0.15);
+}
+
 /* secondary */
 .verification-badge.coded {
   color: #7a5f4e;
