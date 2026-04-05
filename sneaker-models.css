@@ -1083,9 +1083,9 @@ button {
 }
 
 .verification-badge.apparent {
-  color: #2f7fbf;
-  border-color: rgba(47, 127, 191, 0.45);
-  background: rgba(135, 206, 235, 0.18);
+  color: #1e6fa8;
+  border: 1px solid #7fb8df;
+  background: rgba(135, 206, 235, 0.32);
   font-weight: 500;
   box-shadow: 0 0 0 1px rgba(143, 17, 22, 0.15);
 }
