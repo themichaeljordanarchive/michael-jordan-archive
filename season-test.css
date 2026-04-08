@@ -666,17 +666,29 @@ main {
 }
 
 .site-footer {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
   padding: 24px var(--pad) 30px;
-  border-top: 1px solid rgba(17, 17, 17, 0.08);
+  border-top: 1px solid rgba(17, 17, 17, 0.1);
   font-family: Arial, Helvetica, sans-serif;
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
+}
+
+.site-footer > :first-child {
+  justify-self: start;
+}
+
+.site-footer > .social-icon {
+  justify-self: center;
+}
+
+.site-footer > .footer-link {
+  justify-self: end;
 }
 
 .social-icon {
