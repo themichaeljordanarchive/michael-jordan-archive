@@ -591,3 +591,27 @@
     margin: 66px 0 34px;
   }
 }
+/* =========================
+   BEFORE AIR JORDAN (SCOPED)
+========================= */
+
+.before-air-jordan .article-body p {
+  line-height: 1.65;
+}
+
+.before-air-jordan .figure-full.figure-compact img {
+  width: 100%;
+}
+
+.before-air-jordan .article-intro-card {
+  padding: 18px 18px 20px;
+}
+
+.before-air-jordan .article-split {
+  gap: 18px;
+}
+
+.before-air-jordan .figure-full figcaption {
+  text-align: left;
+  margin-top: 8px;
+}
