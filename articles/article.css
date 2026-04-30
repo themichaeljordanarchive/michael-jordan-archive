@@ -424,6 +424,11 @@
   font-size: clamp(16px, 2vw, 20px);
   line-height: 1.5;
 }
+.article-mid-hero-title {
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
 
 /* =========================================================
    MOBILE MID HERO

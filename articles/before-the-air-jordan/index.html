@@ -298,7 +298,7 @@
               <div class="article-mid-hero-kicker">Interlude</div>
               <h2>
                 The story began before<br />
-                the Air Jordan 1.
+                the Air Jordan I
               </h2>
             </div>
           </section>
@@ -716,6 +716,7 @@
     <script>
       const heroTitle = document.querySelector(".article-hero-title");
       const heroImage = document.querySelector(".article-hero-image");
+      const midHeroTitle = document.querySelector(".article-mid-hero-title");
 
       window.addEventListener("scroll", () => {
         const scrolled = window.scrollY;
@@ -737,6 +738,23 @@
           } else {
             heroImage.style.transform = `scale(1.16) translateY(${scrolled * 0.02}px)`;
           }
+        }
+
+        if (midHeroTitle) {
+          const midHero = midHeroTitle.closest(".article-mid-hero");
+          const rect = midHero.getBoundingClientRect();
+          const progress = Math.max(
+            0,
+            Math.min(1, (window.innerHeight - rect.top) / window.innerHeight),
+          );
+
+          const fadeProgress = Math.max(
+            0,
+            Math.min(1, (progress - 0.35) / 0.7),
+          );
+
+          midHeroTitle.style.opacity = 1 - Math.pow(fadeProgress, 1.9);
+          midHeroTitle.style.transform = `translateX(-50%) translateY(${fadeProgress * -100}px)`;
         }
       });
     </script>
