@@ -313,6 +313,18 @@ a {
   color: var(--accent);
 }
 
+.model-card-featured {
+  grid-column: 1 / -1;
+}
+
+.model-card-featured .model-media {
+  aspect-ratio: 16 / 7;
+}
+
+.model-card-featured .model-media img {
+  object-position: center;
+}
+
 /* =========================================================
    ACTIONS
 ========================================================= */
