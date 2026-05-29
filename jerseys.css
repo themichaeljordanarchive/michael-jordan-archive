@@ -673,6 +673,35 @@ button {
   font-size: 0.8rem;
   line-height: 1.5;
 }
+.ownership-status-card {
+  margin-top: 18px;
+  padding: 18px;
+  border: 1px solid var(--line, #e4ded5);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.92);
+}
+
+.ownership-badge {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.ownership-badge--verified {
+  color: #0f5132;
+  border: 2px solid #0f5132;
+}
+
+.ownership-badge--unverified {
+  color: #8a8a8a;
+  border: 2px solid #b8b8b8;
+}
 
 /* =========================================================
    MOBILE
