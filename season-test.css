@@ -945,6 +945,9 @@ main {
 ========================================================== */
 
 @media (max-width: 700px) {
+  .ownership-status-card {
+    display: block;
+  }
   .ownership-actions {
     flex-direction: column;
   }
