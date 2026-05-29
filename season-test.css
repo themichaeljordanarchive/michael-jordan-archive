@@ -807,6 +807,14 @@ main {
   background: rgba(255, 255, 255, 0.94);
 }
 
+.entry-card > .ownership-status-card {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  max-width: none;
+  box-sizing: border-box;
+}
+
 .ownership-kicker {
   margin-bottom: 0.85rem;
   font-size: 0.7rem;
