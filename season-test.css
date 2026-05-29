@@ -835,9 +835,9 @@ main {
 }
 
 .ownership-icon {
-  width: 44px;
-  height: 44px;
-  flex: 0 0 44px;
+  width: 52px;
+  height: 52px;
+  flex: 0 0 52px;
   border-radius: 999px;
   display: inline-flex;
   align-items: center;
@@ -871,8 +871,9 @@ main {
 .ownership-status-row p {
   margin: 0;
   color: var(--muted-text, #666);
-  font-size: 0.9rem;
+  font-size: 1.25rem;
   line-height: 1.45;
+  max-width: 520px;
 }
 
 .ownership-actions {
