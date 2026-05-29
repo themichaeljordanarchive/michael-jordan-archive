@@ -873,7 +873,7 @@ main {
   color: var(--muted-text, #666);
   font-size: 1.25rem;
   line-height: 1.45;
-  max-width: 520px;
+  max-width: 600px;
 }
 
 .ownership-actions {
