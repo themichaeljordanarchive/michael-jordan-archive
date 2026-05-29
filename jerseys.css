@@ -557,6 +557,137 @@ button {
   transform: translateY(-1px);
 }
 
+/* =========================================================
+   OWNERSHIP STATUS
+========================================================== */
+
+.ownership-status-card {
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--line-color, #e5e0d8);
+  border-radius: 14px;
+  background: #fff;
+}
+
+.ownership-kicker {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted-text, #777);
+  margin-bottom: 0.85rem;
+}
+
+.ownership-status-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.ownership-icon {
+  width: 30px;
+  height: 30px;
+  flex: 0 0 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.ownership-icon--verified {
+  color: #1f6b43;
+  border: 1px solid #1f6b43;
+}
+
+.ownership-icon--unverified {
+  color: #8b8b8b;
+  border: 1px solid #bcbcbc;
+}
+
+.ownership-status-row h3 {
+  margin: 0 0 0.2rem;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+
+.ownership-status-row p {
+  margin: 0;
+  color: var(--muted-text, #666);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.ownership-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.ownership-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.ownership-btn--claim {
+  border: 1px solid #b22222;
+  color: #b22222;
+  background: transparent;
+}
+
+.ownership-btn--claim:hover {
+  background: rgba(178, 34, 34, 0.05);
+}
+
+.ownership-btn--offers {
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+}
+
+.ownership-btn--offers:hover {
+  background: #222;
+}
+
+.ownership-btn--disabled {
+  border: 1px solid #d7d7d7;
+  background: #f5f5f5;
+  color: #999;
+  cursor: not-allowed;
+}
+
+.ownership-footer {
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid var(--line-color, #e5e0d8);
+  color: var(--muted-text, #777);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   MOBILE
+========================================================== */
+
+@media (max-width: 700px) {
+  .ownership-actions {
+    flex-direction: column;
+  }
+
+  .ownership-btn {
+    width: 100%;
+  }
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 1180px) {
