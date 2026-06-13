@@ -994,14 +994,14 @@ main {
   border-radius: 22px;
   background: rgba(248, 246, 242, 0.72);
   box-shadow: 0 22px 48px rgba(0, 0, 0, 0.12);
-  transform: rotate(1deg);
+  transform: none;
   transition:
     transform 220ms ease,
     box-shadow 220ms ease;
 }
 
 .method-framework-feature__thumb:hover {
-  transform: rotate(0deg) translateY(-4px);
+  transform: translateY(-4px);
   box-shadow: 0 28px 58px rgba(0, 0, 0, 0.16);
 }
 
