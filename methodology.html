@@ -285,34 +285,52 @@
               class="method-framework-feature reveal"
               id="method-framework"
             >
-              <div class="method-framework-feature__glow"></div>
+              <div class="method-framework-feature__grid">
+                <div class="method-framework-feature__content">
+                  <div class="method-framework-feature__meta">Section Six</div>
+                  <div class="method-framework-feature__eyebrow">
+                    Research Standard
+                  </div>
 
-              <div class="method-framework-feature__content">
-                <div class="method-framework-feature__meta">Section Six</div>
+                  <h2 class="method-framework-feature__title">
+                    MJA Attribution Framework
+                  </h2>
 
-                <h2>MJA Attribution Framework</h2>
+                  <p class="method-framework-feature__lead">
+                    A five-parameter evidentiary classification system used to
+                    evaluate the strength and completeness of artifact
+                    attribution research.
+                  </p>
 
-                <p>
-                  A five-parameter evidentiary classification system used to
-                  evaluate the strength and completeness of artifact attribution
-                  research.
-                </p>
+                  <p class="method-framework-feature__text">
+                    Each artifact is assessed independently based on the
+                    quality, quantity, and nature of the available evidence.
+                    Classifications provide transparency around how an
+                    attribution was reached.
+                  </p>
 
-                <a href="assets/MJA-Grade-Table.pdf" target="_blank">
-                  View Framework
+                  <div class="method-framework-feature__actions">
+                    <a
+                      class="method-framework-feature__button"
+                      href="assets/MJA-Grade-Table.pdf"
+                      target="_blank"
+                    >
+                      View Framework
+                    </a>
+                  </div>
+                </div>
+
+                <a
+                  class="method-framework-feature__thumb"
+                  href="assets/MJA-Grade-Table.pdf"
+                  target="_blank"
+                >
+                  <img
+                    src="assets/framework-thumb.jpg"
+                    alt="MJA Attribution Framework preview"
+                  />
                 </a>
               </div>
-
-              <a
-                class="method-framework-feature__thumb"
-                href="assets/MJA-Grade-Table.pdf"
-                target="_blank"
-              >
-                <img
-                  src="assets/framework-thumb.jpg"
-                  alt="MJA Attribution Framework preview"
-                />
-              </a>
             </section>
 
             <section class="method-card reveal" id="method-note">
@@ -395,7 +413,7 @@
       }
 
       const revealItems = document.querySelectorAll(
-        ".method-hero__content, .method-hero__panel, .method-nav__head, .method-nav__strip, .method-side, .method-block, .method-card",
+        ".method-hero__content, .method-hero__panel, .method-nav__head, .method-nav__strip, .method-side, .method-block, .method-card, .method-framework-feature",
       );
 
       revealItems.forEach((item, index) => {
