@@ -1246,6 +1246,27 @@ main {
     justify-self: end;
     text-align: right;
   }
+
+  .method-framework-feature__grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .method-framework-feature__content {
+    order: 1;
+  }
+
+  .method-framework-feature__thumb {
+    order: 2;
+    width: 100%;
+    max-width: 420px;
+    margin: 20px auto 0;
+    transform: none;
+  }
+
+  .method-framework-feature__thumb img {
+    width: 100%;
+  }
 }
 /* =========================
    METHODOLOGY PAGE
