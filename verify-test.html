@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Archive Verification — Michael Jordan Archive</title>
+    <meta
+      name="description"
+      content="Archive verification portal for Michael Jordan Archive certificates and research records."
+    />
+
+    <link rel="stylesheet" href="styles-test.css?v=23" />
+    <link rel="stylesheet" href="verify.css" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="assets/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+  </head>
+
+  <body class="verify-page">
+    <main>
+      <section class="verify-hero">
+        <div class="section-shell">
+          <div class="verify-card reveal">
+            <img
+              src="assets/logo.png"
+              alt="Michael Jordan Archive logo"
+              class="verify-logo"
+            />
+
+            <div class="verify-kicker">The Michael Jordan Archive</div>
+
+            <h1>Archive Verification</h1>
+
+            <p class="verify-lead">
+              Enter the certificate number printed on your Archive Edition
+              document.
+            </p>
+
+            <form class="verify-form" id="verifyForm">
+              <input
+                type="text"
+                id="certificateInput"
+                placeholder="Certificate Number"
+                autocomplete="off"
+                required
+              />
+              <button type="submit">Verify</button>
+            </form>
+
+            <div id="verifyResult" class="verify-result"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">© Michael Jordan Archive</footer>
+
+    <script>
+      const revealItems = document.querySelectorAll(".verify-card");
+
+      revealItems.forEach((item, index) => {
+        item.classList.add("reveal");
+        item.style.transitionDelay = `${index * 0.02}s`;
+      });
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.04,
+          rootMargin: "0px 0px -10px 0px",
+        },
+      );
+
+      revealItems.forEach((item) => revealObserver.observe(item));
+    </script>
+    <script src="certificates.js"></script>
+  </body>
+</html>
