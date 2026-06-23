@@ -3,7 +3,7 @@ const certificates = {
     status: "Verified Archive Record",
     title: "1986-87 Michael Jordan Game Used Sneakers",
     issueDate: "August 2024",
-    documentId: "MJA-8-2026-PM-001",
+    documentId: "MJA-8-2024-PM-001",
     image: "assets/certificates/MJA-8-2024-C-001.jpg",
   },
   "MJA-4-2026-C-002": {
@@ -12,6 +12,13 @@ const certificates = {
     issueDate: "April 2026",
     documentId: "MJA-4-2026-PM-002",
     image: "assets/certificates/MJA-4-2026-C-002.jpg",
+  },
+  "MJA-6-2026-C-003": {
+    status: "Verified Archive Record",
+    title: "1995–96 Michael Jordan Game Used Sneakers",
+    issueDate: "June 2026",
+    documentId: "MJA-6-2026-PM-003",
+    image: "assets/certificates/MJA-6-2026-C-003.jpg",
   },
 };
 
