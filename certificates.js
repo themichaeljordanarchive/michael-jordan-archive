@@ -20,6 +20,13 @@ const certificates = {
     documentId: "MJA-6-2026-PM-003",
     image: "assets/certificates/MJA-6-2026-C-003.jpg",
   },
+  "MJA-9798-AJXIII-ECF-G2-C-01": {
+    status: "Verified Archive Record",
+    title: "1997–98 Michael Jordan Game Used Sneakers",
+    issueDate: "July 2026",
+    documentId: "MJA-9798-AJXIII-ECF-G2-C-01",
+    image: "assets/certificates/MJA-9798-AJXIII-ECF-G2-C-01.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
