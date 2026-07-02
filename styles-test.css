@@ -989,7 +989,7 @@ main {
 .method-framework-feature__thumb {
   display: block;
   position: relative;
-  padding: 10px;
+  padding: 16px;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 22px;
   background: rgba(248, 246, 242, 0.72);
@@ -1006,6 +1006,8 @@ main {
 }
 
 .method-framework-feature__thumb img {
+  width: 100%;
+  height: auto;
   border-radius: 14px;
   border: 1px solid rgba(17, 17, 17, 0.1);
 }
