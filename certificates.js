@@ -27,6 +27,13 @@ const certificates = {
     documentId: "MJA-9798-AJXIII-ECF-G2-C-001",
     image: "assets/certificates/MJA-9798-AJXIII-ECF-G2-C-001.jpg",
   },
+  "MJA-1988-LGU-C-001": {
+    status: "Verified Archive Record",
+    title: "1988 Michael Jordan Game Worn Jersey",
+    issueDate: "July 2026",
+    documentId: "MJA-1988-LGU-C-001",
+    image: "assets/certificates/MJA-1988-LGU-C-001.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
