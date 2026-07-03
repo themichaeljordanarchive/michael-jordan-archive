@@ -29,7 +29,7 @@ const certificates = {
   },
   "MJA-1988-LGU-C-001": {
     status: "Verified Archive Record",
-    title: "1988 Michael Jordan Game Worn Jersey",
+    title: "1988 Michael Jordan Game Worn Uniform",
     issueDate: "July 2026",
     documentId: "MJA-1988-LGU-C-001",
     image: "assets/certificates/MJA-1988-LGU-C-001.jpg",
