@@ -10,6 +10,7 @@
     />
 
     <link rel="stylesheet" href="styles-test.css?v=23" />
+    <link rel="stylesheet" href="verify.css" />
 
     <link
       rel="icon"
@@ -52,18 +53,22 @@
             <h1>Archive Verification</h1>
 
             <p class="verify-lead">
-              This private verification portal is currently being developed for
-              "Archive Edition" documents and serialized authentication
-              certificates and photo-matches.
+              Enter the certificate number printed on your Archive Edition
+              document.
             </p>
 
-            <p class="verify-copy">
-              Future updates will allow collectors to enter their unique
-              certificate number and confirm the corresponding archive record
-              issued by The Michael Jordan Archive.
-            </p>
+            <form class="verify-form" id="verifyForm">
+              <input
+                type="text"
+                id="certificateInput"
+                placeholder="Certificate Number"
+                autocomplete="off"
+                required
+              />
+              <button type="submit">Verify</button>
+            </form>
 
-            <div class="verify-status">Coming Soon</div>
+            <div id="verifyResult" class="verify-result"></div>
           </div>
         </div>
       </section>
@@ -96,5 +101,6 @@
 
       revealItems.forEach((item) => revealObserver.observe(item));
     </script>
+    <script src="certificates.js?v=7"></script>
   </body>
 </html>
