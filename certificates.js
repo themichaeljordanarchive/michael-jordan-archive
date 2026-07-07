@@ -31,8 +31,15 @@ const certificates = {
     status: "Verified Archive Record",
     title: "1988 Michael Jordan Game Worn Uniform",
     issueDate: "July 2026",
-    documentId: "MJA-1988-LGU-C-001",
+    documentId: "MJA-1988-LGU-PM-001",
     image: "assets/certificates/MJA-1988-LGU-C-001.jpg",
+  },
+  "MJA-9697-SP-HOME-J1-C-001": {
+    status: "Verified Archive Record",
+    title: "1996-97 Scottie Pippen Game Worn Jersey",
+    issueDate: "March 2026",
+    documentId: "MJA-9697-SP-HOME-J1-PM-01",
+    image: "assets/certificates/MJA-9697-SP-HOME-J1-C-001.jpg",
   },
 };
 
