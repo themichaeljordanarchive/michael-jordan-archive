@@ -41,6 +41,13 @@ const certificates = {
     documentId: "MJA-9697-SP-HOME-J1-PM-01",
     image: "assets/certificates/MJA-9697-SP-HOME-J1-C-001.jpg",
   },
+  "MJA-AJ-IV-7-26-004": {
+    status: "Verified Archive Record",
+    title: "Air Jordan IV",
+    issueDate: "July 16 2026",
+    documentId: "MAJA-AJ-IV-7-26-004",
+    image: "assets/certificates/MJA-AJ-IV-7-26-004.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
