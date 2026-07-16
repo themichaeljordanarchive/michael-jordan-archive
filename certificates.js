@@ -62,6 +62,13 @@ const certificates = {
     documentId: "MJA-AJ-XII-7-26-001",
     image: "assets/certificates/MJA-AJ-XII-7-26-001.jpg",
   },
+  "MJA-AJ-WBR-7-26-002": {
+    status: "Verified Archive Record",
+    title: "Air Jordan JUMPMAN WRIST BAND",
+    issueDate: "July 13 2026",
+    documentId: "MJA-AJ-WBR-7-26-002",
+    image: "assets/certificates/MJA-AJ-WBR-7-26-002.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
