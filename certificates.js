@@ -55,6 +55,13 @@ const certificates = {
     documentId: "MJA-J89-7-26-003",
     image: "assets/certificates/MJA-J89-7-26-003.jpg",
   },
+  "MJA-AJ-XII-7-26-001": {
+    status: "Verified Archive Record",
+    title: "Air Jordan XII",
+    issueDate: "July 05 2026",
+    documentId: "MJA-AJ-XII-7-26-001",
+    image: "assets/certificates/MJA-AJ-XII-7-26-001.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
