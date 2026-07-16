@@ -45,8 +45,15 @@ const certificates = {
     status: "Verified Archive Record",
     title: "Air Jordan IV",
     issueDate: "July 16 2026",
-    documentId: "MAJA-AJ-IV-7-26-004",
+    documentId: "MJA-AJ-IV-7-26-004",
     image: "assets/certificates/MJA-AJ-IV-7-26-004.jpg",
+  },
+  "MJA-J89-7-26-003": {
+    status: "Verified Archive Record",
+    title: "1989-90 MICHAEL JORDAN HOME JERSEY",
+    issueDate: "July 06 2026",
+    documentId: "MJA-J89-7-26-003",
+    image: "assets/certificates/MJA-J89-7-26-003.jpg",
   },
 };
 
