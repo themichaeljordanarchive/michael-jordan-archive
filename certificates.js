@@ -69,6 +69,13 @@ const certificates = {
     documentId: "MJA-AJ-WBR-7-26-002",
     image: "assets/certificates/MJA-AJ-WBR-7-26-002.jpg",
   },
+  "MJA-AJ-I-7-26-005": {
+    status: "Verified Archive Record",
+    title: "Air Jordan I TYPS",
+    issueDate: "July 20 2026",
+    documentId: "MJA-AJ-I-7-26-005",
+    image: "assets/certificates/MJA-AJ-I-7-26-005.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
