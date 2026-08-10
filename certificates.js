@@ -76,6 +76,13 @@ const certificates = {
     documentId: "MJA-AJ-I-7-26-005",
     image: "assets/certificates/MJA-AJ-I-7-26-005.jpg",
   },
+  "MJA-J9798-8-10-001": {
+    status: "Verified Archive Record",
+    title: "1997-98 MICHAEL JORDAN ROAD JERSEY",
+    issueDate: "August 8 2026",
+    documentId: "MJA-J9798-8-10-001",
+    image: "assets/certificates/MJA-J9798-8-10-001.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
