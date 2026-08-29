@@ -16,7 +16,7 @@
       image: "images/sneakers/aj2/aj2-c-scp-1.jpg",
       alt: "1987 Air Jordan II White and Red — Pair C",
       category: "sneaker",
-      returnUrl: "sneakers-aj2-ownership-test.html",
+      returnUrl: "sneakers-aj2.html",
     },
   };
   const form = document.querySelector("#offer-form");

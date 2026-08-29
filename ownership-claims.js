@@ -25,7 +25,7 @@
       image: "images/sneakers/aj2/aj2-a-low-8687-1.jpg",
       alt: "1987 Air Jordan II White and Black — Pair A",
       category: "sneaker",
-      returnUrl: "sneakers-aj2-ownership-test.html",
+      returnUrl: "sneakers-aj2.html",
     },
     "aj2-pair-b": {
       title: "1987 Air Jordan II — White | Red",
@@ -34,7 +34,7 @@
       image: "images/sneakers/aj2/aj2-b-8687-1.jpg",
       alt: "1987 Air Jordan II White and Red — Pair B",
       category: "sneaker",
-      returnUrl: "sneakers-aj2-ownership-test.html",
+      returnUrl: "sneakers-aj2.html",
     },
     "aj2-pair-d": {
       title: "1987 Air Jordan II — White | Black | Red",
@@ -43,7 +43,7 @@
       image: "images/sneakers/aj2/aj2-d-wlaces-ha-1.jpg",
       alt: "1987 Air Jordan II White, Black and Red — Pair D",
       category: "sneaker",
-      returnUrl: "sneakers-aj2-ownership-test.html",
+      returnUrl: "sneakers-aj2.html",
     },
   };
 
