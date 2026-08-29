@@ -6,6 +6,7 @@
       usage: "Regular / Postseason",
       image: "images/1986-87-home-fb.jpg",
       alt: "1986–87 Chicago Bulls home jersey",
+      returnUrl: "jerseys-1986-87.html",
     },
     "8687-away-b": {
       title: "1986–87 Chicago Bulls Away Jersey",
@@ -13,6 +14,31 @@
       usage: "Regular / Postseason",
       image: "images/1986-87-away.jpg",
       alt: "1986–87 Chicago Bulls away jersey",
+      returnUrl: "jerseys-1986-87.html",
+    },
+    "aj2-pair-a": {
+      title: "1987 Air Jordan II — White | Black",
+      reference: "Pair A",
+      usage: "Regular Season",
+      image: "images/sneakers/aj2/aj2-a-low-8687-1.jpg",
+      alt: "1987 Air Jordan II White and Black — Pair A",
+      returnUrl: "sneakers-aj2-ownership-test.html",
+    },
+    "aj2-pair-b": {
+      title: "1987 Air Jordan II — White | Red",
+      reference: "Pair B",
+      usage: "Unknown",
+      image: "images/sneakers/aj2/aj2-b-8687-1.jpg",
+      alt: "1987 Air Jordan II White and Red — Pair B",
+      returnUrl: "sneakers-aj2-ownership-test.html",
+    },
+    "aj2-pair-d": {
+      title: "1987 Air Jordan II — White | Black | Red",
+      reference: "Pair D",
+      usage: "Regular Season",
+      image: "images/sneakers/aj2/aj2-d-wlaces-ha-1.jpg",
+      alt: "1987 Air Jordan II White, Black and Red — Pair D",
+      returnUrl: "sneakers-aj2-ownership-test.html",
     },
   };
 
@@ -43,8 +69,15 @@
   get("item-title-field").value = item.title;
   get("item-reference-field").value = item.reference;
   get("item-usage-field").value = item.usage;
-  get("subject-field").value =
-    `New MJA Ownership Claim — ${item.title} — ${item.reference}`;
+  const subjectField = document.querySelector('[name="_subject"]');
+  if (subjectField)
+    subjectField.value = `New MJA Ownership Claim — ${item.title} — ${item.reference}`;
+  const backLink = document.querySelector("#artifact-back-link, .back-link");
+  if (backLink) backLink.href = item.returnUrl;
+  const returnLink = document.querySelector(
+    "#confirmation-return-link, .confirmation .button",
+  );
+  if (returnLink) returnLink.href = item.returnUrl;
   get("artifact-image").src = item.image;
   get("artifact-image").alt = item.alt;
 
