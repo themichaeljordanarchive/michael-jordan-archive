@@ -941,6 +941,20 @@ textarea {
     11px/1.4 Arial,
     sans-serif;
 }
+
+.form-honeypot {
+  position: absolute !important;
+  left: -10000px !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+}
+
+.button[disabled] {
+  cursor: wait;
+  opacity: 0.64;
+  transform: none;
+}
 .money-input {
   position: relative;
 }
