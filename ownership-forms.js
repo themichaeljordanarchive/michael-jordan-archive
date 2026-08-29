@@ -6,6 +6,7 @@
       usage: "Regular / Postseason",
       image: "images/1986-87-home-fb.jpg",
       alt: "1986–87 Chicago Bulls home jersey",
+      category: "jersey",
       returnUrl: "jerseys-1986-87.html",
     },
     "aj2-pair-c": {
@@ -14,10 +15,19 @@
       usage: "Unknown",
       image: "images/sneakers/aj2/aj2-c-scp-1.jpg",
       alt: "1987 Air Jordan II White and Red — Pair C",
-      returnUrl: "sneakers-aj2-ownership-test.html",
+      category: "sneaker",
+      returnUrl: "sneakers-aj2.html",
+    },
+    "aj3-pair-i": {
+      title: "1989 Air Jordan III — White | Cement Grey",
+      reference: "Pair I",
+      usage: "Regular Season",
+      image: "images/sneakers/aj3/aj3-i-8889-wc-1.jpg",
+      alt: "1989 Air Jordan III White and Cement Grey — Pair I",
+      category: "sneaker",
+      returnUrl: "sneakers-aj3.html",
     },
   };
-  const items = window.MJA_OWNERSHIP_ITEMS || {};
   const form = document.querySelector("#offer-form");
   if (!form) return;
   const navToggle = document.querySelector(".nav-toggle");
