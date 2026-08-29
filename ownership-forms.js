@@ -6,7 +6,6 @@
       usage: "Regular / Postseason",
       image: "images/1986-87-home-fb.jpg",
       alt: "1986–87 Chicago Bulls home jersey",
-      category: "jersey",
       returnUrl: "jerseys-1986-87.html",
     },
     "aj2-pair-c": {
@@ -15,10 +14,10 @@
       usage: "Unknown",
       image: "images/sneakers/aj2/aj2-c-scp-1.jpg",
       alt: "1987 Air Jordan II White and Red — Pair C",
-      category: "sneaker",
-      returnUrl: "sneakers-aj2.html",
+      returnUrl: "sneakers-aj2-ownership-test.html",
     },
   };
+  const items = window.MJA_OWNERSHIP_ITEMS || {};
   const form = document.querySelector("#offer-form");
   if (!form) return;
   const navToggle = document.querySelector(".nav-toggle");
