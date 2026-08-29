@@ -6,6 +6,7 @@
       usage: "Regular / Postseason",
       image: "images/1986-87-home-fb.jpg",
       alt: "1986–87 Chicago Bulls home jersey",
+      category: "jersey",
       returnUrl: "jerseys-1986-87.html",
     },
     "8687-away-b": {
@@ -14,6 +15,7 @@
       usage: "Regular / Postseason",
       image: "images/1986-87-away.jpg",
       alt: "1986–87 Chicago Bulls away jersey",
+      category: "jersey",
       returnUrl: "jerseys-1986-87.html",
     },
     "aj2-pair-a": {
@@ -22,6 +24,7 @@
       usage: "Regular Season",
       image: "images/sneakers/aj2/aj2-a-low-8687-1.jpg",
       alt: "1987 Air Jordan II White and Black — Pair A",
+      category: "sneaker",
       returnUrl: "sneakers-aj2-ownership-test.html",
     },
     "aj2-pair-b": {
@@ -30,6 +33,7 @@
       usage: "Unknown",
       image: "images/sneakers/aj2/aj2-b-8687-1.jpg",
       alt: "1987 Air Jordan II White and Red — Pair B",
+      category: "sneaker",
       returnUrl: "sneakers-aj2-ownership-test.html",
     },
     "aj2-pair-d": {
@@ -38,6 +42,7 @@
       usage: "Regular Season",
       image: "images/sneakers/aj2/aj2-d-wlaces-ha-1.jpg",
       alt: "1987 Air Jordan II White, Black and Red — Pair D",
+      category: "sneaker",
       returnUrl: "sneakers-aj2-ownership-test.html",
     },
   };
@@ -61,6 +66,15 @@
   const item = items[itemId];
   let currentStep = 1;
   const get = (id) => document.querySelector(`#${id}`);
+
+  const indexLink = document.querySelector(
+    '.site-nav a[href="jerseys.html"], .site-nav a[href="sneakers.html"]',
+  );
+  if (indexLink) {
+    const isSneaker = item.category === "sneaker";
+    indexLink.href = isSneaker ? "sneakers.html" : "jerseys.html";
+    indexLink.textContent = isSneaker ? "Sneaker Index" : "Jersey Index";
+  }
 
   get("item-id").value = itemId;
   get("artifact-title").textContent = item.title;
