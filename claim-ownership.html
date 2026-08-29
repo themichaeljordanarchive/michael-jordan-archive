@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Submit an ownership claim to The Michael Jordan Archive."
+    />
+    <title>Claim Ownership | The Michael Jordan Archive</title>
+    <link rel="stylesheet" href="season-test.css" />
+    <link rel="stylesheet" href="ownership-forms.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="assets/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <script src="ownership-claims.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <a href="index.html" aria-label="Michael Jordan Archive home">
+          <img src="assets/logo.png" alt="Michael Jordan Archive logo" />
+        </a>
+        <div class="brand-text">
+          <div class="brand-name">Michael Jordan Archive</div>
+        </div>
+      </div>
+      <button
+        class="nav-toggle"
+        aria-label="Menu"
+        aria-expanded="false"
+        type="button"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="jerseys.html">Jersey Index</a>
+        <a href="framework.html">Contact</a>
+      </nav>
+    </header>
+
+    <main class="form-page">
+      <div class="page-shell">
+        <a class="back-link" href="jerseys-1986-87.html"
+          >← Return to the artifact</a
+        >
+
+        <div class="form-intro">
+          <span class="section-kicker">Ownership Registry</span>
+          <h1>Claim Ownership</h1>
+          <p>
+            Submit a private claim for review and verification by The Michael
+            Jordan Archive.
+          </p>
+        </div>
+
+        <section class="offer-layout" aria-label="Ownership claim form">
+          <aside class="artifact-card" aria-labelledby="artifact-title">
+            <div class="artifact-image-wrap">
+              <img
+                id="artifact-image"
+                src="images/1986-87-home-fb.jpg"
+                alt="1986–87 Chicago Bulls home jersey"
+              />
+            </div>
+            <div class="artifact-card-body">
+              <span class="section-kicker">Artifact</span>
+              <h2 id="artifact-title">1986–87 Chicago Bulls Home Jersey</h2>
+              <dl class="artifact-meta">
+                <div>
+                  <dt>Archive Reference</dt>
+                  <dd id="artifact-reference">Jersey A</dd>
+                </div>
+                <div>
+                  <dt>Usage</dt>
+                  <dd id="artifact-usage">Regular / Postseason</dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+
+          <div class="form-card">
+            <ol class="step-list" aria-label="Claim progress">
+              <li class="is-active" data-step-indicator="1">
+                <span>1</span><b>Your Information</b>
+              </li>
+              <li data-step-indicator="2">
+                <span>2</span><b>Ownership Details</b>
+              </li>
+              <li data-step-indicator="3"><span>3</span><b>Review</b></li>
+              <li data-step-indicator="4"><span>4</span><b>Confirmation</b></li>
+            </ol>
+
+            <div id="form-alert" class="form-alert" role="alert" hidden></div>
+
+            <form
+              id="claim-form"
+              action="https://formspree.io/f/mdapvydj"
+              method="POST"
+              novalidate
+            >
+              <input
+                type="hidden"
+                id="item-id"
+                name="item"
+                value="8687-home-a"
+              />
+              <input
+                type="hidden"
+                id="item-title-field"
+                name="artifact"
+                value="1986–87 Chicago Bulls Home Jersey"
+              />
+              <input
+                type="hidden"
+                id="item-reference-field"
+                name="archive_reference"
+                value="Jersey A"
+              />
+              <input
+                type="hidden"
+                id="item-usage-field"
+                name="usage"
+                value="Regular / Postseason"
+              />
+              <input
+                type="hidden"
+                name="request_type"
+                value="Ownership Claim"
+              />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New MJA Ownership Claim — 1986–87 Home Jersey A"
+              />
+              <input
+                class="form-honeypot"
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
+              />
+
+              <section
+                class="form-step is-active"
+                data-step="1"
+                aria-labelledby="step-1-title"
+              >
+                <div class="step-heading">
+                  <span>Step One</span>
+                  <h2 id="step-1-title">Your Information</h2>
+                  <p>
+                    This identity will remain private and will be tied to the
+                    ownership record.
+                  </p>
+                </div>
+                <div class="field-grid">
+                  <div class="field field-wide">
+                    <label for="name">Full Name <em>Required</em></label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      required
+                    />
+                    <small class="field-error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email Address <em>Required</em></label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                    />
+                    <small class="field-error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone <span>Optional</span></label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                    />
+                    <small class="field-error"></small>
+                  </div>
+                </div>
+                <p class="privacy-note">
+                  <strong>Verified contact.</strong> Future correspondence and
+                  evidence for this claim must come from the same email address.
+                </p>
+                <div class="step-actions">
+                  <span></span
+                  ><button
+                    class="button button-primary"
+                    type="button"
+                    data-next
+                  >
+                    Continue to Ownership Details
+                  </button>
+                </div>
+              </section>
+
+              <section
+                class="form-step"
+                data-step="2"
+                aria-labelledby="step-2-title"
+                hidden
+              >
+                <div class="step-heading">
+                  <span>Step Two</span>
+                  <h2 id="step-2-title">Ownership Details</h2>
+                  <p>
+                    Provide the acquisition history currently available to you.
+                  </p>
+                </div>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="acquisition-source"
+                      >Acquisition Source <em>Required</em></label
+                    >
+                    <select
+                      id="acquisition-source"
+                      name="acquisition_source"
+                      required
+                    >
+                      <option value="">Select one</option>
+                      <option>Auction house</option>
+                      <option>Private sale</option>
+                      <option>Dealer</option>
+                      <option>Gift or inheritance</option>
+                      <option>Other</option>
+                    </select>
+                    <small class="field-error"></small>
+                  </div>
+                  <div class="field">
+                    <label for="acquisition-date"
+                      >Acquisition Date <span>Approximate allowed</span></label
+                    >
+                    <input
+                      id="acquisition-date"
+                      name="acquisition_date"
+                      type="text"
+                      placeholder="Month/year or approximate date"
+                    />
+                    <small class="field-error"></small>
+                  </div>
+                  <div class="field field-wide">
+                    <label for="ownership-history"
+                      >How did you acquire this artifact?
+                      <em>Required</em></label
+                    >
+                    <textarea
+                      id="ownership-history"
+                      name="ownership_history"
+                      rows="5"
+                      required
+                      placeholder="Include the seller, auction house and lot number, private transaction, or other relevant history."
+                    ></textarea>
+                    <small class="field-error"></small>
+                  </div>
+                  <div class="field field-wide">
+                    <label for="documentation"
+                      >Documentation Available <em>Required</em></label
+                    >
+                    <textarea
+                      id="documentation"
+                      name="documentation_available"
+                      rows="4"
+                      required
+                      placeholder="List invoices, receipts, letters of authenticity, provenance records, prior sale records, or other supporting material. If none, explain."
+                    ></textarea>
+                    <small class="field-error"></small>
+                  </div>
+                  <div class="field field-wide">
+                    <label for="notes"
+                      >Additional Notes <span>Optional</span></label
+                    >
+                    <textarea
+                      id="notes"
+                      name="additional_notes"
+                      rows="4"
+                    ></textarea>
+                    <small class="field-error"></small>
+                  </div>
+                </div>
+
+                <div class="verification-requirements">
+                  <span class="section-kicker">Required During Review</span>
+                  <h3>Current possession verification</h3>
+                  <p>
+                    Every ownership claim requires current photographic and
+                    video confirmation. Specific item-based instructions and a
+                    one-time verification code will be sent to the email used
+                    for this claim.
+                  </p>
+                  <ul>
+                    <li>
+                      Current photographs showing requested artifact details
+                    </li>
+                    <li>A continuous current-possession video</li>
+                    <li>Acquisition documentation when applicable</li>
+                  </ul>
+                </div>
+
+                <p class="privacy-note">
+                  <strong>Private by design.</strong> Owner identity and
+                  submitted evidence are handled privately by The Michael Jordan
+                  Archive and are not disclosed publicly.
+                </p>
+                <div class="step-actions">
+                  <button
+                    class="button button-secondary"
+                    type="button"
+                    data-back
+                  >
+                    Back</button
+                  ><button
+                    class="button button-primary"
+                    type="button"
+                    data-next
+                  >
+                    Review Your Claim
+                  </button>
+                </div>
+              </section>
+
+              <section
+                class="form-step"
+                data-step="3"
+                aria-labelledby="step-3-title"
+                hidden
+              >
+                <div class="step-heading">
+                  <span>Step Three</span>
+                  <h2 id="step-3-title">Review</h2>
+                  <p>
+                    Please confirm the details below before submitting your
+                    ownership claim.
+                  </p>
+                </div>
+                <div id="review-content" class="review-content"></div>
+                <label class="certification">
+                  <input
+                    id="certification"
+                    name="ownership_certification"
+                    value="Confirmed"
+                    type="checkbox"
+                    required
+                  />
+                  <span
+                    >I certify that I currently own the artifact identified
+                    above and that the information submitted is accurate.</span
+                  >
+                </label>
+                <label class="certification">
+                  <input
+                    id="verification-acknowledgment"
+                    name="verification_acknowledgment"
+                    value="Acknowledged"
+                    type="checkbox"
+                    required
+                  />
+                  <span
+                    >I understand that current photographic and video
+                    confirmation will be required before ownership can be
+                    verified.</span
+                  >
+                </label>
+                <small id="certification-error" class="field-error"></small>
+                <div class="step-actions">
+                  <button
+                    class="button button-secondary"
+                    type="button"
+                    data-back
+                  >
+                    Edit Claim</button
+                  ><button
+                    id="submit-claim"
+                    class="button button-primary"
+                    type="submit"
+                  >
+                    Submit Ownership Claim
+                  </button>
+                </div>
+              </section>
+
+              <section
+                class="form-step confirmation"
+                data-step="4"
+                aria-labelledby="step-4-title"
+                hidden
+              >
+                <div class="confirmation-mark" aria-hidden="true">✓</div>
+                <span class="section-kicker">Claim Received</span>
+                <h2 id="step-4-title">
+                  Your ownership claim has been submitted.
+                </h2>
+                <p>
+                  The Michael Jordan Archive will review the initial information
+                  privately. Verification instructions will be sent to the same
+                  email address if the claim can proceed. Public ownership
+                  status will not change unless the claim is approved.
+                </p>
+                <a class="button button-primary" href="jerseys-1986-87.html"
+                  >Return to the Season Entry</a
+                >
+              </section>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>© Michael Jordan Archive</div>
+      <a
+        href="https://www.instagram.com/themichaeljordanarchive?igsh=YzRlcjhnc2dsdzV5&amp;utm_source=qr"
+        target="_blank"
+        rel="noopener"
+        class="social-icon"
+        aria-label="Instagram"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5z"
+          ></path>
+          <circle cx="12" cy="12" r="3.5"></circle>
+          <circle cx="17.5" cy="6.5" r="1"></circle>
+        </svg>
+      </a>
+      <a
+        href="https://buttondown.email/themichaeljordanarchive"
+        class="footer-link"
+        >Join the Archive</a
+      >
+    </footer>
+  </body>
+</html>
