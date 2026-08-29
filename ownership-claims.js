@@ -7,6 +7,13 @@
       image: "images/1986-87-home-fb.jpg",
       alt: "1986–87 Chicago Bulls home jersey",
     },
+    "8687-away-b": {
+      title: "1986–87 Chicago Bulls Away Jersey",
+      reference: "Jersey B",
+      usage: "Regular / Postseason",
+      image: "images/1986-87-away.jpg",
+      alt: "1986–87 Chicago Bulls away jersey",
+    },
   };
 
   const form = document.querySelector("#claim-form");
@@ -36,6 +43,8 @@
   get("item-title-field").value = item.title;
   get("item-reference-field").value = item.reference;
   get("item-usage-field").value = item.usage;
+  get("subject-field").value =
+    `New MJA Ownership Claim — ${item.title} — ${item.reference}`;
   get("artifact-image").src = item.image;
   get("artifact-image").alt = item.alt;
 
