@@ -116,12 +116,49 @@
               </li>
             </ol>
             <div id="form-alert" class="form-alert" role="alert" hidden></div>
-            <form id="offer-form" novalidate>
+            <form
+              id="offer-form"
+              action="https://formspree.io/f/mdapvydj"
+              method="POST"
+              novalidate
+            >
               <input
                 type="hidden"
                 id="item-id"
                 name="item"
                 value="8687-home-a"
+              />
+              <input
+                type="hidden"
+                id="item-title-field"
+                name="artifact"
+                value="1986–87 Chicago Bulls Home Jersey"
+              />
+              <input
+                type="hidden"
+                id="item-reference-field"
+                name="archive_reference"
+                value="Jersey A"
+              />
+              <input
+                type="hidden"
+                id="item-usage-field"
+                name="usage"
+                value="Regular / Postseason"
+              />
+              <input type="hidden" name="request_type" value="Private Offer" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="New MJA Private Offer — 1986–87 Home Jersey A"
+              />
+              <input
+                class="form-honeypot"
+                type="text"
+                name="_gotcha"
+                tabindex="-1"
+                autocomplete="off"
+                aria-hidden="true"
               />
               <section
                 class="form-step is-active"
@@ -252,8 +289,8 @@
                   <span>Step Three</span>
                   <h2 id="step-3-title">Review</h2>
                   <p>
-                    Please confirm the details below before submitting this
-                    local test.
+                    Please confirm the details below before submitting your
+                    private offer.
                   </p>
                 </div>
                 <div id="review-content" class="review-content"></div>
@@ -265,9 +302,6 @@
                   >
                 </label>
                 <small id="certification-error" class="field-error"> </small>
-                <p class="test-notice">
-                  Test mode: no information will be sent or stored externally.
-                </p>
                 <div class="step-actions">
                   <button
                     class="button button-secondary"
@@ -276,7 +310,11 @@
                   >
                     Edit Offer
                   </button>
-                  <button class="button button-primary" type="submit">
+                  <button
+                    id="submit-offer"
+                    class="button button-primary"
+                    type="submit"
+                  >
                     Submit Private Offer
                   </button>
                 </div>
@@ -288,18 +326,15 @@
                 hidden
               >
                 <div class="confirmation-mark" aria-hidden="true">✓</div>
-                <span class="section-kicker"
-                  >Simulated Submission Complete</span
-                >
+                <span class="section-kicker">Submission Complete</span>
                 <h2 id="step-4-title">
-                  Your offer has been recorded for this test.
+                  Your private offer has been submitted.
                 </h2>
                 <p>
-                  This demonstration did not transmit your information. In the
-                  live workflow, The Michael Jordan Archive would review the
-                  offer privately and contact you if follow-up is appropriate.
+                  The Michael Jordan Archive will review your offer privately
+                  and contact you if follow-up is appropriate. Submission does
+                  not guarantee that the owner will respond or consider a sale.
                 </p>
-                <div id="confirmation-number" class="confirmation-number"></div>
                 <a class="button button-primary" href="jerseys-1986-87.html"
                   >Return to the Season Entry</a
                 >
