@@ -12,6 +12,17 @@
   const form = document.querySelector("#offer-form");
   if (!form) return;
 
+  const navToggle = document.querySelector(".nav-toggle");
+  if (navToggle) {
+    navToggle.addEventListener("click", () => {
+      document.body.classList.toggle("nav-open");
+      navToggle.setAttribute(
+        "aria-expanded",
+        String(document.body.classList.contains("nav-open")),
+      );
+    });
+  }
+
   const params = new URLSearchParams(location.search);
   const itemId = items[params.get("item")] ? params.get("item") : "8687-home-a";
   const item = items[itemId];

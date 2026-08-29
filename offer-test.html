@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Submit a private offer through The Michael Jordan Archive."
+    />
+    <title>Submit a Private Offer | The Michael Jordan Archive</title>
+    <link rel="stylesheet" href="season-test.css" />
+    <link rel="stylesheet" href="ownership-forms.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="48x48"
+      href="assets/favicon-48x48.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/apple-touch-icon.png"
+    />
+    <script src="ownership-forms.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <a href="index.html" aria-label="Michael Jordan Archive home">
+          <img src="assets/logo.png" alt="Michael Jordan Archive logo" />
+        </a>
+        <div class="brand-text">
+          <div class="brand-name">Michael Jordan Archive</div>
+        </div>
+      </div>
+      <button
+        class="nav-toggle"
+        aria-label="Menu"
+        aria-expanded="false"
+        type="button"
+      >
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="jerseys.html">Jersey Index</a>
+        <a href="framework.html">Contact</a>
+      </nav>
+    </header>
+    <main class="form-page">
+      <div class="page-shell">
+        <a class="back-link" href="jerseys-1986-87.html"
+          >← Return to the artifact</a
+        >
+        <div class="form-intro">
+          <span class="section-kicker">Private Collector Services</span>
+          <h1>Submit a Private Offer</h1>
+          <p>
+            Your offer will be reviewed privately by The Michael Jordan Archive
+            and, where appropriate, shared with the verified owner.
+          </p>
+        </div>
+        <section class="offer-layout" aria-label="Private offer form">
+          <aside class="artifact-card" aria-labelledby="artifact-title">
+            <div class="artifact-image-wrap">
+              <img
+                id="artifact-image"
+                src="images/1986-87-home-fb.jpg"
+                alt="1986–87 Chicago Bulls home jersey"
+              />
+            </div>
+            <div class="artifact-card-body">
+              <span class="section-kicker">Artifact</span>
+              <h2 id="artifact-title">1986–87 Chicago Bulls Home Jersey</h2>
+              <dl class="artifact-meta">
+                <div>
+                  <dt>Archive Reference</dt>
+                  <dd id="artifact-reference">Jersey A</dd>
+                </div>
+                <div>
+                  <dt>Usage</dt>
+                  <dd id="artifact-usage">Regular / Postseason</dd>
+                </div>
+              </dl>
+            </div>
+          </aside>
+          <div class="form-card">
+            <ol class="step-list" aria-label="Offer progress">
+              <li class="is-active" data-step-indicator="1">
+                <span>1</span>
+                <b>Your Information</b>
+              </li>
+              <li data-step-indicator="2">
+                <span>2</span>
+                <b>Your Offer</b>
+              </li>
+              <li data-step-indicator="3">
+                <span>3</span>
+                <b>Review</b>
+              </li>
+              <li data-step-indicator="4">
+                <span>4</span>
+                <b>Confirmation</b>
+              </li>
+            </ol>
+            <div id="form-alert" class="form-alert" role="alert" hidden></div>
+            <form id="offer-form" novalidate>
+              <input
+                type="hidden"
+                id="item-id"
+                name="item"
+                value="8687-home-a"
+              />
+              <section
+                class="form-step is-active"
+                data-step="1"
+                aria-labelledby="step-1-title"
+              >
+                <div class="step-heading">
+                  <span>Step One</span>
+                  <h2 id="step-1-title">Your Information</h2>
+                  <p>Tell us how to contact you regarding this offer.</p>
+                </div>
+                <div class="field-grid">
+                  <div class="field field-wide">
+                    <label for="name">Full Name <em>Required</em> </label>
+                    <input
+                      id="name"
+                      name="name"
+                      type="text"
+                      autocomplete="name"
+                      required
+                    />
+                    <small class="field-error"> </small>
+                  </div>
+                  <div class="field">
+                    <label for="email">Email Address <em>Required</em> </label>
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      autocomplete="email"
+                      required
+                    />
+                    <small class="field-error"> </small>
+                  </div>
+                  <div class="field">
+                    <label for="phone">Phone <span>Optional</span> </label>
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      autocomplete="tel"
+                    />
+                    <small class="field-error"> </small>
+                  </div>
+                </div>
+                <div class="step-actions">
+                  <span> </span>
+                  <button class="button button-primary" type="button" data-next>
+                    Continue to Your Offer
+                  </button>
+                </div>
+              </section>
+              <section
+                class="form-step"
+                data-step="2"
+                aria-labelledby="step-2-title"
+                hidden
+              >
+                <div class="step-heading">
+                  <span>Step Two</span>
+                  <h2 id="step-2-title">Your Offer</h2>
+                  <p>
+                    Enter the amount and any terms you would like us to convey.
+                  </p>
+                </div>
+                <div class="field-grid">
+                  <div class="field">
+                    <label for="amount"
+                      >Offer Amount (USD) <em>Required</em>
+                    </label>
+                    <div class="money-input">
+                      <span>$</span>
+                      <input
+                        id="amount"
+                        name="amount"
+                        type="number"
+                        min="1"
+                        step="1"
+                        inputmode="numeric"
+                        required
+                      />
+                    </div>
+                    <small class="field-error"> </small>
+                  </div>
+                  <div class="field">
+                    <label for="expiration"
+                      >Offer Expiration <span>Optional</span>
+                    </label>
+                    <input id="expiration" name="expiration" type="date" />
+                    <small class="field-error"> </small>
+                  </div>
+                  <div class="field field-wide">
+                    <label for="message">Message <span>Optional</span> </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      rows="5"
+                      placeholder="Add context, timing, or other terms for the owner."
+                    ></textarea>
+                    <small class="field-error"> </small>
+                  </div>
+                </div>
+                <p class="privacy-note">
+                  <strong>Private by design.</strong> Owner identity is not
+                  disclosed publicly, and buyer information is handled privately
+                  by The Michael Jordan Archive.
+                </p>
+                <div class="step-actions">
+                  <button
+                    class="button button-secondary"
+                    type="button"
+                    data-back
+                  >
+                    Back
+                  </button>
+                  <button class="button button-primary" type="button" data-next>
+                    Review Your Offer
+                  </button>
+                </div>
+              </section>
+              <section
+                class="form-step"
+                data-step="3"
+                aria-labelledby="step-3-title"
+                hidden
+              >
+                <div class="step-heading">
+                  <span>Step Three</span>
+                  <h2 id="step-3-title">Review</h2>
+                  <p>
+                    Please confirm the details below before submitting this
+                    local test.
+                  </p>
+                </div>
+                <div id="review-content" class="review-content"></div>
+                <label class="certification">
+                  <input id="certification" type="checkbox" required />
+                  <span
+                    >I confirm that the information above is accurate and that
+                    this is a genuine offer.</span
+                  >
+                </label>
+                <small id="certification-error" class="field-error"> </small>
+                <p class="test-notice">
+                  Test mode: no information will be sent or stored externally.
+                </p>
+                <div class="step-actions">
+                  <button
+                    class="button button-secondary"
+                    type="button"
+                    data-back
+                  >
+                    Edit Offer
+                  </button>
+                  <button class="button button-primary" type="submit">
+                    Submit Private Offer
+                  </button>
+                </div>
+              </section>
+              <section
+                class="form-step confirmation"
+                data-step="4"
+                aria-labelledby="step-4-title"
+                hidden
+              >
+                <div class="confirmation-mark" aria-hidden="true">✓</div>
+                <span class="section-kicker"
+                  >Simulated Submission Complete</span
+                >
+                <h2 id="step-4-title">
+                  Your offer has been recorded for this test.
+                </h2>
+                <p>
+                  This demonstration did not transmit your information. In the
+                  live workflow, The Michael Jordan Archive would review the
+                  offer privately and contact you if follow-up is appropriate.
+                </p>
+                <div id="confirmation-number" class="confirmation-number"></div>
+                <a class="button button-primary" href="jerseys-1986-87.html"
+                  >Return to the Season Entry</a
+                >
+              </section>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div>© Michael Jordan Archive</div>
+      <a
+        href="https://www.instagram.com/themichaeljordanarchive?igsh=YzRlcjhnc2dsdzV5&amp;utm_source=qr"
+        target="_blank"
+        rel="noopener"
+        class="social-icon"
+        aria-label="Instagram"
+      >
+        <svg
+          viewBox="0 0 24 24"
+          width="20"
+          height="20"
+          fill="currentColor"
+          aria-hidden="true"
+        >
+          <path
+            d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5z"
+          ></path>
+          <circle cx="12" cy="12" r="3.5"></circle>
+          <circle cx="17.5" cy="6.5" r="1"></circle>
+        </svg>
+      </a>
+      <a
+        href="https://buttondown.email/themichaeljordanarchive"
+        class="footer-link"
+        >Join the Archive</a
+      >
+    </footer>
+  </body>
+</html>
