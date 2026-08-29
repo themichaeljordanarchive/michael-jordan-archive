@@ -32,6 +32,9 @@
   document.querySelector("#artifact-title").textContent = item.title;
   document.querySelector("#artifact-reference").textContent = item.reference;
   document.querySelector("#artifact-usage").textContent = item.usage;
+  document.querySelector("#item-title-field").value = item.title;
+  document.querySelector("#item-reference-field").value = item.reference;
+  document.querySelector("#item-usage-field").value = item.usage;
   const artifactImage = document.querySelector("#artifact-image");
   artifactImage.src = item.image;
   artifactImage.alt = item.alt;
@@ -156,7 +159,7 @@
     if (back) showStep(currentStep - 1);
   });
 
-  form.addEventListener("submit", (event) => {
+  form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const certification = get("certification");
     if (!certification.checked) {
@@ -166,9 +169,32 @@
       return;
     }
     get("certification-error").textContent = "";
-    const testId = `MJA-TEST-${new Date().getFullYear()}-${String(Math.floor(Math.random() * 9000) + 1000)}`;
-    get("confirmation-number").textContent = `Test reference: ${testId}`;
-    showStep(4);
-    form.reset();
+
+    const submitButton = get("submit-offer");
+    const originalLabel = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = "Submitting…";
+    get("form-alert").hidden = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: { Accept: "application/json" },
+      });
+
+      if (!response.ok) throw new Error("Submission was not accepted.");
+
+      showStep(4);
+      form.reset();
+    } catch (submissionError) {
+      get("form-alert").textContent =
+        "Your offer could not be submitted. Please check your connection and try again.";
+      get("form-alert").hidden = false;
+      get("form-alert").scrollIntoView({ behavior: "smooth", block: "center" });
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = originalLabel;
+    }
   });
 })();
