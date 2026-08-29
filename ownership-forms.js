@@ -6,6 +6,15 @@
       usage: "Regular / Postseason",
       image: "images/1986-87-home-fb.jpg",
       alt: "1986–87 Chicago Bulls home jersey",
+      returnUrl: "jerseys-1986-87.html",
+    },
+    "aj2-pair-c": {
+      title: "1987 Air Jordan II — White | Red",
+      reference: "Pair C",
+      usage: "Unknown",
+      image: "images/sneakers/aj2/aj2-c-scp-1.jpg",
+      alt: "1987 Air Jordan II White and Red — Pair C",
+      returnUrl: "sneakers-aj2-ownership-test.html",
     },
   };
 
@@ -35,6 +44,15 @@
   document.querySelector("#item-title-field").value = item.title;
   document.querySelector("#item-reference-field").value = item.reference;
   document.querySelector("#item-usage-field").value = item.usage;
+  const subjectField = document.querySelector('[name="_subject"]');
+  if (subjectField)
+    subjectField.value = `New MJA Private Offer — ${item.title} — ${item.reference}`;
+  const backLink = document.querySelector("#artifact-back-link, .back-link");
+  if (backLink) backLink.href = item.returnUrl;
+  const returnLink = document.querySelector(
+    "#confirmation-return-link, .confirmation .button",
+  );
+  if (returnLink) returnLink.href = item.returnUrl;
   const artifactImage = document.querySelector("#artifact-image");
   artifactImage.src = item.image;
   artifactImage.alt = item.alt;
