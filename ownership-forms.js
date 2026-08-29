@@ -6,6 +6,7 @@
       usage: "Regular / Postseason",
       image: "images/1986-87-home-fb.jpg",
       alt: "1986–87 Chicago Bulls home jersey",
+      category: "jersey",
       returnUrl: "jerseys-1986-87.html",
     },
     "aj2-pair-c": {
@@ -14,13 +15,12 @@
       usage: "Unknown",
       image: "images/sneakers/aj2/aj2-c-scp-1.jpg",
       alt: "1987 Air Jordan II White and Red — Pair C",
+      category: "sneaker",
       returnUrl: "sneakers-aj2-ownership-test.html",
     },
   };
-
   const form = document.querySelector("#offer-form");
   if (!form) return;
-
   const navToggle = document.querySelector(".nav-toggle");
   if (navToggle) {
     navToggle.addEventListener("click", () => {
@@ -31,12 +31,18 @@
       );
     });
   }
-
   const params = new URLSearchParams(location.search);
   const itemId = items[params.get("item")] ? params.get("item") : "8687-home-a";
   const item = items[itemId];
   let currentStep = 1;
-
+  const indexLink = document.querySelector(
+    '.site-nav a[href="jerseys.html"], .site-nav a[href="sneakers.html"]',
+  );
+  if (indexLink) {
+    const isSneaker = item.category === "sneaker";
+    indexLink.href = isSneaker ? "sneakers.html" : "jerseys.html";
+    indexLink.textContent = isSneaker ? "Sneaker Index" : "Jersey Index";
+  }
   document.querySelector("#item-id").value = itemId;
   document.querySelector("#artifact-title").textContent = item.title;
   document.querySelector("#artifact-reference").textContent = item.reference;
@@ -56,7 +62,6 @@
   const artifactImage = document.querySelector("#artifact-image");
   artifactImage.src = item.image;
   artifactImage.alt = item.alt;
-
   const get = (id) => document.querySelector(`#${id}`);
   const values = () => ({
     name: get("name").value.trim(),
@@ -92,14 +97,12 @@
           '"': "&quot;",
         })[char],
     );
-
   function error(input, message) {
     const field = input.closest(".field");
     field?.classList.toggle("is-invalid", Boolean(message));
     if (field) field.querySelector(".field-error").textContent = message;
     input.setAttribute("aria-invalid", message ? "true" : "false");
   }
-
   function validateStep(step) {
     let valid = true;
     const required = step === 1 ? [get("name"), get("email")] : [get("amount")];
@@ -115,7 +118,6 @@
     });
     return valid;
   }
-
   function buildReview() {
     const v = values();
     get("review-content").innerHTML = `
@@ -135,7 +137,6 @@
         <div class="review-row"><dt>Message</dt><dd>${escape(v.message || "No message provided")}</dd></div>
       </dl></div>`;
   }
-
   function showStep(step) {
     currentStep = step;
     document.querySelectorAll(".form-step").forEach((panel) => {
@@ -156,7 +157,6 @@
       .scrollIntoView({ behavior: "smooth", block: "start" });
     document.querySelector(`[data-step="${step}"] h2`)?.focus?.();
   }
-
   form.addEventListener("input", (event) => {
     if (event.target.matches("input, textarea")) error(event.target, "");
   });
@@ -176,7 +176,6 @@
     }
     if (back) showStep(currentStep - 1);
   });
-
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
     const certification = get("certification");
@@ -187,22 +186,18 @@
       return;
     }
     get("certification-error").textContent = "";
-
     const submitButton = get("submit-offer");
     const originalLabel = submitButton.textContent;
     submitButton.disabled = true;
     submitButton.textContent = "Submitting…";
     get("form-alert").hidden = true;
-
     try {
       const response = await fetch(form.action, {
         method: "POST",
         body: new FormData(form),
         headers: { Accept: "application/json" },
       });
-
       if (!response.ok) throw new Error("Submission was not accepted.");
-
       showStep(4);
       form.reset();
     } catch (submissionError) {
