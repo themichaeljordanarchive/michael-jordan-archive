@@ -1,3 +1,7 @@
+// Offer policy defaults used when each item is added:
+// Standard jerseys: $1,000,000 minimum; 2.5% buyer and 2.5% seller fees.
+// Wizards and special-event jerseys: $100,000 minimum; 5% buyer and 5% seller fees.
+// Sneakers: owner-set minimum; 6% buyer and 6% seller fees.
 window.MJA_OWNERSHIP_ITEMS = Object.freeze({
   "8687-home-a": {
     title: "1986–87 Chicago Bulls Home Jersey",
@@ -9,6 +13,9 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     returnUrl: "jerseys-1986-87.html",
     offerEnabled: true,
     claimEnabled: false,
+    minimumOffer: 1000000,
+    buyerFeeRate: 0.025,
+    sellerFeeRate: 0.025,
   },
   "8687-away-b": {
     title: "1986–87 Chicago Bulls Away Jersey",
@@ -53,6 +60,7 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     returnUrl: "sneakers-aj2.html",
     offerEnabled: true,
     claimEnabled: false,
+    minimumOffer: 50000,
   },
   "aj2-pair-d": {
     title: "1987 Air Jordan II — White | Black | Red",
@@ -163,6 +171,7 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     returnUrl: "sneakers-aj3.html",
     offerEnabled: true,
     claimEnabled: false,
+    minimumOffer: 45000,
   },
   "aj3-pair-j": {
     title: "1987 Air Jordan III — White | Cement Grey",
@@ -196,6 +205,7 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     returnUrl: "sneakers-aj4.html",
     offerEnabled: true,
     claimEnabled: false,
+    minimumOffer: 500000,
   },
   "aj4-pair-c": {
     title: "1989 Air Jordan IV — White | Fire Red | Black",
@@ -460,6 +470,7 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     returnUrl: "sneakers-aj1.html",
     offerEnabled: true,
     claimEnabled: false,
+    minimumOffer: 200000,
   },
   "aj1-pair-s": {
     title: "1986 Air Jordan 1.5",
