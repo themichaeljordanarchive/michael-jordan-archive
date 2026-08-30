@@ -177,6 +177,20 @@
   get("artifact-image").src = item.image;
   get("artifact-image").alt = item.alt;
 
+  const isSneaker = item.category === "sneaker";
+  const sellerFeeRate =
+    Number(item.sellerFeeRate ?? (isSneaker ? 0.06 : 0.025)) * 100;
+  const sneakerMinimumField = get("sneaker-minimum-field");
+  const sneakerMinimumInput = get("sneaker-minimum");
+  if (sneakerMinimumField) sneakerMinimumField.hidden = !isSneaker;
+  if (sneakerMinimumInput) {
+    sneakerMinimumInput.disabled = !isSneaker;
+    sneakerMinimumInput.required = isSneaker;
+  }
+  const sellerFeePolicy = get("seller-fee-policy");
+  if (sellerFeePolicy)
+    sellerFeePolicy.innerHTML = `<strong>Seller Service Fee.</strong> If a transaction is completed through the Archive, the seller service fee is ${sellerFeeRate}% of the accepted base purchase price. Taxes, shipping, insurance, escrow, authentication, and related transaction costs vary and are additional.`;
+
   const escape = (value) =>
     String(value).replace(
       /[&<>'"]/g,
@@ -198,6 +212,9 @@
     history: get("ownership-history").value.trim(),
     documentation: get("documentation").value.trim(),
     notes: get("notes").value.trim(),
+    sneakerMinimum: isSneaker
+      ? sneakerMinimumInput.value.trim()
+      : "Not applicable",
   });
 
   function setError(input, message) {
@@ -226,6 +243,14 @@
       setError(input, message);
       if (message) valid = false;
     });
+    if (step === 2 && isSneaker) {
+      const message =
+        Number(sneakerMinimumInput.value) > 0
+          ? ""
+          : "Enter the minimum offer you want displayed for this pair.";
+      setError(sneakerMinimumInput, message);
+      if (message) valid = false;
+    }
     return valid;
   }
 
@@ -248,6 +273,8 @@
         <div class="review-row"><dt>Acquisition History</dt><dd>${escape(v.history)}</dd></div>
         <div class="review-row"><dt>Documentation</dt><dd>${escape(v.documentation)}</dd></div>
         <div class="review-row"><dt>Additional Notes</dt><dd>${escape(v.notes || "None")}</dd></div>
+        ${isSneaker ? `<div class="review-row"><dt>Requested Minimum Offer</dt><dd>${escape(new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(Number(v.sneakerMinimum)))}</dd></div>` : ""}
+        <div class="review-row"><dt>Seller Service Fee</dt><dd>${sellerFeeRate}% of the accepted base purchase price</dd></div>
       </dl></div>`;
   }
 
