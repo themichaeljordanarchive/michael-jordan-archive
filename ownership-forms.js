@@ -78,6 +78,36 @@
   artifactImage.src = item.image;
   artifactImage.alt = item.alt;
 
+  if (item.offerEnabled === false) {
+    const formCard = document.querySelector(".form-card");
+    formCard.innerHTML = `
+      <section class="confirmation is-active" aria-labelledby="offers-unavailable-title">
+        <div class="confirmation-mark" aria-hidden="true">—</div>
+        <span class="section-kicker">Private Offers</span>
+        <h2 id="offers-unavailable-title">Private offers are not currently being accepted.</h2>
+        <p>This artifact may be verified without being open to private offers. Offer availability is determined independently by The Michael Jordan Archive.</p>
+        <a class="button button-primary" href="${item.returnUrl}">Return to the Artifact Page</a>
+      </section>`;
+    return;
+  }
+
+  const minimumOffer = Number(item.minimumOffer || 0);
+  const buyerFeeRate = Number(
+    item.buyerFeeRate ?? (item.category === "jersey" ? 0.025 : 0.06),
+  );
+  const sellerFeeRate = Number(item.sellerFeeRate ?? buyerFeeRate);
+  const amountInput = document.querySelector("#amount");
+  const minimumNotice = document.querySelector("#minimum-offer-notice");
+  if (minimumOffer > 0) {
+    amountInput.min = String(minimumOffer);
+    amountInput.placeholder = minimumOffer.toLocaleString("en-US");
+    minimumNotice.hidden = false;
+    minimumNotice.innerHTML =
+      item.category === "jersey"
+        ? `<strong>Jersey Offer Policy.</strong> All jersey offers are subject to a minimum consideration threshold based on the artifact’s current estimated market value. The minimum submission amount is ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(minimumOffer)}. Jerseys are not represented as being for sale. Offers that are not reasonably aligned with current market value may not be forwarded, acknowledged, or receive a response.`
+        : `<strong>Minimum Offer: ${new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 }).format(minimumOffer)}.</strong> This owner-established minimum does not represent the sneakers as being for sale and does not require the owner to respond, negotiate, or sell.`;
+  }
+
   const get = (id) => document.querySelector(`#${id}`);
   const values = () => ({
     name: get("name").value.trim(),
@@ -91,7 +121,8 @@
     new Intl.NumberFormat("en-US", {
       style: "currency",
       currency: "USD",
-      maximumFractionDigits: 0,
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2,
     }).format(Number(value));
   const date = (value) =>
     value
@@ -131,6 +162,12 @@
         message = "Enter a valid email address.";
       else if (input.id === "amount" && Number(input.value) <= 0)
         message = "Enter an offer greater than zero.";
+      else if (
+        input.id === "amount" &&
+        minimumOffer > 0 &&
+        Number(input.value) < minimumOffer
+      )
+        message = `The minimum offer consideration is ${money(minimumOffer)}.`;
       error(input, message);
       if (message) valid = false;
     });
@@ -139,6 +176,12 @@
 
   function buildReview() {
     const v = values();
+    const baseOffer = Number(v.amount);
+    const buyerFee = baseOffer * buyerFeeRate;
+    const buyerTotal = baseOffer + buyerFee;
+    get("buyer-fee-rate-field").value = `${buyerFeeRate * 100}%`;
+    get("buyer-fee-field").value = money(buyerFee);
+    get("buyer-total-field").value = money(buyerTotal);
     get("review-content").innerHTML = `
       <div class="review-group"><h3>Artifact</h3><dl>
         <div class="review-row"><dt>Title</dt><dd>${escape(item.title)}</dd></div>
@@ -151,10 +194,12 @@
         <div class="review-row"><dt>Phone</dt><dd>${escape(v.phone || "Not provided")}</dd></div>
       </dl></div>
       <div class="review-group"><h3>Your Offer</h3><dl>
-        <div class="review-row"><dt>Offer Amount</dt><dd>${escape(money(v.amount))}</dd></div>
+        <div class="review-row"><dt>Base Offer</dt><dd>${escape(money(baseOffer))}</dd></div>
+        <div class="review-row"><dt>Buyer Service Fee (${buyerFeeRate * 100}%)</dt><dd>${escape(money(buyerFee))}</dd></div>
+        <div class="review-row"><dt>Total Buyer Commitment</dt><dd><strong>${escape(money(buyerTotal))}</strong></dd></div>
         <div class="review-row"><dt>Expiration</dt><dd>${escape(date(v.expiration))}</dd></div>
         <div class="review-row"><dt>Message</dt><dd>${escape(v.message || "No message provided")}</dd></div>
-      </dl></div>`;
+      </dl><p class="privacy-note">Taxes, shipping, insurance, escrow, authentication, and related transaction costs vary and are additional. The seller is charged a separate ${sellerFeeRate * 100}% service fee. Submission does not obligate the owner to respond, negotiate, or sell.</p></div>`;
   }
 
   function showStep(step) {
@@ -200,6 +245,15 @@
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    if (!validateStep(2)) {
+      showStep(2);
+      get("form-alert").textContent =
+        minimumOffer > 0
+          ? `This offer is below the ${money(minimumOffer)} minimum consideration threshold and was not submitted.`
+          : "Please enter a valid offer amount.";
+      get("form-alert").hidden = false;
+      return;
+    }
     const certification = get("certification");
     if (!certification.checked) {
       get("certification-error").textContent =
