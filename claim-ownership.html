@@ -62,6 +62,9 @@
     </header>
     <main class="form-page">
       <div class="page-shell">
+        <a class="back-link" href="jerseys-1986-87.html"
+          >← Return to the artifact</a
+        >
         <a id="artifact-back-link" class="back-link" href="jerseys-1986-87.html"
           >← Return to the artifact</a
         >
@@ -307,6 +310,35 @@
                     ></textarea>
                     <small class="field-error"></small>
                   </div>
+                  <div
+                    id="sneaker-minimum-field"
+                    class="field field-wide"
+                    hidden
+                  >
+                    <label for="sneaker-minimum"
+                      >Minimum Offer Consideration (USD)
+                      <em>Required for sneakers</em></label
+                    >
+                    <div class="money-input">
+                      <span>$</span
+                      ><input
+                        id="sneaker-minimum"
+                        name="requested_minimum_offer"
+                        type="number"
+                        min="1"
+                        step="1"
+                        inputmode="numeric"
+                      />
+                    </div>
+                    <p class="privacy-note">
+                      If ownership is verified and private offers are enabled,
+                      this minimum will be displayed on the offer form. Setting
+                      a minimum does not represent the sneakers as being for
+                      sale and does not require you to respond, negotiate, or
+                      sell.
+                    </p>
+                    <small class="field-error"></small>
+                  </div>
                 </div>
                 <div class="verification-requirements">
                   <span class="section-kicker">Required During Review</span>
@@ -325,6 +357,7 @@
                     <li>Acquisition documentation when applicable</li>
                   </ul>
                 </div>
+                <p id="seller-fee-policy" class="privacy-note"></p>
                 <p class="privacy-note">
                   <strong>Private by design.</strong> Owner identity and
                   submitted evidence are handled privately by The Michael Jordan
