@@ -33,6 +33,7 @@
       sizes="180x180"
       href="assets/apple-touch-icon.png"
     />
+    <script src="ownership-registry.js" defer></script>
     <script src="ownership-forms.js" defer></script>
   </head>
   <body>
@@ -61,7 +62,7 @@
     </header>
     <main class="form-page">
       <div class="page-shell">
-        <a class="back-link" href="jerseys-1986-87.html"
+        <a id="artifact-back-link" class="back-link" href="jerseys-1986-87.html"
           >← Return to the artifact</a
         >
         <div class="form-intro">
@@ -149,6 +150,7 @@
               <input type="hidden" name="request_type" value="Private Offer" />
               <input
                 type="hidden"
+                id="subject-field"
                 name="_subject"
                 value="New MJA Private Offer — 1986–87 Home Jersey A"
               />
@@ -335,8 +337,11 @@
                   and contact you if follow-up is appropriate. Submission does
                   not guarantee that the owner will respond or consider a sale.
                 </p>
-                <a class="button button-primary" href="jerseys-1986-87.html"
-                  >Return to the Season Entry</a
+                <a
+                  id="confirmation-return-link"
+                  class="button button-primary"
+                  href="jerseys-1986-87.html"
+                  >Return to the Artifact Page</a
                 >
               </section>
             </form>
