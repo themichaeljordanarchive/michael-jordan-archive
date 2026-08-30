@@ -1,5 +1,5 @@
 (() => {
-  const items = {
+  const legacyItems = {
     "8687-home-a": {
       title: "1986–87 Chicago Bulls Home Jersey",
       reference: "Jersey A",
@@ -52,7 +52,7 @@
       image: "images/sneakers/aj3/aj3-a-bbm-8788-1.jpg",
       alt: "1987 Air Jordan III White and Cement Grey — Pair A",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
     "aj3-pair-b": {
       title: "1987 Air Jordan III — White | Cement Grey",
@@ -61,7 +61,7 @@
       image: "images/sneakers/aj3/aj3-b-bbm-8788-1.jpg",
       alt: "1987 Air Jordan III White and Cement Grey — Pair B",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
     "aj3-pair-c": {
       title: "1988 Air Jordan III — White | Fire Red",
@@ -70,7 +70,7 @@
       image: "images/sneakers/aj3/aj3-c-fr-8889.jpg",
       alt: "1988 Air Jordan III White and Fire Red — Pair C",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
     "aj3-pair-d": {
       title: "1987 Air Jordan III — White | Cement Grey",
@@ -79,7 +79,7 @@
       image: "images/sneakers/aj3/aj3-d-wc-8788-1.jpg",
       alt: "1987 Air Jordan III White and Cement Grey — Pair D",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
     "aj3-pair-e": {
       title: "1988 Air Jordan III — White | Fire Red",
@@ -88,7 +88,7 @@
       image: "images/sneakers/aj3/aj3-e-FR-8788-1.jpg",
       alt: "1988 Air Jordan III White and Fire Red — Pair E",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
     "aj3-pair-f": {
       title: "1988 Air Jordan III — White | Cement Grey | True Blue",
@@ -97,7 +97,7 @@
       image: "images/sneakers/aj3/aj3-f-tb-8788-2.jpg",
       alt: "1988 Air Jordan III True Blue — Pair F",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
     "aj3-pair-g": {
       title: "1988 Air Jordan III Promo Sample — White | Fire Red",
@@ -106,7 +106,7 @@
       image: "images/sneakers/aj3/aj3-g-fr-promo-8889-1.jpg",
       alt: "1988 Air Jordan III Promo Sample — Pair G",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
     "aj3-pair-h": {
       title: "1988 Air Jordan III — White | Cement Grey",
@@ -115,7 +115,7 @@
       image: "images/sneakers/aj3/aj3-h-3-10-88-wc-1.jpg",
       alt: "1988 Air Jordan III White and Cement Grey — Pair H",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
     "aj3-pair-j": {
       title: "1987 Air Jordan III — White | Cement Grey",
@@ -124,10 +124,11 @@
       image: "images/sneakers/aj3/aj3-j-classic-wc-1.jpg",
       alt: "1987 Air Jordan III White and Cement Grey — Pair J",
       category: "sneaker",
-      returnUrl: "sneakers-aj3-ownership-test.html",
+      returnUrl: "sneakers-aj3.html",
     },
   };
 
+  const items = window.MJA_OWNERSHIP_ITEMS || legacyItems;
   const form = document.querySelector("#claim-form");
   if (!form) return;
 
