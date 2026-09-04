@@ -32,6 +32,160 @@
       sizes="180x180"
       href="assets/apple-touch-icon.png"
     />
+    <style>
+      /* =========================================================
+         OWNERSHIP STATUS — TEST OVERRIDE
+         Move into season-test.css once approved.
+      ========================================================== */
+      .entry-card > .ownership-status-card {
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      .ownership-status-card {
+        display: grid;
+        grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+        column-gap: 28px;
+        align-items: center;
+        margin-top: 18px;
+        padding: 18px;
+        border: 1px solid var(--line-color, #e5e0d8);
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.94);
+      }
+
+      .ownership-main {
+        display: contents;
+      }
+
+      .ownership-left {
+        grid-column: 1;
+        min-width: 0;
+      }
+
+      .ownership-kicker {
+        margin-bottom: 0.85rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--muted-text, #777);
+      }
+
+      .ownership-status-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 1rem;
+      }
+
+      .ownership-icon {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+        border-radius: 999px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        font-weight: 700;
+      }
+
+      .ownership-icon--verified {
+        color: #0f5132;
+        border: 2px solid #0f5132;
+        background: rgba(15, 81, 50, 0.06);
+      }
+
+      .ownership-icon--unverified {
+        color: #777;
+        border: 2px solid #bcbcbc;
+        background: #f7f7f7;
+      }
+
+      .ownership-status-row h3 {
+        margin: 0 0 0.2rem;
+        font-size: 1.1rem;
+        line-height: 1.2;
+      }
+
+      .ownership-status-card--verified h3 {
+        color: #0f5132;
+      }
+
+      .ownership-status-row p {
+        margin: 0;
+        color: var(--muted-text, #666);
+        font-size: 0.9rem;
+        line-height: 1.45;
+      }
+
+      .ownership-actions {
+        grid-column: 2;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.75rem;
+        margin-top: 0;
+      }
+
+      .ownership-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 40px;
+        padding: 0.7rem 1rem;
+        border-radius: 999px;
+        text-decoration: none;
+        font-size: 0.82rem;
+        font-weight: 600;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .ownership-btn--claim {
+        border: 1px solid #b22222;
+        color: #b22222;
+        background: transparent;
+      }
+
+      .ownership-btn--offers {
+        border: 1px solid #0f5132;
+        background: #0f5132;
+        color: #fff;
+      }
+
+      .ownership-btn--disabled {
+        border: 1px solid #d7d7d7;
+        background: #f5f5f5;
+        color: #999;
+        cursor: not-allowed;
+      }
+
+      .ownership-footer {
+        grid-column: 1 / -1;
+        margin-top: 0.9rem;
+        padding-top: 0.9rem;
+        border-top: 1px solid var(--line-color, #e5e0d8);
+        color: var(--muted-text, #777);
+        font-size: 0.8rem;
+        line-height: 1.5;
+      }
+
+      @media (max-width: 700px) {
+        .ownership-status-card {
+          display: block;
+        }
+
+        .ownership-actions {
+          justify-content: stretch;
+          flex-direction: column;
+          margin-top: 1rem;
+        }
+
+        .ownership-btn {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
 
   <body class="season-page s-0000">
@@ -305,6 +459,42 @@
                 </div>
               </div>
             </div>
+            <section
+              class="ownership-status-card ownership-status-card--verified"
+            >
+              <div class="ownership-main">
+                <div class="ownership-left">
+                  <div class="ownership-kicker">Ownership Status</div>
+                  <div class="ownership-status-row">
+                    <span class="ownership-icon ownership-icon--verified"
+                      >✓</span
+                    >
+                    <div>
+                      <h3>Ownership Claimed &amp; Verified</h3>
+                      <p>Private offers are enabled.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ownership-actions">
+                  <button
+                    class="ownership-btn ownership-btn--disabled"
+                    disabled
+                  >
+                    🔒 Claim Ownership</button
+                  ><a
+                    class="ownership-btn ownership-btn--offers"
+                    href="private-offer.html?item=usa84-jersey-a"
+                    >Submit a Private Offer</a
+                  >
+                </div>
+              </div>
+              <p class="ownership-footer">
+                Ownership claims are reviewed and verified privately by The
+                Michael Jordan Archive. Owner identities are not disclosed
+                publicly. Ownership changes should be reported directly to the
+                Archive and are recorded only after reverification.
+              </p>
+            </section>
           </article>
         </div>
       </section>
@@ -436,6 +626,45 @@
                 </div>
               </div>
             </div>
+            <section
+              class="ownership-status-card ownership-status-card--unverified"
+            >
+              <div class="ownership-main">
+                <div class="ownership-left">
+                  <div class="ownership-kicker">Ownership Status</div>
+                  <div class="ownership-status-row">
+                    <span class="ownership-icon ownership-icon--unverified"
+                      >○</span
+                    >
+                    <div>
+                      <h3>Current Owner Unverified</h3>
+                      <p>
+                        Ownership verification is required before private
+                        inquiries can be enabled.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ownership-actions">
+                  <a
+                    class="ownership-btn ownership-btn--claim"
+                    href="claim-ownership.html?item=usa92-jersey-a"
+                    >Claim Ownership</a
+                  ><button
+                    class="ownership-btn ownership-btn--disabled"
+                    disabled
+                  >
+                    🔒 Submit a Private Offer
+                  </button>
+                </div>
+              </div>
+              <p class="ownership-footer">
+                Ownership claims are reviewed and verified privately by The
+                Michael Jordan Archive. Owner identities are not disclosed
+                publicly. Ownership changes should be reported directly to the
+                Archive and are recorded only after reverification.
+              </p>
+            </section>
           </article>
 
           <article class="entry-card" id="usa-1992-jersey-b">
@@ -530,6 +759,45 @@
                 </div>
               </div>
             </div>
+            <section
+              class="ownership-status-card ownership-status-card--unverified"
+            >
+              <div class="ownership-main">
+                <div class="ownership-left">
+                  <div class="ownership-kicker">Ownership Status</div>
+                  <div class="ownership-status-row">
+                    <span class="ownership-icon ownership-icon--unverified"
+                      >○</span
+                    >
+                    <div>
+                      <h3>Current Owner Unverified</h3>
+                      <p>
+                        Ownership verification is required before private
+                        inquiries can be enabled.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ownership-actions">
+                  <a
+                    class="ownership-btn ownership-btn--claim"
+                    href="claim-ownership.html?item=usa92-jersey-b"
+                    >Claim Ownership</a
+                  ><button
+                    class="ownership-btn ownership-btn--disabled"
+                    disabled
+                  >
+                    🔒 Submit a Private Offer
+                  </button>
+                </div>
+              </div>
+              <p class="ownership-footer">
+                Ownership claims are reviewed and verified privately by The
+                Michael Jordan Archive. Owner identities are not disclosed
+                publicly. Ownership changes should be reported directly to the
+                Archive and are recorded only after reverification.
+              </p>
+            </section>
           </article>
 
           <div class="back-link-wrap">
