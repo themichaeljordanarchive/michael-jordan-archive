@@ -591,6 +591,104 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     claimEnabled: true,
   },
 
+  // ===== AIR JORDAN 5 =====
+
+  "aj5-pair-a": {
+    title: "1990 Air Jordan V - Black | Cement Grey",
+    reference: "Pair A",
+    usage: "Postseason",
+    image: "images/sneakers/aj5/aj5-a-5-26-90-1.jpg",
+    alt: "1990 Air Jordan V - Black | Cement Grey — Pair A",
+    category: "sneaker",
+    returnUrl: "sneakers-aj5.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj5-pair-b": {
+    title: "1990 Air Jordan V - Black | Cement Grey",
+    reference: "Pair B",
+    usage: "Postseason",
+    image: "images/sneakers/aj5/aj5-pistons-finlas-1.jpg",
+    alt: "1990 Air Jordan V - Black | Cement Grey — Pair B",
+    category: "sneaker",
+    returnUrl: "sneakers-aj5.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj5-pair-c": {
+    title: "1990 Air Jordan V - White | Black | Fire Red",
+    reference: "Pair C",
+    usage: "Unknown",
+    image: "images/sneakers/aj5/aj5-c-1.jpg",
+    alt: "1990 Air Jordan V - White | Black | Fire Red — Pair C",
+    category: "sneaker",
+    returnUrl: "sneakers-aj5.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj5-pair-d": {
+    title: "1990 Air Jordan V - White | Red | Black",
+    reference: "Pair D",
+    usage: "Regular Season",
+    image: "images/sneakers/aj5/aj5-d-12-19-90-1.jpg",
+    alt: "1990 Air Jordan V - White | Red | Black — Pair D",
+    category: "sneaker",
+    returnUrl: "sneakers-aj5.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj5-pair-e": {
+    title: "1990 Air Jordan V - White | Red | Black",
+    reference: "Pair E",
+    usage: "Unknown",
+    image: "images/sneakers/aj5/aj5-e-scp-2010-1.jpg",
+    alt: "1990 Air Jordan V - White | Red | Black — Pair E",
+    category: "sneaker",
+    returnUrl: "sneakers-aj5.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj5-pair-f": {
+    title: "1990 Air Jordan V — White | Black | Fire Red",
+    reference: "Pair F",
+    usage: "Unknown",
+    image: "images/sneakers/aj5/aj5-f-goldin-2025-1.jpg",
+    alt: "1990 Air Jordan V — White | Black | Fire Red — Pair F",
+    category: "sneaker",
+    returnUrl: "sneakers-aj5.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj5-pair-g": {
+    title: "1990 Air Jordan V — White | Red | Black",
+    reference: "Pair G",
+    usage: "Unknown",
+    image: "images/sneakers/aj5/aj5-g-goldin-2023-1.jpg",
+    alt: "1990 Air Jordan V — White | Red | Black — Pair G",
+    category: "sneaker",
+    returnUrl: "sneakers-aj5.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj5-pair-h": {
+    title: "1990 Air Jordan V - White | Red | Black",
+    reference: "Pair H",
+    usage: "Regular Season",
+    image: "images/sneakers/aj5/aj5-h-1-18-atl-1.jpg",
+    alt: "1990 Air Jordan V - White | Red | Black — Pair H",
+    category: "sneaker",
+    returnUrl: "sneakers-aj5.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
   // ===== AIR JORDAN 8 =====
 
   "aj8-pair-a": {
