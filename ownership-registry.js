@@ -1,6 +1,68 @@
 // Central ownership, offer, minimum, and fee registry.
 // Keep sneakers first in model/pair order, followed by jerseys grouped by page.
 window.MJA_OWNERSHIP_ITEMS = Object.freeze({
+  // ===== NIKE AIR SHIP =====
+
+  "airship-pair-a": {
+    title: "1984 Nike Air Ship “Air Jordan” - Sample",
+    reference: "Pair A",
+    usage: "Preseason",
+    image: "images/sneakers/airship/sneaker-a-air-ship-preseason.jpg",
+    alt: "1984 Nike Air Ship “Air Jordan” - Sample — Pair A",
+    category: "sneaker",
+    returnUrl: "sneakers-nike-airship.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "airship-pair-b": {
+    title: "1984 Nike Air Ship “Air” - Sample",
+    reference: "Pair B",
+    usage: "Regular Season",
+    image: "images/sneakers/airship/sneaker-b-air-ship-1-5-1.jpg",
+    alt: "1984 Nike Air Ship “Air” - Sample — Pair B",
+    category: "sneaker",
+    returnUrl: "sneakers-nike-airship.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "airship-pair-c": {
+    title: "1984 Nike Air Ship",
+    reference: "Pair C",
+    usage: "Regular Season",
+    image: "images/sneakers/airship/sneaker-c-air-ship-11-29-1.jpg",
+    alt: "1984 Nike Air Ship — Pair C",
+    category: "sneaker",
+    returnUrl: "sneakers-nike-airship.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "airship-pair-d": {
+    title: "1984 Nike Air Ship",
+    reference: "Pair D",
+    usage: "Regular Season",
+    image: "images/sneakers/airship/sneaker-d-air-ship-christies-1.jpg",
+    alt: "1984 Nike Air Ship — Pair D",
+    category: "sneaker",
+    returnUrl: "sneakers-nike-airship.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "airship-pair-e": {
+    title: "1984 Nike Air Ship",
+    reference: "Pair E",
+    usage: "Regular Season",
+    image: "images/sneakers/airship/sneaker-e-air-ship-rea-1.jpg",
+    alt: "1984 Nike Air Ship — Pair E",
+    category: "sneaker",
+    returnUrl: "sneakers-nike-airship.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
   // ===== AIR JORDAN 1 =====
 
   "aj1-pair-a": {
