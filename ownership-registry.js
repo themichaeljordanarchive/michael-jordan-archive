@@ -591,6 +591,70 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     claimEnabled: true,
   },
 
+  // ===== AIR JORDAN 8 =====
+
+  "aj8-pair-a": {
+    title: "1993 Air Jordan VIII - White | Black | True Red",
+    reference: "Pair A",
+    usage: "Regular Season",
+    image: "images/sneakers/aj8/aj8-a-4-22-1.jpg",
+    alt: "1993 Air Jordan VIII - White | Black | True Red — Pair A",
+    category: "sneaker",
+    returnUrl: "sneakers-aj8.html",
+    offerEnabled: true,
+    claimEnabled: false,
+    minimumOffer: 75000,
+  },
+
+  "aj8-pair-b": {
+    title: "1993 Air Jordan VIII - Black | True Red",
+    reference: "Pair B",
+    usage: "Postseason",
+    image: "images/sneakers/aj8/aj8-b-5-31-1.jpg",
+    alt: "1993 Air Jordan VIII - Black | True Red — Pair B",
+    category: "sneaker",
+    returnUrl: "sneakers-aj8.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj8-pair-c": {
+    title: "1993 Air Jordan VIII - White | Black | True Red",
+    reference: "Pair C",
+    usage: "Regular Season",
+    image: "images/sneakers/aj8/aj8-c-4-16-93-1.jpg",
+    alt: "1993 Air Jordan VIII - White | Black | True Red — Pair C",
+    category: "sneaker",
+    returnUrl: "sneakers-aj8.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj8-pair-d": {
+    title: "1993 Air Jordan VIII - Black | True Red",
+    reference: "Pair D",
+    usage: "Postseason",
+    image: "images/sneakers/aj8/aj8-d-6-2-93-1.jpg",
+    alt: "1993 Air Jordan VIII - Black | True Red — Pair D",
+    category: "sneaker",
+    returnUrl: "sneakers-aj8.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj8-pair-e": {
+    title: "1993 Air Jordan VIII - Black | Bright Concord | Aqua",
+    reference: "Pair E",
+    usage: "Personal / Test",
+    image: "images/sneakers/aj8/aj8-e-92-sample-1.jpg",
+    alt: "1993 Air Jordan VIII - Black | Bright Concord | Aqua — Pair E",
+    category: "sneaker",
+    returnUrl: "sneakers-aj8.html",
+    offerEnabled: true,
+    claimEnabled: false,
+    minimumOffer: 40000,
+  },
+
   // ===== AIR JORDAN 11 =====
 
   "aj11-pair-a": {
