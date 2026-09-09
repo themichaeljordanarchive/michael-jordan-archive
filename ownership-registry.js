@@ -949,6 +949,56 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     minimumOffer: 40000,
   },
 
+  // ===== AIR JORDAN 9 =====
+
+  "aj9-pair-a": {
+    title: "1994 Air Jordan IX - Birmingham Barons Baseball Cleat",
+    reference: "Pair A",
+    usage: "SOU North Season",
+    image: "images/sneakers/aj9/aj9-a-cleat-8-1-1.jpg",
+    alt: "1994 Air Jordan IX - Birmingham Barons Baseball Cleat — Pair A",
+    category: "sneaker",
+    returnUrl: "sneakers-aj9.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj9-pair-b": {
+    title: '1994 Air Jordan IX - "00" - Birmingham Barons Baseball Cleat',
+    reference: "Pair B",
+    usage: "Early 1994 Season",
+    image: "images/sneakers/aj9/aj9-b-cleat-00-1.jpg",
+    alt: '1994 Air Jordan IX - "00" - Birmingham Barons Baseball Cleat — Pair B',
+    category: "sneaker",
+    returnUrl: "sneakers-aj9.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj9-pair-c": {
+    title: "1994 Air Jordan IX",
+    reference: "Pair C",
+    usage: "Late 1994 Season",
+    image: "images/sneakers/aj9/aj9-practice-1.jpg",
+    alt: "1994 Air Jordan IX — Pair C",
+    category: "sneaker",
+    returnUrl: "sneakers-aj9.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj9-pair-d": {
+    title: "1993 Air Jordan IX",
+    reference: "Pair D",
+    usage: "1994",
+    image: "images/sneakers/aj9/aj9-c-ftps-1.jpg",
+    alt: "1993 Air Jordan IX — Pair D",
+    category: "sneaker",
+    returnUrl: "sneakers-aj9.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
   // ===== AIR JORDAN 11 =====
 
   "aj11-pair-a": {
