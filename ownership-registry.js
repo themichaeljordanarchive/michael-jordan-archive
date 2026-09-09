@@ -763,6 +763,128 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     claimEnabled: true,
   },
 
+  // ===== AIR JORDAN 7 =====
+
+  "aj7-pair-a": {
+    title: "1992 Air Jordan VII - Olympics",
+    reference: "Pair A",
+    usage: "Olympic Games",
+    image: "images/sneakers/aj7/aj7-a-usa-7-3-1.jpg",
+    alt: "1992 Air Jordan VII - Olympics — Pair A",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-b": {
+    title: "1992 Air Jordan VII - White | Lt Silver | True Red",
+    reference: "Pair B",
+    usage: "Regular Season",
+    image: "images/sneakers/aj7/aj7-b-3-31-92-1.jpg",
+    alt: "1992 Air Jordan VII - White | Lt Silver | True Red — Pair B",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-c": {
+    title: "1992 Air Jordan VII - Black | Graphite | Bordeaux",
+    reference: "Pair C",
+    usage: "Unknown",
+    image: "images/sneakers/aj7/aj7-c-wish-92-1.jpg",
+    alt: "1992 Air Jordan VII - Black | Graphite | Bordeaux — Pair C",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-d": {
+    title: "1992 Air Jordan VII - White | Lt Silver | True Red",
+    reference: "Pair D",
+    usage: "Regular Season",
+    image: "images/sneakers/aj7/aj7-d-2-26-92-1.jpg",
+    alt: "1992 Air Jordan VII - White | Lt Silver | True Red — Pair D",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-e": {
+    title: "1992 Air Jordan VII - Black | Dark Charcoal | True Red",
+    reference: "Pair E",
+    usage: "Unknown",
+    image: "images/sneakers/aj7/aj7-e-playoff-92-1.jpg",
+    alt: "1992 Air Jordan VII - Black | Dark Charcoal | True Red — Pair E",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-f": {
+    title: "1992 Air Jordan VII - White | Black | Cardinal Red",
+    reference: "Pair F",
+    usage: "Unknown",
+    image: "images/sneakers/aj7/aj7-f-rr-92-1.jpg",
+    alt: "1992 Air Jordan VII - White | Black | Cardinal Red — Pair F",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-g": {
+    title: "1992 Air Jordan VII - Black | Dark Charcoal | True Red",
+    reference: "Pair G",
+    usage: "Postseason",
+    image: "images/sneakers/aj7/aj7-g-4-29-92-1.jpg",
+    alt: "1992 Air Jordan VII - Black | Dark Charcoal | True Red — Pair G",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-h": {
+    title: "1992 Air Jordan VII - Black | Dark Charcoal | True Red",
+    reference: "Pair H",
+    usage: "Unknown",
+    image: "images/sneakers/aj7/aj7-h-mears-1.jpg",
+    alt: "1992 Air Jordan VII - Black | Dark Charcoal | True Red — Pair H",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-i": {
+    title: "1992 Air Jordan VII - Black | Dark Charcoal | True Red",
+    reference: "Pair I",
+    usage: "Unknown",
+    image: "images/sneakers/aj7/aj7-I-scp-910112-1.jpg",
+    alt: "1992 Air Jordan VII - Black | Dark Charcoal | True Red — Pair I",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj7-pair-j": {
+    title: "1992 Air Jordan VII - White | Black | Cardinal Red",
+    reference: "Pair J",
+    usage: "Unknown",
+    image: "images/sneakers/aj7/aj7-j-gfa-92-1.jpg",
+    alt: "1992 Air Jordan VII - White | Black | Cardinal Red — Pair J",
+    category: "sneaker",
+    returnUrl: "sneakers-aj7.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
   // ===== AIR JORDAN 8 =====
 
   "aj8-pair-a": {
