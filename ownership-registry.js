@@ -689,6 +689,80 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     claimEnabled: true,
   },
 
+  // ===== AIR JORDAN 6 =====
+
+  "aj6-pair-a": {
+    title: "1991 Air Jordan VI - Black | Black | Infra Red",
+    reference: "Pair A",
+    usage: "Finals",
+    image: "images/sneakers/aj6/aj6-a-6-9-91-1.jpg",
+    alt: "1991 Air Jordan VI - Black | Black | Infra Red — Pair A",
+    category: "sneaker",
+    returnUrl: "sneakers-aj6.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj6-pair-b": {
+    title: "1991 Air Jordan VI - White | Carmine | Black",
+    reference: "Pair B",
+    usage: "Unknown",
+    image: "images/sneakers/aj6/aj6-b-carmine-1.jpg",
+    alt: "1991 Air Jordan VI - White | Carmine | Black — Pair B",
+    category: "sneaker",
+    returnUrl: "sneakers-aj6.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj6-pair-c": {
+    title: "1991 Air Jordan VI - White | Infra Red | Black",
+    reference: "Pair C",
+    usage: "Regular Season",
+    image: "images/sneakers/aj6/aj6-c-3-10-91-1.jpg",
+    alt: "1991 Air Jordan VI - White | Infra Red | Black — Pair C",
+    category: "sneaker",
+    returnUrl: "sneakers-aj6.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj6-pair-d": {
+    title: "1991 Air Jordan VI - White | Infra Red | Black",
+    reference: "Pair D",
+    usage: "Regular Season",
+    image: "images/sneakers/aj6/aj6-d-infra-90-1.jpg",
+    alt: "1991 Air Jordan VI - White | Infra Red | Black — Pair D",
+    category: "sneaker",
+    returnUrl: "sneakers-aj6.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj6-pair-e": {
+    title: "1991 Air Jordan VI - White | Carmine | Black",
+    reference: "Pair E",
+    usage: "Regular Season",
+    image: "images/sneakers/aj6/aj6-e-carmine-91-1.jpg",
+    alt: "1991 Air Jordan VI - White | Carmine | Black — Pair E",
+    category: "sneaker",
+    returnUrl: "sneakers-aj6.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj6-pair-f": {
+    title: "1991 Air Jordan VI - Black | Black | Infra Red",
+    reference: "Pair F",
+    usage: "Unknown",
+    image: "images/sneakers/aj6/aj6-f-blk-infa-1.jpg",
+    alt: "1991 Air Jordan VI - Black | Black | Infra Red — Pair F",
+    category: "sneaker",
+    returnUrl: "sneakers-aj6.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
   // ===== AIR JORDAN 8 =====
 
   "aj8-pair-a": {
