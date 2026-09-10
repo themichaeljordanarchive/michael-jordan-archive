@@ -83,6 +83,13 @@ const certificates = {
     documentId: "MJA-J9798-8-10-001",
     image: "assets/certificates/MJA-J9798-8-10-001.jpg",
   },
+  "MJA-AJ-8-27-C-001": {
+    status: "Verified Archive Record",
+    title: "2003 MICHAEL JORDAN GAME USED SNEAKERS",
+    issueDate: "August 27 2026",
+    documentId: "MJA-AJ-8-27-C-001",
+    image: "assets/certificates/MJA-AJ-8-27-C-001.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
