@@ -23,6 +23,18 @@
       @media (max-width: 600px) {
         .sneaker-comparison-grid { grid-template-columns: 1fr; gap: 24px; }
       }
+      .wear-sequence { margin: 54px 0 58px; }
+      .wear-sequence-pair { display: grid; grid-template-columns: minmax(0, 32fr) minmax(0, 39fr); gap: 20px; align-items: start; }
+      .wear-sequence-pair .article-figure { margin: 0; min-width: 0; }
+      .wear-inspect { display: block; cursor: zoom-in; }
+      .wear-inspect:focus-visible { outline: 3px solid #8f1116; outline-offset: 5px; }
+      .wear-inspect img { display: block; width: 100%; height: auto; }
+      .wear-sequence-pair .wear-inspect { display: block; }
+      .wear-sequence-pair .wear-inspect img { display: block; width: 100%; height: auto; max-width: 100%; }
+      .article-body .wear-sequence-context { margin: 24px 0; font-size: 16px; line-height: 1.65; }
+      .wear-sequence-detail { margin: 24px 0 0; }
+      .wear-sequence-detail img { border-radius: 0; }
+      @media (max-width: 600px) { .wear-sequence-pair { grid-template-columns: 1fr; gap: 24px; } }
     </style>
   </head>
 
@@ -127,8 +139,13 @@
 
           <h2>One Frame Is Rarely the Whole Story</h2>
           <p>A faint mark appearing once in a low-resolution image may have limited value.</p>
-          <p>The same mark appearing repeatedly across multiple images, remaining in the same anatomical position on the shoe and corresponding to a physical characteristic on the surviving pair carries more weight.</p>
-          <p>Repetition matters.</p>
+          <p>Once a mark has developed, its repeated appearance across later images, in the same anatomical position on the shoe and corresponding to a physical characteristic on the surviving pair, carries more weight.</p>
+          <p>Repetition matters, but so does chronology.</p>
+          <p>A scuff does not have to appear in every photograph of the same shoe. It may develop during play, leaving an earlier image without the mark and a later image with it. That progression can help establish a timeline of use rather than indicate a different pair.</p>
+          <p>Building that timeline is an essential part of the research. Photographs should be placed in their documented order using game dates and, where available, the sequence of play within a game. An earlier view, a later view and the surviving artifact can then be compared to determine whether the evidence is consistent with the development of wear over time.</p>
+          <p>A mark being absent is not the same as a mark being invisible. Before treating an earlier photograph as evidence that a scuff had not yet formed, the relevant area must be sufficiently clear and exposed to view. Angle, lighting, obstruction, motion blur and low resolution can all prevent an existing mark from being recorded.</p>
+          <p>The first photograph in which a scuff is visible establishes its earliest observed appearance in the available record, not necessarily the exact moment it formed. Where the image order or visibility is uncertain, that uncertainty belongs in the interpretation.</p>
+          <p>The surviving shoe must also be considered within that chronology. It may preserve the characteristic seen in the later photograph along with additional wear acquired afterward. The question is whether the photographs and artifact support a consistent progression of use, not whether every image shows identical wear. A wear sequence can support an attribution, but it does not establish the identity of the shoe on its own.</p>
           <p>Sneaker photomatching often depends less on finding one extraordinary identifier and more on determining whether numerous independent observations continue pointing toward the same conclusion.</p>
           <p>A small abrasion.</p>
           <p>A crease.</p>
@@ -141,14 +158,30 @@
           <p>Collectively, they can become powerful.</p>
           <p>Not every characteristic carries the same evidentiary weight. A general crease common to a particular model may provide useful context, while an irregular abrasion, unique outsole wear pattern or production anomaly may be far more individualizing. The strength of a match depends not simply on how many similarities are identified, but on how distinctive those similarities are and how independently they are corroborated.</p>
 
-          <!-- FUTURE IMAGE: 02-repeated-characteristics-strip.jpg
-          Placement: One Frame Is Rarely the Whole Story. Three or four public game frames showing the same characteristic, optionally followed by an in-hand crop.
-          Add the file to /articles/images/sneaker-photomatching/ and uncomment this figure only after selection and caption review.
-          <figure class="figure-full">
-            <img src="../images/sneaker-photomatching/02-repeated-characteristics-strip.jpg" alt="Three or four public game frames showing the same characteristic, optionally followed by an in-hand crop." loading="lazy" decoding="async" />
-            <figcaption>Repeated appearance of the same characteristic across multiple photographs adds evidentiary weight when its position and physical context remain consistent.</figcaption>
-          </figure>
-          -->
+          <!-- Source files are unchanged. Sequence follows the Archive's research interpretation; camera position and visibility must be considered when interpreting wear. -->
+          <div class="wear-sequence">
+            <div class="wear-sequence-pair">
+              <figure class="article-figure">
+                <a class="wear-inspect" href="../images/sneaker-photomatching/02a-butler-game.jpg" target="_blank" rel="noopener" aria-label="Open Nathaniel S. Butler photograph at full size in a new tab">
+                  <img src="../images/sneaker-photomatching/02a-butler-game.jpg" alt="Michael Jordan shooting against Seattle, with spectator seating behind him" width="800" height="975" loading="lazy" decoding="async" />
+                </a>
+                <figcaption>Earlier view in the Archive’s research sequence. Photograph: Nathaniel S. Butler / Getty Images. Select image for full-size inspection.</figcaption>
+              </figure>
+              <figure class="article-figure">
+                <a class="wear-inspect" href="../images/sneaker-photomatching/02b-reinking-game.jpg" target="_blank" rel="noopener" aria-label="Open Jeff Reinking photograph at full size in a new tab">
+                  <img src="../images/sneaker-photomatching/02b-reinking-game.jpg" alt="Michael Jordan shooting against Seattle, with scorer’s-table advertising and courtside personnel behind him" width="800" height="800" loading="lazy" decoding="async" />
+                </a>
+                <figcaption>Later view in the Archive’s research sequence. Photograph: Jeff Reinking / Getty Images. Select image for full-size inspection.</figcaption>
+              </figure>
+            </div>
+            <p class="wear-sequence-context">The Archive’s research places the Butler photograph before the Reinking photograph, using court context as part of the sequence assessment. The full views retain that context for inspection. Differences in background must be considered alongside camera position; they do not, by themselves, establish the half of play. The comparison below examines two toe-area scuffs in the Reinking photograph against the surviving shoe.</p>
+            <figure class="figure-full wear-sequence-detail">
+              <a class="wear-inspect" href="../images/sneaker-photomatching/02c-scuff-comparison.png" target="_blank" rel="noopener" aria-label="Open annotated game-image and artifact comparison at full size in a new tab">
+                <img src="../images/sneaker-photomatching/02c-scuff-comparison.png" alt="Annotated comparison of the Reinking game-image crop on the left and surviving shoe on the right, with gold arrows and circles identifying two toe-area scuffs" width="2400" height="1410" loading="lazy" decoding="async" />
+              </a>
+              <figcaption>Game-image detail, left; surviving artifact, right. The Archive’s arrows and circles identify two toe-area scuffs for comparison. These observations should be assessed within the image sequence and alongside differences in angle, lighting and resolution. A scuff not visible in an earlier photograph should not automatically be treated as absent. Game photograph: Jeff Reinking / Getty Images. Artifact photograph and annotations: Michael Jordan Archive. Select image for full-size inspection.</figcaption>
+            </figure>
+          </div>
 
           <h2>The Shoe Is Not a Static Object</h2>
           <p>Another major difference between sneakers and jerseys is that a sneaker constantly changes shape while being worn.</p>
