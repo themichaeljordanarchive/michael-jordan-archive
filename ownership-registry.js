@@ -1339,6 +1339,18 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     claimEnabled: true,
   },
 
+  "aj11-pair-cc": {
+    title: "Air Jordan XI — White | Black | Dark Concord",
+    reference: "Pair CC",
+    usage: "Private",
+    image: "images/sneakers/aj11/aj11-cc-12-13-magic-1.jpg",
+    alt: "Air Jordan XI — White | Black | Dark Concord — Pair CC",
+    category: "sneaker",
+    returnUrl: "sneakers-aj11.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
   // ===== AIR JORDAN 12 =====
 
   "aj12-pair-a": {
