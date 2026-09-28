@@ -90,12 +90,12 @@ const certificates = {
     documentId: "MJA-AJ-8-27-C-001",
     image: "assets/certificates/MJA-AJ-8-27-C-001.jpg",
   },
-  "MJA-9798-MJ-ALT-UNI-C-001": {
+  "MJA-4-17-98-MJ-ALT-UNI-C-001": {
     status: "Verified Archive Record",
     title: "1997-98 MICHAEL JORDAN GAME WORN UNIFORM",
     issueDate: "September 28 2026",
-    documentId: "MJA-9798-MJ-ALT-UNI-C-001",
-    image: "assets/certificates/MJA-9798-MJ-ALT-UNI-C-001.jpg",
+    documentId: "MJA-4-17-98-MJ-ALT-UNI-C-001",
+    image: "assets/certificates/MJA-4-17-98-MJ-ALT-UNI-C-001.jpg",
   },
 };
 
