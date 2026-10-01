@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+
     <title>1997–98 Home — Jersey S — Michael Jordan Archive</title>
+
     <meta
       name="description"
       content="1997–98 Chicago Bulls Home Jersey S case file."
@@ -35,14 +37,65 @@
       sizes="180x180"
       href="../assets/apple-touch-icon.png"
     />
+
+    <!-- ============================================================
+         SALES HISTORY — ADDITIONAL STYLING
+         Existing stylesheets and class names are preserved.
+    ============================================================= -->
+
+    <style>
+      .case-file .sales-history-card .population-table {
+        min-width: 0;
+      }
+
+      .case-file .sales-history-card .population-table td:first-child {
+        width: 36%;
+      }
+
+      .case-file .sales-history-card .population-table td {
+        overflow-wrap: anywhere;
+      }
+
+      .case-file .sales-history-card .previous-sales h3 {
+        margin: 0 0 10px;
+        padding-top: 18px;
+        border-top: 1px solid rgba(17, 17, 17, 0.12);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--muted, #666);
+      }
+
+      .case-file .sales-history-card .previous-sales-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        color: var(--muted, #666);
+        font-size: 15px;
+        line-height: 1.6;
+      }
+
+      .case-file .sales-history-card .previous-sales-list li {
+        margin: 0;
+        padding: 4px 0;
+        overflow-wrap: anywhere;
+      }
+    </style>
   </head>
 
   <body class="season-page s-9798 case-file">
+    <!-- ============================================================
+         HEADER & NAVIGATION
+    ============================================================= -->
+
     <header class="site-header">
       <div class="brand">
         <a href="../index.html" aria-label="Michael Jordan Archive home">
           <img src="../assets/logo.png" alt="Michael Jordan Archive logo" />
         </a>
+
         <div class="brand-text">
           <div class="brand-name">Michael Jordan Archive</div>
         </div>
@@ -65,6 +118,10 @@
     </header>
 
     <main>
+      <!-- ============================================================
+           JERSEY S — CASE FILE OVERVIEW
+      ============================================================= -->
+
       <section class="season-hero">
         <div class="page-shell">
           <div class="section-kicker">Case File</div>
@@ -88,10 +145,12 @@
                     <span class="season-review-text">Season</span>
                     <span class="season-review-value">1997–98</span>
                   </div>
+
                   <div class="season-review-row">
                     <span class="season-review-text">Style</span>
                     <span class="season-review-value">Home</span>
                   </div>
+
                   <div class="season-review-row">
                     <span class="season-review-text">Use</span>
                     <span class="season-review-value">Finals</span>
@@ -130,54 +189,93 @@
         </div>
       </section>
 
+      <!-- ============================================================
+           JERSEY S — SALES HISTORY CARD
+      ============================================================= -->
+
       <section class="population-summary-section">
         <div class="page-shell">
-          <div class="section-kicker">Public Sale Summary</div>
+          <div class="section-kicker">Sales History</div>
 
-          <div class="population-summary-card">
+          <div class="population-summary-card sales-history-card">
             <div class="population-summary-head">
-              <h2>Auction record</h2>
+              <h2>Most Recent Sale</h2>
               <p>Public sale history for the documented Jersey S example.</p>
             </div>
+
+            <!-- ======================================================
+                 MOST RECENT SALE — JOOPITER, SEPTEMBER 2026
+            ======================================================= -->
 
             <div class="population-table-wrap">
               <table class="population-table">
                 <tbody>
                   <tr>
                     <td><strong>Auction House</strong></td>
-                    <td>Mears Auctions</td>
+                    <td>
+                      <a
+                        href="https://www.joopiter.com/auctions/driven-to-greatness-michael-jordan-jersey/1998-nba-finals-game-3-jersey"
+                        target="_blank"
+                        rel="noopener"
+                        class="external-ref"
+                        >JOOPITER ➝</a
+                      >
+                    </td>
                   </tr>
+
                   <tr>
-                    <td><strong>Sale Date</strong></td>
-                    <td>April 2015</td>
+                    <td><strong>Auction Dates</strong></td>
+                    <td>September 15–30, 2026</td>
                   </tr>
+
                   <tr>
                     <td><strong>Lot</strong></td>
-                    <td>401</td>
+                    <td>1</td>
                   </tr>
+
+                  <tr>
+                    <td><strong>Estimate</strong></td>
+                    <td>US$10,000,000–15,000,000</td>
+                  </tr>
+
                   <tr>
                     <td><strong>Sale Price</strong></td>
-                    <td>$104,281</td>
+                    <td>$12,260,000.00</td>
                   </tr>
                 </tbody>
               </table>
             </div>
 
-            <div class="summary-footnote">
-              <p>
-                <a
-                  href="https://www.mearsonlineauctions.com/1998_michael_jordan_chicago_bulls_game_worn_nba_fi-lot87082.aspx"
-                  target="_blank"
-                  rel="noopener"
-                  class="external-ref"
-                >
-                  View Sale Listing
-                </a>
-              </p>
+            <!-- ======================================================
+                 PREVIOUS SALES — JERSEY S ONLY
+                 Format: Date · Price / Result · Auction House Link
+            ======================================================= -->
+
+            <div class="summary-footnote previous-sales">
+              <h3>Previous Sales</h3>
+
+              <ul class="previous-sales-list">
+                <li>
+                  <time datetime="2015-04">April 2015</time>
+                  · $104,281 ·
+                  <a
+                    href="https://www.mearsonlineauctions.com/1998_michael_jordan_chicago_bulls_game_worn_nba_fi-lot87082.aspx"
+                    target="_blank"
+                    rel="noopener"
+                    class="external-ref"
+                    title="Lot 401"
+                    >Mears Auctions ➝</a
+                  >
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
+
+      <!-- ============================================================
+           ARCHIVAL DESIGNATION SYSTEM
+      ============================================================= -->
 
       <section class="registry-note-section">
         <div class="page-shell">
@@ -186,6 +284,7 @@
               View Archival Designation System
               <span class="toggle-plus">+</span>
             </summary>
+
             <div class="designation-inner">
               <p>
                 Each jersey is assigned a permanent archival designation (A, B,
@@ -200,6 +299,10 @@
         </div>
       </section>
 
+      <!-- ============================================================
+           HOME — 1997–98
+      ============================================================= -->
+
       <section class="season-section">
         <div class="page-shell">
           <div class="section-divider" aria-hidden="true"></div>
@@ -212,6 +315,10 @@
             <div class="section-head"></div>
           </div>
 
+          <!-- ============================================================
+               JERSEY S — IMAGE, PHOTO MATCHES & PROVENANCE
+          ============================================================= -->
+
           <article class="entry-card" id="jersey-s">
             <div class="entry-grid">
               <div class="entry-image">
@@ -221,6 +328,7 @@
                     alt="1997–98 Chicago Bulls NBA Finals home jersey, Jersey S"
                   />
                 </div>
+
                 <p class="entry-caption">Publicly documented example.</p>
               </div>
 
@@ -230,18 +338,22 @@
                     <span class="meta-label">Archive Reference</span
                     ><span class="meta-value">Jersey S</span>
                   </div>
+
                   <div>
                     <span class="meta-label">Style Population</span
                     ><span class="meta-value">13</span>
                   </div>
+
                   <div>
                     <span class="meta-label">Style</span
                     ><span class="meta-value">Home</span>
                   </div>
+
                   <div>
                     <span class="meta-label">Use</span
                     ><span class="meta-value">Postseason</span>
                   </div>
+
                   <div>
                     <span class="meta-label">Confirmed Matches</span
                     ><span class="meta-value">1</span>
@@ -289,6 +401,10 @@
       </section>
     </main>
 
+    <!-- ============================================================
+         FOOTER
+    ============================================================= -->
+
     <footer class="site-footer">
       <div>© Michael Jordan Archive</div>
 
@@ -308,8 +424,13 @@
       </a>
     </footer>
 
+    <!-- ============================================================
+         NAVIGATION SCRIPT
+    ============================================================= -->
+
     <script>
       const btn = document.querySelector(".nav-toggle");
+
       if (btn) {
         btn.addEventListener("click", () => {
           document.body.classList.toggle("nav-open");
