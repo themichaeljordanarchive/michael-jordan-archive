@@ -74,3 +74,5 @@
 .garden-interlude .article-mid-hero-title{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
 
 .jersey-first .dunk-publication-pair{grid-template-columns:repeat(2,minmax(0,1fr))}.jersey-first .dunk-publication-pair img{height:420px;width:100%;object-fit:contain;object-position:center top}@media(max-width:700px){.jersey-first .dunk-publication-pair img{height:280px}}
+
+.jersey-first .support-grid.dunk-publication-trio{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.jersey-first .support-grid.dunk-publication-trio img{height:360px;width:100%;object-fit:contain;object-position:center top}@media(max-width:700px){.jersey-first .support-grid.dunk-publication-trio{gap:12px}.jersey-first .support-grid.dunk-publication-trio img{height:230px}}
