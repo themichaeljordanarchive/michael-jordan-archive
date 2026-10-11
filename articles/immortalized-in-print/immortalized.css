@@ -66,3 +66,9 @@
 .garden-interlude{min-height:650px;height:55vw;max-height:none}.garden-interlude .article-mid-hero-media img{object-position:center 90%;transform:none}@media(max-width:700px){.garden-interlude{height:110vw;min-height:460px}.garden-interlude .article-mid-hero-media img{object-position:22% center}}
 
 .article-main img{-webkit-user-drag:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}.article-hero,.article-mid-hero{-webkit-touch-callout:none}
+
+/* The Garden headline is baked into the displayed image. */
+.garden-interlude{height:auto;min-height:0;aspect-ratio:20/11}
+.garden-interlude .article-mid-hero-media img{object-fit:contain;object-position:center;transform:none}
+.garden-interlude .article-mid-hero-overlay{display:none}
+.garden-interlude .article-mid-hero-title{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
