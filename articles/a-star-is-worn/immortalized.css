@@ -84,3 +84,15 @@
 .paced-section:has(>h2#section-7) .dunk-publication-trio img{width:auto;max-width:100%;height:320px;margin:0 auto}@media(max-width:700px){.paced-section:has(>h2#section-7) .dunk-publication-trio img{height:24vw}}
 
 .paced-section:has(>h2#section-6) .poster-yearbook-pair{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px}.paced-section:has(>h2#section-6) .poster-yearbook-pair img{display:block;height:440px;width:auto;max-width:100%;margin:0 auto;object-fit:contain}@media(max-width:700px){.paced-section:has(>h2#section-6) .poster-yearbook-pair img{height:48vw}}
+
+/* Archive entry links use the existing site accent. */
+.jersey-lead figcaption a,
+.jersey-lead figcaption a:visited {
+  color: var(--article-accent);
+  text-decoration: none;
+}
+.jersey-lead figcaption a:hover,
+.jersey-lead figcaption a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
