@@ -96,3 +96,10 @@
   text-decoration: underline;
   text-underline-offset: 3px;
 }
+
+/* Scope note reuses the introduction's card treatment. */
+.article-body .scope-note-card{margin:40px 0;padding:28px 32px}
+.article-body .scope-note-card p{font-size:16px;line-height:1.7;margin:0;color:var(--article-muted)}
+.article-body .scope-note-card p+p{margin-top:12px}
+.article-body .scope-note-card strong{color:var(--article-ink)}
+@media(max-width:700px){.article-body .scope-note-card{padding:22px 20px}}
