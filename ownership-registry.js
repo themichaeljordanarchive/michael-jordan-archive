@@ -999,6 +999,45 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     claimEnabled: true,
   },
 
+  // ===== AIR JORDAN 10 =====
+
+  "aj10-pair-a": {
+    title: '1995 Air Jordan X - White | Black | True Red "45"',
+    reference: "Pair A",
+    usage: "Regular Season",
+    image: "images/sneakers/aj10/aj10-a-chi-45-1.jpg",
+    alt: '1995 Air Jordan X - White | Black | True Red "45" — Pair A',
+    category: "sneaker",
+    returnUrl: "sneakers-aj10.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj10-pair-b": {
+    title: "1995 Air Jordan X - White | Black | True Red",
+    reference: "Pair B",
+    usage: "Regular Season",
+    image: "images/sneakers/aj10/aj10-b-chi-4-5-95-1.jpg",
+    alt: "1995 Air Jordan X - White | Black | True Red — Pair B",
+    category: "sneaker",
+    returnUrl: "sneakers-aj10.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
+  "aj10-pair-c": {
+    title: "1995 Air Jordan X - White | Black | True Red",
+    reference: "Pair C",
+    usage: "Regular Season",
+    image: "images/sneakers/aj10/aj10-c-chi-3-30-95-1.jpg",
+    alt: "1995 Air Jordan X - White | Black | True Red — Pair C",
+    category: "sneaker",
+    returnUrl: "sneakers-aj10.html",
+    offerEnabled: true,
+    claimEnabled: false,
+    minimumOffer: 80000,
+  },
+
   // ===== AIR JORDAN 11 =====
 
   "aj11-pair-a": {
