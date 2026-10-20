@@ -1897,4 +1897,21 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     buyerFeeRate: 0.05,
     sellerFeeRate: 0.05,
   },
+
+  // ===== Other Jerseys =====
+
+  "unc-a": {
+    title: "1982–83 North Carolina Jersey",
+    reference: "UNC A",
+    usage: "Pre-NBA Career",
+    image: "images/1982-83-NC promo-fb.jpg",
+    alt: "1982–83 North Carolina jersey — publication cover match",
+    category: "jersey",
+    returnUrl: "jerseys-unc.html",
+    offerEnabled: true,
+    claimEnabled: false,
+    minimumOffer: 5000000,
+    buyerFeeRate: 0.025,
+    sellerFeeRate: 0.025,
+  },
 });
