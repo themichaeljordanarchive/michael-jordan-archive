@@ -1900,6 +1900,33 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
 
   // ===== Other Jerseys =====
 
+  "9293-away-b": {
+    title: "1992–93 Chicago Bulls Road Jersey",
+    reference: "Jersey B",
+    usage: "Regular Season",
+    image: "images/1992-93-away-fb.jpg",
+    alt: "1992–93 Chicago Bulls road jersey",
+    category: "jersey",
+    returnUrl: "jerseys-1992-93.html",
+    offerEnabled: true,
+    claimEnabled: false,
+    minimumOffer: 5000000,
+    buyerFeeRate: 0.025,
+    sellerFeeRate: 0.025,
+  },
+
+  "9293-home-a": {
+    title: "1992–93 Chicago Bulls Home Jersey",
+    reference: "Jersey A",
+    usage: "Regular Season",
+    image: "images/1992-93-home.jpg",
+    alt: "1992–93 Chicago Bulls home jersey",
+    category: "jersey",
+    returnUrl: "jerseys-1992-93.html",
+    offerEnabled: false,
+    claimEnabled: true,
+  },
+
   "unc-a": {
     title: "1982–83 North Carolina Jersey",
     reference: "UNC A",
