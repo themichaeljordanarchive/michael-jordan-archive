@@ -46,11 +46,14 @@
         padding: 10px 0 20px;
         margin: 6px 0 10px;
       }
-      .archive-model-page .archive-controls::after { content: none; }
-      .aj1-search, .aj1-sort {
+      .archive-model-page .archive-controls::after {
+        content: none;
+      }
+      .aj1-search,
+      .aj1-sort {
         min-width: 0;
         border-radius: 16px;
-        background: rgba(255,255,255,.65);
+        background: rgba(255, 255, 255, 0.65);
       }
       .archive-model-page .archive-controls label {
         display: block;
@@ -63,57 +66,83 @@
         text-transform: none;
         color: #111;
       }
-      .aj1-search__field { display: block; }
-      .aj1-search input, .archive-model-page .aj1-sort select {
+      .aj1-search__field {
+        display: block;
+      }
+      .aj1-search input,
+      .archive-model-page .aj1-sort select {
         box-sizing: border-box;
         max-width: 100%;
         padding: 14px 16px;
         border-radius: 14px;
-        border: 1px solid rgba(17,17,17,.12);
-        background: rgba(255,255,255,.9);
+        border: 1px solid rgba(17, 17, 17, 0.12);
+        background: rgba(255, 255, 255, 0.9);
         color: #111;
         font-family: Arial, Helvetica, sans-serif;
-        transition: border-color 180ms ease, box-shadow 180ms ease, transform 120ms ease;
+        transition:
+          border-color 180ms ease,
+          box-shadow 180ms ease,
+          transform 120ms ease;
       }
-      .aj1-search input { width: 100%; font-size: 15px; }
+      .aj1-search input {
+        width: 100%;
+        font-size: 15px;
+      }
       .archive-model-page .aj1-sort select {
         width: 100%;
         padding-right: 30px;
         font-size: 12px;
-        letter-spacing: .12em;
+        letter-spacing: 0.12em;
         text-transform: uppercase;
         cursor: pointer;
         appearance: auto;
         -webkit-appearance: auto;
       }
-      .aj1-search input:focus, .archive-model-page .aj1-sort select:focus {
+      .aj1-search input:focus,
+      .archive-model-page .aj1-sort select:focus {
         outline: none;
-        border-color: rgba(17,17,17,.22);
-        box-shadow: 0 0 0 2px rgba(17,17,17,.06);
+        border-color: rgba(17, 17, 17, 0.22);
+        box-shadow: 0 0 0 2px rgba(17, 17, 17, 0.06);
       }
-      .aj1-search__hint, #aj1-search-clear { display: none; }
+      .aj1-search__hint,
+      #aj1-search-clear {
+        display: none;
+      }
       .aj1-result-count {
         grid-column: 1 / -1;
         margin: 0;
         font-size: 11px;
         line-height: 1.6;
-        letter-spacing: .08em;
+        letter-spacing: 0.08em;
         text-transform: uppercase;
         color: #69665f;
       }
-      .archive-model-page .artifact-record[hidden], .aj1-empty[hidden] { display: none !important; }
+      .archive-model-page .artifact-record[hidden],
+      .aj1-empty[hidden] {
+        display: none !important;
+      }
       .aj1-empty {
         margin: 24px 0;
         padding: 32px 24px;
-        border: 1px solid rgba(17,17,17,.12);
+        border: 1px solid rgba(17, 17, 17, 0.12);
         border-radius: 16px;
-        background: rgba(255,255,255,.65);
+        background: rgba(255, 255, 255, 0.65);
         text-align: center;
       }
-      .aj1-empty h3 { margin: 0 0 10px; font: inherit; font-size: 18px; }
-      .aj1-empty p { margin: 0; font-size: 13px; line-height: 1.7; }
+      .aj1-empty h3 {
+        margin: 0 0 10px;
+        font: inherit;
+        font-size: 18px;
+      }
+      .aj1-empty p {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.7;
+      }
       @media (max-width: 900px) {
-        .archive-model-page .archive-controls { grid-template-columns: 1fr; }
+        .archive-model-page .archive-controls {
+          grid-template-columns: 1fr;
+        }
       }
     </style>
   </head>
@@ -345,29 +374,53 @@
     ========================================================== -->
 
       <div class="archive-controls">
-        <div class="aj1-search" role="search" aria-label="Search Air Jordan I records">
+        <div
+          class="aj1-search"
+          role="search"
+          aria-label="Search Air Jordan I records"
+        >
           <label for="aj1-search">Search the Registry</label>
           <div class="aj1-search__field">
-            <input id="aj1-search" type="search" placeholder="Reference, style, opponent, date or production code"
-              aria-controls="aj1-records" aria-describedby="aj1-search-hint" autocomplete="off" />
+            <input
+              id="aj1-search"
+              type="search"
+              placeholder="Reference, style, opponent, date or production code"
+              aria-controls="aj1-records"
+              aria-describedby="aj1-search-hint"
+              autocomplete="off"
+            />
             <button id="aj1-search-clear" type="button" disabled>Clear</button>
           </div>
-          <p id="aj1-search-hint" class="aj1-search__hint">Filter by pair reference, variation, opponent, game date, production code or record text.</p>
+          <p id="aj1-search-hint" class="aj1-search__hint">
+            Filter by pair reference, variation, opponent, game date, production
+            code or record text.
+          </p>
         </div>
         <div class="aj1-sort">
-        <label for="sort">Sort</label>
-        <select id="sort">
-          <option value="reference">Archive Reference</option>
-          <option value="date">Chronological (Earliest Known Use)</option>
-          <option value="sale">Highest Sale Price</option>
-          <option value="photo-matched">Photo Matched</option>
-        </select>
+          <label for="sort">Sort</label>
+          <select id="sort">
+            <option value="reference">Archive Reference</option>
+            <option value="date">Chronological (Earliest Known Use)</option>
+            <option value="sale">Highest Sale Price</option>
+            <option value="photo-matched">Photo Matched</option>
+          </select>
         </div>
-        <p id="aj1-result-count" class="aj1-result-count" role="status" aria-live="polite" aria-atomic="true">20 of 20 records</p>
+        <p
+          id="aj1-result-count"
+          class="aj1-result-count"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+        >
+          20 of 20 records
+        </p>
       </div>
       <div id="aj1-empty" class="aj1-empty" hidden>
         <h3>No matching records</h3>
-        <p>Try a different reference, style, opponent, date or production code, or clear the search.</p>
+        <p>
+          Try a different reference, style, opponent, date or production code,
+          or clear the search.
+        </p>
       </div>
 
       <div class="artifact-records" id="aj1-records">
@@ -3194,7 +3247,203 @@
         <!-- =========================================================
          EXAMPLE O
     ========================================================== -->
+        <section
+          class="artifact-record"
+          data-reference="O"
+          data-date="1986-03-01"
+          data-sale="24999"
+          data-verification="coded"
+        >
+          <div class="artifact-record__divider"></div>
 
+          <header class="artifact-record__header">
+            <h2 class="artifact-record__title">
+              1985 Air Jordan I TYPS - "Ankle Strap”
+            </h2>
+
+            <div class="artifact-summary-bar">
+              <div class="artifact-summary-bar__grid">
+                <div>
+                  <span class="meta-label">Game Date</span
+                  ><span class="meta-value">Unknown</span>
+                </div>
+                <div>
+                  <span class="meta-label">Opponent</span
+                  ><span class="meta-value">Unknown</span>
+                </div>
+                <div>
+                  <span class="meta-label">Usage</span
+                  ><span class="meta-value">1985-86 Season</span>
+                </div>
+                <div>
+                  <span class="meta-label">Verification</span
+                  ><span class="verification-badge coded">Verified Code</span>
+                </div>
+                <div>
+                  <span class="meta-label">Public Example</span
+                  ><span class="meta-value">Yes</span>
+                </div>
+              </div>
+            </div>
+          </header>
+
+          <article class="artifact-card">
+            <div class="artifact-card__grid">
+              <div class="artifact-card__media">
+                <div class="entry-image-media is-carousel">
+                  <div class="carousel-track">
+                    <figure class="carousel-slide">
+                      <img
+                        src="images/sneakers/aj1-o-86-pair-4-1.jpg"
+                        alt="Air Jordan 1 Ankle Strap — 1986"
+                      />
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img
+                        src="images/sneakers/aj1-o-86-pair-4-2.jpg"
+                        alt="Air Jordan 1 Ankle Strap — 1986"
+                      />
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img
+                        src="images/sneakers/aj1-o-86-pair-4-3.jpg"
+                        alt="Air Jordan 1 Ankle Strap — 1986"
+                      />
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img
+                        src="images/sneakers/aj1-o-86-pair-4-4.jpg"
+                        alt="Air Jordan 1 Ankle Strap — 1986"
+                      />
+                    </figure>
+
+                    <figure class="carousel-slide">
+                      <img
+                        src="images/sneakers/aj1-o-86-pair-4-5.jpg"
+                        alt="Air Jordan 1 Ankle Strap — 1986"
+                      />
+                    </figure>
+                  </div>
+
+                  <div class="carousel-dots" aria-hidden="true">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+
+                <p class="artifact-caption">
+                  A modified pair of Air Jordan 1s with ankle straps.
+                </p>
+              </div>
+
+              <div class="artifact-card__content">
+                <div class="record-meta-strip">
+                  <div>
+                    <span class="meta-label">Archive Reference</span
+                    ><span class="meta-value">Pair O</span>
+                  </div>
+                  <div>
+                    <span class="meta-label">Production Code</span
+                    ><span class="meta-value">850102-TYPS</span>
+                  </div>
+                  <div>
+                    <span class="meta-label">Size</span
+                    ><span class="meta-value">13 L / 13.5 R</span>
+                  </div>
+                </div>
+
+                <div class="record-callout">
+                  A customized Air Jordan 1 made specifically for Jordan upon
+                  his return from ankle injury.
+                </div>
+
+                <div class="record-block">
+                  <h3>Public Sale</h3>
+                  <ul class="record-list">
+                    <li><strong>Auction House:</strong> Ebay</li>
+                    <li><strong>Sale Date:</strong> May 2011</li>
+                    <li><strong>Sale Price:</strong> $24,999</li>
+                  </ul>
+
+                  <p class="record-link">
+                    <a
+                      href="https://sneakernews.com/2011/04/27/air-jordan-1-og-michael-jordan-game-worn-pe/comment-page-1/?noamp=mobile"
+                    >
+                      Article<span>→</span>
+                    </a>
+                  </p>
+                </div>
+
+                <div class="record-block">
+                  <h3>Photo Match Details</h3>
+                  <ul class="record-list">
+                    <li><strong>Photo-Matched:</strong> No</li>
+                    <li><strong>Games Photo-Matched:</strong> 0</li>
+                    <li><strong>Photo-Matched By:</strong> None</li>
+                  </ul>
+                </div>
+
+                <details class="archive-disclosure archive-disclosure--nested">
+                  <summary>Research &amp; Provenance</summary>
+                  <div class="archive-disclosure__body">
+                    <ul class="provenance-list">
+                      <li>
+                        Supporting evidence is held within the archive,
+                        including material through original photography and
+                        original negatives.
+                      </li>
+                    </ul>
+                  </div>
+                </details>
+              </div>
+            </div>
+            <section
+              class="ownership-status-card ownership-status-card--unverified"
+            >
+              <div class="ownership-main">
+                <div class="ownership-left">
+                  <div class="ownership-kicker">Ownership Status</div>
+                  <div class="ownership-status-row">
+                    <span class="ownership-icon ownership-icon--unverified"
+                      >○</span
+                    >
+                    <div>
+                      <h3>Current Owner Unverified</h3>
+                      <p>
+                        Ownership verification is required before private
+                        inquiries can be enabled.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="ownership-actions">
+                  <a
+                    class="ownership-btn ownership-btn--claim"
+                    href="claim-ownership.html?item=aj1-pair-k"
+                    >Claim Ownership</a
+                  ><button
+                    class="ownership-btn ownership-btn--disabled"
+                    disabled
+                  >
+                    🔒 Submit a Private Offer
+                  </button>
+                </div>
+              </div>
+              <p class="ownership-footer">
+                Ownership claims are reviewed and verified privately by The
+                Michael Jordan Archive. Owner identities are not disclosed
+                publicly. Ownership changes should be reported directly to the
+                Archive and are recorded only after reverification.
+              </p>
+            </section>
+          </article>
+        </section>
         <!-- =========================================================
          EXAMPLE P
     ========================================================== -->
@@ -4541,17 +4790,25 @@
         const clear = document.getElementById("aj1-search-clear");
         const count = document.getElementById("aj1-result-count");
         const empty = document.getElementById("aj1-empty");
-        const records = Array.from(document.querySelectorAll("#aj1-records > .artifact-record"));
-        const normalize = (value) => value.normalize("NFKD")
-          .replace(/[\u0300-\u036f]/g, "").toLowerCase()
-          .replace(/[^a-z0-9]+/g, " ").trim();
+        const records = Array.from(
+          document.querySelectorAll("#aj1-records > .artifact-record"),
+        );
+        const normalize = (value) =>
+          value
+            .normalize("NFKD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, " ")
+            .trim();
         const index = records.map((record) => ({
           record,
-          text: normalize([
-            record.textContent,
-            `pair ${record.dataset.reference} reference ${record.dataset.reference}`,
-            ...Object.values(record.dataset),
-          ].join(" ")),
+          text: normalize(
+            [
+              record.textContent,
+              `pair ${record.dataset.reference} reference ${record.dataset.reference}`,
+              ...Object.values(record.dataset),
+            ].join(" "),
+          ),
         }));
         function filterRecords() {
           const terms = normalize(input.value).split(/\s+/).filter(Boolean);
