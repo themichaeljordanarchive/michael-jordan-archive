@@ -97,6 +97,13 @@ const certificates = {
     documentId: "MJA-4-17-98-MJ-ALT-UNI-C-001",
     image: "assets/certificates/MJA-4-17-98-MJ-ALT-UNI-C-001.jpg",
   },
+  "MJA-AJ-I-10-27-26-002": {
+    status: "Verified Archive Record",
+    title: "1985 AIR JORDAN I TYPS",
+    issueDate: "October 27 2026",
+    documentId: "MJA-AJ-I-10-27-26-002",
+    image: "assets/certificates/MJA-AJ-I-10-27-26-002.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
