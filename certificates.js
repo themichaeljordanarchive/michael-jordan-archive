@@ -104,6 +104,13 @@ const certificates = {
     documentId: "MJA-AJ-I-10-27-26-002",
     image: "assets/certificates/MJA-AJ-I-10-27-26-002.jpg",
   },
+  "MJA-1995-AJX-BOSTON-C-001": {
+    status: "Verified Archive Record",
+    title: "1995 AIR JORDAN X",
+    issueDate: "October 27 2026",
+    documentId: "MJA-1995-AJX-BOSTON-C-001",
+    image: "assets/certificates/MJA-1995-AJX-BOSTON-C-001.jpg",
+  },
 };
 
 const form = document.getElementById("verifyForm");
