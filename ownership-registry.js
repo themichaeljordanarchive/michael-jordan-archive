@@ -1927,6 +1927,36 @@ window.MJA_OWNERSHIP_ITEMS = Object.freeze({
     claimEnabled: true,
   },
 
+  "9798-away-u": {
+    title: "1997–98 Chicago Bulls Away Jersey",
+    reference: "Jersey U",
+    usage: "Postseason",
+    image: "images/1997-98/away-u-1998-5-29-fb.jpg",
+    alt: "1997–98 Chicago Bulls postseason away jersey — Jersey U",
+    category: "jersey",
+    returnUrl: "1997-98/away-u.html",
+    offerEnabled: true,
+    claimEnabled: false,
+    minimumOffer: 4000000,
+    buyerFeeRate: 0.025,
+    sellerFeeRate: 0.025,
+  },
+
+  "9798-home-d": {
+    title: "1997–98 Chicago Bulls Home Jersey",
+    reference: "Jersey D",
+    usage: "Postseason",
+    image: "images/1997-98/home-d-1998-4-24-fb.jpg",
+    alt: "1997–98 Chicago Bulls postseason home jersey — Jersey D",
+    category: "jersey",
+    returnUrl: "1997-98/home-d.html",
+    offerEnabled: true,
+    claimEnabled: false,
+    minimumOffer: 3000000,
+    buyerFeeRate: 0.025,
+    sellerFeeRate: 0.025,
+  },
+
   "unc-a": {
     title: "1982–83 North Carolina Jersey",
     reference: "UNC A",
