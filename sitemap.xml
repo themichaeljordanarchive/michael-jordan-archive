@@ -1,60 +1,419 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-<url>
-<loc>https://themichaeljordanarchive.com/</loc>
-<lastmod>2026-03-14</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/jerseys.html</loc>
-<lastmod>2026-03-14</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/notes.html</loc>
-<lastmod>2026-03-14</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/methodology.html</loc>
-<lastmod>2026-03-14</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/research.html</loc>
-<lastmod>2026-03-14</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/services.html</loc>
-<lastmod>2026-03-14</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/articles/research-standards/</loc>
-<lastmod>2026-03-14</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/sneakers.html</loc>
-<lastmod>2026-04-9</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/1997-98/index.html</loc>
-<lastmod>2026-04-9</lastmod>
-</url>
-
-<url>
-<loc>https://themichaeljordanarchive.com/articles/hiding-in-plain-sight/index.html</loc>
-<lastmod>2026-04-9</lastmod>
-</url>
-
-
-<url>
-<loc>https://themichaeljordanarchive.com/articles/sneaker-photomatching/</loc>
-<lastmod>2026-09-20</lastmod>
-</url>
-
+  <url>
+    <loc>https://themichaeljordanarchive.com/</loc>
+    <lastmod>2026-07-17</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/alt-f.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-aa.html</loc>
+    <lastmod>2026-05-08</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-b.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-bb.html</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-g.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-h.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-p.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-q.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-t.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-u.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-v.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-y.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/away-z.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-a.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-c.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-d.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-e.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-i.html</loc>
+    <lastmod>2026-10-04</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-j.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-k.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-l.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-m.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-n.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-o.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-r.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-s.html</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-w.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-x.html</loc>
+    <lastmod>2026-04-11</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/1997-98/home-z.html</loc>
+    <lastmod>2026-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/a-star-is-worn/</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/before-the-air-jordan/</loc>
+    <lastmod>2026-06-09</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/beyond-photo-matched/</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/hiding-in-plain-sight-part-2/</loc>
+    <lastmod>2026-05-20</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/hiding-in-plain-sight/</loc>
+    <lastmod>2026-04-07</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/immortalized-in-print/</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/jordan-jersey-nuances/</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/research-standards/</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/sneaker-photomatching/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/articles/the-population-of-a-legend/</loc>
+    <lastmod>2026-03-31</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/casefiles/cf-0001-aj-1987/</loc>
+    <lastmod>2026-03-27</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/casefiles/cf-0002-uni-1987/</loc>
+    <lastmod>2026-03-27</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/casefiles/cf-0004-84usa-1984/</loc>
+    <lastmod>2026-03-27</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/casefiles/cf-0005-aj13-low-g7-1998/</loc>
+    <lastmod>2026-03-27</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/contact.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/documented-work.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/framework.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1984-85.html</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1985-86.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1986-87.html</loc>
+    <lastmod>2026-10-12</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1987-88.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1988-89.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1989-90.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1992-93.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1995-96.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-1996-97.html</loc>
+    <lastmod>2026-09-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-special-events.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-unc.html</loc>
+    <lastmod>2026-10-20</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys-usa.html</loc>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/jerseys.html</loc>
+    <lastmod>2026-09-08</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/methodology.html</loc>
+    <lastmod>2026-10-29</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/notes.html</loc>
+    <lastmod>2026-10-14</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/preseason.html</loc>
+    <lastmod>2026-02-27</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/research.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/services.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj-champion-set.html</loc>
+    <lastmod>2026-07-03</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj-wizards-2001-02.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj-wizards-2002-03.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj1.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj10.html</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj11.html</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj12.html</loc>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj13.html</loc>
+    <lastmod>2026-09-04</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj14.html</loc>
+    <lastmod>2026-04-10</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj2.html</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj3.html</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj4.html</loc>
+    <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj5.html</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj6.html</loc>
+    <lastmod>2026-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj7.html</loc>
+    <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj8.html</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-aj9.html</loc>
+    <lastmod>2026-09-09</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-nike-airship.html</loc>
+    <lastmod>2026-09-05</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers-pre-nba-others.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/sneakers.html</loc>
+    <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/</loc>
+    <lastmod>2026-07-18</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/away-b.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/away-j.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-a.html</loc>
+    <lastmod>2026-08-17</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-c.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-d.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-e.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-f.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-g.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-h.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-i.html</loc>
+    <lastmod>2026-08-12</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-k.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-l.html</loc>
+    <lastmod>2026-08-24</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-m.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-n.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-o.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-p.html</loc>
+    <lastmod>2026-03-26</lastmod>
+  </url>
+  <url>
+    <loc>https://themichaeljordanarchive.com/wizards/home-q.html</loc>
+    <lastmod>2026-04-27</lastmod>
+  </url>
 </urlset>
