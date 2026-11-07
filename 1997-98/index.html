@@ -813,7 +813,9 @@
           const badge = document.createElement("span");
           badge.className = "table-status is-complete";
           badge.textContent = "Accepting Private Offers";
-          arrow.before(badge);
+          const offerGroup = document.createElement("span");
+          arrow.before(offerGroup);
+          offerGroup.append(badge, document.createTextNode("  "), arrow);
         });
       })();
     </script>
