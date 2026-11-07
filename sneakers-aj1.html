@@ -4867,8 +4867,6 @@
               top: Math.max(0, controls.getBoundingClientRect().top + window.scrollY - offset),
               behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
             });
-            count.setAttribute("tabindex", "-1");
-            count.focus({ preventScroll: true });
           });
         });
         function filterRecords() {
