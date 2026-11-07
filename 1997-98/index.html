@@ -795,5 +795,27 @@
           this.textContent = asc ? "Registry Order ▾" : "Chronological Order ▾";
         });
     </script>
+    <!-- Private-offer availability follows the central ownership registry. -->
+    <script src="../ownership-registry.js"></script>
+    <script>
+      (() => {
+        const items = Object.values(window.MJA_OWNERSHIP_ITEMS || {});
+        const siteRoot = new URL("../", document.baseURI);
+        const available = new Set(
+          items
+            .filter((item) => item.category === "jersey" && item.offerEnabled === true && item.returnUrl)
+            .map((item) => new URL(item.returnUrl, siteRoot).href),
+        );
+        document.querySelectorAll(".registry-item").forEach((card) => {
+          if (!available.has(card.href)) return;
+          const arrow = card.querySelector(".registry-arrow");
+          if (!arrow) return;
+          const badge = document.createElement("span");
+          badge.className = "table-status is-complete";
+          badge.textContent = "Accepting Private Offers";
+          arrow.before(badge);
+        });
+      })();
+    </script>
   </body>
 </html>
