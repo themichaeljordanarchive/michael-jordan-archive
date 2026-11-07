@@ -4837,6 +4837,16 @@
         }));
         const seasonButtons = Array.from(document.querySelectorAll("[data-season-filter]"));
         let selectedSeason = "all";
+        function updateSeasonButtons() {
+          seasonButtons.forEach((button) => {
+            const active = button.dataset.seasonFilter === selectedSeason;
+            const label = button.dataset.seasonFilter === "all"
+              ? "All Pairs" : button.dataset.seasonFilter.replace("-", "–");
+            button.setAttribute("aria-pressed", String(active));
+            button.textContent = `${active ? "✓ " : ""}${label} ↓`;
+          });
+        }
+        updateSeasonButtons();
         seasonButtons.forEach((button) => {
           button.addEventListener("keydown", (event) => {
             if (event.key === " ") {
@@ -4847,10 +4857,18 @@
           button.addEventListener("click", (event) => {
             event.preventDefault();
             selectedSeason = button.dataset.seasonFilter;
-            seasonButtons.forEach((item) => {
-              item.setAttribute("aria-pressed", String(item === button));
-            });
+            updateSeasonButtons();
             filterRecords();
+            // Show the filtered registry below the fixed site header.
+            const controls = document.querySelector(".archive-controls");
+            const header = document.querySelector(".site-header");
+            const offset = (header ? header.getBoundingClientRect().height : 0) + 20;
+            window.scrollTo({
+              top: Math.max(0, controls.getBoundingClientRect().top + window.scrollY - offset),
+              behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+            });
+            count.setAttribute("tabindex", "-1");
+            count.focus({ preventScroll: true });
           });
         });
         function filterRecords() {
@@ -4862,7 +4880,9 @@
             record.hidden = !matches;
             if (matches) visible += 1;
           });
-          count.textContent = `${visible} of ${records.length} records`;
+          const seasonLabel = selectedSeason === "all" ? "All Pairs" : selectedSeason.replace("-", "–");
+          const seasonTotal = records.filter((record) => selectedSeason === "all" || record.dataset.season === selectedSeason).length;
+          count.textContent = `${seasonLabel} · ${visible} of ${seasonTotal} records`;
           empty.hidden = visible !== 0;
           clear.disabled = input.value.length === 0;
         }
