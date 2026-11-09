@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Air Jordan I — Michael Jordan Archive</title>
+    <title>Michael Jordan Air Jordan I Sneakers — 1984–86 Registry</title>
     <meta
       name="description"
       content="Documented Air Jordan 1 examples worn by Michael Jordan during the 1984–85 season and beyond."
@@ -143,6 +143,31 @@
         .archive-model-page .archive-controls {
           grid-template-columns: 1fr;
         }
+      }
+      /* Match the site navigation underline on the AJ1 season controls. */
+      .archive-model-page [data-season-filter] {
+        position: relative;
+      }
+      .archive-model-page [data-season-filter]::after {
+        content: "";
+        position: absolute;
+        left: 14px;
+        right: 14px;
+        bottom: 5px;
+        height: 1px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 250ms ease;
+      }
+      .archive-model-page .method-nav__strip [aria-pressed="true"]::after,
+      .archive-model-page [data-season-filter]:hover::after,
+      .archive-model-page [data-season-filter]:focus-visible::after {
+        transform: scaleX(1);
+      }
+      .archive-model-page .method-nav__strip:has([data-season-filter]:hover, [data-season-filter]:focus-visible)
+        [aria-pressed="true"]:not(:hover):not(:focus-visible)::after {
+        transform: scaleX(0);
       }
     </style>
     <link rel="canonical" href="https://themichaeljordanarchive.com/sneakers-aj1.html" />
