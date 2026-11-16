@@ -4,9 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
 
-    <title>
-      Michael Jordan Game-Worn Jerseys — 1997–98 Bulls Registry
-    </title>
+    <title>Michael Jordan Game-Worn Jerseys — 1997–98 Bulls Registry</title>
     <meta
       name="description"
       content="Population registry and documentation for Michael Jordan’s 1997–98 Chicago Bulls season uniforms."
@@ -40,7 +38,10 @@
       sizes="180x180"
       href="../assets/apple-touch-icon.png"
     />
-    <link rel="canonical" href="https://themichaeljordanarchive.com/1997-98/index.html" />
+    <link
+      rel="canonical"
+      href="https://themichaeljordanarchive.com/1997-98/index.html"
+    />
   </head>
 
   <body class="season-page s-9798">
@@ -188,7 +189,7 @@
                   <tr>
                     <td>Away</td>
                     <td>17</td>
-                    <td>11</td>
+                    <td>12</td>
                     <td>
                       <span class="table-status is-complete">Complete</span>
                     </td>
@@ -804,7 +805,12 @@
         const siteRoot = new URL("../", document.baseURI);
         const available = new Set(
           items
-            .filter((item) => item.category === "jersey" && item.offerEnabled === true && item.returnUrl)
+            .filter(
+              (item) =>
+                item.category === "jersey" &&
+                item.offerEnabled === true &&
+                item.returnUrl,
+            )
             .map((item) => new URL(item.returnUrl, siteRoot).href),
         );
         document.querySelectorAll(".registry-item").forEach((card) => {

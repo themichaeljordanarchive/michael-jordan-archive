@@ -36,6 +36,45 @@
       href="assets/apple-touch-icon.png"
     />
     <link rel="canonical" href="https://themichaeljordanarchive.com/sneakers.html" />
+    <style>
+      .jump-section .jump-hint { margin: 6px 0 0; font-size: 14px; }
+      .jump-section .jump-strip-controls {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+      }
+      .jump-section .jump-more:not([hidden]) {
+        display: grid;
+        place-items: center;
+        margin-left: 8px;
+        width: 44px;
+        min-height: 44px;
+        padding: 0;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.82);
+        color: var(--ink);
+        font-size: 22px;
+        cursor: pointer;
+      }
+      .jump-section .jump-strip a { position: relative; }
+      .jump-section .jump-strip a::after {
+        content: "";
+        position: absolute;
+        inset: auto 14px 5px;
+        height: 1px;
+        background: var(--accent);
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 250ms ease;
+      }
+      .jump-section .jump-strip a:is(:hover, :focus-visible)::after {
+        transform: scaleX(1);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .jump-section .jump-strip a::after { transition: none; }
+      }
+    </style>
   </head>
 
   <body>
@@ -136,24 +175,29 @@
 
           <div class="section-head">
             <h2>Browse by Model</h2>
+            <p class="jump-hint">Select a model to jump to its card.</p>
           </div>
 
-          <div class="jump-strip">
-            <a href="#model-airship">Nike Air Ship</a>
-            <a href="#model-aj1">Air Jordan I</a>
-            <a href="#model-aj2">Air Jordan II</a>
-            <a href="#model-aj3">Air Jordan III</a>
-            <a href="#model-aj4">Air Jordan IV</a>
-            <a href="#model-aj5">Air Jordan V</a>
-            <a href="#model-aj6">Air Jordan VI</a>
-            <a href="#model-aj7">Air Jordan VII</a>
-            <a href="#model-aj8">Air Jordan VIII</a>
-            <a href="#model-aj9">Air Jordan IX</a>
-            <a href="#model-aj10">Air Jordan X</a>
-            <a href="#model-aj11">Air Jordan XI</a>
-            <a href="#model-aj12">Air Jordan XII</a>
-            <a href="#model-aj13">Air Jordan XIII</a>
-            <a href="#model-aj14">Air Jordan XIV</a>
+          <div class="jump-strip-controls">
+            <div class="jump-strip" id="sneaker-model-pills">
+              <a href="#model-airship">Nike Air Ship</a>
+              <a href="#model-aj1" aria-label="AJ-1 (Air Jordan I)">AJ-1</a>
+              <a href="#model-aj2" aria-label="AJ-2 (Air Jordan II)">AJ-2</a>
+              <a href="#model-aj3" aria-label="AJ-3 (Air Jordan III)">AJ-3</a>
+              <a href="#model-aj4" aria-label="AJ-4 (Air Jordan IV)">AJ-4</a>
+              <a href="#model-aj5" aria-label="AJ-5 (Air Jordan V)">AJ-5</a>
+              <a href="#model-aj6" aria-label="AJ-6 (Air Jordan VI)">AJ-6</a>
+              <a href="#model-aj7" aria-label="AJ-7 (Air Jordan VII)">AJ-7</a>
+              <a href="#model-aj8" aria-label="AJ-8 (Air Jordan VIII)">AJ-8</a>
+              <a href="#model-aj9" aria-label="AJ-9 (Air Jordan IX)">AJ-9</a>
+              <a href="#model-aj10" aria-label="AJ-10 (Air Jordan X)">AJ-10</a>
+              <a href="#model-aj11" aria-label="AJ-11 (Air Jordan XI)">AJ-11</a>
+              <a href="#model-aj12" aria-label="AJ-12 (Air Jordan XII)">AJ-12</a>
+              <a href="#model-aj13" aria-label="AJ-13 (Air Jordan XIII)">AJ-13</a>
+              <a href="#model-aj14" aria-label="AJ-14 (Air Jordan XIV)">AJ-14</a>
+            </div>
+            <button type="button" class="jump-more" aria-controls="sneaker-model-pills"
+              aria-label="Show more models" hidden><span aria-hidden="true">›</span></button>
           </div>
         </div>
       </section>
@@ -457,6 +501,33 @@
           );
         });
       }
+    </script>
+    <script>
+      (() => {
+        const row = document.getElementById("sneaker-model-pills");
+        const controls = row.parentElement;
+        const more = controls.querySelector(".jump-more");
+        const icon = more.firstElementChild;
+        const atEnd = () => row.scrollLeft + row.clientWidth >= row.scrollWidth - 1;
+        function updateChevron() {
+          more.hidden = row.scrollWidth <= controls.clientWidth;
+          const back = atEnd();
+          icon.textContent = back ? "‹" : "›";
+          more.setAttribute("aria-label", back ? "Back to first model" : "Show more models");
+        }
+        more.addEventListener("click", () => {
+          row.scrollTo({
+            left: atEnd() ? 0 : row.scrollLeft + row.clientWidth * 0.8,
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+              ? "instant"
+              : "smooth",
+          });
+        });
+        row.addEventListener("scroll", updateChevron, { passive: true });
+        new ResizeObserver(updateChevron).observe(controls);
+        document.fonts.ready.then(updateChevron);
+        updateChevron();
+      })();
     </script>
   </body>
 </html>
