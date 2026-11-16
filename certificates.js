@@ -111,12 +111,12 @@ const certificates = {
     documentId: "MJA-1995-AJX-BOSTON-C-001",
     image: "assets/certificates/MJA-1995-AJX-BOSTON-C-001.jpg",
   },
-  "MJA-JER8990-ROAD-001 -C-01": {
+  "MJA-JER8990-ROAD-001-C-01": {
     status: "Verified Archive Record",
     title: "1989-90 MICHAEL JORDAN GAME WORN ROAD JERSEY",
     issueDate: "August 12 2026",
-    documentId: "MJA-JER8990-ROAD-001 -C-01-C-001",
-    image: "assets/certificates/MJA-JER8990-ROAD-001 -C-01.jpg",
+    documentId: "MJA-JER8990-ROAD-001-C-01-C-001",
+    image: "assets/certificates/MJA-JER8990-ROAD-001-C-01.jpg",
   },
 };
 
