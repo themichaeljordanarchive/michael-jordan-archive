@@ -35,9 +35,15 @@
       sizes="180x180"
       href="assets/apple-touch-icon.png"
     />
-    <link rel="canonical" href="https://themichaeljordanarchive.com/sneakers.html" />
+    <link
+      rel="canonical"
+      href="https://themichaeljordanarchive.com/sneakers.html"
+    />
     <style>
-      .jump-section .jump-hint { margin: 6px 0 0; font-size: 14px; }
+      .jump-section .jump-hint {
+        margin: 6px 0 0;
+        font-size: 14px;
+      }
       .jump-section .jump-strip-controls {
         display: grid;
         grid-template-columns: minmax(0, 1fr) auto;
@@ -57,7 +63,9 @@
         font-size: 22px;
         cursor: pointer;
       }
-      .jump-section .jump-strip a { position: relative; }
+      .jump-section .jump-strip a {
+        position: relative;
+      }
       .jump-section .jump-strip a::after {
         content: "";
         position: absolute;
@@ -72,7 +80,9 @@
         transform: scaleX(1);
       }
       @media (prefers-reduced-motion: reduce) {
-        .jump-section .jump-strip a::after { transition: none; }
+        .jump-section .jump-strip a::after {
+          transition: none;
+        }
       }
     </style>
   </head>
@@ -161,7 +171,7 @@
             <aside class="hero-stats">
               <div class="stat-card">
                 <div class="stat-label">Documented</div>
-                <div class="stat-value">152</div>
+                <div class="stat-value">153</div>
                 <div class="stat-note">Sneaker Examples</div>
               </div>
             </aside>
@@ -183,24 +193,43 @@
               <a href="#model-airship">Nike Air Ship</a>
               <a href="#model-aj1" aria-label="AJ I (Air Jordan I)">AJ I</a>
               <a href="#model-aj2" aria-label="AJ II (Air Jordan II)">AJ II</a>
-              <a href="#model-aj3" aria-label="AJ III (Air Jordan III)">AJ III</a>
+              <a href="#model-aj3" aria-label="AJ III (Air Jordan III)"
+                >AJ III</a
+              >
               <a href="#model-aj4" aria-label="AJ IV (Air Jordan IV)">AJ IV</a>
               <a href="#model-aj5" aria-label="AJ V (Air Jordan V)">AJ V</a>
               <a href="#model-aj6" aria-label="AJ VI (Air Jordan VI)">AJ VI</a>
-              <a href="#model-aj7" aria-label="AJ VII (Air Jordan VII)">AJ VII</a>
-              <a href="#model-aj8" aria-label="AJ VIII (Air Jordan VIII)">AJ VIII</a>
+              <a href="#model-aj7" aria-label="AJ VII (Air Jordan VII)"
+                >AJ VII</a
+              >
+              <a href="#model-aj8" aria-label="AJ VIII (Air Jordan VIII)"
+                >AJ VIII</a
+              >
               <a href="#model-aj9" aria-label="AJ IX (Air Jordan IX)">AJ IX</a>
               <a href="#model-aj10" aria-label="AJ X (Air Jordan X)">AJ X</a>
               <a href="#model-aj11" aria-label="AJ XI (Air Jordan XI)">AJ XI</a>
-              <a href="#model-aj12" aria-label="AJ XII (Air Jordan XII)">AJ XII</a>
-              <a href="#model-aj13" aria-label="AJ XIII (Air Jordan XIII)">AJ XIII</a>
-              <a href="#model-aj14" aria-label="AJ XIV (Air Jordan XIV)">AJ XIV</a>
+              <a href="#model-aj12" aria-label="AJ XII (Air Jordan XII)"
+                >AJ XII</a
+              >
+              <a href="#model-aj13" aria-label="AJ XIII (Air Jordan XIII)"
+                >AJ XIII</a
+              >
+              <a href="#model-aj14" aria-label="AJ XIV (Air Jordan XIV)"
+                >AJ XIV</a
+              >
               <a href="#model-ajwizards-0102">Wizards 01-02</a>
               <a href="#model-ajwizards-0203">Wizards 02-03</a>
               <a href="#model-pre-nba-other">Pre NBA</a>
             </div>
-            <button type="button" class="jump-more" aria-controls="sneaker-model-pills"
-              aria-label="Show more models" hidden><span aria-hidden="true">›</span></button>
+            <button
+              type="button"
+              class="jump-more"
+              aria-controls="sneaker-model-pills"
+              aria-label="Show more models"
+              hidden
+            >
+              <span aria-hidden="true">›</span>
+            </button>
           </div>
         </div>
       </section>
@@ -511,17 +540,22 @@
         const controls = row.parentElement;
         const more = controls.querySelector(".jump-more");
         const icon = more.firstElementChild;
-        const atEnd = () => row.scrollLeft + row.clientWidth >= row.scrollWidth - 1;
+        const atEnd = () =>
+          row.scrollLeft + row.clientWidth >= row.scrollWidth - 1;
         function updateChevron() {
           more.hidden = row.scrollWidth <= controls.clientWidth;
           const back = atEnd();
           icon.textContent = back ? "‹" : "›";
-          more.setAttribute("aria-label", back ? "Back to first model" : "Show more models");
+          more.setAttribute(
+            "aria-label",
+            back ? "Back to first model" : "Show more models",
+          );
         }
         more.addEventListener("click", () => {
           row.scrollTo({
             left: atEnd() ? 0 : row.scrollLeft + row.clientWidth * 0.8,
-            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)")
+              .matches
               ? "instant"
               : "smooth",
           });
